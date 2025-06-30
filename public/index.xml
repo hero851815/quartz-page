@@ -1,28 +1,70 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <rss version="2.0">
     <channel>
-      <title>Quartz 4</title>
-      <link>https://hero851815.xyz</link>
-      <description>Last 10 notes on Quartz 4</description>
+      <title>Data Security</title>
+      <link>https://hero851815.cc</link>
+      <description>Last 10 notes on Data Security</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
     <title>Welcome to Quartz</title>
-    <link>https://hero851815.xyz/</link>
-    <guid>https://hero851815.xyz/</guid>
+    <link>https://hero851815.cc/</link>
+    <guid>https://hero851815.cc/</guid>
     <description>This is a blank Quartz installation. See the documentation for how to get started.</description>
-    <pubDate>Tue, 13 May 2025 07:33:36 GMT</pubDate>
+    <pubDate>Mon, 30 Jun 2025 01:12:37 GMT</pubDate>
   </item><item>
     <title>技术措施</title>
-    <link>https://hero851815.xyz/%E6%8A%80%E6%9C%AF%E6%8E%AA%E6%96%BD</link>
-    <guid>https://hero851815.xyz/%E6%8A%80%E6%9C%AF%E6%8E%AA%E6%96%BD</guid>
+    <link>https://hero851815.cc/%E6%9C%AF%E8%AF%AD/%E6%8A%80%E6%9C%AF%E6%8E%AA%E6%96%BD</link>
+    <guid>https://hero851815.cc/%E6%9C%AF%E8%AF%AD/%E6%8A%80%E6%9C%AF%E6%8E%AA%E6%96%BD</guid>
     <description>数据接口安全 防护措施 1.</description>
-    <pubDate>Tue, 13 May 2025 07:33:36 GMT</pubDate>
+    <pubDate>Mon, 30 Jun 2025 01:12:37 GMT</pubDate>
+  </item><item>
+    <title>数据生命周期</title>
+    <link>https://hero851815.cc/%E6%9C%AF%E8%AF%AD/%E6%95%B0%E6%8D%AE%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F</link>
+    <guid>https://hero851815.cc/%E6%9C%AF%E8%AF%AD/%E6%95%B0%E6%8D%AE%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F</guid>
+    <description>数据生命周期 数据生命周期 data lifecycle 数据从产生，经过数据采集、数据传输、数据存储、数据处理（如计算、分析、可视化等）、数据交换，直至数据销毁等各种生存形态的演变过程。 数据处理活动 data processing activties 数据收集、存储、使用、加工、传输、提供、公开、删除等活动。 数据收集 data collection 通过不同方式汇集信息的过程。 1 根据特定的目的和要求，从一种或多种数据源选择和获取数据，并对数据进行清洗、标识、加载等数据操作，形成数据资产的数据处理活动。 2 数据存储 data storage 将数据持久化保存在硬盘等存储介质中的数据处...</description>
+    <pubDate>Mon, 30 Jun 2025 01:12:37 GMT</pubDate>
+  </item><item>
+    <title>标准之间的关系</title>
+    <link>https://hero851815.cc/%E6%A0%87%E5%87%86/%E6%A0%87%E5%87%86%E4%B9%8B%E9%97%B4%E7%9A%84%E5%85%B3%E7%B3%BB</link>
+    <guid>https://hero851815.cc/%E6%A0%87%E5%87%86/%E6%A0%87%E5%87%86%E4%B9%8B%E9%97%B4%E7%9A%84%E5%85%B3%E7%B3%BB</guid>
+    <description> 关于团体标准、企业标准、行业标准、国家标准之间的关系 定义与性质 国家标准 由国家标准化机构制定并发布 在全国范围内统一实施 分为强制性标准和推荐性标准 行业标准 由国务院行政主管部门制定并发布 在特定行业内实施 分为强制性标准和推荐性标准 企业标准 企业自行制定并在企业内部实施 满足企业特定生产、经营和管理需求 团体标准 社会团体或行业组织制定并发布 促进团体或行业内的技术进步和规范化管理 层级与关系 层级关系 国家标准具有最高法律地位 其次是行业标准、团体标准和企业标准 企业标准应符合国家标准和行业标准，不得与之相抵触 互补与协调 各类标准相互补充、相互协调 国家标准和行业标准提供统一技...</description>
+    <pubDate>Mon, 30 Jun 2025 01:12:37 GMT</pubDate>
+  </item><item>
+    <title>相关标准</title>
+    <link>https://hero851815.cc/%E6%A0%87%E5%87%86/%E7%9B%B8%E5%85%B3%E6%A0%87%E5%87%86</link>
+    <guid>https://hero851815.cc/%E6%A0%87%E5%87%86/%E7%9B%B8%E5%85%B3%E6%A0%87%E5%87%86</guid>
+    <description>交通运输 技术领域专业领域分类标准级别分类标准名称标签信息安全基础通用标准国家推荐标准GB/T 41819-2022 信息安全技术 人脸识别数据安全要求信息安全基础通用标准国家推荐标准GB/T 41773-2022 信息安全技术 步态识别数据安全要求信息安全基础通用标准国家推荐标准GB/T 39477-2020 信息安全技术 政务信息共享 数据安全技术要求分类分级基础通用标准相关行业标准JT/T 1522-2024 交通运输数据安全分级和保护要求风险评估基础通用标准相关行业标准JTT+1547-2025 交通运输数据安全风险评估指南数据脱敏基础通用标准相关行业标准JTT+1480-2023 交...</description>
+    <pubDate>Mon, 30 Jun 2025 01:12:37 GMT</pubDate>
   </item><item>
     <title>知识点</title>
-    <link>https://hero851815.xyz/%E7%9F%A5%E8%AF%86%E7%82%B9</link>
-    <guid>https://hero851815.xyz/%E7%9F%A5%E8%AF%86%E7%82%B9</guid>
+    <link>https://hero851815.cc/%E7%9F%A5%E8%AF%86%E7%82%B9</link>
+    <guid>https://hero851815.cc/%E7%9F%A5%E8%AF%86%E7%82%B9</guid>
     <description>数据安全</description>
-    <pubDate>Tue, 13 May 2025 07:33:36 GMT</pubDate>
+    <pubDate>Mon, 30 Jun 2025 01:12:37 GMT</pubDate>
+  </item><item>
+    <title>安全</title>
+    <link>https://hero851815.cc/%E8%AF%8D%E5%85%B8/A/%E5%AE%89%E5%85%A8</link>
+    <guid>https://hero851815.cc/%E8%AF%8D%E5%85%B8/A/%E5%AE%89%E5%85%A8</guid>
+    <description>定义 对某一系统，据以获得保密性、完整性、可用性、可核查性、真实性以及可靠性的性质。【来源：ISO/IEC TR 15443-1:2012 《信息技术-安全技术-安全保证框架》】 补充评论 扩展 关联词 .</description>
+    <pubDate>Mon, 30 Jun 2025 01:12:37 GMT</pubDate>
+  </item><item>
+    <title>传输</title>
+    <link>https://hero851815.cc/%E8%AF%8D%E5%85%B8/C/%E4%BC%A0%E8%BE%93</link>
+    <guid>https://hero851815.cc/%E8%AF%8D%E5%85%B8/C/%E4%BC%A0%E8%BE%93</guid>
+    <description>定义 通过信息通信设备将数据从一个网络节点传送到一个或多个网络节点的数据处理活动。【来源：GB/T 35274-2023 《信息安全技术 大数据服务安全能力要求》】 注：网络节点可以是计算机、程序、终端设备、存储器、信息系统等。 补充评论 扩展 关联词 .</description>
+    <pubDate>Mon, 30 Jun 2025 01:12:37 GMT</pubDate>
+  </item><item>
+    <title>存储</title>
+    <link>https://hero851815.cc/%E8%AF%8D%E5%85%B8/C/%E5%AD%98%E5%82%A8</link>
+    <guid>https://hero851815.cc/%E8%AF%8D%E5%85%B8/C/%E5%AD%98%E5%82%A8</guid>
+    <description>定义 数据在存储器中的保存。【来源：GB/T 5271.12-2000《信息技术 词汇 第12部分：外围设备》】 补充评论 扩展 关联词 .</description>
+    <pubDate>Mon, 30 Jun 2025 01:12:37 GMT</pubDate>
+  </item><item>
+    <title>公开</title>
+    <link>https://hero851815.cc/%E8%AF%8D%E5%85%B8/G/%E5%85%AC%E5%BC%80</link>
+    <guid>https://hero851815.cc/%E8%AF%8D%E5%85%B8/G/%E5%85%AC%E5%BC%80</guid>
+    <description>定义 向其他组织、个人或指定范围公开所控制的数据资产的数据处理活动，使其可合规地获取所公开的数据。【来源：GB/T 42574—2023《信息安全技术 个人信息处理中告知和同意的实施指南》】 个人信息的公开是指个人信息处理者将信息向不特定的人公开，让个人信息处于不特定人都可以获取的状态。若一个人只是在小范围内（如十几人的聊天群）发布一些个人信息，则不意味着公开。【来源：程啸，《个人信息保护法理解与适用》，2021】 补充评论 扩展 第二十五条 个人信息公开 关联词 .</description>
+    <pubDate>Mon, 30 Jun 2025 01:12:37 GMT</pubDate>
   </item>
     </channel>
   </rss>
