@@ -6,65 +6,65 @@
       <description>Last 10 notes on 数据安全知识库</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
-    <title>个人信息</title>
-    <link>https://hero851815.cc/%E8%AF%8D%E5%85%B8/G/%E4%B8%AA%E4%BA%BA%E4%BF%A1%E6%81%AF</link>
-    <guid>https://hero851815.cc/%E8%AF%8D%E5%85%B8/G/%E4%B8%AA%E4%BA%BA%E4%BF%A1%E6%81%AF</guid>
-    <description>定义 以电子或者其他方式记录的与已识别或者可识别的自然人有关的各种信息，不包括匿名化处理后的信息。【来源：《个人信息保护法》，2021】 注1：个人信息包括姓名、出生日期、身份证件号码、个人生物识别信息、住址、通信通讯联系方式、 通信记录和内容、账号密码、财产信息、征信信息、行踪轨迹、住宿信息、健康生理信息、交易信息等。【来源：GB/T 35273—2020《信息安全技术 个人信息安全规范》】 注2：个人信息控制者通过个人信息或其他信息加工处理后形成的信息，例如，用户画像或特征标签，能够单独或者与其他信息结合识别特定自然人身份或者反映特定自然人活动情况的，属于个人信息。【来源：GB/T 352...</description>
-    <pubDate>Thu, 10 Jul 2025 08:43:49 GMT</pubDate>
+    <title>数据安全知识库</title>
+    <link>https://hero851815.cc/</link>
+    <guid>https://hero851815.cc/</guid>
+    <description>全面的数据安全术语词典、技术指南和标准规范</description>
+    <pubDate>Thu, 10 Jul 2025 09:09:59 GMT</pubDate>
   </item><item>
-    <title>个人信息处理</title>
-    <link>https://hero851815.cc/%E8%AF%8D%E5%85%B8/G/%E4%B8%AA%E4%BA%BA%E4%BF%A1%E6%81%AF%E5%A4%84%E7%90%86</link>
-    <guid>https://hero851815.cc/%E8%AF%8D%E5%85%B8/G/%E4%B8%AA%E4%BA%BA%E4%BF%A1%E6%81%AF%E5%A4%84%E7%90%86</guid>
-    <description>定义 对个人信息的收集 、存储 、使用、加工 、传输 、提供、公开 、删除等行为。【来源：《个人信息保护法》，2021】 补充评论 程啸老师在《个人信息保护法理解与适用》一书中记载“虽然在《个人信息保护法》的审议过程中，一些委员、代表和专家提出应当增加对个人信息处理活动的列举，如增加“记录”“删除”“检索”等。最终本条第2款只是增加了“删除”这一类处理活动，没有增加其他的类型。这主要是考虑到个人信息处理活动的类型很多，对于不是特别典型和重要的处理活动，可以用“等”字涵盖，无须一一列举。我国《个人信息保护法》并未限定个人信息处理的具体方式，也就是说，并不需要考虑到个人信息处理的媒介和方式，无论是...</description>
-    <pubDate>Thu, 10 Jul 2025 08:43:49 GMT</pubDate>
+    <title>技术措施</title>
+    <link>https://hero851815.cc/%E6%89%A9%E5%B1%95/%E6%8A%80%E6%9C%AF%E6%8E%AA%E6%96%BD</link>
+    <guid>https://hero851815.cc/%E6%89%A9%E5%B1%95/%E6%8A%80%E6%9C%AF%E6%8E%AA%E6%96%BD</guid>
+    <description>数据接口安全 防护措施 1.</description>
+    <pubDate>Thu, 10 Jul 2025 09:09:59 GMT</pubDate>
   </item><item>
-    <title>个人信息处理者</title>
-    <link>https://hero851815.cc/%E8%AF%8D%E5%85%B8/G/%E4%B8%AA%E4%BA%BA%E4%BF%A1%E6%81%AF%E5%A4%84%E7%90%86%E8%80%85</link>
-    <guid>https://hero851815.cc/%E8%AF%8D%E5%85%B8/G/%E4%B8%AA%E4%BA%BA%E4%BF%A1%E6%81%AF%E5%A4%84%E7%90%86%E8%80%85</guid>
-    <description>定义 在个人信息处理活动中自主决定处理目的、处理方式的组织、个人。【来源：《个人信息保护法》，2021】 补充评论 注：本概念与 GB/T 35273—2020 中的“个人信息控制者”所指一致。 中国法下的个人信息处理者等于GDPR中的数据控制者（data conrtoller），而GDPR的数据处理者（data processor）则在中国法下对应的是“受托处理者”。这很容易在做比较法研究时让人搞混。因此，部分文件在翻译时为了避免混淆，会采用“handler”来翻译“处理者”。 中国法为什么要采用“处理者”这一称呼，目前众说纷纭，其中一种说法是为了配合《民法典》中使用“处理”概念来囊括对信息...</description>
-    <pubDate>Thu, 10 Jul 2025 08:43:49 GMT</pubDate>
+    <title>数据分级规则</title>
+    <link>https://hero851815.cc/%E6%89%A9%E5%B1%95/%E6%95%B0%E6%8D%AE%E5%88%86%E7%BA%A7%E8%A7%84%E5%88%99</link>
+    <guid>https://hero851815.cc/%E6%89%A9%E5%B1%95/%E6%95%B0%E6%8D%AE%E5%88%86%E7%BA%A7%E8%A7%84%E5%88%99</guid>
+    <description>教育数据分级规则 JY/T XXXX-XXXX 教育数据分类分级指南（征求意见稿） 级别定义识别规则（满足其中一个条件）L5核心数据是指在教育系统内具有较高覆盖度或达到较大规模的重要数据,一旦遭到泄露、篡改、破坏或者非法获取、非法使用、非法共享，可能直接影响政治安全。1.</description>
+    <pubDate>Thu, 10 Jul 2025 09:09:59 GMT</pubDate>
   </item><item>
-    <title>个人信息转移</title>
-    <link>https://hero851815.cc/%E8%AF%8D%E5%85%B8/G/%E4%B8%AA%E4%BA%BA%E4%BF%A1%E6%81%AF%E8%BD%AC%E7%A7%BB</link>
-    <guid>https://hero851815.cc/%E8%AF%8D%E5%85%B8/G/%E4%B8%AA%E4%BA%BA%E4%BF%A1%E6%81%AF%E8%BD%AC%E7%A7%BB</guid>
-    <description>定义 个人信息主体请求处理其个人信息的个人信息处理者，将其所处理的个人信息转移至个人信息主体指定的其他个人信息处理者的过程。【来源：《数据安全技术 基于个人请求的个人信息转移要求》（征求意见稿），2024】 补充评论 扩展资料 个人信息流转：对外提供与个人信息转移权的多维解析 关联词 .</description>
-    <pubDate>Thu, 10 Jul 2025 08:43:49 GMT</pubDate>
+    <title>数据泄露</title>
+    <link>https://hero851815.cc/%E6%89%A9%E5%B1%95/%E6%95%B0%E6%8D%AE%E6%B3%84%E9%9C%B2</link>
+    <guid>https://hero851815.cc/%E6%89%A9%E5%B1%95/%E6%95%B0%E6%8D%AE%E6%B3%84%E9%9C%B2</guid>
+    <description>GDPR 通用数据保护条例 第4条 第12款 “个人数据泄露”是指由于违反安全政策而导致传输、储存、处理中的个人数据被意外或非法损毁、丢失、更改或未经同意而被公开或访问。 NIST 美国国家标准与技术研究院 NIST SP 800-53 中的相关描述 NIST SP 800-53 没有为“数据泄露”提供一个单独的、明确的定义条目，而是通过“安全事件”（Security Incident）或“隐私事件”（Privacy Incident）的概念来涵盖数据泄露的场景。在 Appendix B - Glossary 中，NIST 定义了 Security Incident，而数据泄露通常被视为一种特...</description>
+    <pubDate>Thu, 10 Jul 2025 09:09:59 GMT</pubDate>
   </item><item>
-    <title>个性化展示</title>
-    <link>https://hero851815.cc/%E8%AF%8D%E5%85%B8/G/%E4%B8%AA%E6%80%A7%E5%8C%96%E5%B1%95%E7%A4%BA</link>
-    <guid>https://hero851815.cc/%E8%AF%8D%E5%85%B8/G/%E4%B8%AA%E6%80%A7%E5%8C%96%E5%B1%95%E7%A4%BA</guid>
-    <description>定义 基于特定个人信息主体的网络浏览历史、兴趣爱好、消费记录和习惯等个人信息，向该个人信息主体展示信息内容、提供商品或服务的搜索结果等活动。 注：基于个人信息主体所选择的特定地理位置进行展示、搜索结果排序，且不因个人信息主体身份不同展示不一样的内容和搜索结果排序，则属于不针对其个人特征的选项。 【来源：GB/T 35273—2020《信息安全标准 个人信息安全规范》】 补充评论 其与其他相近概念的比较可参见个性化推荐 扩展资料 关联词 个性化推荐 个性化推送 定向推送 算法推荐 自动化决策 用户画像 .</description>
-    <pubDate>Thu, 10 Jul 2025 08:43:49 GMT</pubDate>
+    <title>标准之间的关系</title>
+    <link>https://hero851815.cc/%E6%A0%87%E5%87%86/%E6%A0%87%E5%87%86%E4%B9%8B%E9%97%B4%E7%9A%84%E5%85%B3%E7%B3%BB</link>
+    <guid>https://hero851815.cc/%E6%A0%87%E5%87%86/%E6%A0%87%E5%87%86%E4%B9%8B%E9%97%B4%E7%9A%84%E5%85%B3%E7%B3%BB</guid>
+    <description> 关于团体标准、企业标准、行业标准、国家标准之间的关系 定义与性质 国家标准 由国家标准化机构制定并发布 在全国范围内统一实施 分为强制性标准和推荐性标准 行业标准 由国务院行政主管部门制定并发布 在特定行业内实施 分为强制性标准和推荐性标准 企业标准 企业自行制定并在企业内部实施 满足企业特定生产、经营和管理需求 团体标准 社会团体或行业组织制定并发布 促进团体或行业内的技术进步和规范化管理 层级与关系 层级关系 国家标准具有最高法律地位 其次是行业标准、团体标准和企业标准 企业标准应符合国家标准和行业标准，不得与之相抵触 互补与协调 各类标准相互补充、相互协调 国家标准和行业标准提供统一技...</description>
+    <pubDate>Thu, 10 Jul 2025 09:09:59 GMT</pubDate>
   </item><item>
-    <title>个性化推荐</title>
-    <link>https://hero851815.cc/%E8%AF%8D%E5%85%B8/G/%E4%B8%AA%E6%80%A7%E5%8C%96%E6%8E%A8%E8%8D%90</link>
-    <guid>https://hero851815.cc/%E8%AF%8D%E5%85%B8/G/%E4%B8%AA%E6%80%A7%E5%8C%96%E6%8E%A8%E8%8D%90</guid>
-    <description>定义 个性化推荐是一种利用数据分析和算法技术，为用户提供量身定制内容的方式。其核心思想是根据用户的历史行为、偏好和兴趣，自动生成个性化的推荐列表，从而提升用户体验和满意度。例如，当用户在观看视频、浏览电商平台或阅读新闻时，平台所展示的内容往往精准地契合用户的近期兴趣，这正是个性化推荐技术在背后发挥作用的结果。 这种推荐方式就像朋友知道你喜欢什么，主动给你推荐一样，不仅能提高用户的购物体验，还能帮助用户发现很多新的东西，省去很多寻找的时间。但是，与此同时，在用户享受这种“量身定制”的信息服务的同时，也存在一些隐患。例如“大数据杀熟”对于消费者权利的侵害，有譬如对于个人信息的处理引发对于隐私/个人...</description>
-    <pubDate>Thu, 10 Jul 2025 08:43:49 GMT</pubDate>
+    <title>相关标准</title>
+    <link>https://hero851815.cc/%E6%A0%87%E5%87%86/%E7%9B%B8%E5%85%B3%E6%A0%87%E5%87%86</link>
+    <guid>https://hero851815.cc/%E6%A0%87%E5%87%86/%E7%9B%B8%E5%85%B3%E6%A0%87%E5%87%86</guid>
+    <description>1 基础共性标准 1.1 术语定义 JR/T 0236-2021 金融大数据 术语GB/T 25069-2022《信息安全技术 术语》 1.2 数据安全框架 GB/T 42570-2023《信息安全技术 区块链技术安全框架》 2 安全管理标准 2.1 数据安全规范 2.1.1 数据安全通用要求 JT/T 1522-2024《交通运输数据安全分级和保护要求》GBT+43697-2024《数据安全技术 数据分类分级规则》GB/T 45577-2025《数据安全技术 数据安全风险评估方法》 2.1.2 个人信息保护 GB/T 41391-2022《信息安全技术 移动互联网应用程序（App） 收集个人...</description>
+    <pubDate>Thu, 10 Jul 2025 09:09:59 GMT</pubDate>
   </item><item>
-    <title>个性化推送</title>
-    <link>https://hero851815.cc/%E8%AF%8D%E5%85%B8/G/%E4%B8%AA%E6%80%A7%E5%8C%96%E6%8E%A8%E9%80%81</link>
-    <guid>https://hero851815.cc/%E8%AF%8D%E5%85%B8/G/%E4%B8%AA%E6%80%A7%E5%8C%96%E6%8E%A8%E9%80%81</guid>
-    <description>定义 基于对特定用户或用户群体进行个性化用户画像实现的信息推送，信息推送的展现形式包括但不限于推荐、列表页面、弹窗等。【来源：T/TAF 138—2022《App 推荐算法用户权益保护技术要求及测评规范》】 补充评论 其与其他相近概念的比较可参见个性化推荐 扩展资料 关联词 个性化推荐 个性化展示 定向推送 算法推荐 自动化决策 用户画像 .</description>
-    <pubDate>Thu, 10 Jul 2025 08:43:49 GMT</pubDate>
+    <title>安全</title>
+    <link>https://hero851815.cc/%E8%AF%8D%E5%85%B8/A/%E5%AE%89%E5%85%A8</link>
+    <guid>https://hero851815.cc/%E8%AF%8D%E5%85%B8/A/%E5%AE%89%E5%85%A8</guid>
+    <description>定义 对某一系统，据以获得保密性、完整性、可用性、可核查性、真实性以及可靠性的性质。【来源：ISO/IEC TR 15443-1:2012 《信息技术-安全技术-安全保证框架》】 补充评论 扩展资料 关联词 .</description>
+    <pubDate>Thu, 10 Jul 2025 09:09:59 GMT</pubDate>
   </item><item>
-    <title>公开</title>
-    <link>https://hero851815.cc/%E8%AF%8D%E5%85%B8/G/%E5%85%AC%E5%BC%80</link>
-    <guid>https://hero851815.cc/%E8%AF%8D%E5%85%B8/G/%E5%85%AC%E5%BC%80</guid>
-    <description>定义 向其他组织、个人或指定范围公开所控制的数据资产的数据处理活动，使其可合规地获取所公开的数据。【来源：GB/T 35274-2023《信息安全技术 大数据服务安全能力要求》】 个人信息的公开是指个人信息处理者将信息向不特定的人公开，让个人信息处于不特定人都可以获取的状态。若一个人只是在小范围内（如十几人的聊天群）发布一些个人信息，则不意味着公开。【来源：程啸，《个人信息保护法理解与适用》，2021】 补充评论 扩展资料 第二十五条 个人信息公开 关联词 .</description>
-    <pubDate>Thu, 10 Jul 2025 08:43:49 GMT</pubDate>
+    <title>标识符</title>
+    <link>https://hero851815.cc/%E8%AF%8D%E5%85%B8/B/%E6%A0%87%E8%AF%86%E7%AC%A6</link>
+    <guid>https://hero851815.cc/%E8%AF%8D%E5%85%B8/B/%E6%A0%87%E8%AF%86%E7%AC%A6</guid>
+    <description>定义 微数据中的一个或多个属性 ，可以实现对个人信息主体的唯一识別。 注：标识符分为直接标识符和准标识符。 【来源：GB/T 37964-2019 《信息安全技术 个人信息去标识化指南》】 补充评论 扩展资料 关联词 .</description>
+    <pubDate>Thu, 10 Jul 2025 09:09:59 GMT</pubDate>
   </item><item>
-    <title>公开披露</title>
-    <link>https://hero851815.cc/%E8%AF%8D%E5%85%B8/G/%E5%85%AC%E5%BC%80%E6%8A%AB%E9%9C%B2</link>
-    <guid>https://hero851815.cc/%E8%AF%8D%E5%85%B8/G/%E5%85%AC%E5%BC%80%E6%8A%AB%E9%9C%B2</guid>
-    <description>定义 向社会或不特定人群发布信息的行为。【来源：GB/T 35273—2020 《信息安全技术 个人信息安全规范》】 补充评论 扩展资料 第二十五条 个人信息公开 关联词 .</description>
-    <pubDate>Thu, 10 Jul 2025 08:43:49 GMT</pubDate>
+    <title>传输</title>
+    <link>https://hero851815.cc/%E8%AF%8D%E5%85%B8/C/%E4%BC%A0%E8%BE%93</link>
+    <guid>https://hero851815.cc/%E8%AF%8D%E5%85%B8/C/%E4%BC%A0%E8%BE%93</guid>
+    <description>定义 通过信息通信设备将数据从一个网络节点传送到一个或多个网络节点的数据处理活动。 注：网络节点可以是计算机、程序、终端设备、存储器、信息系统等。 【来源：GB/T 35274-2023 《信息安全技术 大数据服务安全能力要求》】 补充评论 扩展资料 关联词 .</description>
+    <pubDate>Thu, 10 Jul 2025 09:09:59 GMT</pubDate>
   </item><item>
-    <title>共享</title>
-    <link>https://hero851815.cc/%E8%AF%8D%E5%85%B8/G/%E5%85%B1%E4%BA%AB</link>
-    <guid>https://hero851815.cc/%E8%AF%8D%E5%85%B8/G/%E5%85%B1%E4%BA%AB</guid>
-    <description>定义 个人信息控制者向其他控制者提供个人信息，且双方分别对个人信息拥有独立控制权的过程。【来源：GB/T 35273—2020《信息安全技术 个人信息安全规范》】 补充评论 “提供”行为还经常容易和“共享”与“转移/转让”之间产生混淆。这三个概念都是用来描述数据从一方流向另一方的过程。GB/T 35273—2020《信息安全技术 个人信息安全规范》规定了“共享”和“转让/转移”，而《个人信息保护法》规定了“提供”。而根据GB/T 42574—2023《信息安全技术 个人信息处理中告知和同意的实施指南》上述的定义，我们倾向于认为“共享”和”转让”都是“提供”的方式之一。其中，转让是指个人信息控制...</description>
-    <pubDate>Thu, 10 Jul 2025 08:43:49 GMT</pubDate>
+    <title>存储</title>
+    <link>https://hero851815.cc/%E8%AF%8D%E5%85%B8/C/%E5%AD%98%E5%82%A8</link>
+    <guid>https://hero851815.cc/%E8%AF%8D%E5%85%B8/C/%E5%AD%98%E5%82%A8</guid>
+    <description>定义 数据在存储器中的保存。【来源：GB/T 5271.12-2000《信息技术 词汇 第12部分：外围设备》】 补充评论 扩展资料 关联词 .</description>
+    <pubDate>Thu, 10 Jul 2025 09:09:59 GMT</pubDate>
   </item>
     </channel>
   </rss>
