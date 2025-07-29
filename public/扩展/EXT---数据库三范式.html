@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="en"><head><title>数据库三范式 - 专业术语词典与技术指南</title><meta charset="utf-8"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted Grotesk:wght@400;700&amp;family=Source Sans Pro:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="og:site_name" content="数据安全知识库"/><meta property="og:title" content="数据库三范式 - 专业术语词典与技术指南"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="数据库三范式 - 专业术语词典与技术指南"/><meta name="twitter:description" content="三大范式 第一范式（1NF） 第一范式 (1NF) 确保数据库表的结构以更易于管理和查询的方式组织。 如果关系中的每个属性都是单值属性，或者不包含任何复合或多值属性，则该关系符合第一范式。 这是关系数据库设计中减少冗余、提高数据完整性、减少异常的第一步，也是必不可少的一步。 如果满足以下条件，则称关系（表）符合第一范式（1NF）： 所有属性（列）仅包含原子（不可分割）值。 每列包含单一类型的值。 每条记录（行）都是唯一的，这意味着它可以通过主键来识别。 任何行中都没有重复的组或数组。 DBMS 中的第一范式 (1NF) 规则 为了遵循数据库中的第一范式（1NF），必须遵循以下简单规则： 每列都..."/><meta property="og:description" content="三大范式 第一范式（1NF） 第一范式 (1NF) 确保数据库表的结构以更易于管理和查询的方式组织。 如果关系中的每个属性都是单值属性，或者不包含任何复合或多值属性，则该关系符合第一范式。 这是关系数据库设计中减少冗余、提高数据完整性、减少异常的第一步，也是必不可少的一步。 如果满足以下条件，则称关系（表）符合第一范式（1NF）： 所有属性（列）仅包含原子（不可分割）值。 每列包含单一类型的值。 每条记录（行）都是唯一的，这意味着它可以通过主键来识别。 任何行中都没有重复的组或数组。 DBMS 中的第一范式 (1NF) 规则 为了遵循数据库中的第一范式（1NF），必须遵循以下简单规则： 每列都..."/><meta property="og:image:alt" content="三大范式 第一范式（1NF） 第一范式 (1NF) 确保数据库表的结构以更易于管理和查询的方式组织。 如果关系中的每个属性都是单值属性，或者不包含任何复合或多值属性，则该关系符合第一范式。 这是关系数据库设计中减少冗余、提高数据完整性、减少异常的第一步，也是必不可少的一步。 如果满足以下条件，则称关系（表）符合第一范式（1NF）： 所有属性（列）仅包含原子（不可分割）值。 每列包含单一类型的值。 每条记录（行）都是唯一的，这意味着它可以通过主键来识别。 任何行中都没有重复的组或数组。 DBMS 中的第一范式 (1NF) 规则 为了遵循数据库中的第一范式（1NF），必须遵循以下简单规则： 每列都..."/><meta property="twitter:domain" content="hero851815.cc"/><meta property="og:url" content="https://hero851815.cc/扩展/EXT---数据库三范式"/><meta property="twitter:url" content="https://hero851815.cc/扩展/EXT---数据库三范式"/><link rel="icon" href="../static/icon.png"/><meta name="description" content="三大范式 第一范式（1NF） 第一范式 (1NF) 确保数据库表的结构以更易于管理和查询的方式组织。 如果关系中的每个属性都是单值属性，或者不包含任何复合或多值属性，则该关系符合第一范式。 这是关系数据库设计中减少冗余、提高数据完整性、减少异常的第一步，也是必不可少的一步。 如果满足以下条件，则称关系（表）符合第一范式（1NF）： 所有属性（列）仅包含原子（不可分割）值。 每列包含单一类型的值。 每条记录（行）都是唯一的，这意味着它可以通过主键来识别。 任何行中都没有重复的组或数组。 DBMS 中的第一范式 (1NF) 规则 为了遵循数据库中的第一范式（1NF），必须遵循以下简单规则： 每列都..."/><meta name="generator" content="Quartz"/><link href="../index.css" rel="stylesheet" type="text/css" spa-preserve/><style>.expand-button {
+  position: absolute;
+  display: flex;
+  float: right;
+  padding: 0.4rem;
+  margin: 0.3rem;
+  right: 0;
+  color: var(--gray);
+  border-color: var(--dark);
+  background-color: var(--light);
+  border: 1px solid;
+  border-radius: 5px;
+  opacity: 0;
+  transition: 0.2s;
+}
+.expand-button > svg {
+  fill: var(--light);
+  filter: contrast(0.3);
+}
+.expand-button:hover {
+  cursor: pointer;
+  border-color: var(--secondary);
+}
+.expand-button:focus {
+  outline: 0;
+}
+
+pre:hover > .expand-button {
+  opacity: 1;
+  transition: 0.2s;
+}
+
+#mermaid-container {
+  position: fixed;
+  contain: layout;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: none;
+  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.5);
+}
+#mermaid-container.active {
+  display: inline-block;
+}
+#mermaid-container > #mermaid-space {
+  border: 1px solid var(--lightgray);
+  background-color: var(--light);
+  border-radius: 5px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80vh;
+  width: 80vw;
+  overflow: hidden;
+}
+#mermaid-container > #mermaid-space > .mermaid-content {
+  padding: 2rem;
+  position: relative;
+  transform-origin: 0 0;
+  transition: transform 0.1s ease;
+  overflow: visible;
+  min-height: 200px;
+  min-width: 200px;
+}
+#mermaid-container > #mermaid-space > .mermaid-content pre {
+  margin: 0;
+  border: none;
+}
+#mermaid-container > #mermaid-space > .mermaid-content svg {
+  max-width: none;
+  height: auto;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  background: var(--light);
+  border: 1px solid var(--lightgray);
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid var(--lightgray);
+  background: var(--light);
+  color: var(--dark);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: var(--bodyFont);
+  transition: all 0.2s ease;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:hover {
+  background: var(--lightgray);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:active {
+  transform: translateY(1px);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:nth-child(2) {
+  width: auto;
+  padding: 0 12px;
+  font-size: 14px;
+}
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiL2hvbWUvcnVubmVyL3dvcmsvcXVhcnR6LXJlcG8vcXVhcnR6LXJlcG8vcXVhcnR6L3F1YXJ0ei9jb21wb25lbnRzL3N0eWxlcyIsInNvdXJjZXMiOlsibWVybWFpZC5pbmxpbmUuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBR0Y7RUFDRTs7O0FBS0Y7RUFDRTtFQUNBOzs7QUFJSjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTs7QUFHRjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTtFQUNBOztBQUdGO0VBQ0U7RUFDQTs7QUFJSjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7O0FBR0Y7RUFDRTs7QUFJRjtFQUNFO0VBQ0E7RUFDQSIsInNvdXJjZXNDb250ZW50IjpbIi5leHBhbmQtYnV0dG9uIHtcbiAgcG9zaXRpb246IGFic29sdXRlO1xuICBkaXNwbGF5OiBmbGV4O1xuICBmbG9hdDogcmlnaHQ7XG4gIHBhZGRpbmc6IDAuNHJlbTtcbiAgbWFyZ2luOiAwLjNyZW07XG4gIHJpZ2h0OiAwOyAvLyBOT1RFOiByaWdodCB3aWxsIGJlIHNldCBpbiBtZXJtYWlkLmlubGluZS50c1xuICBjb2xvcjogdmFyKC0tZ3JheSk7XG4gIGJvcmRlci1jb2xvcjogdmFyKC0tZGFyayk7XG4gIGJhY2tncm91bmQtY29sb3I6IHZhcigtLWxpZ2h0KTtcbiAgYm9yZGVyOiAxcHggc29saWQ7XG4gIGJvcmRlci1yYWRpdXM6IDVweDtcbiAgb3BhY2l0eTogMDtcbiAgdHJhbnNpdGlvbjogMC4ycztcblxuICAmID4gc3ZnIHtcbiAgICBmaWxsOiB2YXIoLS1saWdodCk7XG4gICAgZmlsdGVyOiBjb250cmFzdCgwLjMpO1xuICB9XG5cbiAgJjpob3ZlciB7XG4gICAgY3Vyc29yOiBwb2ludGVyO1xuICAgIGJvcmRlci1jb2xvcjogdmFyKC0tc2Vjb25kYXJ5KTtcbiAgfVxuXG4gICY6Zm9jdXMge1xuICAgIG91dGxpbmU6IDA7XG4gIH1cbn1cblxucHJlIHtcbiAgJjpob3ZlciA+IC5leHBhbmQtYnV0dG9uIHtcbiAgICBvcGFjaXR5OiAxO1xuICAgIHRyYW5zaXRpb246IDAuMnM7XG4gIH1cbn1cblxuI21lcm1haWQtY29udGFpbmVyIHtcbiAgcG9zaXRpb246IGZpeGVkO1xuICBjb250YWluOiBsYXlvdXQ7XG4gIHotaW5kZXg6IDk5OTtcbiAgbGVmdDogMDtcbiAgdG9wOiAwO1xuICB3aWR0aDogMTAwdnc7XG4gIGhlaWdodDogMTAwdmg7XG4gIG92ZXJmbG93OiBoaWRkZW47XG4gIGRpc3BsYXk6IG5vbmU7XG4gIGJhY2tkcm9wLWZpbHRlcjogYmx1cig0cHgpO1xuICBiYWNrZ3JvdW5kOiByZ2JhKDAsIDAsIDAsIDAuNSk7XG5cbiAgJi5hY3RpdmUge1xuICAgIGRpc3BsYXk6IGlubGluZS1ibG9jaztcbiAgfVxuXG4gICYgPiAjbWVybWFpZC1zcGFjZSB7XG4gICAgYm9yZGVyOiAxcHggc29saWQgdmFyKC0tbGlnaHRncmF5KTtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1saWdodCk7XG4gICAgYm9yZGVyLXJhZGl1czogNXB4O1xuICAgIHBvc2l0aW9uOiBmaXhlZDtcbiAgICB0b3A6IDUwJTtcbiAgICBsZWZ0OiA1MCU7XG4gICAgdHJhbnNmb3JtOiB0cmFuc2xhdGUoLTUwJSwgLTUwJSk7XG4gICAgaGVpZ2h0OiA4MHZoO1xuICAgIHdpZHRoOiA4MHZ3O1xuICAgIG92ZXJmbG93OiBoaWRkZW47XG5cbiAgICAmID4gLm1lcm1haWQtY29udGVudCB7XG4gICAgICBwYWRkaW5nOiAycmVtO1xuICAgICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgICAgdHJhbnNmb3JtLW9yaWdpbjogMCAwO1xuICAgICAgdHJhbnNpdGlvbjogdHJhbnNmb3JtIDAuMXMgZWFzZTtcbiAgICAgIG92ZXJmbG93OiB2aXNpYmxlO1xuICAgICAgbWluLWhlaWdodDogMjAwcHg7XG4gICAgICBtaW4td2lkdGg6IDIwMHB4O1xuXG4gICAgICBwcmUge1xuICAgICAgICBtYXJnaW46IDA7XG4gICAgICAgIGJvcmRlcjogbm9uZTtcbiAgICAgIH1cblxuICAgICAgc3ZnIHtcbiAgICAgICAgbWF4LXdpZHRoOiBub25lO1xuICAgICAgICBoZWlnaHQ6IGF1dG87XG4gICAgICB9XG4gICAgfVxuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRyb2xzIHtcbiAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICAgIGJvdHRvbTogMjBweDtcbiAgICAgIHJpZ2h0OiAyMHB4O1xuICAgICAgZGlzcGxheTogZmxleDtcbiAgICAgIGdhcDogOHB4O1xuICAgICAgcGFkZGluZzogOHB4O1xuICAgICAgYmFja2dyb3VuZDogdmFyKC0tbGlnaHQpO1xuICAgICAgYm9yZGVyOiAxcHggc29saWQgdmFyKC0tbGlnaHRncmF5KTtcbiAgICAgIGJvcmRlci1yYWRpdXM6IDZweDtcbiAgICAgIGJveC1zaGFkb3c6IDAgMnB4IDRweCByZ2JhKDAsIDAsIDAsIDAuMSk7XG4gICAgICB6LWluZGV4OiAyO1xuXG4gICAgICAubWVybWFpZC1jb250cm9sLWJ1dHRvbiB7XG4gICAgICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICAgICAgICB3aWR0aDogMzJweDtcbiAgICAgICAgaGVpZ2h0OiAzMnB4O1xuICAgICAgICBwYWRkaW5nOiAwO1xuICAgICAgICBib3JkZXI6IDFweCBzb2xpZCB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodCk7XG4gICAgICAgIGNvbG9yOiB2YXIoLS1kYXJrKTtcbiAgICAgICAgYm9yZGVyLXJhZGl1czogNHB4O1xuICAgICAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgICAgIGZvbnQtc2l6ZTogMTZweDtcbiAgICAgICAgZm9udC1mYW1pbHk6IHZhcigtLWJvZHlGb250KTtcbiAgICAgICAgdHJhbnNpdGlvbjogYWxsIDAuMnMgZWFzZTtcblxuICAgICAgICAmOmhvdmVyIHtcbiAgICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICB9XG5cbiAgICAgICAgJjphY3RpdmUge1xuICAgICAgICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWSgxcHgpO1xuICAgICAgICB9XG5cbiAgICAgICAgLy8gU3R5bGUgdGhlIHJlc2V0IGJ1dHRvbiBkaWZmZXJlbnRseVxuICAgICAgICAmOm50aC1jaGlsZCgyKSB7XG4gICAgICAgICAgd2lkdGg6IGF1dG87XG4gICAgICAgICAgcGFkZGluZzogMCAxMnB4O1xuICAgICAgICAgIGZvbnQtc2l6ZTogMTRweDtcbiAgICAgICAgfVxuICAgICAgfVxuICAgIH1cbiAgfVxufVxuIl19 */</style><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" spa-preserve/><script src="../prescript.js" type="application/javascript" spa-preserve></script><script type="application/javascript" spa-preserve>const fetchData = fetch("../static/contentIndex.json").then(data => data.json())</script><link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://hero851815.cc/index.xml"/><meta property="og:image:width" content="1200"/><meta property="og:image:height" content="630"/><meta property="og:image" content="https://hero851815.cc/扩展/EXT---数据库三范式-og-image.webp"/><meta property="og:image:url" content="https://hero851815.cc/扩展/EXT---数据库三范式-og-image.webp"/><meta name="twitter:image" content="https://hero851815.cc/扩展/EXT---数据库三范式-og-image.webp"/><meta property="og:image:type" content="image/.webp"/></head><body data-slug="扩展/EXT---数据库三范式"><div id="quartz-root" class="page"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href="..">数据安全知识库</a></h2><div class="spacer mobile-only"></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 1rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button"><p>Search</p><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="Search for something" placeholder="Search for something"/><div class="search-layout" data-preview="true"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="Dark mode"><title>Dark mode</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="Light mode"><title>Light mode</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="Reader mode"><title>Reader mode</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a,b)=>!a.isFolder&amp;&amp;!b.isFolder||a.isFolder&amp;&amp;b.isFolder?a.displayName.localeCompare(b.displayName,void 0,{numeric:!0,sensitivity:\&quot;base\&quot;}):!a.isFolder&amp;&amp;b.isFolder?1:-1&quot;,&quot;filterFn&quot;:&quot;node=>node.slugSegment!==\&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;node=>node&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-content"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>Explorer</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div class="explorer-content" aria-expanded="false"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#"></a></li></template><template id="template-folder"><li><div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="../">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../扩展/">扩展</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>数据库三范式</a></div></nav><h1 class="article-title">数据库三范式<span class="article-subtitle"> </span><span class="article-synonyms"> </span></h1><p show-comma="true" class="content-meta"><span>21 min read</span></p></div></div><article class="popover-hint"><h1 id="三大范式">三大范式<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#三大范式" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h2 id="第一范式1nf">第一范式（1NF）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#第一范式1nf" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>第一范式 (1NF) 确保数据库表的结构以更易于管理和查询的方式组织。</p>
+<ul>
+<li>如果关系中的每个属性都是单值属性，或者不包含任何复合或多值属性，则该关系符合第一范式。</li>
+<li>这是关系数据库设计中减少冗余、提高数据完整性、减少异常的第一步，也是必不可少的一步。</li>
+</ul>
+<p>如果满足以下条件，则称关系（表）符合第一范式（1NF）：</p>
+<ul>
+<li>所有属性（列）仅包含原子（不可分割）值。</li>
+<li>每列包含单一类型的值。</li>
+<li>每条记录（行）都是唯一的，这意味着它可以通过主键来识别。</li>
+<li>任何行中都没有重复的组或数组。</li>
+</ul>
+<h3 id="dbms-中的第一范式-1nf-规则">DBMS 中的第一范式 (1NF) 规则<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#dbms-中的第一范式-1nf-规则" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>为了遵循数据库中的第一范式（1NF），必须遵循以下简单规则：</p>
+<p><strong>每列都应具有单个值</strong>
+表格中的每一列单元格只能包含一个值。任何单元格都不应包含多个值。如果一个单元格包含多个值，则该表不符合第一范式 (1NF)。</p>
+<ul>
+<li>示例：对于同一个图书 ID，如果表中有 【作家 1】、【作家 2】 和 【作家 3】 等列，则该表不符合第一范式 (1NF)，因为它重复了同一类型的信息（作家）。所有作家都应该列在单独的行中。</li>
+</ul>
+<p><strong>同一列中的所有值应为同一类型</strong>。
+每列必须存储相同类型的数据。同一列中不能混合不同类型的信息。</p>
+<ul>
+<li>例如：如果某个列用于存储出生日期 (DOB)，则不能用它来存储姓名。每种类型的信息都应该有自己的列。</li>
+</ul>
+<p><strong>每列必须具有唯一名称</strong>
+表中的每一列都必须具有唯一名称。这可以避免在检索、更新或添加数据时产生混淆。</p>
+<ul>
+<li>示例：如果两列具有相同的名称，数据库系统可能不知道使用哪一个。</li>
+</ul>
+<p><strong>数据顺序无关紧要</strong>
+在 1NF 中，数据在表中的存储顺序不会影响表的工作方式。您可以以任何方式组织行，而不会违反规则。</p>
+<h3 id="示例">示例<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#示例" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>假设有一个学生表 <code>Student</code>，结构如下：</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>学生ID</th><th>姓名</th><th>电话号码</th></tr></thead><tbody><tr><td>1</td><td>张三</td><td>123456789, 987654321</td></tr><tr><td>2</td><td>李四</td><td>555555555</td></tr></tbody></table></div>
+<p>在这个表中，<code>电话号码</code>字段包含多个号码，违反了1NF的原子性要求。为了满足1NF，需要将电话号码拆分为单独的记录或创建一个新的表。</p>
+<p><strong>满足1NF后的设计</strong>：</p>
+<p>学生表 <code>Student</code></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>学生ID</th><th>姓名</th></tr></thead><tbody><tr><td>1</td><td>张三</td></tr><tr><td>2</td><td>李四</td></tr></tbody></table></div>
+<p>电话表 <code>Phone</code></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>电话ID</th><th>学生ID</th><th>电话号码</th></tr></thead><tbody><tr><td>1</td><td>1</td><td>123456789</td></tr><tr><td>2</td><td>1</td><td>987654321</td></tr><tr><td>3</td><td>2</td><td>555555555</td></tr></tbody></table></div>
+<h2 id="第二范式2nf">第二范式（2NF）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#第二范式2nf" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>第二范式 (2NF) 基于完全函数依赖的概念。它是一种组织数据库表的方法，可以减少冗余并确保数据一致性。完全函数依赖意味着非键属性依赖于整个主键，而不仅仅是其中的一部分。</p>
+<p>对于符合 2NF 的表，它必须首先满足以下要求</p>
+<ol>
+<li>满足1NF要求：表首先必须满足第一范式（1NF），即：
+<ul>
+<li>所有列都包含单个、不可分割的值。</li>
+<li>没有重复的列组。</li>
+</ul>
+</li>
+<li>消除部分依赖：当非主属性（不是候选键的一部分）仅依赖于复合主键的一部分而不是整个键时，就会发生部分依赖。通过确保这些步骤，2NF 中的表在更新、插入和删除过程中更高效，并且更不容易出错。</li>
+</ol>
+<h3 id="什么是部分依赖">什么是部分依赖<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#什么是部分依赖" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>如果 B 在函数上依赖于 A，并且 B 可以由 A 的任何其他真子集确定，则FD（函数依赖）A<span>→</span>B 恰好是部分依赖。</p>
+<p>换句话说，如果您有一个复合键（由多个属性组成的主键），并且一个属性仅依赖于该复合键的子集，而不是整个键，则被视为部分依赖。</p>
+<p>每当非主属性在功能上依赖于给定候选键的一部分时，就会发生部分依赖。</p>
+<p>员工关系表StaffBranch：</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>staffNo</th><th>sName</th><th>position</th><th>salary</th><th>branchNo</th></tr></thead><tbody><tr><td>SL21</td><td>Tannu</td><td>Manager</td><td>30000</td><td>B005</td></tr><tr><td>SG37</td><td>Leela</td><td>Assistant</td><td>12000</td><td>B003</td></tr><tr><td>SG14</td><td>Henry</td><td>Supervisor</td><td>18000</td><td>B003</td></tr><tr><td>SA9</td><td>Suresh</td><td>Assistant</td><td>9000</td><td>B007</td></tr></tbody></table></div>
+<p>在给定的关系 StaffBranch 中，我们有函数依赖关系：</p>
+<ul>
+<li>staffNo, sName → branchNo.</li>
+</ul>
+<p>这意味着 staffNo 和 sName 的组合决定了 branchNo。</p>
+<p>branchNo 在功能上也依赖于复合键的子集，即 staffNo。这意味着 branchNo 可以仅通过 staffNo 来确定。</p>
+<ul>
+<li>员工编号 → 分行编号</li>
+</ul>
+<p>这是一个部分依赖，因为 branchNo 仅依赖于复合键（staffNo，sName）的一部分，而不是整个键。</p>
+<h3 id="示例-1">示例<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#示例-1" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>假设有一个订单详情表 <code>OrderDetail</code>，结构如下：</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>订单ID</th><th>商品ID</th><th>商品名称</th><th>数量</th><th>单价</th></tr></thead><tbody><tr><td>1001</td><td>A01</td><td>苹果</td><td>10</td><td>2.5</td></tr><tr><td>1001</td><td>A02</td><td>橙子</td><td>5</td><td>3.0</td></tr><tr><td>1002</td><td>A01</td><td>苹果</td><td>7</td><td>2.5</td></tr></tbody></table></div>
+<p>在上述表中，主键是复合主键 <code>(订单ID, 商品ID)</code>。<code>商品名称</code>和<code>单价</code>只依赖于复合主键中的<code>商品ID</code>，而不是整个主键，存在部分依赖，违反了2NF。</p>
+<p><strong>满足 2NF后的设计：</strong></p>
+<p>订单详情表 <code>OrderDetail</code></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>订单ID</th><th>商品ID</th><th>数量</th></tr></thead><tbody><tr><td>1001</td><td>A01</td><td>10</td></tr><tr><td>1001</td><td>A02</td><td>5</td></tr><tr><td>1002</td><td>A01</td><td>7</td></tr></tbody></table></div>
+<p>商品表 <code>Product</code></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>商品ID</th><th>商品名称</th><th>单价</th></tr></thead><tbody><tr><td>A01</td><td>苹果</td><td>2.5</td></tr><tr><td>A02</td><td>橙子</td><td>3.0</td></tr></tbody></table></div>
+<h3 id="第二范式的局限性">第二范式的局限性<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#第二范式的局限性" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>虽然第二范式（2NF）解决了部分依赖关系并有助于减少冗余，但它也有一些局限性：</p>
+<ol>
+<li>
+<p>无法处理传递依赖关系：2NF 确保非主键属性完全依赖于整个主键，但它无法处理传递依赖关系。在传递依赖关系中，一个属性依赖于另一个非主键属性。</p>
+<ul>
+<li>例如，如果 A → B 且 B → C，则 A 间接决定 C。这会导致进一步的冗余和异常。</li>
+</ul>
+</li>
+<li>
+<p>无法确保优化：尽管 2NF 消除了部分依赖关系，但它仍可能在数据中留下一些冗余，尤其是在处理更大、更复杂的数据集时。它无法保证数据库的结构最高效或最优化。</p>
+</li>
+<li>
+<p>处理多属性键的复杂性：处理复合主键（由多个属性组成的键）时，确保完全依赖关系仍然会导致设计复杂。需要进一步的规范化步骤（第三范式或3NF）来解决传递依赖关系并实现更好的数据组织。</p>
+</li>
+<li>
+<p>对于某些用例来说是不够的：虽然 2NF 在某些情况下有助于减少冗余，但在数据完整性和效率至关重要的实际应用中，可能需要额外的规范化（如 3NF）来解决更复杂的依赖关系并优化数据存储和检索。</p>
+</li>
+</ol>
+<h2 id="第三范式3nf">第三范式（3NF）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#第三范式3nf" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>第三范式 (3NF )建立在第一范式 (1NF) 和第二范式 (2NF) 的基础上。满足 3NF 可确保数据库结构不受传递依赖的影响，从而降低数据异常的可能性。即使 2NF 中的表与 1NF 相比冗余度有所降低，它们仍然可能遇到更新异常等问题。</p>
+<p>如果一个关系满足以下两个条件，则它符合第三范式（3NF）：</p>
+<ol>
+<li>它符合第二范式（2NF）：这意味着该表没有部分依赖关系（即，没有非素数属性依赖于候选键的一部分）。</li>
+<li>非主键属性不存在传递依赖：简单来说，任何非键属性都不应依赖于其他非键属性。相反，所有非键属性都应该直接依赖于主键。</li>
+</ol>
+<h3 id="理解传递依赖">理解传递依赖<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#理解传递依赖" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>传递依赖是指一个非主属性依赖于另一个非主属性，而不是直接依赖于主键。这会导致数据库出现冗余和不一致。</p>
+<p>例如，如果属性之间存在以下关系：</p>
+<ul>
+<li>A <span>→</span> B（A 决定 B）</li>
+<li>B <span>→</span> C（B 决定 C）</li>
+</ul>
+<p>这意味着A通过B间接确定C，从而产生传递依赖关系。3NF 消除了这些传递依赖关系，以确保非键属性仅直接依赖于主键。</p>
+<h3 id="示例-2">示例<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#示例-2" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>假如有一张候选表<code>CandidateTable</code>，结构如下：</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>CAND_NO</th><th>CAND_NAME</th><th>CAND_STATE</th><th>CAND_COUNTRY</th><th>CAND_AGE</th></tr></thead><tbody><tr><td>1</td><td>Amayra</td><td>West Bengal</td><td>India</td><td>18</td></tr><tr><td>2</td><td>Rihaan</td><td>Haryana</td><td>India</td><td>17</td></tr><tr><td>3</td><td>Manya</td><td>Haryana</td><td>India</td><td>19</td></tr></tbody></table></div>
+<ol>
+<li><strong>函数依赖集</strong>：</li>
+</ol>
+<p>函数依赖关系集如下：</p>
+<ul>
+<li>CAND_NO → CAND_NAME</li>
+<li>CAND_NO → CAND_STATE</li>
+<li>CAND_STATE → CAND_COUNTRY</li>
+<li>CAND_NO → CAND_AGE</li>
+</ul>
+<ol start="2">
+<li><strong>确定候选键</strong>：</li>
+</ol>
+<p>此关系的候选键是{CAND_NO}，因为CAND_NO唯一标识表中的所有其他属性。</p>
+<ol start="3">
+<li><strong>识别传递依赖</strong>：</li>
+</ol>
+<p>这里的问题源于CAND_NO和CAND_COUNTRY之间的传递依赖关系：</p>
+<ul>
+<li>CAND_NO → CAND_STATE</li>
+<li>CAND_STATE → CAND_COUNTRY
+这意味着CAND_COUNTRY通过CAND_STATE传递依赖于CAND_NO，这违反了第三范式 (3NF)规则，该规则规定非主属性（非键属性）不应传递依赖于主键。</li>
+</ul>
+<ol start="4">
+<li><strong>将关系转换为 3NF：</strong>
+为了消除传递依赖并确保关系符合3NF，我们将原始CANDIDATE关系分解为两个独立的关系：</li>
+</ol>
+<ul>
+<li>CANDIDATE：这将存储有关候选人的信息，包括他们的CAND_NO、CAND_NAME、CAND_STATE和CAND_AGE</li>
+<li>STATE_COUNTRY：此关系将存储有关各州及其各自国家的信息CAND_STATE和CAND_COUNTRY</li>
+</ul>
+<p><strong>满足 3NF后的设计：</strong></p>
+<p>CANDIDATE（CAND_NO、CAND_NAME、CAND_STATE、CAND_AGE）
+STATE_COUNTRY (CAND_STATE，CAND_COUNTRY)</p>
+<p>候选人表<code>CANDIDATE</code></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>CAND_NO</th><th>CAND_NAME</th><th>CAND_STATE</th><th>CAND_AGE</th></tr></thead><tbody><tr><td>1</td><td>Amayra</td><td>West Bengal</td><td>18</td></tr><tr><td>2</td><td>Rihaan</td><td>Haryana</td><td>17</td></tr><tr><td>3</td><td>Manya</td><td>Haryana</td><td>19</td></tr></tbody></table></div>
+<p>州/国家表<code>STATE_COUNTRY</code></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>CAND_STATE</th><th>CAND_COUNTRY</th></tr></thead><tbody><tr><td>West Bengal</td><td>India</td></tr><tr><td>Haryana</td><td>India</td></tr></tbody></table></div>
+<p><strong>这种分解为何有效：</strong>
+CANDIDATE关系现在不再具有传递依赖关系。在此关系中，CAND_STATE不再决定CAND_COUNTRY 。
+STATE_COUNTRY关系单独处理CAND_STATE → CAND_COUNTRY依赖关系，确保所有数据现在都以满足3NF的方式组织。</p>
+<h3 id="为什么3nf很重要">为什么3NF很重要<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#为什么3nf很重要" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ol>
+<li>
+<p>消除冗余：3NF通过确保非素数属性（不属于任何候选键的属性）直接依赖于主键而不是其他非素数属性，帮助消除不必要的数据重复。</p>
+</li>
+<li>
+<p>防止异常： 3NF中的表不存在常见异常，例如：</p>
+<ul>
+<li>插入异常：无法插入数据，而无需插入不需要的或多余的数据。</li>
+<li>更新异常：当一个地方发生变化时，需要更新多行数据。</li>
+<li>删除异常：删除记录时意外丢失数据。</li>
+</ul>
+</li>
+<li>
+<p>保留功能依赖关系：3NF确保保留所有功能依赖关系，这意味着维护属性之间的关系。</p>
+</li>
+<li>
+<p>无损分解：当分解关系以实现3NF时，分解应该是无损的，这意味着在规范化的过程中不会丢失任何信息。</p>
+</li>
+</ol>
+<h2 id="总结">总结<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#总结" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li><strong>第一范式（1NF）</strong>： 确保每个字段的值都是原子性的，不可再分。</li>
+<li><strong>第二范式（2NF）</strong>： 在满足 1NF的基础上，消除部分依赖，确保非主键字段完全依赖于主键（确保表中的每列都和主键相关）。</li>
+<li><strong>第三范式（3NF）</strong>： 在满足 2NF的基础上，消除传递依赖，确保非主键字段直接依赖于主键（确保每列都和主键列直接相关，而不是间接相关）。</li>
+</ul>
+<h1 id="破坏三范式">破坏三范式<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#破坏三范式" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p>在实际工作中，尽管遵循数据库的三大范式（1NF、2NF、3NF）有助于提高数据的一致性和减少冗余，但在某些情况下，为了满足性能、简化设计或特定业务需求，我们可能需要违反这些范式。</p>
+<p>下面列举了一些常见的破坏三范式的原因及对应的示例。</p>
+<h2 id="性能优化">性能优化<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#性能优化" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>在高并发、大数据量的应用场景中，严格遵循三范式可能导致频繁的联表查询，增加查询时间和系统负载。为了提高查询性能，设计者可能会通过冗余数据来减少联表操作。</p>
+<p>假设有一个电商系统，包含订单表Orders和用户表Users。在严格3NF设计中，订单表只存储用户ID，需要通过联表查询获取用户的详细信息。</p>
+<p>但是，为了查询性能，我们通常会在订单表中冗余存储<code>用户姓名</code>和<code>用户地址</code>等信息，因此，查询订单信息时无需联表查询Users 表，从而提升查询速度。</p>
+<p><strong>破坏 3NF后的设计：</strong></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>订单ID</th><th>用户ID</th><th>用户姓名</th><th>用户地址</th><th>订单日期</th><th>总金额</th></tr></thead><tbody><tr><td>1001</td><td>U01</td><td>张三</td><td>北京市</td><td>2023-10-01</td><td>500元</td></tr><tr><td>1002</td><td>U02</td><td>李四</td><td>上海市</td><td>2023-10-02</td><td>300元</td></tr></tbody></table></div>
+<h2 id="简化查询和开发">简化查询和开发<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#简化查询和开发" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>严格规范化可能导致数据库结构过于复杂，增加开发和维护的难度，为了简化查询逻辑和减少开发复杂度，我们也可能会选择适当的冗余。</p>
+<p>比如，在内容管理系统（CMS）中，文章表Articles和分类表Categories通常是独立的，如果频繁需要显示文章所属的分类名称，联表查询可能增加复杂性。因此，通过在Articles表中直接存储 分类名称，可以简化前端展示逻辑，减少开发工作量。</p>
+<p><strong>破坏 3NF后的设计：</strong></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>文章ID</th><th>标题</th><th>内容</th><th>分类ID</th><th>分类名称</th></tr></thead><tbody><tr><td>A01</td><td>文章一</td><td>…</td><td>C01</td><td>技术</td></tr><tr><td>A02</td><td>文章二</td><td>…</td><td>C02</td><td>生活</td></tr></tbody></table></div>
+<h2 id="报表和数据仓库">报表和数据仓库<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#报表和数据仓库" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>在数据仓库和报表系统中，通常需要快速读取和聚合大量数据。为了优化查询性能和数据分析，可能会采用冗余的数据结构，甚至使用星型或雪花型模式，这些模式并不完全符合三范式。</p>
+<p>在销售数据仓库中，为了快速生成销售报表，可能会创建一个包含维度信息的事实表。</p>
+<p><strong>破坏 3NF后的设计：</strong></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>销售ID</th><th>产品ID</th><th>产品名称</th><th>类别</th><th>销售数量</th><th>销售金额</th><th>销售日期</th></tr></thead><tbody><tr><td>S01</td><td>P01</td><td>手机</td><td>电子</td><td>100</td><td>50000元</td><td>2023-10-01</td></tr><tr><td>S02</td><td>P02</td><td>书籍</td><td>教育</td><td>200</td><td>20000元</td><td>2023-10-02</td></tr></tbody></table></div>
+<p>在事实表中直接存储<code>产品名称</code>和<code>类别</code>，避免了需要联表查询维度表，提高了报表生成的效率。</p>
+<h2 id="特殊业务需求">特殊业务需求<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#特殊业务需求" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>在某些业务场景下，可能需要快速响应特定的查询或操作，这时通过适当的冗余设计可以满足业务需求。</p>
+<p>比如，在实时交易系统中，为了快速计算用户的账户余额，可能会在用户表中直接存储当前余额，而不是每次交易时都计算。</p>
+<p><strong>破坏 3NF后的设计：</strong></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>用户ID</th><th>用户名</th><th>当前余额</th></tr></thead><tbody><tr><td>U01</td><td>王五</td><td>10000元</td></tr><tr><td>U02</td><td>赵六</td><td>5000元</td></tr></tbody></table></div>
+<p>在交易记录表中存储每笔交易的增减，但直接在用户表中维护<code>当前余额</code>，避免了每次查询时的复杂计算。</p>
+<h2 id="兼顾读写性能">兼顾读写性能<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#兼顾读写性能" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>在某些应用中，读操作远多于写操作。为了优化读性能，可能会通过数据冗余来提升查询速度，而接受在数据写入时需要额外的维护工作。</p>
+<p>社交媒体平台中，用户的好友数常被展示在用户主页上。如果每次请求都计算好友数量，效率低下。可以在用户表中维护一个<code>好友数</code>字段。</p>
+<p><strong>破坏 3NF后的设计：</strong></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>用户ID</th><th>用户名</th><th>好友数</th></tr></thead><tbody><tr><td>U01</td><td>Alice</td><td>150</td></tr><tr><td>U02</td><td>Bob</td><td>200</td></tr></tbody></table></div>
+<p>通过在<code>Users</code>表中冗余存储<code>好友数</code>，可以快速展示，无需实时计算。</p>
+<h2 id="快速迭代和灵活性">快速迭代和灵活性<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#快速迭代和灵活性" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>在快速发展的产品或初创企业中，数据库设计可能需要频繁调整。过度规范化可能导致设计不够灵活，影响迭代速度。适当的冗余设计可以提高开发的灵活性和速度。</p>
+<p>一个初创电商平台在初期快速上线，数据库设计时为了简化开发，可能会将用户的收货地址直接存储在订单表中，而不是单独创建地址表。</p>
+<p><strong>破坏 3NF后的设计：</strong></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>订单ID</th><th>用户ID</th><th>用户名</th><th>收货地址</th><th>订单日期</th><th>总金额</th></tr></thead><tbody><tr><td>O1001</td><td>U01</td><td>李雷</td><td>北京市海淀区…</td><td>2023-10-01</td><td>800元</td></tr><tr><td>O1002</td><td>U02</td><td>韩梅梅</td><td>上海市浦东新区…</td><td>2023-10-02</td><td>1200元</td></tr></tbody></table></div>
+<p>这样设计可以快速上线，后续根据需求再进行规范化和优化。</p>
+<h2 id="降低复杂性和提高可理解性">降低复杂性和提高可理解性<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#降低复杂性和提高可理解性" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>有时，过度规范化可能使数据库结构变得复杂，难以理解和维护。适度的冗余可以降低设计的复杂性，提高团队对数据库结构的理解和沟通效率。</p>
+<p>在一个学校管理系统中，如果将学生的班级信息独立为多个表，可能增加理解难度。为了简化设计，可以在学生表中直接存储班级名称。</p>
+<p><strong>破坏 3NF后的设计：</strong></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>学生ID</th><th>姓名</th><th>班级ID</th><th>班级名称</th><th>班主任</th></tr></thead><tbody><tr><td>S01</td><td>张三</td><td>C01</td><td>三年级一班</td><td>李老师</td></tr><tr><td>S02</td><td>李四</td><td>C02</td><td>三年级二班</td><td>王老师</td></tr></tbody></table></div>
+<p>通过在学生表中直接存储<code>班级名称</code>和<code>班主任</code>，减少了表的数量，简化了设计。</p></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>Graph View</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc desktop-only"><button type="button" class="toc-header" aria-controls="toc-content" aria-expanded="true"><h3>Table of Contents</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul class="toc-content overflow" id="list-1"><li class="depth-0"><a href="#三大范式" data-for="三大范式">三大范式</a></li><li class="depth-1"><a href="#第一范式1nf" data-for="第一范式1nf">第一范式（1NF）</a></li><li class="depth-2"><a href="#dbms-中的第一范式-1nf-规则" data-for="dbms-中的第一范式-1nf-规则">DBMS 中的第一范式 (1NF) 规则</a></li><li class="depth-2"><a href="#示例" data-for="示例">示例</a></li><li class="depth-1"><a href="#第二范式2nf" data-for="第二范式2nf">第二范式（2NF）</a></li><li class="depth-2"><a href="#什么是部分依赖" data-for="什么是部分依赖">什么是部分依赖</a></li><li class="depth-2"><a href="#示例-1" data-for="示例-1">示例</a></li><li class="depth-2"><a href="#第二范式的局限性" data-for="第二范式的局限性">第二范式的局限性</a></li><li class="depth-1"><a href="#第三范式3nf" data-for="第三范式3nf">第三范式（3NF）</a></li><li class="depth-2"><a href="#理解传递依赖" data-for="理解传递依赖">理解传递依赖</a></li><li class="depth-2"><a href="#示例-2" data-for="示例-2">示例</a></li><li class="depth-2"><a href="#为什么3nf很重要" data-for="为什么3nf很重要">为什么3NF很重要</a></li><li class="depth-1"><a href="#总结" data-for="总结">总结</a></li><li class="depth-0"><a href="#破坏三范式" data-for="破坏三范式">破坏三范式</a></li><li class="depth-1"><a href="#性能优化" data-for="性能优化">性能优化</a></li><li class="depth-1"><a href="#简化查询和开发" data-for="简化查询和开发">简化查询和开发</a></li><li class="depth-1"><a href="#报表和数据仓库" data-for="报表和数据仓库">报表和数据仓库</a></li><li class="depth-1"><a href="#特殊业务需求" data-for="特殊业务需求">特殊业务需求</a></li><li class="depth-1"><a href="#兼顾读写性能" data-for="兼顾读写性能">兼顾读写性能</a></li><li class="depth-1"><a href="#快速迭代和灵活性" data-for="快速迭代和灵活性">快速迭代和灵活性</a></li><li class="depth-1"><a href="#降低复杂性和提高可理解性" data-for="降低复杂性和提高可理解性">降低复杂性和提高可理解性</a></li><li class="overflow-end"></li></ul></div><div class="backlinks"><h3>Backlinks</h3><ul id="list-2" class="overflow"><li><a href="../词典/G/关系数据库" class="internal">关系数据库</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v4.5.1</a> © 2025</p><ul><li><a href="https://github.com/hero851815/quartz-page">GitHub</a></li></ul></footer></div></div></body><script type="application/javascript">function n(){let t=this.parentElement;t.classList.toggle("is-collapsed");let e=t.getElementsByClassName("callout-content")[0];if(!e)return;let l=t.classList.contains("is-collapsed");e.style.gridTemplateRows=l?"0fr":"1fr"}function c(){let t=document.getElementsByClassName("callout is-collapsible");for(let e of t){let l=e.getElementsByClassName("callout-title")[0],s=e.getElementsByClassName("callout-content")[0];if(!l||!s)continue;l.addEventListener("click",n),window.addCleanup(()=>l.removeEventListener("click",n));let o=e.classList.contains("is-collapsed");s.style.gridTemplateRows=o?"0fr":"1fr"}}document.addEventListener("nav",c);
+</script><script type="module">function f(i,e){if(!i)return;function r(o){o.target===this&&(o.preventDefault(),o.stopPropagation(),e())}function t(o){o.key.startsWith("Esc")&&(o.preventDefault(),e())}i?.addEventListener("click",r),window.addCleanup(()=>i?.removeEventListener("click",r)),document.addEventListener("keydown",t),window.addCleanup(()=>document.removeEventListener("keydown",t))}function y(i){for(;i.firstChild;)i.removeChild(i.firstChild)}var h=class{constructor(e,r){this.container=e;this.content=r;this.setupEventListeners(),this.setupNavigationControls(),this.resetTransform()}isDragging=!1;startPan={x:0,y:0};currentPan={x:0,y:0};scale=1;MIN_SCALE=.5;MAX_SCALE=3;cleanups=[];setupEventListeners(){let e=this.onMouseDown.bind(this),r=this.onMouseMove.bind(this),t=this.onMouseUp.bind(this),o=this.resetTransform.bind(this);this.container.addEventListener("mousedown",e),document.addEventListener("mousemove",r),document.addEventListener("mouseup",t),window.addEventListener("resize",o),this.cleanups.push(()=>this.container.removeEventListener("mousedown",e),()=>document.removeEventListener("mousemove",r),()=>document.removeEventListener("mouseup",t),()=>window.removeEventListener("resize",o))}cleanup(){for(let e of this.cleanups)e()}setupNavigationControls(){let e=document.createElement("div");e.className="mermaid-controls";let r=this.createButton("+",()=>this.zoom(.1)),t=this.createButton("-",()=>this.zoom(-.1)),o=this.createButton("Reset",()=>this.resetTransform());e.appendChild(t),e.appendChild(o),e.appendChild(r),this.container.appendChild(e)}createButton(e,r){let t=document.createElement("button");return t.textContent=e,t.className="mermaid-control-button",t.addEventListener("click",r),window.addCleanup(()=>t.removeEventListener("click",r)),t}onMouseDown(e){e.button===0&&(this.isDragging=!0,this.startPan={x:e.clientX-this.currentPan.x,y:e.clientY-this.currentPan.y},this.container.style.cursor="grabbing")}onMouseMove(e){this.isDragging&&(e.preventDefault(),this.currentPan={x:e.clientX-this.startPan.x,y:e.clientY-this.startPan.y},this.updateTransform())}onMouseUp(){this.isDragging=!1,this.container.style.cursor="grab"}zoom(e){let r=Math.min(Math.max(this.scale+e,this.MIN_SCALE),this.MAX_SCALE),t=this.content.getBoundingClientRect(),o=t.width/2,n=t.height/2,c=r-this.scale;this.currentPan.x-=o*c,this.currentPan.y-=n*c,this.scale=r,this.updateTransform()}updateTransform(){this.content.style.transform=`translate(${this.currentPan.x}px, ${this.currentPan.y}px) scale(${this.scale})`}resetTransform(){this.scale=1;let e=this.content.querySelector("svg");this.currentPan={x:e.getBoundingClientRect().width/2,y:e.getBoundingClientRect().height/2},this.updateTransform()}},C=["--secondary","--tertiary","--gray","--light","--lightgray","--highlight","--dark","--darkgray","--codeFont"],E;document.addEventListener("nav",async()=>{let e=document.querySelector(".center").querySelectorAll("code.mermaid");if(e.length===0)return;E||=await import("https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.4.0/mermaid.esm.min.mjs");let r=E.default,t=new WeakMap;for(let n of e)t.set(n,n.innerText);async function o(){for(let s of e){s.removeAttribute("data-processed");let a=t.get(s);a&&(s.innerHTML=a)}let n=C.reduce((s,a)=>(s[a]=window.getComputedStyle(document.documentElement).getPropertyValue(a),s),{}),c=document.documentElement.getAttribute("saved-theme")==="dark";r.initialize({startOnLoad:!1,securityLevel:"loose",theme:c?"dark":"base",themeVariables:{fontFamily:n["--codeFont"],primaryColor:n["--light"],primaryTextColor:n["--darkgray"],primaryBorderColor:n["--tertiary"],lineColor:n["--darkgray"],secondaryColor:n["--secondary"],tertiaryColor:n["--tertiary"],clusterBkg:n["--light"],edgeLabelBackground:n["--highlight"]}}),await r.run({nodes:e})}await o(),document.addEventListener("themechange",o),window.addCleanup(()=>document.removeEventListener("themechange",o));for(let n=0;n<e.length;n++){let v=function(){let g=l.querySelector("#mermaid-space"),m=l.querySelector(".mermaid-content");if(!m)return;y(m);let w=c.querySelector("svg").cloneNode(!0);m.appendChild(w),l.classList.add("active"),g.style.cursor="grab",u=new h(g,m)},M=function(){l.classList.remove("active"),u?.cleanup(),u=null},c=e[n],s=c.parentElement,a=s.querySelector(".clipboard-button"),d=s.querySelector(".expand-button"),p=window.getComputedStyle(a),L=a.offsetWidth+parseFloat(p.marginLeft||"0")+parseFloat(p.marginRight||"0");d.style.right=`calc(${L}px + 0.3rem)`,s.prepend(d);let l=s.querySelector("#mermaid-container");if(!l)return;let u=null;d.addEventListener("click",v),f(l,M),window.addCleanup(()=>{u?.cleanup(),d.removeEventListener("click",v)})}});
+</script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript"></script><script src="../postscript.js" type="module"></script></html>
