@@ -6,65 +6,65 @@
       <description>Last 10 notes on 数据安全知识库</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>半结构化数据</title>
+    <link>https://hero851815.cc/%E8%AF%8D%E5%85%B8/B/%E5%8D%8A%E7%BB%93%E6%9E%84%E5%8C%96%E6%95%B0%E6%8D%AE</link>
+    <guid>https://hero851815.cc/%E8%AF%8D%E5%85%B8/B/%E5%8D%8A%E7%BB%93%E6%9E%84%E5%8C%96%E6%95%B0%E6%8D%AE</guid>
+    <description>定义 是指不符合关系型数据库或其他数据表的形式关联起来的数据模型结构，但包含相关标记，用来分隔语义元素以及对记录和字段进行分层的一种数据化结构形式。【来源：《数据领域常用名词解释（第一批）》，2024】 补充评论 扩展资料 关联词 结构化数据 非结构化数据 .</description>
+    <pubDate>Tue, 29 Jul 2025 08:33:46 GMT</pubDate>
+  </item><item>
+    <title>标识符</title>
+    <link>https://hero851815.cc/%E8%AF%8D%E5%85%B8/B/%E6%A0%87%E8%AF%86%E7%AC%A6</link>
+    <guid>https://hero851815.cc/%E8%AF%8D%E5%85%B8/B/%E6%A0%87%E8%AF%86%E7%AC%A6</guid>
+    <description>定义 微数据中的一个或多个属性 ，可以实现对个人信息主体的唯一识別。 注：标识符分为直接标识符和准标识符。 【来源：GB/T 37964-2019 《信息安全技术 个人信息去标识化指南》】 补充评论 扩展资料 关联词 .</description>
+    <pubDate>Tue, 29 Jul 2025 08:33:46 GMT</pubDate>
+  </item><item>
     <title>被遗忘权</title>
     <link>https://hero851815.cc/%E8%AF%8D%E5%85%B8/B/%E8%A2%AB%E9%81%97%E5%BF%98%E6%9D%83</link>
     <guid>https://hero851815.cc/%E8%AF%8D%E5%85%B8/B/%E8%A2%AB%E9%81%97%E5%BF%98%E6%9D%83</guid>
     <description>定义 被遗忘权是信息主体所享有的就其个人信息中不准确、不充分、不相关或超越信息处理目的信息，可以要求运营商等信息处理者把链接删除的权利。【来源：丁宇翔，《个人信息保护纠纷理论释解与裁判实务（第二版）》】 补充评论 虽然被遗忘权并非我国《个人信息保护法》所明确的法定权利，但其所涉及的利益可通过删除制度及损害赔偿等方式得以保护。 被遗忘权一词并不同于我国对权利的命名逻辑，无法直接看出该权利的客体是什么，如，我们不能参照肖像权的客体是肖像利益这种角度，来推断出被遗忘权的客体是被遗忘利益。但我们从被遗忘权的英文用词（right to be forgotten）来看，也许就能更好理解该权利的内涵。 扩展...</description>
-    <pubDate>Tue, 29 Jul 2025 07:07:17 GMT</pubDate>
+    <pubDate>Tue, 29 Jul 2025 08:33:46 GMT</pubDate>
   </item><item>
     <title>传输</title>
     <link>https://hero851815.cc/%E8%AF%8D%E5%85%B8/C/%E4%BC%A0%E8%BE%93</link>
     <guid>https://hero851815.cc/%E8%AF%8D%E5%85%B8/C/%E4%BC%A0%E8%BE%93</guid>
     <description>定义 通过信息通信设备将数据从一个网络节点传送到一个或多个网络节点的数据处理活动。 注：网络节点可以是计算机、程序、终端设备、存储器、信息系统等。 【来源：GB/T 35274-2023 《信息安全技术 大数据服务安全能力要求》】 补充评论 扩展资料 关联词 .</description>
-    <pubDate>Tue, 29 Jul 2025 07:07:17 GMT</pubDate>
+    <pubDate>Tue, 29 Jul 2025 08:33:46 GMT</pubDate>
   </item><item>
     <title>存储</title>
     <link>https://hero851815.cc/%E8%AF%8D%E5%85%B8/C/%E5%AD%98%E5%82%A8</link>
     <guid>https://hero851815.cc/%E8%AF%8D%E5%85%B8/C/%E5%AD%98%E5%82%A8</guid>
     <description>定义 数据在存储器中的保存。【来源：GB/T 5271.12-2000《信息技术 词汇 第12部分：外围设备》】 补充评论 扩展资料 关联词 .</description>
-    <pubDate>Tue, 29 Jul 2025 07:07:17 GMT</pubDate>
+    <pubDate>Tue, 29 Jul 2025 08:33:46 GMT</pubDate>
   </item><item>
     <title>存储介质</title>
     <link>https://hero851815.cc/%E8%AF%8D%E5%85%B8/C/%E5%AD%98%E5%82%A8%E4%BB%8B%E8%B4%A8</link>
     <guid>https://hero851815.cc/%E8%AF%8D%E5%85%B8/C/%E5%AD%98%E5%82%A8%E4%BB%8B%E8%B4%A8</guid>
     <description>定义 承载电子数据的各类载体或设备，包括但不限于计算机硬盘、磁带、软盘、光盘、各种形式的存 储卡、存储芯片等。【来源：GB/T 31500-2024《网络安全技术 存储介质数据恢复服务安全规范》】 补充评论 GB/T 25069-2022《信息安全技术 术语》中术语为存储媒体。 存储系统：如数据库、大数据平台、云存储、网盘、存储介质等【来源：JT/T 1547-2025《交通运输数据安全风险评估指南》】 内部讨论： 物理存储介质：U盘、移动硬盘、光盘、磁带等 逻辑存储介质：网络共享文件夹、云存储控制等 扩展资料 关联词 .</description>
-    <pubDate>Tue, 29 Jul 2025 07:07:17 GMT</pubDate>
+    <pubDate>Tue, 29 Jul 2025 08:33:46 GMT</pubDate>
   </item><item>
     <title>脆弱性</title>
     <link>https://hero851815.cc/%E8%AF%8D%E5%85%B8/C/%E8%84%86%E5%BC%B1%E6%80%A7</link>
     <guid>https://hero851815.cc/%E8%AF%8D%E5%85%B8/C/%E8%84%86%E5%BC%B1%E6%80%A7</guid>
     <description>定义 可能被一个或多个威胁利用的资产或控制的弱点。【来源：GB/T 29246-2023《信息安全技术 信息安全管理体系 概述和词汇》】 补充评论 扩展资料 关联词 .</description>
-    <pubDate>Tue, 29 Jul 2025 07:07:17 GMT</pubDate>
+    <pubDate>Tue, 29 Jul 2025 08:33:46 GMT</pubDate>
   </item><item>
     <title>超大型平台</title>
     <link>https://hero851815.cc/%E8%AF%8D%E5%85%B8/C/%E8%B6%85%E5%A4%A7%E5%9E%8B%E5%B9%B3%E5%8F%B0</link>
     <guid>https://hero851815.cc/%E8%AF%8D%E5%85%B8/C/%E8%B6%85%E5%A4%A7%E5%9E%8B%E5%B9%B3%E5%8F%B0</guid>
     <description>定义 在中国的上年度年活跃用户不低于5000万、具有表现突出的主营业务、上年底市值（或估值）不低于1000亿人民币、具有较强的限制平台内经营者接触消费者（用户）能力的平台。【来源：《互联网平台落实主体责任指南》（征求意见稿），2021】 补充评论 扩展资料 互联网平台 - 个人信息处理者 关联词 大型网络平台 大型互联网企业 互联网平台 .</description>
-    <pubDate>Tue, 29 Jul 2025 07:07:17 GMT</pubDate>
+    <pubDate>Tue, 29 Jul 2025 08:33:46 GMT</pubDate>
   </item><item>
     <title>单独同意</title>
     <link>https://hero851815.cc/%E8%AF%8D%E5%85%B8/D/%E5%8D%95%E7%8B%AC%E5%90%8C%E6%84%8F</link>
     <guid>https://hero851815.cc/%E8%AF%8D%E5%85%B8/D/%E5%8D%95%E7%8B%AC%E5%90%8C%E6%84%8F</guid>
     <description>定义 个人针对其个人信息进行特定处理而专门作出具体、明确授权的行为，不包括一次性针对多种目的或方式的个人信息处理活动作出的同意。注： 单独同意的告知内容与取得同意的方式需与其他处理活动予以区分。【来源：GB/T42574-2023《信息安全技术 个人信息处理中告知和同意的实施指南》】 补充评论 扩展资料 第二十九条 特别同意规则 关联词 .</description>
-    <pubDate>Tue, 29 Jul 2025 07:07:17 GMT</pubDate>
+    <pubDate>Tue, 29 Jul 2025 08:33:46 GMT</pubDate>
   </item><item>
     <title>大型互联网企业</title>
     <link>https://hero851815.cc/%E8%AF%8D%E5%85%B8/D/%E5%A4%A7%E5%9E%8B%E4%BA%92%E8%81%94%E7%BD%91%E4%BC%81%E4%B8%9A</link>
     <guid>https://hero851815.cc/%E8%AF%8D%E5%85%B8/D/%E5%A4%A7%E5%9E%8B%E4%BA%92%E8%81%94%E7%BD%91%E4%BC%81%E4%B8%9A</guid>
     <description>定义 提供重要互联网平台服务、用户数量巨大、业务类型复杂的互联网企业，同时具备较大用户规模、较广业务种类、较多业务范围、较高经济体量和较强影响能力的大型互联网平台。【来源：《信息安全技术 大型互联网企业内设个人信息保护监督机构要求(征求意见稿）》，2023 】 补充评论 扩展资料 关联词 超大型平台 大型网络平台 互联网平台 .</description>
-    <pubDate>Tue, 29 Jul 2025 07:07:17 GMT</pubDate>
-  </item><item>
-    <title>大型网络平台</title>
-    <link>https://hero851815.cc/%E8%AF%8D%E5%85%B8/D/%E5%A4%A7%E5%9E%8B%E7%BD%91%E7%BB%9C%E5%B9%B3%E5%8F%B0</link>
-    <guid>https://hero851815.cc/%E8%AF%8D%E5%85%B8/D/%E5%A4%A7%E5%9E%8B%E7%BD%91%E7%BB%9C%E5%B9%B3%E5%8F%B0</guid>
-    <description>定义 是指注册用户5000万以上或者月活跃用户1000万以上，业务类型复杂，网络数据处理活动对国家安全、经济运行、国计民生等具有重要影响的网络平台。【来源：《网络数据安全管理条例》，2024】 补充评论 扩展资料 互联网平台 - 个人信息处理者 关联词 超大型平台 大型互联网企业 互联网平台 .</description>
-    <pubDate>Tue, 29 Jul 2025 07:07:17 GMT</pubDate>
-  </item><item>
-    <title>大数据</title>
-    <link>https://hero851815.cc/%E8%AF%8D%E5%85%B8/D/%E5%A4%A7%E6%95%B0%E6%8D%AE</link>
-    <guid>https://hero851815.cc/%E8%AF%8D%E5%85%B8/D/%E5%A4%A7%E6%95%B0%E6%8D%AE</guid>
-    <description>定义 具有体量巨大、来源多样、生成极快、且多变等特征并且难以用传统数据体系结构有效处理的包含大量数据集的数据。 注：国际上，大数据的4个特征普遍不加修饰地直接用volume、variety、velocity和variability予以表述，并分别赋予了它们在大数据语境下的定义：a）体量volume：构成大数据的数据集的规模。b）多样性 variety：数据可能来自多个数据仓库、数据领域或多种数据类型。c）速度velocity：单位时间的数据流量。d）多变性variability：大数据其他特征，即体量、速度和多样性等特征都处于多变状态。 【来源：GB/T 35295-2017《信息技术 大数据...</description>
-    <pubDate>Tue, 29 Jul 2025 07:07:17 GMT</pubDate>
+    <pubDate>Tue, 29 Jul 2025 08:33:46 GMT</pubDate>
   </item>
     </channel>
   </rss>
