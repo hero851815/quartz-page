@@ -6,65 +6,65 @@
       <description>Last 10 notes on 数据安全知识库</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
-    <title>数据安全知识库</title>
-    <link>https://hero851815.cc/</link>
-    <guid>https://hero851815.cc/</guid>
-    <description>全面的数据安全术语词典、技术指南和标准规范</description>
-    <pubDate>Tue, 29 Jul 2025 06:47:20 GMT</pubDate>
+    <title>被遗忘权</title>
+    <link>https://hero851815.cc/%E8%AF%8D%E5%85%B8/B/%E8%A2%AB%E9%81%97%E5%BF%98%E6%9D%83</link>
+    <guid>https://hero851815.cc/%E8%AF%8D%E5%85%B8/B/%E8%A2%AB%E9%81%97%E5%BF%98%E6%9D%83</guid>
+    <description>定义 被遗忘权是信息主体所享有的就其个人信息中不准确、不充分、不相关或超越信息处理目的信息，可以要求运营商等信息处理者把链接删除的权利。【来源：丁宇翔，《个人信息保护纠纷理论释解与裁判实务（第二版）》】 补充评论 虽然被遗忘权并非我国《个人信息保护法》所明确的法定权利，但其所涉及的利益可通过删除制度及损害赔偿等方式得以保护。 被遗忘权一词并不同于我国对权利的命名逻辑，无法直接看出该权利的客体是什么，如，我们不能参照肖像权的客体是肖像利益这种角度，来推断出被遗忘权的客体是被遗忘利益。但我们从被遗忘权的英文用词（right to be forgotten）来看，也许就能更好理解该权利的内涵。 扩展...</description>
+    <pubDate>Tue, 29 Jul 2025 07:07:17 GMT</pubDate>
   </item><item>
-    <title>EXT - API敏感数据安全管理最佳实践：脱敏、数字签名与数字水印</title>
-    <link>https://hero851815.cc/%E6%89%A9%E5%B1%95/EXT---API%E6%95%8F%E6%84%9F%E6%95%B0%E6%8D%AE%E5%AE%89%E5%85%A8%E7%AE%A1%E7%90%86%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5%EF%BC%9A%E8%84%B1%E6%95%8F%E3%80%81%E6%95%B0%E5%AD%97%E7%AD%BE%E5%90%8D%E4%B8%8E%E6%95%B0%E5%AD%97%E6%B0%B4%E5%8D%B0</link>
-    <guid>https://hero851815.cc/%E6%89%A9%E5%B1%95/EXT---API%E6%95%8F%E6%84%9F%E6%95%B0%E6%8D%AE%E5%AE%89%E5%85%A8%E7%AE%A1%E7%90%86%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5%EF%BC%9A%E8%84%B1%E6%95%8F%E3%80%81%E6%95%B0%E5%AD%97%E7%AD%BE%E5%90%8D%E4%B8%8E%E6%95%B0%E5%AD%97%E6%B0%B4%E5%8D%B0</guid>
-    <description>一、概述 API 在传输和对外提供敏感数据时，面临数据泄露、篡改和滥用的风险。为了保证数据的安全性、完整性和可追溯性，常用的策略包括： • 数据脱敏：隐藏或部分遮蔽敏感信息，保护隐私。 • 数字签名：验证数据来源和完整性，防篡改。 • 数字水印：嵌入隐性标识，实现数据泄露追踪。 二、数据脱敏 1.</description>
-    <pubDate>Tue, 29 Jul 2025 06:47:20 GMT</pubDate>
+    <title>传输</title>
+    <link>https://hero851815.cc/%E8%AF%8D%E5%85%B8/C/%E4%BC%A0%E8%BE%93</link>
+    <guid>https://hero851815.cc/%E8%AF%8D%E5%85%B8/C/%E4%BC%A0%E8%BE%93</guid>
+    <description>定义 通过信息通信设备将数据从一个网络节点传送到一个或多个网络节点的数据处理活动。 注：网络节点可以是计算机、程序、终端设备、存储器、信息系统等。 【来源：GB/T 35274-2023 《信息安全技术 大数据服务安全能力要求》】 补充评论 扩展资料 关联词 .</description>
+    <pubDate>Tue, 29 Jul 2025 07:07:17 GMT</pubDate>
   </item><item>
-    <title>EXT - 中间人攻击</title>
-    <link>https://hero851815.cc/%E6%89%A9%E5%B1%95/EXT---%E4%B8%AD%E9%97%B4%E4%BA%BA%E6%94%BB%E5%87%BB</link>
-    <guid>https://hero851815.cc/%E6%89%A9%E5%B1%95/EXT---%E4%B8%AD%E9%97%B4%E4%BA%BA%E6%94%BB%E5%87%BB</guid>
-    <description>中间人攻击的定义 中间人攻击（Man-in-the-Middle Attack，简称MITM），是一种会话劫持攻击。攻击者作为中间人，劫持通信双方会话并操纵通信过程，而通信双方并不知情，从而达到窃取信息或冒充访问的目的。 中间人攻击的类型 电子邮件劫持 顾名思义，在这种类型的攻击中，网络罪犯控制银行、金融机构或其他可以访问敏感数据和资金的受信任公司的电子邮件帐户。一旦进入，攻击者就可以监控银行与其客户之间的交易和通信。 在更恶意的场景中，攻击者欺骗或伪造银行的电子邮件地址，并向客户发送电子邮件，指示他们重新发送凭据，或者更糟糕的是，将钱发送到攻击者控制的帐户。在这个 MitM 攻击版本中，社交...</description>
-    <pubDate>Tue, 29 Jul 2025 06:47:20 GMT</pubDate>
+    <title>存储</title>
+    <link>https://hero851815.cc/%E8%AF%8D%E5%85%B8/C/%E5%AD%98%E5%82%A8</link>
+    <guid>https://hero851815.cc/%E8%AF%8D%E5%85%B8/C/%E5%AD%98%E5%82%A8</guid>
+    <description>定义 数据在存储器中的保存。【来源：GB/T 5271.12-2000《信息技术 词汇 第12部分：外围设备》】 补充评论 扩展资料 关联词 .</description>
+    <pubDate>Tue, 29 Jul 2025 07:07:17 GMT</pubDate>
   </item><item>
-    <title>EXT - 共同处理、委托处理、提供与技术支持</title>
-    <link>https://hero851815.cc/%E6%89%A9%E5%B1%95/EXT---%E5%85%B1%E5%90%8C%E5%A4%84%E7%90%86%E3%80%81%E5%A7%94%E6%89%98%E5%A4%84%E7%90%86%E3%80%81%E6%8F%90%E4%BE%9B%E4%B8%8E%E6%8A%80%E6%9C%AF%E6%94%AF%E6%8C%81</link>
-    <guid>https://hero851815.cc/%E6%89%A9%E5%B1%95/EXT---%E5%85%B1%E5%90%8C%E5%A4%84%E7%90%86%E3%80%81%E5%A7%94%E6%89%98%E5%A4%84%E7%90%86%E3%80%81%E6%8F%90%E4%BE%9B%E4%B8%8E%E6%8A%80%E6%9C%AF%E6%94%AF%E6%8C%81</guid>
-    <description>法律关系的类别 合规要点 共同处理 在协议约定各自的权利和义务 侵害个人信息权益造成损害 的，应当依法承担连带责任（约定无法对抗连带责任） 委托处理 个人信息保护影响评估 约定委托处理的目的、期限、处理方式、个人信息的种类、保护措施以及双方的权利和义务等 对受托人的个人信息处理活动进行监督 受托人 受托人应当按照约定处理个人信息，不得超出约定的处理目的、 处理方式等处理个人信息 委托合同不生效、无效、被撤销或者终止的，受托人应当将个人信息返还个人信息处理者或者予以删除，不得保留 未经个人信息处理者同意，受托人不得转委托他人处理个人信息 采取必要措施保障所处理的个人信息的安全 协助个人信息处理者...</description>
-    <pubDate>Tue, 29 Jul 2025 06:47:20 GMT</pubDate>
+    <title>存储介质</title>
+    <link>https://hero851815.cc/%E8%AF%8D%E5%85%B8/C/%E5%AD%98%E5%82%A8%E4%BB%8B%E8%B4%A8</link>
+    <guid>https://hero851815.cc/%E8%AF%8D%E5%85%B8/C/%E5%AD%98%E5%82%A8%E4%BB%8B%E8%B4%A8</guid>
+    <description>定义 承载电子数据的各类载体或设备，包括但不限于计算机硬盘、磁带、软盘、光盘、各种形式的存 储卡、存储芯片等。【来源：GB/T 31500-2024《网络安全技术 存储介质数据恢复服务安全规范》】 补充评论 GB/T 25069-2022《信息安全技术 术语》中术语为存储媒体。 存储系统：如数据库、大数据平台、云存储、网盘、存储介质等【来源：JT/T 1547-2025《交通运输数据安全风险评估指南》】 内部讨论： 物理存储介质：U盘、移动硬盘、光盘、磁带等 逻辑存储介质：网络共享文件夹、云存储控制等 扩展资料 关联词 .</description>
+    <pubDate>Tue, 29 Jul 2025 07:07:17 GMT</pubDate>
   </item><item>
-    <title>EXT - 数据丢失防护</title>
-    <link>https://hero851815.cc/%E6%89%A9%E5%B1%95/EXT---%E6%95%B0%E6%8D%AE%E4%B8%A2%E5%A4%B1%E9%98%B2%E6%8A%A4</link>
-    <guid>https://hero851815.cc/%E6%89%A9%E5%B1%95/EXT---%E6%95%B0%E6%8D%AE%E4%B8%A2%E5%A4%B1%E9%98%B2%E6%8A%A4</guid>
-    <description> TIP 内容来自站点Cloudflare的Access词汇 什么是数据丢失防护 数据外泄 数据外泄是指数据未经公司授权而移动。这也被称为数据挤出。DLP 的主要目标是防止数据外泄。 数据外泄可以通过多种不同方式发生： 机密数据可以通过电子邮件或即时消息离开网络 用户可以在没有授权的情况下将数据复制到外部硬盘驱动器上 一名员工可能将数据上传到公司控制之外的公共云 外部攻击者可以获得未经授权的访问并窃取数据 员工可将敏感数据上传到 AI 工具，如大型语言模型 (LLM) 为防止数据外泄，数据丢失防护会跟踪数据在网络内、员工设备上以及何时存储在公司基础设施上的移动。然后它可以发送警报、更改对数据的...</description>
-    <pubDate>Tue, 29 Jul 2025 06:47:20 GMT</pubDate>
+    <title>脆弱性</title>
+    <link>https://hero851815.cc/%E8%AF%8D%E5%85%B8/C/%E8%84%86%E5%BC%B1%E6%80%A7</link>
+    <guid>https://hero851815.cc/%E8%AF%8D%E5%85%B8/C/%E8%84%86%E5%BC%B1%E6%80%A7</guid>
+    <description>定义 可能被一个或多个威胁利用的资产或控制的弱点。【来源：GB/T 29246-2023《信息安全技术 信息安全管理体系 概述和词汇》】 补充评论 扩展资料 关联词 .</description>
+    <pubDate>Tue, 29 Jul 2025 07:07:17 GMT</pubDate>
   </item><item>
-    <title>EXT - 数据库三范式</title>
-    <link>https://hero851815.cc/%E6%89%A9%E5%B1%95/EXT---%E6%95%B0%E6%8D%AE%E5%BA%93%E4%B8%89%E8%8C%83%E5%BC%8F</link>
-    <guid>https://hero851815.cc/%E6%89%A9%E5%B1%95/EXT---%E6%95%B0%E6%8D%AE%E5%BA%93%E4%B8%89%E8%8C%83%E5%BC%8F</guid>
-    <description>三大范式 第一范式（1NF） 第一范式 (1NF) 确保数据库表的结构以更易于管理和查询的方式组织。 如果关系中的每个属性都是单值属性，或者不包含任何复合或多值属性，则该关系符合第一范式。 这是关系数据库设计中减少冗余、提高数据完整性、减少异常的第一步，也是必不可少的一步。 如果满足以下条件，则称关系（表）符合第一范式（1NF）： 所有属性（列）仅包含原子（不可分割）值。 每列包含单一类型的值。 每条记录（行）都是唯一的，这意味着它可以通过主键来识别。 任何行中都没有重复的组或数组。 DBMS 中的第一范式 (1NF) 规则 为了遵循数据库中的第一范式（1NF），必须遵循以下简单规则： 每列都...</description>
-    <pubDate>Tue, 29 Jul 2025 06:47:20 GMT</pubDate>
+    <title>超大型平台</title>
+    <link>https://hero851815.cc/%E8%AF%8D%E5%85%B8/C/%E8%B6%85%E5%A4%A7%E5%9E%8B%E5%B9%B3%E5%8F%B0</link>
+    <guid>https://hero851815.cc/%E8%AF%8D%E5%85%B8/C/%E8%B6%85%E5%A4%A7%E5%9E%8B%E5%B9%B3%E5%8F%B0</guid>
+    <description>定义 在中国的上年度年活跃用户不低于5000万、具有表现突出的主营业务、上年底市值（或估值）不低于1000亿人民币、具有较强的限制平台内经营者接触消费者（用户）能力的平台。【来源：《互联网平台落实主体责任指南》（征求意见稿），2021】 补充评论 扩展资料 互联网平台 - 个人信息处理者 关联词 大型网络平台 大型互联网企业 互联网平台 .</description>
+    <pubDate>Tue, 29 Jul 2025 07:07:17 GMT</pubDate>
   </item><item>
-    <title>EXT - 数据库事务的ACID属性</title>
-    <link>https://hero851815.cc/%E6%89%A9%E5%B1%95/EXT---%E6%95%B0%E6%8D%AE%E5%BA%93%E4%BA%8B%E5%8A%A1%E7%9A%84ACID%E5%B1%9E%E6%80%A7</link>
-    <guid>https://hero851815.cc/%E6%89%A9%E5%B1%95/EXT---%E6%95%B0%E6%8D%AE%E5%BA%93%E4%BA%8B%E5%8A%A1%E7%9A%84ACID%E5%B1%9E%E6%80%A7</guid>
-    <description>DBMS中的事务 DBMS中的事务是指作为单个工作单元执行的一系列操作。这些操作可能涉及读取或写入数据库数据。为了维护数据完整性，DBMS 确保每个事务都遵循ACID 属性。可以把事务想象成 ATM 取款。当我们从账户中取款时，交易涉及以下几个步骤： 检查您的余额。 从您的账户中扣除钱。 将钱添加到银行记录中。 为了使事务成功，所有步骤必须完成。如果此过程的任何部分失败（例如，系统崩溃），则整个事务都应失败，并且不会更改任何数据。这确保了数据库保持一致状态。 ACID特性 原子性：“全有或全无” 原子性（Atomicity）确保事务具有原子性，这意味着整个事务要么完全完成，要么根本不执行。不存...</description>
-    <pubDate>Tue, 29 Jul 2025 06:47:20 GMT</pubDate>
+    <title>单独同意</title>
+    <link>https://hero851815.cc/%E8%AF%8D%E5%85%B8/D/%E5%8D%95%E7%8B%AC%E5%90%8C%E6%84%8F</link>
+    <guid>https://hero851815.cc/%E8%AF%8D%E5%85%B8/D/%E5%8D%95%E7%8B%AC%E5%90%8C%E6%84%8F</guid>
+    <description>定义 个人针对其个人信息进行特定处理而专门作出具体、明确授权的行为，不包括一次性针对多种目的或方式的个人信息处理活动作出的同意。注： 单独同意的告知内容与取得同意的方式需与其他处理活动予以区分。【来源：GB/T42574-2023《信息安全技术 个人信息处理中告知和同意的实施指南》】 补充评论 扩展资料 第二十九条 特别同意规则 关联词 .</description>
+    <pubDate>Tue, 29 Jul 2025 07:07:17 GMT</pubDate>
   </item><item>
-    <title>EXT - 数据泄露的概念</title>
-    <link>https://hero851815.cc/%E6%89%A9%E5%B1%95/EXT---%E6%95%B0%E6%8D%AE%E6%B3%84%E9%9C%B2%E7%9A%84%E6%A6%82%E5%BF%B5</link>
-    <guid>https://hero851815.cc/%E6%89%A9%E5%B1%95/EXT---%E6%95%B0%E6%8D%AE%E6%B3%84%E9%9C%B2%E7%9A%84%E6%A6%82%E5%BF%B5</guid>
-    <description>GDPR 一般数据保护条例 第4条 第12款 “个人数据泄露”是指由于违反安全政策而导致传输、储存、处理中的个人数据被意外或非法损毁、丢失、更改或未经同意而被公开或访问。 【原文】 ‘personal data breach’ means a breach of security leading to the accidental or unlawful destruction, loss, alteration, unauthorised disclosure of, or access to, personal data transmitted, stored or otherwise p...</description>
-    <pubDate>Tue, 29 Jul 2025 06:47:20 GMT</pubDate>
+    <title>大型互联网企业</title>
+    <link>https://hero851815.cc/%E8%AF%8D%E5%85%B8/D/%E5%A4%A7%E5%9E%8B%E4%BA%92%E8%81%94%E7%BD%91%E4%BC%81%E4%B8%9A</link>
+    <guid>https://hero851815.cc/%E8%AF%8D%E5%85%B8/D/%E5%A4%A7%E5%9E%8B%E4%BA%92%E8%81%94%E7%BD%91%E4%BC%81%E4%B8%9A</guid>
+    <description>定义 提供重要互联网平台服务、用户数量巨大、业务类型复杂的互联网企业，同时具备较大用户规模、较广业务种类、较多业务范围、较高经济体量和较强影响能力的大型互联网平台。【来源：《信息安全技术 大型互联网企业内设个人信息保护监督机构要求(征求意见稿）》，2023 】 补充评论 扩展资料 关联词 超大型平台 大型网络平台 互联网平台 .</description>
+    <pubDate>Tue, 29 Jul 2025 07:07:17 GMT</pubDate>
   </item><item>
-    <title>EXT - 访问控制</title>
-    <link>https://hero851815.cc/%E6%89%A9%E5%B1%95/EXT---%E8%AE%BF%E9%97%AE%E6%8E%A7%E5%88%B6</link>
-    <guid>https://hero851815.cc/%E6%89%A9%E5%B1%95/EXT---%E8%AE%BF%E9%97%AE%E6%8E%A7%E5%88%B6</guid>
-    <description> TIP 内容来自站点Cloudflare的Access词汇 什么是访问控制？ 物理访问控制 虽然重点是信息访问控制，但物理访问控制是一个有用的比较，有助于理解整个概念。 物理访问控制是一组策略，用于控制谁可以进入一个物理位置。下面是现实生活中的一些物理访问控制示例： 吧台保镖 地铁转门 机场报关员 公司办公室的门禁卡或工作证扫描器 在所有这些示例中，人员或设备遵循一组策略来决定谁有权进入受限的物理位置。例如，酒店钥匙卡扫描器仅允许持有酒店钥匙的授权客人进入房间。 信息访问控制 信息访问控制限制对数据和用于操作该数据的软件的访问，以下为部分示例： 使用密码登录笔记本电脑 用拇指指纹扫描解锁智能...</description>
-    <pubDate>Tue, 29 Jul 2025 06:47:20 GMT</pubDate>
+    <title>大型网络平台</title>
+    <link>https://hero851815.cc/%E8%AF%8D%E5%85%B8/D/%E5%A4%A7%E5%9E%8B%E7%BD%91%E7%BB%9C%E5%B9%B3%E5%8F%B0</link>
+    <guid>https://hero851815.cc/%E8%AF%8D%E5%85%B8/D/%E5%A4%A7%E5%9E%8B%E7%BD%91%E7%BB%9C%E5%B9%B3%E5%8F%B0</guid>
+    <description>定义 是指注册用户5000万以上或者月活跃用户1000万以上，业务类型复杂，网络数据处理活动对国家安全、经济运行、国计民生等具有重要影响的网络平台。【来源：《网络数据安全管理条例》，2024】 补充评论 扩展资料 互联网平台 - 个人信息处理者 关联词 超大型平台 大型互联网企业 互联网平台 .</description>
+    <pubDate>Tue, 29 Jul 2025 07:07:17 GMT</pubDate>
   </item><item>
-    <title>EXT - 重要数据识别</title>
-    <link>https://hero851815.cc/%E6%89%A9%E5%B1%95/EXT---%E9%87%8D%E8%A6%81%E6%95%B0%E6%8D%AE%E8%AF%86%E5%88%AB</link>
-    <guid>https://hero851815.cc/%E6%89%A9%E5%B1%95/EXT---%E9%87%8D%E8%A6%81%E6%95%B0%E6%8D%AE%E8%AF%86%E5%88%AB</guid>
-    <description>数据分类分级规则 GB/T 43697-2024《数据安全技术 数据分类分级规则》 重要数据识别指南 重要数据识别应在符合 6.5b）的基础上，考虑如下因素： a）直接影响领土安全和国家统一，或反映国家自然资源基础情况，如未公开的领陆、领水、领空数据； b）可被其他国家或组织利用发起对我国的军事打击，或反映我国战略储备、应急动员、作战等能力，如满足一定精度指标的地理数据或与战略物资产能、储备量有关的数据； c）直接影响市场经济秩序，如支撑关键信息基础设施所在行业、领域核心业务运行或重要经济领域生产的数据； d）反映我国语言文字、历史、风俗习惯、民族价值观念等特质，如记录历史文化遗产的数据； e...</description>
-    <pubDate>Tue, 29 Jul 2025 06:47:20 GMT</pubDate>
+    <title>大数据</title>
+    <link>https://hero851815.cc/%E8%AF%8D%E5%85%B8/D/%E5%A4%A7%E6%95%B0%E6%8D%AE</link>
+    <guid>https://hero851815.cc/%E8%AF%8D%E5%85%B8/D/%E5%A4%A7%E6%95%B0%E6%8D%AE</guid>
+    <description>定义 具有体量巨大、来源多样、生成极快、且多变等特征并且难以用传统数据体系结构有效处理的包含大量数据集的数据。 注：国际上，大数据的4个特征普遍不加修饰地直接用volume、variety、velocity和variability予以表述，并分别赋予了它们在大数据语境下的定义：a）体量volume：构成大数据的数据集的规模。b）多样性 variety：数据可能来自多个数据仓库、数据领域或多种数据类型。c）速度velocity：单位时间的数据流量。d）多变性variability：大数据其他特征，即体量、速度和多样性等特征都处于多变状态。 【来源：GB/T 35295-2017《信息技术 大数据...</description>
+    <pubDate>Tue, 29 Jul 2025 07:07:17 GMT</pubDate>
   </item>
     </channel>
   </rss>
