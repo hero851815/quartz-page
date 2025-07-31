@@ -1,4 +1,0 @@
-User-agent: *
-Disallow: /public/
-
-Sitemap: https://hero851815.cc/public/sitemap.xml
