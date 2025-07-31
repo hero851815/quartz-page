@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en"><head><title>EXT - 定性分析和定量分析 - 专业术语词典与技术指南</title><meta charset="utf-8"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted Grotesk:wght@400;700&amp;family=Source Sans Pro:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="og:site_name" content="数据安全知识库"/><meta property="og:title" content="EXT - 定性分析和定量分析 - 专业术语词典与技术指南"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="EXT - 定性分析和定量分析 - 专业术语词典与技术指南"/><meta name="twitter:description" content="TIP 内容摘自Geeksforgeeks 定性数据和定量数据 定量数据是数值型的、可数的、可测量的，提供有关数量、程度或频率的信息。而定性数据则是描述性的、解释性的、基于语言的，帮助我们理解某些行为背后的原因、过程或背景。 示例 定性数据的示例包括： 开放式调查问题的文本回复 观察笔记或实地考察观察 采访记录 照片或视频 个人叙述或案例研究 定量数据的示例包括： 年龄、身高、体重等 温度 收入 兄弟姐妹数量 平均绩点 (GPA) 考试成绩 股票价格 差异 定性数据定量数据定性数据使用访谈、参与观察、关注分组等方法来获取集体信息。定量数据使用问卷、调查和结构观察等方法来获取集体信息。其中使用..."/><meta property="og:description" content="TIP 内容摘自Geeksforgeeks 定性数据和定量数据 定量数据是数值型的、可数的、可测量的，提供有关数量、程度或频率的信息。而定性数据则是描述性的、解释性的、基于语言的，帮助我们理解某些行为背后的原因、过程或背景。 示例 定性数据的示例包括： 开放式调查问题的文本回复 观察笔记或实地考察观察 采访记录 照片或视频 个人叙述或案例研究 定量数据的示例包括： 年龄、身高、体重等 温度 收入 兄弟姐妹数量 平均绩点 (GPA) 考试成绩 股票价格 差异 定性数据定量数据定性数据使用访谈、参与观察、关注分组等方法来获取集体信息。定量数据使用问卷、调查和结构观察等方法来获取集体信息。其中使用..."/><meta property="og:image:alt" content="TIP 内容摘自Geeksforgeeks 定性数据和定量数据 定量数据是数值型的、可数的、可测量的，提供有关数量、程度或频率的信息。而定性数据则是描述性的、解释性的、基于语言的，帮助我们理解某些行为背后的原因、过程或背景。 示例 定性数据的示例包括： 开放式调查问题的文本回复 观察笔记或实地考察观察 采访记录 照片或视频 个人叙述或案例研究 定量数据的示例包括： 年龄、身高、体重等 温度 收入 兄弟姐妹数量 平均绩点 (GPA) 考试成绩 股票价格 差异 定性数据定量数据定性数据使用访谈、参与观察、关注分组等方法来获取集体信息。定量数据使用问卷、调查和结构观察等方法来获取集体信息。其中使用..."/><meta property="twitter:domain" content="hero851815.cc"/><meta property="og:url" content="https://hero851815.cc/扩展/概念解析/EXT---定性分析和定量分析"/><meta property="twitter:url" content="https://hero851815.cc/扩展/概念解析/EXT---定性分析和定量分析"/><link rel="icon" href="../../static/icon.png"/><meta name="description" content="TIP 内容摘自Geeksforgeeks 定性数据和定量数据 定量数据是数值型的、可数的、可测量的，提供有关数量、程度或频率的信息。而定性数据则是描述性的、解释性的、基于语言的，帮助我们理解某些行为背后的原因、过程或背景。 示例 定性数据的示例包括： 开放式调查问题的文本回复 观察笔记或实地考察观察 采访记录 照片或视频 个人叙述或案例研究 定量数据的示例包括： 年龄、身高、体重等 温度 收入 兄弟姐妹数量 平均绩点 (GPA) 考试成绩 股票价格 差异 定性数据定量数据定性数据使用访谈、参与观察、关注分组等方法来获取集体信息。定量数据使用问卷、调查和结构观察等方法来获取集体信息。其中使用..."/><meta name="generator" content="Quartz"/><link href="../../index.css" rel="stylesheet" type="text/css" spa-preserve/><style>.expand-button {
+  position: absolute;
+  display: flex;
+  float: right;
+  padding: 0.4rem;
+  margin: 0.3rem;
+  right: 0;
+  color: var(--gray);
+  border-color: var(--dark);
+  background-color: var(--light);
+  border: 1px solid;
+  border-radius: 5px;
+  opacity: 0;
+  transition: 0.2s;
+}
+.expand-button > svg {
+  fill: var(--light);
+  filter: contrast(0.3);
+}
+.expand-button:hover {
+  cursor: pointer;
+  border-color: var(--secondary);
+}
+.expand-button:focus {
+  outline: 0;
+}
+
+pre:hover > .expand-button {
+  opacity: 1;
+  transition: 0.2s;
+}
+
+#mermaid-container {
+  position: fixed;
+  contain: layout;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: none;
+  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.5);
+}
+#mermaid-container.active {
+  display: inline-block;
+}
+#mermaid-container > #mermaid-space {
+  border: 1px solid var(--lightgray);
+  background-color: var(--light);
+  border-radius: 5px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80vh;
+  width: 80vw;
+  overflow: hidden;
+}
+#mermaid-container > #mermaid-space > .mermaid-content {
+  padding: 2rem;
+  position: relative;
+  transform-origin: 0 0;
+  transition: transform 0.1s ease;
+  overflow: visible;
+  min-height: 200px;
+  min-width: 200px;
+}
+#mermaid-container > #mermaid-space > .mermaid-content pre {
+  margin: 0;
+  border: none;
+}
+#mermaid-container > #mermaid-space > .mermaid-content svg {
+  max-width: none;
+  height: auto;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  background: var(--light);
+  border: 1px solid var(--lightgray);
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid var(--lightgray);
+  background: var(--light);
+  color: var(--dark);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: var(--bodyFont);
+  transition: all 0.2s ease;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:hover {
+  background: var(--lightgray);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:active {
+  transform: translateY(1px);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:nth-child(2) {
+  width: auto;
+  padding: 0 12px;
+  font-size: 14px;
+}
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiL2hvbWUvcnVubmVyL3dvcmsvcXVhcnR6LXJlcG8vcXVhcnR6LXJlcG8vcXVhcnR6L3F1YXJ0ei9jb21wb25lbnRzL3N0eWxlcyIsInNvdXJjZXMiOlsibWVybWFpZC5pbmxpbmUuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBR0Y7RUFDRTs7O0FBS0Y7RUFDRTtFQUNBOzs7QUFJSjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTs7QUFHRjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTtFQUNBOztBQUdGO0VBQ0U7RUFDQTs7QUFJSjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7O0FBR0Y7RUFDRTs7QUFJRjtFQUNFO0VBQ0E7RUFDQSIsInNvdXJjZXNDb250ZW50IjpbIi5leHBhbmQtYnV0dG9uIHtcbiAgcG9zaXRpb246IGFic29sdXRlO1xuICBkaXNwbGF5OiBmbGV4O1xuICBmbG9hdDogcmlnaHQ7XG4gIHBhZGRpbmc6IDAuNHJlbTtcbiAgbWFyZ2luOiAwLjNyZW07XG4gIHJpZ2h0OiAwOyAvLyBOT1RFOiByaWdodCB3aWxsIGJlIHNldCBpbiBtZXJtYWlkLmlubGluZS50c1xuICBjb2xvcjogdmFyKC0tZ3JheSk7XG4gIGJvcmRlci1jb2xvcjogdmFyKC0tZGFyayk7XG4gIGJhY2tncm91bmQtY29sb3I6IHZhcigtLWxpZ2h0KTtcbiAgYm9yZGVyOiAxcHggc29saWQ7XG4gIGJvcmRlci1yYWRpdXM6IDVweDtcbiAgb3BhY2l0eTogMDtcbiAgdHJhbnNpdGlvbjogMC4ycztcblxuICAmID4gc3ZnIHtcbiAgICBmaWxsOiB2YXIoLS1saWdodCk7XG4gICAgZmlsdGVyOiBjb250cmFzdCgwLjMpO1xuICB9XG5cbiAgJjpob3ZlciB7XG4gICAgY3Vyc29yOiBwb2ludGVyO1xuICAgIGJvcmRlci1jb2xvcjogdmFyKC0tc2Vjb25kYXJ5KTtcbiAgfVxuXG4gICY6Zm9jdXMge1xuICAgIG91dGxpbmU6IDA7XG4gIH1cbn1cblxucHJlIHtcbiAgJjpob3ZlciA+IC5leHBhbmQtYnV0dG9uIHtcbiAgICBvcGFjaXR5OiAxO1xuICAgIHRyYW5zaXRpb246IDAuMnM7XG4gIH1cbn1cblxuI21lcm1haWQtY29udGFpbmVyIHtcbiAgcG9zaXRpb246IGZpeGVkO1xuICBjb250YWluOiBsYXlvdXQ7XG4gIHotaW5kZXg6IDk5OTtcbiAgbGVmdDogMDtcbiAgdG9wOiAwO1xuICB3aWR0aDogMTAwdnc7XG4gIGhlaWdodDogMTAwdmg7XG4gIG92ZXJmbG93OiBoaWRkZW47XG4gIGRpc3BsYXk6IG5vbmU7XG4gIGJhY2tkcm9wLWZpbHRlcjogYmx1cig0cHgpO1xuICBiYWNrZ3JvdW5kOiByZ2JhKDAsIDAsIDAsIDAuNSk7XG5cbiAgJi5hY3RpdmUge1xuICAgIGRpc3BsYXk6IGlubGluZS1ibG9jaztcbiAgfVxuXG4gICYgPiAjbWVybWFpZC1zcGFjZSB7XG4gICAgYm9yZGVyOiAxcHggc29saWQgdmFyKC0tbGlnaHRncmF5KTtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1saWdodCk7XG4gICAgYm9yZGVyLXJhZGl1czogNXB4O1xuICAgIHBvc2l0aW9uOiBmaXhlZDtcbiAgICB0b3A6IDUwJTtcbiAgICBsZWZ0OiA1MCU7XG4gICAgdHJhbnNmb3JtOiB0cmFuc2xhdGUoLTUwJSwgLTUwJSk7XG4gICAgaGVpZ2h0OiA4MHZoO1xuICAgIHdpZHRoOiA4MHZ3O1xuICAgIG92ZXJmbG93OiBoaWRkZW47XG5cbiAgICAmID4gLm1lcm1haWQtY29udGVudCB7XG4gICAgICBwYWRkaW5nOiAycmVtO1xuICAgICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgICAgdHJhbnNmb3JtLW9yaWdpbjogMCAwO1xuICAgICAgdHJhbnNpdGlvbjogdHJhbnNmb3JtIDAuMXMgZWFzZTtcbiAgICAgIG92ZXJmbG93OiB2aXNpYmxlO1xuICAgICAgbWluLWhlaWdodDogMjAwcHg7XG4gICAgICBtaW4td2lkdGg6IDIwMHB4O1xuXG4gICAgICBwcmUge1xuICAgICAgICBtYXJnaW46IDA7XG4gICAgICAgIGJvcmRlcjogbm9uZTtcbiAgICAgIH1cblxuICAgICAgc3ZnIHtcbiAgICAgICAgbWF4LXdpZHRoOiBub25lO1xuICAgICAgICBoZWlnaHQ6IGF1dG87XG4gICAgICB9XG4gICAgfVxuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRyb2xzIHtcbiAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICAgIGJvdHRvbTogMjBweDtcbiAgICAgIHJpZ2h0OiAyMHB4O1xuICAgICAgZGlzcGxheTogZmxleDtcbiAgICAgIGdhcDogOHB4O1xuICAgICAgcGFkZGluZzogOHB4O1xuICAgICAgYmFja2dyb3VuZDogdmFyKC0tbGlnaHQpO1xuICAgICAgYm9yZGVyOiAxcHggc29saWQgdmFyKC0tbGlnaHRncmF5KTtcbiAgICAgIGJvcmRlci1yYWRpdXM6IDZweDtcbiAgICAgIGJveC1zaGFkb3c6IDAgMnB4IDRweCByZ2JhKDAsIDAsIDAsIDAuMSk7XG4gICAgICB6LWluZGV4OiAyO1xuXG4gICAgICAubWVybWFpZC1jb250cm9sLWJ1dHRvbiB7XG4gICAgICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICAgICAgICB3aWR0aDogMzJweDtcbiAgICAgICAgaGVpZ2h0OiAzMnB4O1xuICAgICAgICBwYWRkaW5nOiAwO1xuICAgICAgICBib3JkZXI6IDFweCBzb2xpZCB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodCk7XG4gICAgICAgIGNvbG9yOiB2YXIoLS1kYXJrKTtcbiAgICAgICAgYm9yZGVyLXJhZGl1czogNHB4O1xuICAgICAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgICAgIGZvbnQtc2l6ZTogMTZweDtcbiAgICAgICAgZm9udC1mYW1pbHk6IHZhcigtLWJvZHlGb250KTtcbiAgICAgICAgdHJhbnNpdGlvbjogYWxsIDAuMnMgZWFzZTtcblxuICAgICAgICAmOmhvdmVyIHtcbiAgICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICB9XG5cbiAgICAgICAgJjphY3RpdmUge1xuICAgICAgICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWSgxcHgpO1xuICAgICAgICB9XG5cbiAgICAgICAgLy8gU3R5bGUgdGhlIHJlc2V0IGJ1dHRvbiBkaWZmZXJlbnRseVxuICAgICAgICAmOm50aC1jaGlsZCgyKSB7XG4gICAgICAgICAgd2lkdGg6IGF1dG87XG4gICAgICAgICAgcGFkZGluZzogMCAxMnB4O1xuICAgICAgICAgIGZvbnQtc2l6ZTogMTRweDtcbiAgICAgICAgfVxuICAgICAgfVxuICAgIH1cbiAgfVxufVxuIl19 */</style><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" spa-preserve/><script src="../../prescript.js" type="application/javascript" spa-preserve></script><script type="application/javascript" spa-preserve>const fetchData = fetch("../../static/contentIndex.json").then(data => data.json())</script><link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://hero851815.cc/index.xml"/><meta property="og:image:width" content="1200"/><meta property="og:image:height" content="630"/><meta property="og:image" content="https://hero851815.cc/扩展/概念解析/EXT---定性分析和定量分析-og-image.webp"/><meta property="og:image:url" content="https://hero851815.cc/扩展/概念解析/EXT---定性分析和定量分析-og-image.webp"/><meta name="twitter:image" content="https://hero851815.cc/扩展/概念解析/EXT---定性分析和定量分析-og-image.webp"/><meta property="og:image:type" content="image/.webp"/></head><body data-slug="扩展/概念解析/EXT---定性分析和定量分析"><div id="quartz-root" class="page"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href="../..">数据安全知识库</a></h2><div class="spacer mobile-only"></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 1rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button"><p>Search</p><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="Search for something" placeholder="Search for something"/><div class="search-layout" data-preview="true"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="Dark mode"><title>Dark mode</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="Light mode"><title>Light mode</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="Reader mode"><title>Reader mode</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a,b)=>!a.isFolder&amp;&amp;!b.isFolder||a.isFolder&amp;&amp;b.isFolder?a.displayName.localeCompare(b.displayName,void 0,{numeric:!0,sensitivity:\&quot;base\&quot;}):!a.isFolder&amp;&amp;b.isFolder?1:-1&quot;,&quot;filterFn&quot;:&quot;node=>node.slugSegment!==\&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;node=>node&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-content"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>Explorer</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div class="explorer-content" aria-expanded="false"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#"></a></li></template><template id="template-folder"><li><div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="../../">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../扩展/">扩展</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../扩展/概念解析/">概念解析</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>EXT   定性分析和定量分析</a></div></nav><h1 class="article-title">EXT - 定性分析和定量分析<span class="article-subtitle"> </span><span class="article-synonyms"> </span></h1><p show-comma="true" class="content-meta"><span>27 min read</span></p></div></div><article class="popover-hint"><blockquote class="callout tip" data-callout="tip">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>TIP</p></div>
+                  
+                </div>
+<div class="callout-content">
+<div class="callout-content-inner">
+<p>内容摘自<a href="https://www.geeksforgeeks.org/" class="external">Geeksforgeeks<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+</div>
+</div>
+</blockquote>
+<h1 id="定性数据和定量数据">定性数据和定量数据<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#定性数据和定量数据" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p>定量数据是数值型的、可数的、可测量的，提供有关数量、程度或频率的信息。而定性数据则是描述性的、解释性的、基于语言的，帮助我们理解某些行为背后的原因、过程或背景。</p>
+<h2 id="示例">示例<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#示例" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><strong>定性数据的示例包括：</strong></p>
+<ul>
+<li>开放式调查问题的文本回复</li>
+<li>观察笔记或实地考察观察</li>
+<li>采访记录</li>
+<li>照片或视频</li>
+<li>个人叙述或案例研究</li>
+</ul>
+<p><strong>定量数据的示例包括：</strong></p>
+<ul>
+<li>年龄、身高、体重等</li>
+<li>温度</li>
+<li>收入</li>
+<li>兄弟姐妹数量</li>
+<li>平均绩点 (GPA)</li>
+<li>考试成绩</li>
+<li>股票价格</li>
+</ul>
+<h2 id="差异">差异<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#差异" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>定性数据</th><th>定量数据</th></tr></thead><tbody><tr><td>定性数据使用访谈、参与观察、关注分组等方法来获取集体信息。</td><td>定量数据使用问卷、调查和结构观察等方法来获取集体信息。</td></tr><tr><td>其中使用的数据格式是文本。数据表包含音频或视频记录和注释。</td><td>其中使用的数据格式是数值。数据表以数值形式获得。</td></tr><tr><td>定性数据讨论经验或质量，并解释“为什么”和“如何”等问题。</td><td>定量数据谈论的是数量，并解释“多少”、“多少”之类的问题。</td></tr><tr><td>通过将数据分组为不同的类别来分析。</td><td>采用统计方法对数据进行分析。</td></tr><tr><td>定性数据是主观的，可以进一步进行解释。</td><td>定量数据是固定的、通用的。</td></tr></tbody></table></div>
+<h1 id="定性数据分析">定性数据分析<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#定性数据分析" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h2 id="定性分析的重要性">定性分析的重要性<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#定性分析的重要性" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>定性事实分析至关重要，因为它超越了冷冰冰的硬数据和数字，能够提供关于事物出现的原因和方式的更丰富的知识。定性统计分析之所以重要，原因如下：</p>
+<ul>
+<li><strong>理解复杂性并揭示“为什么”</strong>：定量事实告诉您发生了什么（例如销售数字），而定性评估则揭示其背后的动机（例如消费者对产品特性的评论）。</li>
+<li><strong>情境洞察</strong>：数字并非凭空而来。定性信息为定量研究结果提供背景，使整体情况更加清晰。想象一下高客户流失率——访谈可能会发现功能缺失或界面令人困惑。</li>
+<li><strong>揭示情感和观点</strong>：定性记录挖掘了人的因素·带有开放式问题或意识的调查可以显示情感、批评和动机，而这些是我自己使用数字无法捕捉到的。</li>
+<li><strong>提供更好的决策依据</strong>：通过了解客户行为或员工情绪背后的“为什么”和“如何”，公司可以就产品改进、广告技术和内部技术做出更明智的决策。</li>
+<li><strong>产生新的想法</strong>：定性分析可以激发清晰的想法和假设·例如，通过分析消费者访谈，可能会出现导致全新产品功能的常见主题。</li>
+<li><strong>补充定量数据</strong>：虽然两种信息类型都很有价值，但它们共同发挥着质量作用·想象一下将网站流量记录（定量）与用户评论（定性）结合起来，以了解用户在特定网页上的体验。</li>
+</ul>
+<p>本质上，定性数据评估弥合了“是什么”和“为什么”之间的差距，提供了细致入微的专业知识，使人们能够做出更好的选择。</p>
+<h2 id="定性分析的关键组成部分">定性分析的关键组成部分<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#定性分析的关键组成部分" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><strong>数据收集</strong></p>
+<p>定性数据分析的第一步是收集数据。常用的方法包括：</p>
+<ul>
+<li>访谈：一对一或小组访谈，参与者讨论他们的经历或观点。</li>
+<li>焦点小组：提供对集体观点的见解的小组讨论。</li>
+<li>观察：观察并记录自然环境中的行为或事件。</li>
+<li>文档分析：审查和分析文档、媒体或工件。</li>
+</ul>
+<p><strong>数据准备</strong></p>
+<p>在分析之前，必须准备数据。这包括：</p>
+<ul>
+<li>转录：将音频或视频记录转换为书面文本。</li>
+<li>组织：将数据分类为可管理的块或类别。</li>
+</ul>
+<p><strong>编码</strong></p>
+<p>编码是定性数据分析的核心过程。它涉及使用代表主题或概念的标签或代码来标记数据的各个部分。编码类型包括：</p>
+<ul>
+<li>开放式编码：初始编码，其中数据被分解为离散部分并检查其相似性和差异性。</li>
+<li>轴向编码：通过创建类别和子类别将代码相互关联。</li>
+<li>选择性编码：识别核心类别并系统地将其与其他类别关联起来。</li>
+</ul>
+<p><strong>主题分析</strong></p>
+<p>主题分析是一种识别、分析和报告数据中模式（主题）的方法。它涉及：</p>
+<ul>
+<li>熟悉：沉浸在数据中以深入了解数据。</li>
+<li>生成初始代码：对整个数据集中的有趣特征进行编码。</li>
+<li>搜索主题：将代码整理成潜在主题。</li>
+<li>审查主题：检查主题是否与编码摘录和整个数据集相关。</li>
+<li>定义和命名主题：细化每个主题的细节并为其生成清晰的定义和名称。</li>
+<li>制作报告：将分析汇编成连贯、合乎逻辑的说明。</li>
+</ul>
+<h2 id="定性分析的步骤">定性分析的步骤<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#定性分析的步骤" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><img src="https://ying-quartz-resourse.oss-cn-shanghai.aliyuncs.com/20250731161259773.webp" alt/></p>
+<ol>
+<li><strong>制定清晰的研究问题</strong></li>
+</ol>
+<p>在深入分析之前，务必明确具体的研究问题。这些问题应该清晰地阐明您希望从数据中研究什么，并指导您的分析得出可行的见解。例如，提出“员工如何理解我们公司内部的组织文化？”这一问题，有助于了解技术员工对特定企业内部组织亚文化的认知。通过探索员工与组织文化相关的观点、态度和故事，研究人员可以发现关于工作场所动态、沟通模式、管理模式和员工满意度的宝贵见解。</p>
+<ol start="2">
+<li><strong>收集丰富的客户洞察</strong></li>
+</ol>
+<p>获取定性信息的方法有很多种，每种方法都能提供对客户看法和评论的具体见解。</p>
+<ul>
+<li>用户反馈：应用内调查、应用排名和社交媒体反馈提供了用户对产品或服务研究的直接评论。</li>
+<li>深入访谈：一对一访谈可以更深入地探讨特定主题，并提供对个人观点和行为的丰富、特殊的见解。</li>
+<li>焦点小组：促进小组讨论可以探索多种观点，并允许个人在彼此的想法上进行构建。</li>
+<li>评论网站：分析亚马逊、Yelp 或应用商店等平台上的购买者评论可以监控常见的痛点、自豪感程度以及需要改进的领域。</li>
+<li>NPS 后续问题：通过开放式问题跟进净推荐值 (NPS) 调查，可以让客户详细说明他们的排名，并为定量评级提供定性背景。</li>
+</ul>
+<ol start="3">
+<li><strong>组织和分类数据</strong></li>
+</ol>
+<p>以下有效的事实对于有力的分析和解释至关重要。</p>
+<ul>
+<li>集中：将所有定性统计数据（包括录音、笔记和成绩单）收集到一个有价值的存储库中，以便顺利获取和控制。</li>
+<li>按研究问题分类：根据研究问题对事实进行分组。这种组织结构有助于在分析过程中保持意识，并确保见解与研究目标相一致。</li>
+</ul>
+<ol start="4">
+<li><strong>发现主题和模式：编码</strong></li>
+</ol>
+<p>编码是一种为定性统计数据片段分配标签或类别的科学方式，以揭示潜在的问题和模式。</p>
+<ul>
+<li>主题识别：主题是从记录中出现的总体原则或想法·在编码过程中，研究人员会识别并标记与这些主题相关的统计数据部分，同时牢记数据集中重要原则的识别。</li>
+<li>模式检测：模式旨在从统计数据中异常元素之间的关系或联系中寻求建议。通过读取编码片段，研究人员可以发现趋势、重复或因果关系，从而更深入地了解顾客的感知和行为。</li>
+</ul>
+<ol start="5">
+<li><strong>提出假设并验证</strong></li>
+</ol>
+<p>根据确定的主题和风格，研究人员可以制定假设并得出有关顾客体验和选择的结论。</p>
+<ul>
+<li>假设的制定：假设是基于在信息中发现的风格而提出的初步原因或预测。研究人员制定假设是为了解释某些主题或风格出现的原因，并预测它们对消费者行为的影响。</li>
+<li>验证：研究人员通过基于特定标准（例如，人口统计因素、使用模式）对数据进行细分，并分析数据内部的差异或关系来验证假设。此过程有助于提高研究结果的有效性，并为定性分析得出的结论提供证据。</li>
+</ul>
+<h2 id="定性分析的方法">定性分析的方法<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#定性分析的方法" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ol>
+<li>
+<p><strong>内容分析</strong></p>
+<p>内容分析涉及系统地对文本信息进行分类，以识别模式、主题或偏见。它既可以是定性的，也可以是定量的，提供了一种量化定性数据的方法。</p>
+</li>
+<li>
+<p><strong>扎根理论</strong></p>
+<p>扎根理论是研究人员根据收集的数据构建理论的一种方法。它同时进行数据收集和分析，使理论从数据中产生。</p>
+</li>
+<li>
+<p><strong>叙述分析</strong></p>
+<p>叙事分析关注的是人们提供的故事或叙述，旨在了解人们如何理解自己的经历以及赋予这些经历的意义。</p>
+</li>
+<li>
+<p><strong>话语分析</strong></p>
+<p>话语分析考察语言在文本和对话中的运用方式，关注对话的结构以及通过语言传达的潜在含义。</p>
+</li>
+<li>
+<p><strong>现象学分析</strong></p>
+<p>现象学分析旨在从人们的视角理解他们的生活经历。它涉及对参与者对其经历的描述进行深入、反思性的解读。</p>
+</li>
+</ol>
+<h2 id="定性分析的应用">定性分析的应用<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#定性分析的应用" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>定性数据分析是一种用途广泛的工具，广泛应用于各个领域，用于探索复杂的现象。以下是一些在社会科学、心理学、人类学、定性市场研究和医疗保健领域的关键应用及其示例。</p>
+<ol>
+<li>
+<p><strong>社会科学</strong></p>
+<p>理解人类行为、态度和感知：在社会科学领域，定性数据分析有助于研究人员理解人类的行为、态度和观念，尤其在探索社会互动、文化动态和社会规范的复杂性方面尤为有用。</p>
+</li>
+</ol>
+<ul>
+<li>例子：城市贫困研究：研究人员对低收入城市社区的居民进行深入访谈，以了解他们的日常困境、应对机制以及对社会服务的看法。通过分析这些访谈，他们揭示了与经济困难、社会耻辱和社区支持网络相关的主题。</li>
+</ul>
+<ol start="2">
+<li>
+<p><strong>心理学</strong></p>
+<p>探索个人经历、情感和动机：在心理学中，定性数据分析有助于探索和解释个人的经历、情绪和动机。它帮助心理学家深入探究个人的主观体验。</p>
+</li>
+</ol>
+<ul>
+<li>例子：治疗结果：心理学家对接受过认知行为疗法治疗抑郁症的患者进行叙事访谈。通过分析这些叙事，心理学家识别出一些共同的主题，例如治疗联盟的重要性、个人成长以及自我认知的变化，从而深入了解疗法的有效性。</li>
+</ul>
+<ol start="3">
+<li>
+<p><strong>人类学</strong></p>
+<p>考察文化习俗、信仰和社会互动：人类学家运用定性数据分析来研究不同社区和社会中的文化习俗、信仰和社会互动。这种方法有助于他们揭示塑造文化身份和行为的象征意义和社会结构。</p>
+</li>
+</ol>
+<ul>
+<li>例子：原住民部落的仪式实践：一位人类学家与原住民部落共同生活一年，参与并观察他们的日常活动和仪式。通过对田野笔记和访谈的定性分析，人类学家揭示了仪式背后的象征意义及其在维护社会凝聚力和文化认同方面的作用。</li>
+</ul>
+<ol start="4">
+<li>
+<p><strong>定性市场研究</strong></p>
+<p>探索消费者偏好、看法和行为：在市场研究中，定性数据分析对于探索消费者的偏好、看法和行为至关重要。它可以帮助营销人员更深入地了解消费者的动机和决策过程。</p>
+</li>
+</ol>
+<ul>
+<li>例子：品牌认知研究：一家市场研究公司对某豪华汽车品牌的忠实客户进行了焦点小组讨论。通过分析讨论内容，研究人员识别出影响品牌忠诚度的关键因素，例如感知质量、社会地位以及与品牌的情感联系，从而为未来的营销策略提供参考。</li>
+</ul>
+<ol start="5">
+<li>
+<p><strong>医疗保健</strong></p>
+<p>调查患者体验、满意度和医疗保健实践：在医疗保健研究中，定性数据分析对于调查患者体验、满意度和医疗保健实践至关重要。它有助于揭示患者对医疗服务和治疗结果的看法。</p>
+</li>
+</ol>
+<ul>
+<li>例子：以患者为中心的护理：研究人员对接受过手术的患者进行深入访谈。通过分析这些访谈，他们确定了与患者满意度、与医疗服务提供者的沟通以及术后护理相关的主题。这些见解有助于医疗服务提供者改进以患者为中心的护理服务和政策。</li>
+</ul>
+<h2 id="优缺点">优缺点<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#优缺点" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><strong>优势：</strong></p>
+<ol>
+<li>丰富性和深度：定性记录分析使研究人员能够深入探索复杂现象，揭示人类故事、行为和社会过程的丰富性和复杂性。</li>
+<li>灵活性：定性技术在统计数据收集和评估方面提供了灵活性，使研究人员能够根据新兴主题和不断发展的研究问题调整他们的方法。</li>
+<li>背景理解：定性评估提供对信息背景和含义的感知，帮助研究人员认识构成人类行为和互动的社会、文化和历史元素。</li>
+<li>主观观点：定性方法使研究人员能够探索主观观点、信念和评论，提供对人们的思想、情感和动机的细致了解。</li>
+<li>理论生成：定性信息分析可以导致最新理论或假设的产生，因为研究人员发现了记录中以前可能未被认识到的模式、主题和关系。</li>
+</ol>
+<p><strong>缺点：</strong></p>
+<ol>
+<li>主观性：定性记录评估本质上是主观的，因为解释可以受到研究人员的偏见、观点和先入之见的影响。</li>
+<li>耗时：定性记录分析可能很耗时，需要大量数据收集、转录、编码和解释。</li>
+<li>普遍性：定性研究的结果可能无法轻易推广到更大的群体，因为重点通常放在特定背景和评论上，而不是进行统计推断。</li>
+<li>有效性和可靠性：确保定性研究结果的有效性和可靠性可能很困难，因为与定量研究相比，评估和建立严谨性的标准化方法较少。</li>
+<li>数据管理：管理和组织定性信息（包括成绩单、主题笔记和多媒体记录）可能很复杂，需要仔细的记录和车库。</li>
+</ol>
+<h1 id="定量数据分析">定量数据分析<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#定量数据分析" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h2 id="定量数据分析的步骤">定量数据分析的步骤<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#定量数据分析的步骤" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ol>
+<li>
+<p><strong>数据收集</strong>：定量数据分析始于从各种来源（例如调查、实验、传感器或数据库）收集数值数据。收集的数据可以包括任何可以用数字测量的数据，例如销售数据、网站流量、客户人口统计数据等。</p>
+</li>
+<li>
+<p><strong>数据清理和准备</strong>：在开始分析之前，必须清理和准备数据以确保准确性和一致性。这涉及处理缺失值、删除异常值、标准化格式以及以方便分析的方式构建数据等任务。</p>
+</li>
+<li>
+<p><strong>数据分析</strong>： EDA 是分析师探索数据以发现模式、趋势和关系的关键步骤。数据可视化、相关性分析和降维等技术可用于深入了解数据。</p>
+</li>
+<li>
+<p><strong>建模与预测</strong>：定量数据分析通常涉及建立数学模型，以根据数据预测结果。回归分析、机器学习算法和时间序列预测等技术可用于开发预测模型。</p>
+</li>
+<li>
+<p><strong>解读与报告</strong>：最后，对分析结果进行解读和报告，通常以数据可视化、报告或演示文稿的形式呈现。分析师会解释其发现的意义，并根据分析所得的见解提出建议。</p>
+</li>
+</ol>
+<h2 id="定量数据分析的方法与技术">定量数据分析的方法与技术<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#定量数据分析的方法与技术" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>定量数据分析涉及使用统计方法来分析数值数据并得出结论。定量数据分析中常用的方法和技术包括：</p>
+<ul>
+<li><strong>描述性分析</strong>：描述性分析涉及总结和描述数据的主要特征。这包括计算集中趋势度量（平均值、中位数、众数）、离散度量（范围、标准差），以及通过直方图、箱线图或散点图可视化数据。</li>
+<li><strong>假设检验与推论统计</strong>：在假设检验中，研究人员会提出关于变量之间关系的假设，并使用统计检验来确定是否有足够的证据支持或否定这些假设。推论统计有助于将样本研究结果推广到更大的总体，从而使研究人员能够做出预测并得出结论。</li>
+<li><strong>交叉表</strong>：交叉表（或列联表）用于分析两个分类变量之间的关联。它们清晰地展现了变量之间的关系，帮助研究人员识别数据中的模式和依赖关系。</li>
+<li><strong>回归分析</strong>：回归分析探讨一个因变量与一个或多个自变量之间的关系。它量化了这些关系的强度和性质，使其成为预测和理解变量对结果影响的有效工具。</li>
+<li><strong>群组分析</strong>：群组分析是指根据共同特征或经历对数据进行分组。它可以帮助研究人员追踪和比较不同群组随时间推移的行为或结果，从而洞察趋势、模式和潜在的因果关系。</li>
+<li><strong>方差分析 (ANOVA)</strong>：方差分析评估组均值之间的差异，以确定是否存在显著差异。它在比较多个组的均值时尤其有用，可以帮助研究人员识别哪些组之间存在差异。</li>
+<li><strong>因子分析</strong>：因子分析探索影响观测变量的潜在因素。它通过将相关变量归类为共同因子，帮助研究人员识别潜在结构并简化复杂数据集，从而理解数据的底层结构。</li>
+<li><strong>蒙特卡洛模拟</strong>：蒙特卡洛模拟涉及使用随机抽样来建模和分析复杂系统。它提供了一种概率方法来评估不同变量的不确定性和可变性的影响，从而辅助决策和风险分析。</li>
+<li><strong>聚类分析</strong>：聚类分析根据相似性将数据分类为组或簇。它有助于识别数据中的自然模式，从而促进对不同子组或分类的识别。</li>
+<li><strong>时间序列分析</strong>： 时间序列分析检查连续时间点收集的数据，以识别模式、趋势和周期。它对于预测未来值、理解时间依赖性以及根据历史数据趋势做出明智的决策非常有价值。</li>
+</ul>
+<h2 id="优点">优点<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#优点" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li><strong>识别趋势和模式</strong>：定量分析有助于发现隐藏在大型数据集中的趋势和模式。</li>
+<li><strong>明智的决策</strong>：它能够根据事实证据而不是直觉或猜测做出决策。</li>
+<li><strong>预测洞察</strong>：通过分析历史数据，可以洞察未来的趋势和行为。</li>
+<li><strong>衡量有效性</strong>：定量分析可以衡量策略、举措或干预措施的有效性。</li>
+<li><strong>风险评估</strong>：通过分析与各种因素相关的数值数据来帮助评估风险。</li>
+<li><strong>发现机会</strong>：通过发现数据中的相关性和关系，可以发现改进或增长的机会。</li>
+</ul>
+<h1 id="分析之间的区别">分析之间的区别<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#分析之间的区别" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>特征</th><th>定量数据分析</th><th>定性数据分析</th></tr></thead><tbody><tr><td>重点</td><td>数字和统计数据</td><td>文字、图像、非数字数据</td></tr><tr><td>数据类型</td><td>数字、测量值、百分比、频率</td><td>采访、观察、文件、视频、图像</td></tr><tr><td>方法</td><td>调查、实验、观察性研究、统计检验、回归分析</td><td>主题分析、话语分析、扎根理论、叙事分析</td></tr><tr><td>优势</td><td>客观性、精确性、普遍性</td><td>深刻理解体验，捕捉情感和意义，揭示背景</td></tr><tr><td>弱点</td><td>无法捕捉主观方面，忽视了背景</td><td>难以概括、主观解释、分析耗时</td></tr><tr><td>何时使用</td><td>测量、比较、检验假设、概括</td><td>理解“为什么”和“如何”，探索经验，捕捉主观意义</td></tr></tbody></table></div></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>Graph View</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc desktop-only"><button type="button" class="toc-header" aria-controls="toc-content" aria-expanded="true"><h3>Table of Contents</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul class="toc-content overflow" id="list-1"><li class="depth-0"><a href="#定性数据和定量数据" data-for="定性数据和定量数据">定性数据和定量数据</a></li><li class="depth-1"><a href="#示例" data-for="示例">示例</a></li><li class="depth-1"><a href="#差异" data-for="差异">差异</a></li><li class="depth-0"><a href="#定性数据分析" data-for="定性数据分析">定性数据分析</a></li><li class="depth-1"><a href="#定性分析的重要性" data-for="定性分析的重要性">定性分析的重要性</a></li><li class="depth-1"><a href="#定性分析的关键组成部分" data-for="定性分析的关键组成部分">定性分析的关键组成部分</a></li><li class="depth-1"><a href="#定性分析的步骤" data-for="定性分析的步骤">定性分析的步骤</a></li><li class="depth-1"><a href="#定性分析的方法" data-for="定性分析的方法">定性分析的方法</a></li><li class="depth-1"><a href="#定性分析的应用" data-for="定性分析的应用">定性分析的应用</a></li><li class="depth-1"><a href="#优缺点" data-for="优缺点">优缺点</a></li><li class="depth-0"><a href="#定量数据分析" data-for="定量数据分析">定量数据分析</a></li><li class="depth-1"><a href="#定量数据分析的步骤" data-for="定量数据分析的步骤">定量数据分析的步骤</a></li><li class="depth-1"><a href="#定量数据分析的方法与技术" data-for="定量数据分析的方法与技术">定量数据分析的方法与技术</a></li><li class="depth-1"><a href="#优点" data-for="优点">优点</a></li><li class="depth-0"><a href="#分析之间的区别" data-for="分析之间的区别">分析之间的区别</a></li><li class="overflow-end"></li></ul></div><div class="backlinks"><h3>Backlinks</h3><ul id="list-2" class="overflow"><li><a href="../../扩展知识目录" class="internal">扩展知识目录</a></li><li><a href="../../词典/D/定性数据分析" class="internal">定性数据分析</a></li><li><a href="../../词典/D/定量数据分析" class="internal">定量数据分析</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v4.5.1</a> © 2025</p><ul><li><a href="https://github.com/hero851815/quartz-page">GitHub</a></li></ul></footer></div></div></body><script type="application/javascript">function n(){let t=this.parentElement;t.classList.toggle("is-collapsed");let e=t.getElementsByClassName("callout-content")[0];if(!e)return;let l=t.classList.contains("is-collapsed");e.style.gridTemplateRows=l?"0fr":"1fr"}function c(){let t=document.getElementsByClassName("callout is-collapsible");for(let e of t){let l=e.getElementsByClassName("callout-title")[0],s=e.getElementsByClassName("callout-content")[0];if(!l||!s)continue;l.addEventListener("click",n),window.addCleanup(()=>l.removeEventListener("click",n));let o=e.classList.contains("is-collapsed");s.style.gridTemplateRows=o?"0fr":"1fr"}}document.addEventListener("nav",c);
+</script><script type="module">function f(i,e){if(!i)return;function r(o){o.target===this&&(o.preventDefault(),o.stopPropagation(),e())}function t(o){o.key.startsWith("Esc")&&(o.preventDefault(),e())}i?.addEventListener("click",r),window.addCleanup(()=>i?.removeEventListener("click",r)),document.addEventListener("keydown",t),window.addCleanup(()=>document.removeEventListener("keydown",t))}function y(i){for(;i.firstChild;)i.removeChild(i.firstChild)}var h=class{constructor(e,r){this.container=e;this.content=r;this.setupEventListeners(),this.setupNavigationControls(),this.resetTransform()}isDragging=!1;startPan={x:0,y:0};currentPan={x:0,y:0};scale=1;MIN_SCALE=.5;MAX_SCALE=3;cleanups=[];setupEventListeners(){let e=this.onMouseDown.bind(this),r=this.onMouseMove.bind(this),t=this.onMouseUp.bind(this),o=this.resetTransform.bind(this);this.container.addEventListener("mousedown",e),document.addEventListener("mousemove",r),document.addEventListener("mouseup",t),window.addEventListener("resize",o),this.cleanups.push(()=>this.container.removeEventListener("mousedown",e),()=>document.removeEventListener("mousemove",r),()=>document.removeEventListener("mouseup",t),()=>window.removeEventListener("resize",o))}cleanup(){for(let e of this.cleanups)e()}setupNavigationControls(){let e=document.createElement("div");e.className="mermaid-controls";let r=this.createButton("+",()=>this.zoom(.1)),t=this.createButton("-",()=>this.zoom(-.1)),o=this.createButton("Reset",()=>this.resetTransform());e.appendChild(t),e.appendChild(o),e.appendChild(r),this.container.appendChild(e)}createButton(e,r){let t=document.createElement("button");return t.textContent=e,t.className="mermaid-control-button",t.addEventListener("click",r),window.addCleanup(()=>t.removeEventListener("click",r)),t}onMouseDown(e){e.button===0&&(this.isDragging=!0,this.startPan={x:e.clientX-this.currentPan.x,y:e.clientY-this.currentPan.y},this.container.style.cursor="grabbing")}onMouseMove(e){this.isDragging&&(e.preventDefault(),this.currentPan={x:e.clientX-this.startPan.x,y:e.clientY-this.startPan.y},this.updateTransform())}onMouseUp(){this.isDragging=!1,this.container.style.cursor="grab"}zoom(e){let r=Math.min(Math.max(this.scale+e,this.MIN_SCALE),this.MAX_SCALE),t=this.content.getBoundingClientRect(),o=t.width/2,n=t.height/2,c=r-this.scale;this.currentPan.x-=o*c,this.currentPan.y-=n*c,this.scale=r,this.updateTransform()}updateTransform(){this.content.style.transform=`translate(${this.currentPan.x}px, ${this.currentPan.y}px) scale(${this.scale})`}resetTransform(){this.scale=1;let e=this.content.querySelector("svg");this.currentPan={x:e.getBoundingClientRect().width/2,y:e.getBoundingClientRect().height/2},this.updateTransform()}},C=["--secondary","--tertiary","--gray","--light","--lightgray","--highlight","--dark","--darkgray","--codeFont"],E;document.addEventListener("nav",async()=>{let e=document.querySelector(".center").querySelectorAll("code.mermaid");if(e.length===0)return;E||=await import("https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.4.0/mermaid.esm.min.mjs");let r=E.default,t=new WeakMap;for(let n of e)t.set(n,n.innerText);async function o(){for(let s of e){s.removeAttribute("data-processed");let a=t.get(s);a&&(s.innerHTML=a)}let n=C.reduce((s,a)=>(s[a]=window.getComputedStyle(document.documentElement).getPropertyValue(a),s),{}),c=document.documentElement.getAttribute("saved-theme")==="dark";r.initialize({startOnLoad:!1,securityLevel:"loose",theme:c?"dark":"base",themeVariables:{fontFamily:n["--codeFont"],primaryColor:n["--light"],primaryTextColor:n["--darkgray"],primaryBorderColor:n["--tertiary"],lineColor:n["--darkgray"],secondaryColor:n["--secondary"],tertiaryColor:n["--tertiary"],clusterBkg:n["--light"],edgeLabelBackground:n["--highlight"]}}),await r.run({nodes:e})}await o(),document.addEventListener("themechange",o),window.addCleanup(()=>document.removeEventListener("themechange",o));for(let n=0;n<e.length;n++){let v=function(){let g=l.querySelector("#mermaid-space"),m=l.querySelector(".mermaid-content");if(!m)return;y(m);let w=c.querySelector("svg").cloneNode(!0);m.appendChild(w),l.classList.add("active"),g.style.cursor="grab",u=new h(g,m)},M=function(){l.classList.remove("active"),u?.cleanup(),u=null},c=e[n],s=c.parentElement,a=s.querySelector(".clipboard-button"),d=s.querySelector(".expand-button"),p=window.getComputedStyle(a),L=a.offsetWidth+parseFloat(p.marginLeft||"0")+parseFloat(p.marginRight||"0");d.style.right=`calc(${L}px + 0.3rem)`,s.prepend(d);let l=s.querySelector("#mermaid-container");if(!l)return;let u=null;d.addEventListener("click",v),f(l,M),window.addCleanup(()=>{u?.cleanup(),d.removeEventListener("click",v)})}});
+</script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript"></script><script src="../../postscript.js" type="module"></script></html>
