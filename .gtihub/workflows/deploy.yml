@@ -4,7 +4,7 @@ name: Deploy to Publish Repo
 on:
   push:
     branches:
-      - v4  # 根据需要调整触发的分支
+      - main  # 根据需要调整触发的分支
 
 jobs:
   build-and-deploy:
