@@ -6,65 +6,65 @@
       <description>Last 10 notes on 数据安全知识库</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
-    <title>算法推荐技术</title>
-    <link>https://hero851815.cc/%E8%AF%8D%E5%85%B8/S/%E7%AE%97%E6%B3%95%E6%8E%A8%E8%8D%90%E6%8A%80%E6%9C%AF</link>
-    <guid>https://hero851815.cc/%E8%AF%8D%E5%85%B8/S/%E7%AE%97%E6%B3%95%E6%8E%A8%E8%8D%90%E6%8A%80%E6%9C%AF</guid>
-    <description>定义 是指利用生成合成类、个性化推送类、排序精选类、检索过滤类、调度决策类等算法技术向用户提供信息。【来源：《互联网信息服务算法推荐管理规定》，2022】 补充评论 此外，团体标准T/TAF 138-2022《App 推荐算法用户权益保护技术要求及测评规范》的附录A列举了常见的推荐算法应用。 扩展资料 关联词 个性化展示 个性化推荐 定向推送 自动化决策 用户画像 .</description>
-    <pubDate>Fri, 01 Aug 2025 02:00:11 GMT</pubDate>
+    <title>相关标准</title>
+    <link>https://hero851815.cc/%E6%A0%87%E5%87%86/%E7%9B%B8%E5%85%B3%E6%A0%87%E5%87%86</link>
+    <guid>https://hero851815.cc/%E6%A0%87%E5%87%86/%E7%9B%B8%E5%85%B3%E6%A0%87%E5%87%86</guid>
+    <description>1 基础共性标准 1.1 术语定义 JR/T 0236-2021 金融大数据 术语GB/T 25069-2022《信息安全技术 术语》 1.2 数据安全框架 GB/T 42570-2023《信息安全技术 区块链技术安全框架》 2 安全管理标准 2.1 数据安全规范 2.1.1 数据安全通用要求 JT/T 1522-2024《交通运输数据安全分级和保护要求》GBT+43697-2024《数据安全技术 数据分类分级规则》GB/T 45577-2025《数据安全技术 数据安全风险评估方法》 2.1.2 个人信息保护 GB/T 41391-2022《信息安全技术 移动互联网应用程序（App） 收集个人...</description>
+    <pubDate>Fri, 01 Aug 2025 02:07:47 GMT</pubDate>
   </item><item>
-    <title>身份鉴别</title>
-    <link>https://hero851815.cc/%E8%AF%8D%E5%85%B8/S/%E8%BA%AB%E4%BB%BD%E9%89%B4%E5%88%AB</link>
-    <guid>https://hero851815.cc/%E8%AF%8D%E5%85%B8/S/%E8%BA%AB%E4%BB%BD%E9%89%B4%E5%88%AB</guid>
-    <description>定义 对主客体身份进行确认的过程，也就是对网络用户在进入系统或访问受限系统资源时的身份进行识别和验证的过程。【来源：网络】 补充评论 网络用户身份鉴别：在网络中识别用户身份并辨别其合法性的过程。【来源：GB/T 36633-2018《信息安全技术 网络用户身份鉴别技术指南》】 扩展资料 关联词 .</description>
-    <pubDate>Fri, 01 Aug 2025 02:00:11 GMT</pubDate>
+    <title>安全</title>
+    <link>https://hero851815.cc/%E8%AF%8D%E5%85%B8/A/%E5%AE%89%E5%85%A8</link>
+    <guid>https://hero851815.cc/%E8%AF%8D%E5%85%B8/A/%E5%AE%89%E5%85%A8</guid>
+    <description>定义 对某一系统，据以获得保密性、完整性、可用性、可核查性、真实性以及可靠性的性质。【来源：ISO/IEC TR 15443-1:2012 《信息技术-安全技术-安全保证框架》】 补充评论 扩展资料 关联词 .</description>
+    <pubDate>Fri, 01 Aug 2025 02:07:47 GMT</pubDate>
   </item><item>
-    <title>提供</title>
-    <link>https://hero851815.cc/%E8%AF%8D%E5%85%B8/T/%E6%8F%90%E4%BE%9B</link>
-    <guid>https://hero851815.cc/%E8%AF%8D%E5%85%B8/T/%E6%8F%90%E4%BE%9B</guid>
-    <description>定义 个人信息处理者通过共享、 转移等方式将个人信息传输或披露给其他个人信息处理者的行为。委托第三方处理个人信息的，不属于向其他个人信息处理者提供个人信息的行为。【来源：GB/T 42574-2023《信息安全技术 个人信息处理中告知和同意的实施指南》】 向组织内其他责任主体或其他组织提供所控制的数据资产的数据处理活动。 注：组织内数据提供一般指跨安全域的数据交换、数据共享、数据转让等数据操作，跨组织的数据提供还可涉及数 据的权益归属、数据跨境安全评估以及个人信息保护影响评估等数据操作。 【来源：GB/T 35274-2023《信息安全技术 大数据服务安全能力要求》】 补充评论 例如，在APP...</description>
-    <pubDate>Fri, 01 Aug 2025 02:00:11 GMT</pubDate>
+    <title>安全多方计算</title>
+    <link>https://hero851815.cc/%E8%AF%8D%E5%85%B8/A/%E5%AE%89%E5%85%A8%E5%A4%9A%E6%96%B9%E8%AE%A1%E7%AE%97</link>
+    <guid>https://hero851815.cc/%E8%AF%8D%E5%85%B8/A/%E5%AE%89%E5%85%A8%E5%A4%9A%E6%96%B9%E8%AE%A1%E7%AE%97</guid>
+    <description>定义 是指在一个分布式网络中，多个参与实体各自持有秘密数据，各方希望以这些数据为输入共同完成对某函数的计算，而要求每个参与实体除计算结果、预期可公开的信息外均不能得到其他参与实体的任何输入信息。主要研究针对无可信第三方情况下，安全地进行多方协同的计算问题。【来源：《数据领域常用名词解释（第一批）》，2024】 补充评论 扩展资料 关联词 隐私计算 .</description>
+    <pubDate>Fri, 01 Aug 2025 02:07:47 GMT</pubDate>
   </item><item>
-    <title>委托合同</title>
-    <link>https://hero851815.cc/%E8%AF%8D%E5%85%B8/W/%E5%A7%94%E6%89%98%E5%90%88%E5%90%8C</link>
-    <guid>https://hero851815.cc/%E8%AF%8D%E5%85%B8/W/%E5%A7%94%E6%89%98%E5%90%88%E5%90%8C</guid>
-    <description>定义 委托合同是委托人和受托人约定，由受托人处理委托人事务的合同。【来源：《中华人民共和国民法典》，2024】 补充评论 扩展资料 关联词 .</description>
-    <pubDate>Fri, 01 Aug 2025 02:00:11 GMT</pubDate>
+    <title>保密性</title>
+    <link>https://hero851815.cc/%E8%AF%8D%E5%85%B8/B/%E4%BF%9D%E5%AF%86%E6%80%A7</link>
+    <guid>https://hero851815.cc/%E8%AF%8D%E5%85%B8/B/%E4%BF%9D%E5%AF%86%E6%80%A7</guid>
+    <description>定义 信息对未经授权的个人、实体或 过程不可用或不泄露的性质。【来源：GB/T 29246-2023《信息安全技术 信息安全管理体系 概述和词汇》】 使信息不泄漏给未授权的个人、 实体、进程，或不被其利用的特性。【来源：GB/T 37988—2019《信息安全技术 数据安全能力成熟度模型》】 保密性是指信息不被未授权实体（含产品、服务、个人、组织）获得或知悉的特性，即医疗器械产品自身和相关数据仅可由授权用户在授权时间以授权方式进行访问和使用。【来源：《医疗器械网络安全注册审查指导原则（2022年修订版）》】 补充评论 扩展资料 关联词 .</description>
+    <pubDate>Fri, 01 Aug 2025 02:07:47 GMT</pubDate>
   </item><item>
-    <title>委托处理</title>
-    <link>https://hero851815.cc/%E8%AF%8D%E5%85%B8/W/%E5%A7%94%E6%89%98%E5%A4%84%E7%90%86</link>
-    <guid>https://hero851815.cc/%E8%AF%8D%E5%85%B8/W/%E5%A7%94%E6%89%98%E5%A4%84%E7%90%86</guid>
-    <description>定义 数据处理者委托第三方按照约定的目的和方式开展的数据处理活动。【来源：《信息安全技术 重要数据处理安全要求（征求意见稿）》，2023】 补充评论 例如，在APP与SDK之间处理信息的关系中，SDK收集个人信息时无法独立决定对App用户数据处理的目的、方式，需遵照与App运营者的约定处理个人信息，属于App运营者委托SDK提供者处理的情形。此时，App运营者是个人信息处理者、SDK服务商是受托处理者，告知同意的职责由App运营者承担。App运营者委托SDK提供者定制（包括基于免费版本定制）开发SDK的，同样需要满足以上情形，才构成“委托处理”关系。 【来源：CCIA数据安全工作委员会，《如何...</description>
-    <pubDate>Fri, 01 Aug 2025 02:00:11 GMT</pubDate>
+    <title>半结构化数据</title>
+    <link>https://hero851815.cc/%E8%AF%8D%E5%85%B8/B/%E5%8D%8A%E7%BB%93%E6%9E%84%E5%8C%96%E6%95%B0%E6%8D%AE</link>
+    <guid>https://hero851815.cc/%E8%AF%8D%E5%85%B8/B/%E5%8D%8A%E7%BB%93%E6%9E%84%E5%8C%96%E6%95%B0%E6%8D%AE</guid>
+    <description>定义 是指不符合关系型数据库或其他数据表的形式关联起来的数据模型结构，但包含相关标记，用来分隔语义元素以及对记录和字段进行分层的一种数据化结构形式。【来源：《数据领域常用名词解释（第一批）》，2024】 补充评论 扩展资料 关联词 结构化数据 非结构化数据 .</description>
+    <pubDate>Fri, 01 Aug 2025 02:07:47 GMT</pubDate>
   </item><item>
-    <title>完整性</title>
-    <link>https://hero851815.cc/%E8%AF%8D%E5%85%B8/W/%E5%AE%8C%E6%95%B4%E6%80%A7</link>
-    <guid>https://hero851815.cc/%E8%AF%8D%E5%85%B8/W/%E5%AE%8C%E6%95%B4%E6%80%A7</guid>
-    <description>定义 准确和完备的特性。【来源：GB/T 29246-2023《信息安全技术 信息安全管理体系 概述和词汇》】 完整性是指信息的创建、传输、存储、显示未以非授权方式进行更改（含删除、添加）的特性，即医疗器械相关数据是准确和完整的，且未被篡改。【来源：《医疗器械网络安全注册审查指导原则（2022年修订版）》】 补充评论 扩展资料 关联词 .</description>
-    <pubDate>Fri, 01 Aug 2025 02:00:11 GMT</pubDate>
+    <title>标识符</title>
+    <link>https://hero851815.cc/%E8%AF%8D%E5%85%B8/B/%E6%A0%87%E8%AF%86%E7%AC%A6</link>
+    <guid>https://hero851815.cc/%E8%AF%8D%E5%85%B8/B/%E6%A0%87%E8%AF%86%E7%AC%A6</guid>
+    <description>定义 微数据中的一个或多个属性 ，可以实现对个人信息主体的唯一识別。 注：标识符分为直接标识符和准标识符。 【来源：GB/T 37964-2019 《信息安全技术 个人信息去标识化指南》】 补充评论 扩展资料 关联词 .</description>
+    <pubDate>Fri, 01 Aug 2025 02:07:47 GMT</pubDate>
   </item><item>
-    <title>未成年人</title>
-    <link>https://hero851815.cc/%E8%AF%8D%E5%85%B8/W/%E6%9C%AA%E6%88%90%E5%B9%B4%E4%BA%BA</link>
-    <guid>https://hero851815.cc/%E8%AF%8D%E5%85%B8/W/%E6%9C%AA%E6%88%90%E5%B9%B4%E4%BA%BA</guid>
-    <description>定义 未满十八周岁的公民。【来源：《未成年人保护法》，2020】 补充评论 虽然《个人信息保护法》将特殊保护的年龄从十八岁下降到了十四岁，但是更宏观的网络法律层面，中国也出于未成年人保护的目的提出了很多特殊的合规要求，例如未成年人模式。 扩展资料 未成年/儿童个人信息保护 关联词 儿童 .</description>
-    <pubDate>Fri, 01 Aug 2025 02:00:11 GMT</pubDate>
+    <title>被遗忘权</title>
+    <link>https://hero851815.cc/%E8%AF%8D%E5%85%B8/B/%E8%A2%AB%E9%81%97%E5%BF%98%E6%9D%83</link>
+    <guid>https://hero851815.cc/%E8%AF%8D%E5%85%B8/B/%E8%A2%AB%E9%81%97%E5%BF%98%E6%9D%83</guid>
+    <description>定义 被遗忘权是信息主体所享有的就其个人信息中不准确、不充分、不相关或超越信息处理目的信息，可以要求运营商等信息处理者把链接删除的权利。【来源：丁宇翔，《个人信息保护纠纷理论释解与裁判实务（第二版）》】 补充评论 虽然被遗忘权并非我国《个人信息保护法》所明确的法定权利，但其所涉及的利益可通过删除制度及损害赔偿等方式得以保护。 被遗忘权一词并不同于我国对权利的命名逻辑，无法直接看出该权利的客体是什么，如，我们不能参照肖像权的客体是肖像利益这种角度，来推断出被遗忘权的客体是被遗忘利益。但我们从被遗忘权的英文用词（right to be forgotten）来看，也许就能更好理解该权利的内涵。 扩展...</description>
+    <pubDate>Fri, 01 Aug 2025 02:07:47 GMT</pubDate>
   </item><item>
-    <title>网络安全事件</title>
-    <link>https://hero851815.cc/%E8%AF%8D%E5%85%B8/W/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E4%BA%8B%E4%BB%B6</link>
-    <guid>https://hero851815.cc/%E8%AF%8D%E5%85%B8/W/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E4%BA%8B%E4%BB%B6</guid>
-    <description>定义 由于人为原因、软硬件缺陷或故障、自然灾害等，对网络和信息系统或者其中的数据造成危害，对社会造成负面影响的事件，可分为有害程序事件、网络攻击事件、信息破坏事件、信息内容安全事件、设备设施故障、灾害性事件和其他事件。【来源：《国家网络安全事件应急预案》，2017】 由于人为原因、网络遭受攻击、网络存在漏洞隐患、软硬件缺陷或故障、不可抗力等因素，对网络和信息系统或者其中的数据和业务应用造成危害，对国家、社会、经济造成负面影响的事件。【来源：GB/T 20986-2023《信息安全技术 网络安全事件分类分级指南》】 补充评论 《国家网络安全事件应急预案》和《网络安全事件报告管理办法》（征求意见稿...</description>
-    <pubDate>Fri, 01 Aug 2025 02:00:11 GMT</pubDate>
+    <title>传输</title>
+    <link>https://hero851815.cc/%E8%AF%8D%E5%85%B8/C/%E4%BC%A0%E8%BE%93</link>
+    <guid>https://hero851815.cc/%E8%AF%8D%E5%85%B8/C/%E4%BC%A0%E8%BE%93</guid>
+    <description>定义 通过信息通信设备将数据从一个网络节点传送到一个或多个网络节点的数据处理活动。 注：网络节点可以是计算机、程序、终端设备、存储器、信息系统等。 【来源：GB/T 35274-2023 《信息安全技术 大数据服务安全能力要求》】 补充评论 扩展资料 关联词 .</description>
+    <pubDate>Fri, 01 Aug 2025 02:07:47 GMT</pubDate>
   </item><item>
-    <title>网络攻击</title>
-    <link>https://hero851815.cc/%E8%AF%8D%E5%85%B8/W/%E7%BD%91%E7%BB%9C%E6%94%BB%E5%87%BB</link>
-    <guid>https://hero851815.cc/%E8%AF%8D%E5%85%B8/W/%E7%BD%91%E7%BB%9C%E6%94%BB%E5%87%BB</guid>
-    <description>定义 通过计算机、路由器等计算资源和网络资源，利用网络中存在的漏洞和安全缺陷实施的一种行为。【来源：GB/T 37027-2018《信息安全技术网络攻击定义及描述规范》】 通过信息网络技术和各种手段，利用网络中存在的安全漏洞和安全缺陷针对网络实施干扰、控制、 破坏等影响网络正常运行状态，以及针对网络数据实施窃取、滥用、篡改、损毁等危害数据安全的行为。【来源：GB/T 37027-2025《网络安全技术 网络攻击和网络攻击事件判定准则》】 补充评论 扩展资料 EXT - 中间人攻击 关联词 .</description>
-    <pubDate>Fri, 01 Aug 2025 02:00:11 GMT</pubDate>
+    <title>存储</title>
+    <link>https://hero851815.cc/%E8%AF%8D%E5%85%B8/C/%E5%AD%98%E5%82%A8</link>
+    <guid>https://hero851815.cc/%E8%AF%8D%E5%85%B8/C/%E5%AD%98%E5%82%A8</guid>
+    <description>定义 数据在存储器中的保存。【来源：GB/T 5271.12-2000《信息技术 词汇 第12部分：外围设备》】 补充评论 扩展资料 关联词 .</description>
+    <pubDate>Fri, 01 Aug 2025 02:07:47 GMT</pubDate>
   </item><item>
-    <title>信息</title>
-    <link>https://hero851815.cc/%E8%AF%8D%E5%85%B8/X/%E4%BF%A1%E6%81%AF</link>
-    <guid>https://hero851815.cc/%E8%AF%8D%E5%85%B8/X/%E4%BF%A1%E6%81%AF</guid>
-    <description>定义 有意义的数据。【来源：GB/T 19000-2016 《质量管理体系 基础和术语》】 关于客体（如事实、事件、事物、过程或思想，包括概念）的知识，在一定的场合中具有特定的意义。【来源：JR/T 0197-2020《金融数据安全 数据安全分级指南》】 补充评论 扩展资料 关联词 数据 个人信息 .</description>
-    <pubDate>Fri, 01 Aug 2025 02:00:11 GMT</pubDate>
+    <title>存储介质</title>
+    <link>https://hero851815.cc/%E8%AF%8D%E5%85%B8/C/%E5%AD%98%E5%82%A8%E4%BB%8B%E8%B4%A8</link>
+    <guid>https://hero851815.cc/%E8%AF%8D%E5%85%B8/C/%E5%AD%98%E5%82%A8%E4%BB%8B%E8%B4%A8</guid>
+    <description>定义 承载电子数据的各类载体或设备，包括但不限于计算机硬盘、磁带、软盘、光盘、各种形式的存 储卡、存储芯片等。【来源：GB/T 31500-2024《网络安全技术 存储介质数据恢复服务安全规范》】 补充评论 GB/T 25069-2022《信息安全技术 术语》中术语为存储媒体。 存储系统：如数据库、大数据平台、云存储、网盘、存储介质等【来源：JT/T 1547-2025《交通运输数据安全风险评估指南》】 内部讨论： 物理存储介质：U盘、移动硬盘、光盘、磁带等 逻辑存储介质：网络共享文件夹、云存储控制等 扩展资料 关联词 .</description>
+    <pubDate>Fri, 01 Aug 2025 02:07:47 GMT</pubDate>
   </item>
     </channel>
   </rss>
