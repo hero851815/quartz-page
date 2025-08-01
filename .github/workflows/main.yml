@@ -21,3 +21,4 @@ jobs:
           ENDPOINT: ${{ secrets.OSS_ENDPOINT }}
           # 上传的目录，这里是 Quartz 的输出目录
           source_dir: 'public'
+          
