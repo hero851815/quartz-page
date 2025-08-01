@@ -1,0 +1,23 @@
+name: Deploy to Publish Aliyun OSS
+
+on:
+  push:
+    branches:
+      - main  # 根据需要调整触发的分支
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 将生成的 HTML 推送到阿里云 OSS
+      - name: Deploy to Aliyun OSS
+        uses: aliyun-oss-website-action@v1.1
+        with:
+          # 以下变量从 GitHub Secrets 中获取，请确保已配置
+          ACCESS_KEY_ID: ${{ secrets.OSS_ACCESS_KEY_ID }}
+          ACCESS_KEY_SECRET: ${{ secrets.OSS_ACCESS_KEY_SECRET }}
+          BUCKET: ${{ secrets.OSS_BUCKET_NAME }}
+          ENDPOINT: ${{ secrets.OSS_ENDPOINT }}
+          # 上传的目录，这里是 Quartz 的输出目录
+          source_dir: 'public'
