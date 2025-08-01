@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en"><head><title>EXT - CPU调度算法 - 专业术语词典与技术指南</title><meta charset="utf-8"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted Grotesk:wght@400;700&amp;family=Source Sans Pro:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="og:site_name" content="数据安全知识库"/><meta property="og:title" content="EXT - CPU调度算法 - 专业术语词典与技术指南"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="EXT - CPU调度算法 - 专业术语词典与技术指南"/><meta name="twitter:description" content="调度的基本概念 在多道程序系统中，进程的数量往往多于处理机的个数，因此进程争用处理机的情况在所难免。处理机调度是对处理机进行分配，即从就绪队列中按照一定的算法（公平、高效的原则）选用一行进程并将处理机分配给它运行，以实现进程并发地执行。 调度的层次 高级调度（作业调度） 它负责从外部存储器（如硬盘、网络等）中选择一个或多个作业（job），并将它们调入内存中，为它们创建进程，并在系统资源充足时将它们放入就绪队列中等待CPU执行。 简单点来说，高级调度就是内存与辅存之间的调度，对于每个作业，只调入一次，调出一次。 中级调度（内存调度） 它负责在内存中运行的进程数量和大小之间进行平衡，并控制进程在内..."/><meta property="og:description" content="调度的基本概念 在多道程序系统中，进程的数量往往多于处理机的个数，因此进程争用处理机的情况在所难免。处理机调度是对处理机进行分配，即从就绪队列中按照一定的算法（公平、高效的原则）选用一行进程并将处理机分配给它运行，以实现进程并发地执行。 调度的层次 高级调度（作业调度） 它负责从外部存储器（如硬盘、网络等）中选择一个或多个作业（job），并将它们调入内存中，为它们创建进程，并在系统资源充足时将它们放入就绪队列中等待CPU执行。 简单点来说，高级调度就是内存与辅存之间的调度，对于每个作业，只调入一次，调出一次。 中级调度（内存调度） 它负责在内存中运行的进程数量和大小之间进行平衡，并控制进程在内..."/><meta property="og:image:alt" content="调度的基本概念 在多道程序系统中，进程的数量往往多于处理机的个数，因此进程争用处理机的情况在所难免。处理机调度是对处理机进行分配，即从就绪队列中按照一定的算法（公平、高效的原则）选用一行进程并将处理机分配给它运行，以实现进程并发地执行。 调度的层次 高级调度（作业调度） 它负责从外部存储器（如硬盘、网络等）中选择一个或多个作业（job），并将它们调入内存中，为它们创建进程，并在系统资源充足时将它们放入就绪队列中等待CPU执行。 简单点来说，高级调度就是内存与辅存之间的调度，对于每个作业，只调入一次，调出一次。 中级调度（内存调度） 它负责在内存中运行的进程数量和大小之间进行平衡，并控制进程在内..."/><meta property="twitter:domain" content="hero851815.cc"/><meta property="og:url" content="https://hero851815.cc/扩展/概念解析/EXT---CPU调度算法"/><meta property="twitter:url" content="https://hero851815.cc/扩展/概念解析/EXT---CPU调度算法"/><link rel="icon" href="../../static/icon.png"/><meta name="description" content="调度的基本概念 在多道程序系统中，进程的数量往往多于处理机的个数，因此进程争用处理机的情况在所难免。处理机调度是对处理机进行分配，即从就绪队列中按照一定的算法（公平、高效的原则）选用一行进程并将处理机分配给它运行，以实现进程并发地执行。 调度的层次 高级调度（作业调度） 它负责从外部存储器（如硬盘、网络等）中选择一个或多个作业（job），并将它们调入内存中，为它们创建进程，并在系统资源充足时将它们放入就绪队列中等待CPU执行。 简单点来说，高级调度就是内存与辅存之间的调度，对于每个作业，只调入一次，调出一次。 中级调度（内存调度） 它负责在内存中运行的进程数量和大小之间进行平衡，并控制进程在内..."/><meta name="generator" content="Quartz"/><link href="../../index.css" rel="stylesheet" type="text/css" spa-preserve/><style>.expand-button {
+  position: absolute;
+  display: flex;
+  float: right;
+  padding: 0.4rem;
+  margin: 0.3rem;
+  right: 0;
+  color: var(--gray);
+  border-color: var(--dark);
+  background-color: var(--light);
+  border: 1px solid;
+  border-radius: 5px;
+  opacity: 0;
+  transition: 0.2s;
+}
+.expand-button > svg {
+  fill: var(--light);
+  filter: contrast(0.3);
+}
+.expand-button:hover {
+  cursor: pointer;
+  border-color: var(--secondary);
+}
+.expand-button:focus {
+  outline: 0;
+}
+
+pre:hover > .expand-button {
+  opacity: 1;
+  transition: 0.2s;
+}
+
+#mermaid-container {
+  position: fixed;
+  contain: layout;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: none;
+  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.5);
+}
+#mermaid-container.active {
+  display: inline-block;
+}
+#mermaid-container > #mermaid-space {
+  border: 1px solid var(--lightgray);
+  background-color: var(--light);
+  border-radius: 5px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80vh;
+  width: 80vw;
+  overflow: hidden;
+}
+#mermaid-container > #mermaid-space > .mermaid-content {
+  padding: 2rem;
+  position: relative;
+  transform-origin: 0 0;
+  transition: transform 0.1s ease;
+  overflow: visible;
+  min-height: 200px;
+  min-width: 200px;
+}
+#mermaid-container > #mermaid-space > .mermaid-content pre {
+  margin: 0;
+  border: none;
+}
+#mermaid-container > #mermaid-space > .mermaid-content svg {
+  max-width: none;
+  height: auto;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  background: var(--light);
+  border: 1px solid var(--lightgray);
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid var(--lightgray);
+  background: var(--light);
+  color: var(--dark);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: var(--bodyFont);
+  transition: all 0.2s ease;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:hover {
+  background: var(--lightgray);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:active {
+  transform: translateY(1px);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:nth-child(2) {
+  width: auto;
+  padding: 0 12px;
+  font-size: 14px;
+}
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiL2hvbWUvcnVubmVyL3dvcmsvcXVhcnR6LXJlcG8vcXVhcnR6LXJlcG8vcXVhcnR6L3F1YXJ0ei9jb21wb25lbnRzL3N0eWxlcyIsInNvdXJjZXMiOlsibWVybWFpZC5pbmxpbmUuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBR0Y7RUFDRTs7O0FBS0Y7RUFDRTtFQUNBOzs7QUFJSjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTs7QUFHRjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTtFQUNBOztBQUdGO0VBQ0U7RUFDQTs7QUFJSjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7O0FBR0Y7RUFDRTs7QUFJRjtFQUNFO0VBQ0E7RUFDQSIsInNvdXJjZXNDb250ZW50IjpbIi5leHBhbmQtYnV0dG9uIHtcbiAgcG9zaXRpb246IGFic29sdXRlO1xuICBkaXNwbGF5OiBmbGV4O1xuICBmbG9hdDogcmlnaHQ7XG4gIHBhZGRpbmc6IDAuNHJlbTtcbiAgbWFyZ2luOiAwLjNyZW07XG4gIHJpZ2h0OiAwOyAvLyBOT1RFOiByaWdodCB3aWxsIGJlIHNldCBpbiBtZXJtYWlkLmlubGluZS50c1xuICBjb2xvcjogdmFyKC0tZ3JheSk7XG4gIGJvcmRlci1jb2xvcjogdmFyKC0tZGFyayk7XG4gIGJhY2tncm91bmQtY29sb3I6IHZhcigtLWxpZ2h0KTtcbiAgYm9yZGVyOiAxcHggc29saWQ7XG4gIGJvcmRlci1yYWRpdXM6IDVweDtcbiAgb3BhY2l0eTogMDtcbiAgdHJhbnNpdGlvbjogMC4ycztcblxuICAmID4gc3ZnIHtcbiAgICBmaWxsOiB2YXIoLS1saWdodCk7XG4gICAgZmlsdGVyOiBjb250cmFzdCgwLjMpO1xuICB9XG5cbiAgJjpob3ZlciB7XG4gICAgY3Vyc29yOiBwb2ludGVyO1xuICAgIGJvcmRlci1jb2xvcjogdmFyKC0tc2Vjb25kYXJ5KTtcbiAgfVxuXG4gICY6Zm9jdXMge1xuICAgIG91dGxpbmU6IDA7XG4gIH1cbn1cblxucHJlIHtcbiAgJjpob3ZlciA+IC5leHBhbmQtYnV0dG9uIHtcbiAgICBvcGFjaXR5OiAxO1xuICAgIHRyYW5zaXRpb246IDAuMnM7XG4gIH1cbn1cblxuI21lcm1haWQtY29udGFpbmVyIHtcbiAgcG9zaXRpb246IGZpeGVkO1xuICBjb250YWluOiBsYXlvdXQ7XG4gIHotaW5kZXg6IDk5OTtcbiAgbGVmdDogMDtcbiAgdG9wOiAwO1xuICB3aWR0aDogMTAwdnc7XG4gIGhlaWdodDogMTAwdmg7XG4gIG92ZXJmbG93OiBoaWRkZW47XG4gIGRpc3BsYXk6IG5vbmU7XG4gIGJhY2tkcm9wLWZpbHRlcjogYmx1cig0cHgpO1xuICBiYWNrZ3JvdW5kOiByZ2JhKDAsIDAsIDAsIDAuNSk7XG5cbiAgJi5hY3RpdmUge1xuICAgIGRpc3BsYXk6IGlubGluZS1ibG9jaztcbiAgfVxuXG4gICYgPiAjbWVybWFpZC1zcGFjZSB7XG4gICAgYm9yZGVyOiAxcHggc29saWQgdmFyKC0tbGlnaHRncmF5KTtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1saWdodCk7XG4gICAgYm9yZGVyLXJhZGl1czogNXB4O1xuICAgIHBvc2l0aW9uOiBmaXhlZDtcbiAgICB0b3A6IDUwJTtcbiAgICBsZWZ0OiA1MCU7XG4gICAgdHJhbnNmb3JtOiB0cmFuc2xhdGUoLTUwJSwgLTUwJSk7XG4gICAgaGVpZ2h0OiA4MHZoO1xuICAgIHdpZHRoOiA4MHZ3O1xuICAgIG92ZXJmbG93OiBoaWRkZW47XG5cbiAgICAmID4gLm1lcm1haWQtY29udGVudCB7XG4gICAgICBwYWRkaW5nOiAycmVtO1xuICAgICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgICAgdHJhbnNmb3JtLW9yaWdpbjogMCAwO1xuICAgICAgdHJhbnNpdGlvbjogdHJhbnNmb3JtIDAuMXMgZWFzZTtcbiAgICAgIG92ZXJmbG93OiB2aXNpYmxlO1xuICAgICAgbWluLWhlaWdodDogMjAwcHg7XG4gICAgICBtaW4td2lkdGg6IDIwMHB4O1xuXG4gICAgICBwcmUge1xuICAgICAgICBtYXJnaW46IDA7XG4gICAgICAgIGJvcmRlcjogbm9uZTtcbiAgICAgIH1cblxuICAgICAgc3ZnIHtcbiAgICAgICAgbWF4LXdpZHRoOiBub25lO1xuICAgICAgICBoZWlnaHQ6IGF1dG87XG4gICAgICB9XG4gICAgfVxuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRyb2xzIHtcbiAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICAgIGJvdHRvbTogMjBweDtcbiAgICAgIHJpZ2h0OiAyMHB4O1xuICAgICAgZGlzcGxheTogZmxleDtcbiAgICAgIGdhcDogOHB4O1xuICAgICAgcGFkZGluZzogOHB4O1xuICAgICAgYmFja2dyb3VuZDogdmFyKC0tbGlnaHQpO1xuICAgICAgYm9yZGVyOiAxcHggc29saWQgdmFyKC0tbGlnaHRncmF5KTtcbiAgICAgIGJvcmRlci1yYWRpdXM6IDZweDtcbiAgICAgIGJveC1zaGFkb3c6IDAgMnB4IDRweCByZ2JhKDAsIDAsIDAsIDAuMSk7XG4gICAgICB6LWluZGV4OiAyO1xuXG4gICAgICAubWVybWFpZC1jb250cm9sLWJ1dHRvbiB7XG4gICAgICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICAgICAgICB3aWR0aDogMzJweDtcbiAgICAgICAgaGVpZ2h0OiAzMnB4O1xuICAgICAgICBwYWRkaW5nOiAwO1xuICAgICAgICBib3JkZXI6IDFweCBzb2xpZCB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodCk7XG4gICAgICAgIGNvbG9yOiB2YXIoLS1kYXJrKTtcbiAgICAgICAgYm9yZGVyLXJhZGl1czogNHB4O1xuICAgICAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgICAgIGZvbnQtc2l6ZTogMTZweDtcbiAgICAgICAgZm9udC1mYW1pbHk6IHZhcigtLWJvZHlGb250KTtcbiAgICAgICAgdHJhbnNpdGlvbjogYWxsIDAuMnMgZWFzZTtcblxuICAgICAgICAmOmhvdmVyIHtcbiAgICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICB9XG5cbiAgICAgICAgJjphY3RpdmUge1xuICAgICAgICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWSgxcHgpO1xuICAgICAgICB9XG5cbiAgICAgICAgLy8gU3R5bGUgdGhlIHJlc2V0IGJ1dHRvbiBkaWZmZXJlbnRseVxuICAgICAgICAmOm50aC1jaGlsZCgyKSB7XG4gICAgICAgICAgd2lkdGg6IGF1dG87XG4gICAgICAgICAgcGFkZGluZzogMCAxMnB4O1xuICAgICAgICAgIGZvbnQtc2l6ZTogMTRweDtcbiAgICAgICAgfVxuICAgICAgfVxuICAgIH1cbiAgfVxufVxuIl19 */</style><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" spa-preserve/><script src="../../prescript.js" type="application/javascript" spa-preserve></script><script type="application/javascript" spa-preserve>const fetchData = fetch("../../static/contentIndex.json").then(data => data.json())</script><link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://hero851815.cc/index.xml"/><meta property="og:image:width" content="1200"/><meta property="og:image:height" content="630"/><meta property="og:image" content="https://hero851815.cc/扩展/概念解析/EXT---CPU调度算法-og-image.webp"/><meta property="og:image:url" content="https://hero851815.cc/扩展/概念解析/EXT---CPU调度算法-og-image.webp"/><meta name="twitter:image" content="https://hero851815.cc/扩展/概念解析/EXT---CPU调度算法-og-image.webp"/><meta property="og:image:type" content="image/.webp"/></head><body data-slug="扩展/概念解析/EXT---CPU调度算法"><div id="quartz-root" class="page"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href="../..">数据安全知识库</a></h2><div class="spacer mobile-only"></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 1rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button"><p>Search</p><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="Search for something" placeholder="Search for something"/><div class="search-layout" data-preview="true"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="Dark mode"><title>Dark mode</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="Light mode"><title>Light mode</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="Reader mode"><title>Reader mode</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a,b)=>!a.isFolder&amp;&amp;!b.isFolder||a.isFolder&amp;&amp;b.isFolder?a.displayName.localeCompare(b.displayName,void 0,{numeric:!0,sensitivity:\&quot;base\&quot;}):!a.isFolder&amp;&amp;b.isFolder?1:-1&quot;,&quot;filterFn&quot;:&quot;node=>node.slugSegment!==\&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;node=>node&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-content"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>Explorer</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div class="explorer-content" aria-expanded="false"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#"></a></li></template><template id="template-folder"><li><div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="../../">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../扩展/">扩展</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../扩展/概念解析/">概念解析</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>EXT   CPU调度算法</a></div></nav><h1 class="article-title">EXT - CPU调度算法<span class="article-subtitle"> </span><span class="article-synonyms"> </span></h1><p show-comma="true" class="content-meta"><span>23 min read</span></p></div></div><article class="popover-hint"><h1 id="调度的基本概念">调度的基本概念<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#调度的基本概念" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p>在多道程序系统中，进程的数量往往多于处理机的个数，因此进程争用处理机的情况在所难免。处理机调度是对处理机进行分配，即从就绪队列中按照一定的算法（公平、高效的原则）选用一行进程并将处理机分配给它运行，以实现进程并发地执行。</p>
+<h1 id="调度的层次">调度的层次<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#调度的层次" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p><strong>高级调度（作业调度）</strong></p>
+<ol>
+<li>它负责从外部存储器（如硬盘、网络等）中选择一个或多个作业（job），并将它们调入内存中，为它们创建进程，并在系统资源充足时将它们放入就绪队列中等待CPU执行。</li>
+<li>简单点来说，高级调度就是内存与辅存之间的调度，对于每个作业，只调入一次，调出一次。</li>
+</ol>
+<p><strong>中级调度（内存调度）</strong></p>
+<ol>
+<li>它负责在内存中运行的进程数量和大小之间进行平衡，并控制进程在内存中的位置和状态；</li>
+<li>中级调度通常由操作系统自动执行，其主要任务是将某些处于阻塞状态的进程移动到外部设备或磁盘上，以释放出宝贵的内存资源。</li>
+</ol>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>调度</th><th>比较</th></tr></thead><tbody><tr><td>高级调度</td><td>针对整个作业或进程的调度</td></tr><tr><td>中级调度</td><td>针对进程在内存中的状态进行调度。中级调度主要关注内存的使用情况，以保证系统的稳定性和性能</td></tr></tbody></table></div>
+<p><strong>低级调度（进程调度）</strong></p>
+<ol>
+<li>它控制CPU从就绪队列中选择下一个要执行的进程，并将CPU分配给该进程；</li>
+<li>低级调度的目的是尽可能快地完成当前进程的运行，以达到最大的系统吞吐量和响应速度。</li>
+</ol>
+<h1 id="进程调度的方式">进程调度的方式<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#进程调度的方式" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p><strong>非抢占式调度方式</strong></p>
+<p>它指定了一个进程在运行中不会被操作系统强制中断，只有当这个进程自己完成或者发生某些事件时才会放弃CPU控制权。</p>
+<p>应用场景：</p>
+<ul>
+<li>通常适用于一些轻量级应用程序，如嵌入式系统、移动设备或者实时数据处理等场景；</li>
+<li>因为这些应用程序通常需要快速响应用户输入或者外部事件，而非抢占式调度可以保证当前进程能够完整地执行，避免出现任务切换带来的开销和延迟，提高了响应速度和稳定性。</li>
+</ul>
+<p><strong>抢占式调度方式</strong></p>
+<p>在这种调度策略下，操作系统可以强制中断正在执行的进程，并将CPU分配给优先级更高的进程。</p>
+<p>应用场景：</p>
+<ul>
+<li>通常适用于对响应速度要求比较高、需要快速处理事件的应用程序，如实时系统或者多任务操作系统等场景。它可以保证高优先级进程能够及时获得CPU使用权，提高系统的性能和稳定性。</li>
+</ul>
+<p><strong>注意</strong></p>
+<ul>
+<li>抢占式调度和非抢占式调度并不是对立的，而是可以结合起来使用；</li>
+<li>例如，在Windows操作系统中，就采用了两种调度策略：时间片轮转（抢占式）和优先级调度（非抢占式），以提供更好的操作系统服务。</li>
+</ul>
+<h1 id="典型的调度算法">典型的调度算法<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#典型的调度算法" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h2 id="先来先服务调度算法fcfs">先来先服务调度算法（FCFS）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#先来先服务调度算法fcfs" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>先来先服务（First Come, First Serve）是最简单的 CPU 调度算法之一。顾名思义，它就是按照进程到达就绪队列的顺序进行处理，就像顾客在杂货店排队一样。</p>
+<p>FCFS 调度是一种非抢占式算法，这意味着一旦进程开始运行，它就无法停止，直到它主动放弃 CPU（通常是在它终止或执行 I/O 操作时）。此方法按照进程到达的顺序进行调度，而不考虑优先级或其他因素。</p>
+<p><strong>工作机制：</strong></p>
+<ol>
+<li>到达：进程进入系统并按照到达的顺序排队。</li>
+<li>执行：CPU 从队列前面取出第一个进程，执行直到完成，然后将其从队列中移除。</li>
+<li>重复：CPU取出队列中的下一个进程，重复执行过程。</li>
+</ol>
+<p><strong>FCFS的优势：</strong></p>
+<ul>
+<li>CPU调度算法的最简单、最基本的形式</li>
+<li>每个进程都有机会按照其到达的顺序执行。这确保了任何进程都不会被任意地赋予优先权。</li>
+<li>易于实现，不需要复杂的数据结构。</li>
+<li>由于进程按照到达的顺序执行，因此不存在饥饿的风险</li>
+<li>它非常适合批处理系统，因为在批处理系统中，每个过程的较长时间通常是可以接受的。</li>
+</ul>
+<p><strong>FCFS的缺点：</strong></p>
+<ul>
+<li>由于 FCFS 是一种非抢占式 CPU 调度算法，它可能会导致较长的等待时间，尤其是在一个长进程先于一个短进程到达的情况下。这被称为“护送效应”，即短进程被迫在长进程之后等待，从而导致执行效率低下。</li>
+<li>FCFS 中的平均等待时间比其他的要高得多</li>
+<li>由于 FCFS 按照任务到达的顺序进行处理，因此如果短任务在长任务之后到达，则可能需要等待很长时间，这会导致混合有长任务和短任务的系统性能不佳。</li>
+<li>位于队列末尾的进程必须等待更长时间才能完成。</li>
+<li>它不适用于分时操作系统，因为在分时操作系统中每个进程都应该获得相同数量的 CPU 时间。</li>
+</ul>
+<h2 id="最短作业优先调度算法sjf">最短作业优先调度算法（SJF）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#最短作业优先调度算法sjf" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>最短作业优先（Shortest Job First）是一种调度方法，它选择执行时间最短的等待进程作为下一个执行对象。这种调度方法可以是抢占式的，也可以不是。它显著减少了其他等待执行进程的平均等待时间。</p>
+<p><strong>调度的实现：</strong></p>
+<p><img src="https://ying-quartz-resourse.oss-cn-shanghai.aliyuncs.com/20250801155132083.png" alt="SJF"/></p>
+<ul>
+<li>按照到达时间对所有流程进行排序。</li>
+<li>然后选择具有最短到达时间和最短突发时间的进程。</li>
+<li>该过程完成后，创建一个进程池（就绪队列），该进程在前一个过程完成之前到达，并从该队列中选择具有最短突发时间的进程。</li>
+</ul>
+<p><strong>SJF的优势：</strong></p>
+<ul>
+<li>SJF 比先来先服务(FCFS) 算法更好 ，因为它减少了平均等待时间。</li>
+<li>SJF一般用于长期调度。</li>
+<li>它适用于批量运行的作业，其中运行时间是已知的。</li>
+<li>就平均周转时间 (TAT) 而言，SJF 可能是最佳的。</li>
+</ul>
+<p><strong>SJF的缺点：</strong></p>
+<ul>
+<li>SJF 可能会导致非常长的周转时间或饥饿。</li>
+<li>在 SJF 中，必须提前知道作业完成时间。</li>
+<li>很多时候，预测即将到来的 CPU 请求的长度变得很复杂。</li>
+</ul>
+<h2 id="优先级调度算法">优先级调度算法<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#优先级调度算法" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>优先级调度算法（Priority scheduling）是操作系统根据进程优先级进行调度的最常见算法之一。每个进程都会根据内存需求、时间需求、其他资源需求或平均 I/O 与平均 CPU 突发时间之比等标准分配一个优先级值。</p>
+<p>优先级最高的进程会被优先选择执行。如果有多个进程具有相同的优先级，则按照它们到达的顺序进行调度，遵循“先到先服务”的原则。之后，被选中的进程会被执行，直到完成或被抢占（取决于调度是抢占式还是非抢占式）。</p>
+<p>优先级调度可以通过两种方式实现：</p>
+<ul>
+<li>非抢占式优先级调度：CPU 不会被从正在运行的进程中夺走。即使更高优先级的进程到来，当前正在运行的进程也会先完成。</li>
+<li>抢占式优先级调度：如果有更高优先级的新进程到达，则可以从当前正在运行的进程中夺走 CPU。</li>
+</ul>
+<h2 id="高响应比优先调度算法hrrn">高响应比优先调度算法（HRRN）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#高响应比优先调度算法hrrn" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>高响应比优先调度（Highest Response Ratio Next）算法是一种非抢占式算法，其中 HRRN 调度基于一个称为响应率的额外参数进行。给定 N 个进程及其到达时间和突发时间，任务是使用 HRRN 调度算法找出平均等待时间和平均周转时间。</p>
+<p>顾名思义，我们需要找到所有可用进程的响应率，并选择响应率最高的进程。它旨在通过平衡进程的等待时间和突发时间，改进先来先服务(FCFS) 和最短作业优先(SJN) 等更简单的算法。一旦选定进程，它将运行直至完成。以下是计算响应率的公式。</p>
+<p><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord cjk_fallback">响应比率</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.13889em;">W</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="mclose">)</span><span class="mord">/</span><span class="mord mathnormal" style="margin-right:0.05764em;">S</span></span></span></span>
+W：迄今为止过程的等待时间
+S：过程的突发时间</p>
+<p>在 HRRN 中，响应率最高的进程将被选中执行。这种方法优先考虑等待时间较长的进程，同时也考虑了突发时间，确保在长时间等待的进程和快速执行的进程之间取得公平的平衡。</p>
+<p><strong>HRRN的特点：</strong></p>
+<ul>
+<li>最高响应率下一步是一种非抢占式 CPU 调度算法，它被认为是最优调度算法之一。</li>
+<li>HRRN 的标准是响应率，模式是非抢占式。</li>
+<li>HRRN 被认为是最短作业优先算法的修改版，可以减少饥饿问题。</li>
+<li>与SJF相比，在HRRN调度算法中，CPU被分配给响应率最高的下一个进程，而不是分配给突发时间较短的进程。</li>
+</ul>
+<p><strong>HRRN的优势：</strong></p>
+<ul>
+<li>公平性：HRRN通过同时考虑进程的等待时间和突发时间来实现公平性。它确保等待时间较长的进程获得优先权，从而有助于防止出现资源匮乏的情况。</li>
+<li>更好的响应时间：由于 HRRN 优先考虑等待时间较长的进程，与 FCFS 等更简单的算法相比，它可以为这些进程带来更好的响应时间。</li>
+<li>无饥饿：与其他一些调度算法（例如最短作业优先 (SJF)）不同，HRRN 降低了饥饿的风险。即使需要更多 CPU 时间的进程最终也会得到执行。</li>
+<li>易于实现：该算法易于理解和实现，因为它只需要计算响应率并选择具有最高比率的过程。</li>
+<li>动态优先级：HRRN 算法动态调整优先级，这意味着等待时间较长的进程（但不一定是等待时间最短的作业）最终将获得更高的优先级。</li>
+</ul>
+<p><strong>HRRN的缺点：</strong></p>
+<ul>
+<li>HRRN 在实践中不可行，因为我们无法提前预测每个进程的突发时间。</li>
+<li>HRRN 需要计算每个进程的响应率，这会增加一些计算开销，尤其是在具有大量进程的系统中。</li>
+</ul>
+<h2 id="时间片轮转调度算法">时间片轮转调度算法<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#时间片轮转调度算法" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>时间片轮转调度（Round Robin Scheduling）是一种按照时间片大小进行调度的算法。每个进程被分配一个固定大小的时间片，即每次只能执行一段固定长度的时间，如果在这个时间内没有完成，则该进程会被挂起，并将CPU控制权转移到下一个进程上。</p>
+<p>这种调度方法的主要目标是确保所有进程都有平等的执行机会，促进任务之间的公平性：</p>
+<ul>
+<li>进程到达：进程进入系统并被放入队列。</li>
+<li>时间分配：每个进程都被赋予一定量的 CPU 时间，称为量子。</li>
+<li>执行：进程在分配的时间内使用 CPU。</li>
+<li>轮换：如果进程在规定时间内完成，则离开系统。如果没有完成，则回到队列末尾。</li>
+<li>重复： CPU 继续循环队列，直到所有进程完成。</li>
+</ul>
+<p><img src="https://ying-quartz-resourse.oss-cn-shanghai.aliyuncs.com/20250801165538662.webp" alt="时间片轮转调度"/></p>
+<p><strong>调度的优势：</strong></p>
+<ul>
+<li>公平性：每个进程都获得平等的 CPU 份额。</li>
+<li>简单性：算法简单，易于实现。</li>
+<li>响应能力：循环算法可以处理多个进程而不会出现明显的延迟，使其成为分时系统的理想选择。</li>
+</ul>
+<p><strong>调度的缺点：</strong></p>
+<ul>
+<li>开销：进程之间的切换可能会导致高开销，特别是当量子太小时。</li>
+<li>利用率不足：如果量子太大，则会导致 CPU 在等待进程完成时感觉无响应。</li>
+</ul>
+<h2 id="多级队列调度mlq">多级队列调度（MLQ）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#多级队列调度mlq" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>多级队列调度（Multilevel Queue Scheduling）是一种 CPU 调度机制，其中进程被划分为多个层级队列，每个队列拥有不同的优先级和进程类型。每个队列的调度算法可能不同，并且这些进程会根据某些标准（例如优先级或资源）以永久方式映射到特定队列。</p>
+<p><strong>MLQ的特点：</strong></p>
+<ul>
+<li>多队列：在 MLQ 调度中，进程根据其优先级被划分到多个队列中，每个队列具有不同的优先级。高优先级进程被放置在优先级较高的队列中，而低优先级进程被放置在优先级较低的队列中。</li>
+<li>分配优先级：根据进程的类型、特性和重要性为其分配优先级。例如，用户输入/输出等交互式进程的优先级可能高于文件备份等批处理进程。</li>
+<li>抢占： MLQ 调度允许抢占，即高优先级进程可以抢占低优先级进程，并将 CPU 分配给高优先级进程。这有助于确保高优先级进程及时执行。</li>
+<li>调度算法：每个队列可以使用不同的调度算法，具体取决于该队列中进程的需求。例如，对于交互式进程，可以使用循环调度；对于批处理进程，可以使用先来先服务调度。</li>
+<li>反馈机制：可以实现反馈机制，根据进程随时间的变化调整其优先级。例如，如果一个交互式进程在低优先级队列中等待了很长时间，则可以提高其优先级，以确保其及时执行。</li>
+<li>高效分配 CPU 时间： MLQ 调度确保及时执行具有较高优先级的进程，同时仍允许在 CPU 空闲时执行较低优先级的进程。</li>
+<li>公平性： MLQ 调度根据优先级和要求，为不同类型的进程公平分配 CPU 时间。</li>
+<li>可定制： MLQ调度可以定制，以满足不同类型流程的特定要求。</li>
+</ul>
+<p><strong>MLQ的优势：</strong></p>
+<ul>
+<li>调度开销低：由于进程被永久地分配到各自的队列中，因此调度的开销很低，因为调度程序只需要选择适当的队列进行执行。</li>
+<li>高效分配 CPU 时间：调度算法确保高优先级进程及时执行，同时允许低优先级进程在 CPU 空闲时执行。这确保了 CPU 时间的最佳利用。</li>
+<li>公平性：调度算法根据不同类型进程的优先级和要求，公平地分配 CPU 时间。</li>
+<li>可定制：调度算法可定制，以满足不同类型进程的特定需求。每个队列可以根据其进程的需求使用不同的调度算法。</li>
+<li>优先级：根据流程的类型、特点和重要性分配优先级，以确保重要流程及时执行。</li>
+<li>抢占：多级队列调度允许抢占，即高优先级进程可以抢占低优先级进程，将CPU分配给高优先级进程，从而保证高优先级进程能够及时执行。</li>
+</ul>
+<p><strong>MLQ的缺点：</strong></p>
+<ul>
+<li>如果某些高优先级队列始终为空，则某些进程可能会缺少 CPU。</li>
+<li>其本质是不灵活的。</li>
+<li>实现和维护多个队列和调度算法可能会增加复杂性。</li>
+</ul>
+<h2 id="多级反馈队列调度mlfq">多级反馈队列调度（MLFQ）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#多级反馈队列调度mlfq" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>多级反馈队列调度（Multilevel Feedback Queue Scheduling）调度类似于多级队列 (MLQ) 调度，但在此过程中可以在队列之间移动。因此，它比多级队列调度效率更高。</p>
+<p><strong>MLFQ的特点：</strong></p>
+<ul>
+<li>多队列：与 MLQ 调度类似，MLFQ 调度根据进程的优先级将其划分到多个队列中。然而，与 MLQ 调度不同的是，进程可以根据其行为和需求在队列之间移动。</li>
+<li>动态调整优先级：进程的优先级可以根据其行为（例如已使用的 CPU 时间或被阻塞的频率）动态调整。高优先级进程将获得更多 CPU 时间，而低优先级进程将获得较少 CPU 时间。</li>
+<li>时间分片：每个队列都分配有一个时间段或时间片，这决定了该队列中的进程在被抢占并移至较低优先级队列之前可以使用多少 CPU 时间。</li>
+<li>反馈机制： MLFQ 调度使用反馈机制，根据进程随时间的变化调整其优先级。例如，如果低优先级队列中的进程用完了其时间片，则可能会将其移至高优先级队列，以确保获得更多 CPU 时间。</li>
+<li>抢占： MLFQ 调度允许抢占，这意味着高优先级进程可以抢占低优先级进程，以确保其获得所需的 CPU 时间。</li>
+</ul>
+<p><strong>MLFQ的优势</strong>：</p>
+<ul>
+<li>它更加灵活。</li>
+<li>它允许不同的进程在不同的队列之间移动。</li>
+<li>它通过将等待低优先级队列时间过长的进程移动到高优先级队列来防止饥饿。</li>
+</ul>
+<p><strong>MLFQ的缺点：</strong></p>
+<ul>
+<li>最佳调度程序的选择，需要一些其他方法来选择值。</li>
+<li>它会产生更多的 CPU 开销。</li>
+<li>它是最复杂的算法。</li>
+</ul></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>Graph View</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc desktop-only"><button type="button" class="toc-header" aria-controls="toc-content" aria-expanded="true"><h3>Table of Contents</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul class="toc-content overflow" id="list-1"><li class="depth-0"><a href="#调度的基本概念" data-for="调度的基本概念">调度的基本概念</a></li><li class="depth-0"><a href="#调度的层次" data-for="调度的层次">调度的层次</a></li><li class="depth-0"><a href="#进程调度的方式" data-for="进程调度的方式">进程调度的方式</a></li><li class="depth-0"><a href="#典型的调度算法" data-for="典型的调度算法">典型的调度算法</a></li><li class="depth-1"><a href="#先来先服务调度算法fcfs" data-for="先来先服务调度算法fcfs">先来先服务调度算法（FCFS）</a></li><li class="depth-1"><a href="#最短作业优先调度算法sjf" data-for="最短作业优先调度算法sjf">最短作业优先调度算法（SJF）</a></li><li class="depth-1"><a href="#优先级调度算法" data-for="优先级调度算法">优先级调度算法</a></li><li class="depth-1"><a href="#高响应比优先调度算法hrrn" data-for="高响应比优先调度算法hrrn">高响应比优先调度算法（HRRN）</a></li><li class="depth-1"><a href="#时间片轮转调度算法" data-for="时间片轮转调度算法">时间片轮转调度算法</a></li><li class="depth-1"><a href="#多级队列调度mlq" data-for="多级队列调度mlq">多级队列调度（MLQ）</a></li><li class="depth-1"><a href="#多级反馈队列调度mlfq" data-for="多级反馈队列调度mlfq">多级反馈队列调度（MLFQ）</a></li><li class="overflow-end"></li></ul></div><div class="backlinks"><h3>Backlinks</h3><ul id="list-2" class="overflow"><li><a href="../../扩展知识目录" class="internal">扩展知识目录</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v4.5.1</a> © 2025</p><ul><li><a href="https://github.com/hero851815/quartz-page">GitHub</a></li></ul></footer></div></div></body><script type="application/javascript">function n(){let t=this.parentElement;t.classList.toggle("is-collapsed");let e=t.getElementsByClassName("callout-content")[0];if(!e)return;let l=t.classList.contains("is-collapsed");e.style.gridTemplateRows=l?"0fr":"1fr"}function c(){let t=document.getElementsByClassName("callout is-collapsible");for(let e of t){let l=e.getElementsByClassName("callout-title")[0],s=e.getElementsByClassName("callout-content")[0];if(!l||!s)continue;l.addEventListener("click",n),window.addCleanup(()=>l.removeEventListener("click",n));let o=e.classList.contains("is-collapsed");s.style.gridTemplateRows=o?"0fr":"1fr"}}document.addEventListener("nav",c);
+</script><script type="module">function f(i,e){if(!i)return;function r(o){o.target===this&&(o.preventDefault(),o.stopPropagation(),e())}function t(o){o.key.startsWith("Esc")&&(o.preventDefault(),e())}i?.addEventListener("click",r),window.addCleanup(()=>i?.removeEventListener("click",r)),document.addEventListener("keydown",t),window.addCleanup(()=>document.removeEventListener("keydown",t))}function y(i){for(;i.firstChild;)i.removeChild(i.firstChild)}var h=class{constructor(e,r){this.container=e;this.content=r;this.setupEventListeners(),this.setupNavigationControls(),this.resetTransform()}isDragging=!1;startPan={x:0,y:0};currentPan={x:0,y:0};scale=1;MIN_SCALE=.5;MAX_SCALE=3;cleanups=[];setupEventListeners(){let e=this.onMouseDown.bind(this),r=this.onMouseMove.bind(this),t=this.onMouseUp.bind(this),o=this.resetTransform.bind(this);this.container.addEventListener("mousedown",e),document.addEventListener("mousemove",r),document.addEventListener("mouseup",t),window.addEventListener("resize",o),this.cleanups.push(()=>this.container.removeEventListener("mousedown",e),()=>document.removeEventListener("mousemove",r),()=>document.removeEventListener("mouseup",t),()=>window.removeEventListener("resize",o))}cleanup(){for(let e of this.cleanups)e()}setupNavigationControls(){let e=document.createElement("div");e.className="mermaid-controls";let r=this.createButton("+",()=>this.zoom(.1)),t=this.createButton("-",()=>this.zoom(-.1)),o=this.createButton("Reset",()=>this.resetTransform());e.appendChild(t),e.appendChild(o),e.appendChild(r),this.container.appendChild(e)}createButton(e,r){let t=document.createElement("button");return t.textContent=e,t.className="mermaid-control-button",t.addEventListener("click",r),window.addCleanup(()=>t.removeEventListener("click",r)),t}onMouseDown(e){e.button===0&&(this.isDragging=!0,this.startPan={x:e.clientX-this.currentPan.x,y:e.clientY-this.currentPan.y},this.container.style.cursor="grabbing")}onMouseMove(e){this.isDragging&&(e.preventDefault(),this.currentPan={x:e.clientX-this.startPan.x,y:e.clientY-this.startPan.y},this.updateTransform())}onMouseUp(){this.isDragging=!1,this.container.style.cursor="grab"}zoom(e){let r=Math.min(Math.max(this.scale+e,this.MIN_SCALE),this.MAX_SCALE),t=this.content.getBoundingClientRect(),o=t.width/2,n=t.height/2,c=r-this.scale;this.currentPan.x-=o*c,this.currentPan.y-=n*c,this.scale=r,this.updateTransform()}updateTransform(){this.content.style.transform=`translate(${this.currentPan.x}px, ${this.currentPan.y}px) scale(${this.scale})`}resetTransform(){this.scale=1;let e=this.content.querySelector("svg");this.currentPan={x:e.getBoundingClientRect().width/2,y:e.getBoundingClientRect().height/2},this.updateTransform()}},C=["--secondary","--tertiary","--gray","--light","--lightgray","--highlight","--dark","--darkgray","--codeFont"],E;document.addEventListener("nav",async()=>{let e=document.querySelector(".center").querySelectorAll("code.mermaid");if(e.length===0)return;E||=await import("https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.4.0/mermaid.esm.min.mjs");let r=E.default,t=new WeakMap;for(let n of e)t.set(n,n.innerText);async function o(){for(let s of e){s.removeAttribute("data-processed");let a=t.get(s);a&&(s.innerHTML=a)}let n=C.reduce((s,a)=>(s[a]=window.getComputedStyle(document.documentElement).getPropertyValue(a),s),{}),c=document.documentElement.getAttribute("saved-theme")==="dark";r.initialize({startOnLoad:!1,securityLevel:"loose",theme:c?"dark":"base",themeVariables:{fontFamily:n["--codeFont"],primaryColor:n["--light"],primaryTextColor:n["--darkgray"],primaryBorderColor:n["--tertiary"],lineColor:n["--darkgray"],secondaryColor:n["--secondary"],tertiaryColor:n["--tertiary"],clusterBkg:n["--light"],edgeLabelBackground:n["--highlight"]}}),await r.run({nodes:e})}await o(),document.addEventListener("themechange",o),window.addCleanup(()=>document.removeEventListener("themechange",o));for(let n=0;n<e.length;n++){let v=function(){let g=l.querySelector("#mermaid-space"),m=l.querySelector(".mermaid-content");if(!m)return;y(m);let w=c.querySelector("svg").cloneNode(!0);m.appendChild(w),l.classList.add("active"),g.style.cursor="grab",u=new h(g,m)},M=function(){l.classList.remove("active"),u?.cleanup(),u=null},c=e[n],s=c.parentElement,a=s.querySelector(".clipboard-button"),d=s.querySelector(".expand-button"),p=window.getComputedStyle(a),L=a.offsetWidth+parseFloat(p.marginLeft||"0")+parseFloat(p.marginRight||"0");d.style.right=`calc(${L}px + 0.3rem)`,s.prepend(d);let l=s.querySelector("#mermaid-container");if(!l)return;let u=null;d.addEventListener("click",v),f(l,M),window.addCleanup(()=>{u?.cleanup(),d.removeEventListener("click",v)})}});
+</script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript"></script><script src="../../postscript.js" type="module"></script></html>
