@@ -12,7 +12,7 @@ jobs:
     steps:
       # 将生成的 HTML 推送到阿里云 OSS
       - name: Deploy to Aliyun OSS
-        uses: aliyun-oss-website-action@v1.1
+        uses: cpacm/aliyun-oss-upload-action@v1.0.0
         with:
           # 以下变量从 GitHub Secrets 中获取，请确保已配置
           ACCESS_KEY_ID: ${{ secrets.OSS_ACCESS_KEY_ID }}
