@@ -10,61 +10,61 @@
     <link>https://hero851815.cc/</link>
     <guid>https://hero851815.cc/</guid>
     <description>全面的数据安全术语词典、技术指南和标准规范</description>
-    <pubDate>Thu, 31 Jul 2025 09:08:00 GMT</pubDate>
+    <pubDate>Fri, 01 Aug 2025 00:59:48 GMT</pubDate>
   </item><item>
     <title>EXT - 中间人攻击</title>
     <link>https://hero851815.cc/%E6%89%A9%E5%B1%95/%E5%AE%89%E5%85%A8%E9%98%B2%E6%8A%A4/EXT---%E4%B8%AD%E9%97%B4%E4%BA%BA%E6%94%BB%E5%87%BB</link>
     <guid>https://hero851815.cc/%E6%89%A9%E5%B1%95/%E5%AE%89%E5%85%A8%E9%98%B2%E6%8A%A4/EXT---%E4%B8%AD%E9%97%B4%E4%BA%BA%E6%94%BB%E5%87%BB</guid>
-    <description> TIP 内容摘自Geeksforgeeks 中间人攻击的定义 中间人攻击（Man-in-the-Middle Attack，简称MITM），是一种会话劫持攻击。攻击者作为中间人，劫持通信双方会话并操纵通信过程，而通信双方并不知情，从而达到窃取信息或冒充访问的目的。 中间人攻击的类型 电子邮件劫持 顾名思义，在这种类型的攻击中，网络罪犯控制银行、金融机构或其他可以访问敏感数据和资金的受信任公司的电子邮件帐户。一旦进入，攻击者就可以监控银行与其客户之间的交易和通信。 在更恶意的场景中，攻击者欺骗或伪造银行的电子邮件地址，并向客户发送电子邮件，指示他们重新发送凭据，或者更糟糕的是，将钱发送到攻击者...</description>
-    <pubDate>Thu, 31 Jul 2025 09:08:00 GMT</pubDate>
+    <description>内容摘自Geeksforgeeks</description>
+    <pubDate>Fri, 01 Aug 2025 00:59:48 GMT</pubDate>
   </item><item>
     <title>EXT - 数据丢失防护</title>
     <link>https://hero851815.cc/%E6%89%A9%E5%B1%95/%E5%AE%89%E5%85%A8%E9%98%B2%E6%8A%A4/EXT---%E6%95%B0%E6%8D%AE%E4%B8%A2%E5%A4%B1%E9%98%B2%E6%8A%A4</link>
     <guid>https://hero851815.cc/%E6%89%A9%E5%B1%95/%E5%AE%89%E5%85%A8%E9%98%B2%E6%8A%A4/EXT---%E6%95%B0%E6%8D%AE%E4%B8%A2%E5%A4%B1%E9%98%B2%E6%8A%A4</guid>
-    <description> TIP 内容摘自站点Cloudflare的Access词汇 什么是数据丢失防护 数据外泄 数据外泄是指数据未经公司授权而移动。这也被称为数据挤出。DLP 的主要目标是防止数据外泄。 数据外泄可以通过多种不同方式发生： 机密数据可以通过电子邮件或即时消息离开网络 用户可以在没有授权的情况下将数据复制到外部硬盘驱动器上 一名员工可能将数据上传到公司控制之外的公共云 外部攻击者可以获得未经授权的访问并窃取数据 员工可将敏感数据上传到 AI 工具，如大型语言模型 (LLM) 为防止数据外泄，数据丢失防护会跟踪数据在网络内、员工设备上以及何时存储在公司基础设施上的移动。然后它可以发送警报、更改对数据的...</description>
-    <pubDate>Thu, 31 Jul 2025 09:08:00 GMT</pubDate>
+    <description>内容摘自Cloudflare的Access词汇</description>
+    <pubDate>Fri, 01 Aug 2025 00:59:48 GMT</pubDate>
   </item><item>
     <title>EXT - 访问控制</title>
     <link>https://hero851815.cc/%E6%89%A9%E5%B1%95/%E5%AE%89%E5%85%A8%E9%98%B2%E6%8A%A4/EXT---%E8%AE%BF%E9%97%AE%E6%8E%A7%E5%88%B6</link>
     <guid>https://hero851815.cc/%E6%89%A9%E5%B1%95/%E5%AE%89%E5%85%A8%E9%98%B2%E6%8A%A4/EXT---%E8%AE%BF%E9%97%AE%E6%8E%A7%E5%88%B6</guid>
-    <description> TIP 内容摘自站点Cloudflare的Access词汇 什么是访问控制？ 物理访问控制 虽然重点是信息访问控制，但物理访问控制是一个有用的比较，有助于理解整个概念。 物理访问控制是一组策略，用于控制谁可以进入一个物理位置。下面是现实生活中的一些物理访问控制示例： 吧台保镖 地铁转门 机场报关员 公司办公室的门禁卡或工作证扫描器 在所有这些示例中，人员或设备遵循一组策略来决定谁有权进入受限的物理位置。例如，酒店钥匙卡扫描器仅允许持有酒店钥匙的授权客人进入房间。 信息访问控制 信息访问控制限制对数据和用于操作该数据的软件的访问，以下为部分示例： 使用密码登录笔记本电脑 用拇指指纹扫描解锁智能...</description>
-    <pubDate>Thu, 31 Jul 2025 09:08:00 GMT</pubDate>
+    <description>内容摘自Cloudflare的Access词汇</description>
+    <pubDate>Fri, 01 Aug 2025 00:59:48 GMT</pubDate>
   </item><item>
     <title>EXT - API敏感数据安全管理最佳实践：脱敏、数字签名与数字水印</title>
     <link>https://hero851815.cc/%E6%89%A9%E5%B1%95/%E6%8A%80%E6%9C%AF%E6%8E%AA%E6%96%BD/EXT---API%E6%95%8F%E6%84%9F%E6%95%B0%E6%8D%AE%E5%AE%89%E5%85%A8%E7%AE%A1%E7%90%86%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5%EF%BC%9A%E8%84%B1%E6%95%8F%E3%80%81%E6%95%B0%E5%AD%97%E7%AD%BE%E5%90%8D%E4%B8%8E%E6%95%B0%E5%AD%97%E6%B0%B4%E5%8D%B0</link>
     <guid>https://hero851815.cc/%E6%89%A9%E5%B1%95/%E6%8A%80%E6%9C%AF%E6%8E%AA%E6%96%BD/EXT---API%E6%95%8F%E6%84%9F%E6%95%B0%E6%8D%AE%E5%AE%89%E5%85%A8%E7%AE%A1%E7%90%86%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5%EF%BC%9A%E8%84%B1%E6%95%8F%E3%80%81%E6%95%B0%E5%AD%97%E7%AD%BE%E5%90%8D%E4%B8%8E%E6%95%B0%E5%AD%97%E6%B0%B4%E5%8D%B0</guid>
     <description>一、概述 API 在传输和对外提供敏感数据时，面临数据泄露、篡改和滥用的风险。为了保证数据的安全性、完整性和可追溯性，常用的策略包括： • 数据脱敏：隐藏或部分遮蔽敏感信息，保护隐私。 • 数字签名：验证数据来源和完整性，防篡改。 • 数字水印：嵌入隐性标识，实现数据泄露追踪。 二、数据脱敏 1.</description>
-    <pubDate>Thu, 31 Jul 2025 09:08:00 GMT</pubDate>
+    <pubDate>Fri, 01 Aug 2025 00:59:48 GMT</pubDate>
   </item><item>
     <title>EXT - 国密算法</title>
     <link>https://hero851815.cc/%E6%89%A9%E5%B1%95/%E6%8A%80%E6%9C%AF%E6%8E%AA%E6%96%BD/EXT---%E5%9B%BD%E5%AF%86%E7%AE%97%E6%B3%95</link>
     <guid>https://hero851815.cc/%E6%89%A9%E5%B1%95/%E6%8A%80%E6%9C%AF%E6%8E%AA%E6%96%BD/EXT---%E5%9B%BD%E5%AF%86%E7%AE%97%E6%B3%95</guid>
     <description>国密算法 国密算法（SM，State Management） 是中国自主研发的密码算法系列，由 国家密码管理局设计，并成为国家标准（GB/T 32918-2016），主要用于金融、通信、政务等领域的信息安全。 算法名称用途对标国际算法SM2非对称加密、签名ECC（椭圆曲线加密）SM3哈希（摘要）SHA-256SM4对称加密AES-128SM9标识密码RSA / ECC SM2 SM2 是基于椭圆曲线（ECC）的公钥密码算法，提供加密和数字签名。 比 RSA 2048 位更安全 密钥更短，计算更快 适用于电子政务、电子合同、金融支付 原理： 选取椭园曲线参数（推荐使用 SM2标准曲线） 生成密钥...</description>
-    <pubDate>Thu, 31 Jul 2025 09:08:00 GMT</pubDate>
+    <pubDate>Fri, 01 Aug 2025 00:59:48 GMT</pubDate>
   </item><item>
     <title>EXT - 系统设计中的恢复时间目标与恢复点目标</title>
     <link>https://hero851815.cc/%E6%89%A9%E5%B1%95/%E6%8A%80%E6%9C%AF%E6%8E%AA%E6%96%BD/EXT---%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1%E4%B8%AD%E7%9A%84%E6%81%A2%E5%A4%8D%E6%97%B6%E9%97%B4%E7%9B%AE%E6%A0%87%E4%B8%8E%E6%81%A2%E5%A4%8D%E7%82%B9%E7%9B%AE%E6%A0%87</link>
     <guid>https://hero851815.cc/%E6%89%A9%E5%B1%95/%E6%8A%80%E6%9C%AF%E6%8E%AA%E6%96%BD/EXT---%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1%E4%B8%AD%E7%9A%84%E6%81%A2%E5%A4%8D%E6%97%B6%E9%97%B4%E7%9B%AE%E6%A0%87%E4%B8%8E%E6%81%A2%E5%A4%8D%E7%82%B9%E7%9B%AE%E6%A0%87</guid>
-    <description> TIP 内容摘自Geeksforgeeks 在系统设计中，确保业务连续性和故障期间的数据恢复至关重要。恢复时间目标 (RTO) 和恢复点目标 (RPO) 是衡量灾难恢复能力的两个关键指标。RTO 指的是故障后可接受的最长停机时间，而 RPO 则定义了中断期间可能丢失的最大数据量。了解这两个指标之间的差异对于设计能够快速从中断中恢复并将数据丢失降至最低的弹性系统至关重要，从而确保维护运营连续性和数据完整性。 恢复时间目标 恢复时间目标（RTO）是指系统或服务在发生故障或中断后，在影响业务运营之前，可以保持不可用状态的最长时间。它定义了系统在事故发生后必须多快恢复才能恢复正常运行。设置 RTO ...</description>
-    <pubDate>Thu, 31 Jul 2025 09:08:00 GMT</pubDate>
+    <description>内容摘自Geeksforgeeks</description>
+    <pubDate>Fri, 01 Aug 2025 00:59:48 GMT</pubDate>
   </item><item>
     <title>EXT - 系统设计中的高可用</title>
     <link>https://hero851815.cc/%E6%89%A9%E5%B1%95/%E6%8A%80%E6%9C%AF%E6%8E%AA%E6%96%BD/EXT---%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1%E4%B8%AD%E7%9A%84%E9%AB%98%E5%8F%AF%E7%94%A8</link>
     <guid>https://hero851815.cc/%E6%89%A9%E5%B1%95/%E6%8A%80%E6%9C%AF%E6%8E%AA%E6%96%BD/EXT---%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1%E4%B8%AD%E7%9A%84%E9%AB%98%E5%8F%AF%E7%94%A8</guid>
-    <description> TIP 内容摘自Geeksforgeeks 系统设计中的高可用性是指系统能够在较高比例的时间内保持运行和可访问性，通常为 99.9% 或更高。这种可用性级别可确保系统可靠运行，并能够承受故障或中断，而不会对其运行造成重大影响。 高可用的重要性 高可用性（High availability）对于系统来说很重要，原因如下： 最大程度减少停机时间： 高可用性确保系统可长时间访问和运行，从而最大限度地减少停机时间。 这对于系统来说至关重要，因为即使是短暂的中断也可能导致重大的财务损失或影响用户体验。 确保可靠性： 高可用性系统更加可靠，因为它可以承受故障并继续无中断运行。 这种可靠性在用户和利益相关...</description>
-    <pubDate>Thu, 31 Jul 2025 09:08:00 GMT</pubDate>
+    <description>内容摘自Geeksforgeeks</description>
+    <pubDate>Fri, 01 Aug 2025 00:59:48 GMT</pubDate>
   </item><item>
     <title>EXT - 数据库三范式</title>
     <link>https://hero851815.cc/%E6%89%A9%E5%B1%95/%E6%95%B0%E6%8D%AE%E7%AE%A1%E7%90%86/EXT---%E6%95%B0%E6%8D%AE%E5%BA%93%E4%B8%89%E8%8C%83%E5%BC%8F</link>
     <guid>https://hero851815.cc/%E6%89%A9%E5%B1%95/%E6%95%B0%E6%8D%AE%E7%AE%A1%E7%90%86/EXT---%E6%95%B0%E6%8D%AE%E5%BA%93%E4%B8%89%E8%8C%83%E5%BC%8F</guid>
-    <description> TIP 内容摘自知乎和GeeksforGeeks 三大范式 第一范式（1NF） 第一范式（1NF）确保数据库表的结构以更易于管理和查询的方式组织。 如果关系中的每个属性都是单值属性，或者不包含任何复合或多值属性，则该关系符合第一范式。 这是关系数据库设计中减少冗余、提高数据完整性、减少异常的第一步，也是必不可少的一步。 如果满足以下条件，则称关系（表）符合第一范式（1NF）： 所有属性（列）仅包含原子（不可分割）值。 每列包含单一类型的值。 每条记录（行）都是唯一的，这意味着它可以通过主键来识别。 任何行中都没有重复的组或数组。 DBMS 中的第一范式 (1NF) 规则 为了遵循数据库中的第...</description>
-    <pubDate>Thu, 31 Jul 2025 09:08:00 GMT</pubDate>
+    <description>内容摘自知乎和Geeksforgeeks</description>
+    <pubDate>Fri, 01 Aug 2025 00:59:48 GMT</pubDate>
   </item><item>
     <title>EXT - 数据库事务的ACID属性</title>
     <link>https://hero851815.cc/%E6%89%A9%E5%B1%95/%E6%95%B0%E6%8D%AE%E7%AE%A1%E7%90%86/EXT---%E6%95%B0%E6%8D%AE%E5%BA%93%E4%BA%8B%E5%8A%A1%E7%9A%84ACID%E5%B1%9E%E6%80%A7</link>
     <guid>https://hero851815.cc/%E6%89%A9%E5%B1%95/%E6%95%B0%E6%8D%AE%E7%AE%A1%E7%90%86/EXT---%E6%95%B0%E6%8D%AE%E5%BA%93%E4%BA%8B%E5%8A%A1%E7%9A%84ACID%E5%B1%9E%E6%80%A7</guid>
-    <description> TIP 内容摘自Geeksforgeeks DBMS中的事务 DBMS中的事务是指作为单个工作单元执行的一系列操作。这些操作可能涉及读取或写入数据库数据。为了维护数据完整性，DBMS 确保每个事务都遵循ACID 属性。可以把事务想象成 ATM 取款。当我们从账户中取款时，交易涉及以下几个步骤： 检查您的余额。 从您的账户中扣除钱。 将钱添加到银行记录中。 为了使事务成功，所有步骤必须完成。如果此过程的任何部分失败（例如，系统崩溃），则整个事务都应失败，并且不会更改任何数据。这确保了数据库保持一致状态。 ACID特性 原子性：“全有或全无” 原子性（Atomicity）确保事务具有原子性，这意...</description>
-    <pubDate>Thu, 31 Jul 2025 09:08:00 GMT</pubDate>
+    <description>内容摘自Geeksforgeeks</description>
+    <pubDate>Fri, 01 Aug 2025 00:59:48 GMT</pubDate>
   </item>
     </channel>
   </rss>
