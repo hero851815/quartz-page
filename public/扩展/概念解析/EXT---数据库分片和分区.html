@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en"><head><title>EXT - 数据库分片和分区 - 专业术语词典与技术指南</title><meta charset="utf-8"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted Grotesk:wght@400;700&amp;family=Source Sans Pro:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="og:site_name" content="数据安全知识库"/><meta property="og:title" content="EXT - 数据库分片和分区 - 专业术语词典与技术指南"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="EXT - 数据库分片和分区 - 专业术语词典与技术指南"/><meta name="twitter:description" content="数据库分片 数据库分片（Sharding）是一种数据库水平扩展的技术，其中数据被分散到多个数据库实例或分片中，以提高性能并减少大量数据对单个数据库的影响。 分片是一种数据库架构模式，我们将大型数据集分成较小的块（逻辑分片），并将这些块存储/分发到不同的机器/数据库节点（物理分片）中。 每个块/分区称为“分片”，每个分片具有与原始数据库相同的数据库模式。 我们以这样的方式分布数据，即每一行都恰好出现在一个分片中。 这是提高应用程序 可扩展性的良好机制。 分片的方法 基于密钥的分片 基于密钥的分片技术也称为基于哈希的分片技术。在这里，我们获取实体的值，例如客户 ID、客户电子邮件、客户端 IP 地..."/><meta property="og:description" content="数据库分片 数据库分片（Sharding）是一种数据库水平扩展的技术，其中数据被分散到多个数据库实例或分片中，以提高性能并减少大量数据对单个数据库的影响。 分片是一种数据库架构模式，我们将大型数据集分成较小的块（逻辑分片），并将这些块存储/分发到不同的机器/数据库节点（物理分片）中。 每个块/分区称为“分片”，每个分片具有与原始数据库相同的数据库模式。 我们以这样的方式分布数据，即每一行都恰好出现在一个分片中。 这是提高应用程序 可扩展性的良好机制。 分片的方法 基于密钥的分片 基于密钥的分片技术也称为基于哈希的分片技术。在这里，我们获取实体的值，例如客户 ID、客户电子邮件、客户端 IP 地..."/><meta property="og:image:alt" content="数据库分片 数据库分片（Sharding）是一种数据库水平扩展的技术，其中数据被分散到多个数据库实例或分片中，以提高性能并减少大量数据对单个数据库的影响。 分片是一种数据库架构模式，我们将大型数据集分成较小的块（逻辑分片），并将这些块存储/分发到不同的机器/数据库节点（物理分片）中。 每个块/分区称为“分片”，每个分片具有与原始数据库相同的数据库模式。 我们以这样的方式分布数据，即每一行都恰好出现在一个分片中。 这是提高应用程序 可扩展性的良好机制。 分片的方法 基于密钥的分片 基于密钥的分片技术也称为基于哈希的分片技术。在这里，我们获取实体的值，例如客户 ID、客户电子邮件、客户端 IP 地..."/><meta property="twitter:domain" content="hero851815.cc"/><meta property="og:url" content="https://hero851815.cc/扩展/概念解析/EXT---数据库分片和分区"/><meta property="twitter:url" content="https://hero851815.cc/扩展/概念解析/EXT---数据库分片和分区"/><link rel="icon" href="../../static/icon.png"/><meta name="description" content="数据库分片 数据库分片（Sharding）是一种数据库水平扩展的技术，其中数据被分散到多个数据库实例或分片中，以提高性能并减少大量数据对单个数据库的影响。 分片是一种数据库架构模式，我们将大型数据集分成较小的块（逻辑分片），并将这些块存储/分发到不同的机器/数据库节点（物理分片）中。 每个块/分区称为“分片”，每个分片具有与原始数据库相同的数据库模式。 我们以这样的方式分布数据，即每一行都恰好出现在一个分片中。 这是提高应用程序 可扩展性的良好机制。 分片的方法 基于密钥的分片 基于密钥的分片技术也称为基于哈希的分片技术。在这里，我们获取实体的值，例如客户 ID、客户电子邮件、客户端 IP 地..."/><meta name="generator" content="Quartz"/><link href="../../index.css" rel="stylesheet" type="text/css" spa-preserve/><style>.expand-button {
+  position: absolute;
+  display: flex;
+  float: right;
+  padding: 0.4rem;
+  margin: 0.3rem;
+  right: 0;
+  color: var(--gray);
+  border-color: var(--dark);
+  background-color: var(--light);
+  border: 1px solid;
+  border-radius: 5px;
+  opacity: 0;
+  transition: 0.2s;
+}
+.expand-button > svg {
+  fill: var(--light);
+  filter: contrast(0.3);
+}
+.expand-button:hover {
+  cursor: pointer;
+  border-color: var(--secondary);
+}
+.expand-button:focus {
+  outline: 0;
+}
+
+pre:hover > .expand-button {
+  opacity: 1;
+  transition: 0.2s;
+}
+
+#mermaid-container {
+  position: fixed;
+  contain: layout;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: none;
+  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.5);
+}
+#mermaid-container.active {
+  display: inline-block;
+}
+#mermaid-container > #mermaid-space {
+  border: 1px solid var(--lightgray);
+  background-color: var(--light);
+  border-radius: 5px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80vh;
+  width: 80vw;
+  overflow: hidden;
+}
+#mermaid-container > #mermaid-space > .mermaid-content {
+  padding: 2rem;
+  position: relative;
+  transform-origin: 0 0;
+  transition: transform 0.1s ease;
+  overflow: visible;
+  min-height: 200px;
+  min-width: 200px;
+}
+#mermaid-container > #mermaid-space > .mermaid-content pre {
+  margin: 0;
+  border: none;
+}
+#mermaid-container > #mermaid-space > .mermaid-content svg {
+  max-width: none;
+  height: auto;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  background: var(--light);
+  border: 1px solid var(--lightgray);
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid var(--lightgray);
+  background: var(--light);
+  color: var(--dark);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: var(--bodyFont);
+  transition: all 0.2s ease;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:hover {
+  background: var(--lightgray);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:active {
+  transform: translateY(1px);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:nth-child(2) {
+  width: auto;
+  padding: 0 12px;
+  font-size: 14px;
+}
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiL2hvbWUvcnVubmVyL3dvcmsvcXVhcnR6LXJlcG8vcXVhcnR6LXJlcG8vcXVhcnR6L3F1YXJ0ei9jb21wb25lbnRzL3N0eWxlcyIsInNvdXJjZXMiOlsibWVybWFpZC5pbmxpbmUuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBR0Y7RUFDRTs7O0FBS0Y7RUFDRTtFQUNBOzs7QUFJSjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTs7QUFHRjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTtFQUNBOztBQUdGO0VBQ0U7RUFDQTs7QUFJSjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7O0FBR0Y7RUFDRTs7QUFJRjtFQUNFO0VBQ0E7RUFDQSIsInNvdXJjZXNDb250ZW50IjpbIi5leHBhbmQtYnV0dG9uIHtcbiAgcG9zaXRpb246IGFic29sdXRlO1xuICBkaXNwbGF5OiBmbGV4O1xuICBmbG9hdDogcmlnaHQ7XG4gIHBhZGRpbmc6IDAuNHJlbTtcbiAgbWFyZ2luOiAwLjNyZW07XG4gIHJpZ2h0OiAwOyAvLyBOT1RFOiByaWdodCB3aWxsIGJlIHNldCBpbiBtZXJtYWlkLmlubGluZS50c1xuICBjb2xvcjogdmFyKC0tZ3JheSk7XG4gIGJvcmRlci1jb2xvcjogdmFyKC0tZGFyayk7XG4gIGJhY2tncm91bmQtY29sb3I6IHZhcigtLWxpZ2h0KTtcbiAgYm9yZGVyOiAxcHggc29saWQ7XG4gIGJvcmRlci1yYWRpdXM6IDVweDtcbiAgb3BhY2l0eTogMDtcbiAgdHJhbnNpdGlvbjogMC4ycztcblxuICAmID4gc3ZnIHtcbiAgICBmaWxsOiB2YXIoLS1saWdodCk7XG4gICAgZmlsdGVyOiBjb250cmFzdCgwLjMpO1xuICB9XG5cbiAgJjpob3ZlciB7XG4gICAgY3Vyc29yOiBwb2ludGVyO1xuICAgIGJvcmRlci1jb2xvcjogdmFyKC0tc2Vjb25kYXJ5KTtcbiAgfVxuXG4gICY6Zm9jdXMge1xuICAgIG91dGxpbmU6IDA7XG4gIH1cbn1cblxucHJlIHtcbiAgJjpob3ZlciA+IC5leHBhbmQtYnV0dG9uIHtcbiAgICBvcGFjaXR5OiAxO1xuICAgIHRyYW5zaXRpb246IDAuMnM7XG4gIH1cbn1cblxuI21lcm1haWQtY29udGFpbmVyIHtcbiAgcG9zaXRpb246IGZpeGVkO1xuICBjb250YWluOiBsYXlvdXQ7XG4gIHotaW5kZXg6IDk5OTtcbiAgbGVmdDogMDtcbiAgdG9wOiAwO1xuICB3aWR0aDogMTAwdnc7XG4gIGhlaWdodDogMTAwdmg7XG4gIG92ZXJmbG93OiBoaWRkZW47XG4gIGRpc3BsYXk6IG5vbmU7XG4gIGJhY2tkcm9wLWZpbHRlcjogYmx1cig0cHgpO1xuICBiYWNrZ3JvdW5kOiByZ2JhKDAsIDAsIDAsIDAuNSk7XG5cbiAgJi5hY3RpdmUge1xuICAgIGRpc3BsYXk6IGlubGluZS1ibG9jaztcbiAgfVxuXG4gICYgPiAjbWVybWFpZC1zcGFjZSB7XG4gICAgYm9yZGVyOiAxcHggc29saWQgdmFyKC0tbGlnaHRncmF5KTtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1saWdodCk7XG4gICAgYm9yZGVyLXJhZGl1czogNXB4O1xuICAgIHBvc2l0aW9uOiBmaXhlZDtcbiAgICB0b3A6IDUwJTtcbiAgICBsZWZ0OiA1MCU7XG4gICAgdHJhbnNmb3JtOiB0cmFuc2xhdGUoLTUwJSwgLTUwJSk7XG4gICAgaGVpZ2h0OiA4MHZoO1xuICAgIHdpZHRoOiA4MHZ3O1xuICAgIG92ZXJmbG93OiBoaWRkZW47XG5cbiAgICAmID4gLm1lcm1haWQtY29udGVudCB7XG4gICAgICBwYWRkaW5nOiAycmVtO1xuICAgICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgICAgdHJhbnNmb3JtLW9yaWdpbjogMCAwO1xuICAgICAgdHJhbnNpdGlvbjogdHJhbnNmb3JtIDAuMXMgZWFzZTtcbiAgICAgIG92ZXJmbG93OiB2aXNpYmxlO1xuICAgICAgbWluLWhlaWdodDogMjAwcHg7XG4gICAgICBtaW4td2lkdGg6IDIwMHB4O1xuXG4gICAgICBwcmUge1xuICAgICAgICBtYXJnaW46IDA7XG4gICAgICAgIGJvcmRlcjogbm9uZTtcbiAgICAgIH1cblxuICAgICAgc3ZnIHtcbiAgICAgICAgbWF4LXdpZHRoOiBub25lO1xuICAgICAgICBoZWlnaHQ6IGF1dG87XG4gICAgICB9XG4gICAgfVxuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRyb2xzIHtcbiAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICAgIGJvdHRvbTogMjBweDtcbiAgICAgIHJpZ2h0OiAyMHB4O1xuICAgICAgZGlzcGxheTogZmxleDtcbiAgICAgIGdhcDogOHB4O1xuICAgICAgcGFkZGluZzogOHB4O1xuICAgICAgYmFja2dyb3VuZDogdmFyKC0tbGlnaHQpO1xuICAgICAgYm9yZGVyOiAxcHggc29saWQgdmFyKC0tbGlnaHRncmF5KTtcbiAgICAgIGJvcmRlci1yYWRpdXM6IDZweDtcbiAgICAgIGJveC1zaGFkb3c6IDAgMnB4IDRweCByZ2JhKDAsIDAsIDAsIDAuMSk7XG4gICAgICB6LWluZGV4OiAyO1xuXG4gICAgICAubWVybWFpZC1jb250cm9sLWJ1dHRvbiB7XG4gICAgICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICAgICAgICB3aWR0aDogMzJweDtcbiAgICAgICAgaGVpZ2h0OiAzMnB4O1xuICAgICAgICBwYWRkaW5nOiAwO1xuICAgICAgICBib3JkZXI6IDFweCBzb2xpZCB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodCk7XG4gICAgICAgIGNvbG9yOiB2YXIoLS1kYXJrKTtcbiAgICAgICAgYm9yZGVyLXJhZGl1czogNHB4O1xuICAgICAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgICAgIGZvbnQtc2l6ZTogMTZweDtcbiAgICAgICAgZm9udC1mYW1pbHk6IHZhcigtLWJvZHlGb250KTtcbiAgICAgICAgdHJhbnNpdGlvbjogYWxsIDAuMnMgZWFzZTtcblxuICAgICAgICAmOmhvdmVyIHtcbiAgICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICB9XG5cbiAgICAgICAgJjphY3RpdmUge1xuICAgICAgICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWSgxcHgpO1xuICAgICAgICB9XG5cbiAgICAgICAgLy8gU3R5bGUgdGhlIHJlc2V0IGJ1dHRvbiBkaWZmZXJlbnRseVxuICAgICAgICAmOm50aC1jaGlsZCgyKSB7XG4gICAgICAgICAgd2lkdGg6IGF1dG87XG4gICAgICAgICAgcGFkZGluZzogMCAxMnB4O1xuICAgICAgICAgIGZvbnQtc2l6ZTogMTRweDtcbiAgICAgICAgfVxuICAgICAgfVxuICAgIH1cbiAgfVxufVxuIl19 */</style><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" spa-preserve/><script src="../../prescript.js" type="application/javascript" spa-preserve></script><script type="application/javascript" spa-preserve>const fetchData = fetch("../../static/contentIndex.json").then(data => data.json())</script><link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://hero851815.cc/index.xml"/><meta property="og:image:width" content="1200"/><meta property="og:image:height" content="630"/><meta property="og:image" content="https://hero851815.cc/扩展/概念解析/EXT---数据库分片和分区-og-image.webp"/><meta property="og:image:url" content="https://hero851815.cc/扩展/概念解析/EXT---数据库分片和分区-og-image.webp"/><meta name="twitter:image" content="https://hero851815.cc/扩展/概念解析/EXT---数据库分片和分区-og-image.webp"/><meta property="og:image:type" content="image/.webp"/></head><body data-slug="扩展/概念解析/EXT---数据库分片和分区"><div id="quartz-root" class="page"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href="../..">数据安全知识库</a></h2><div class="spacer mobile-only"></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 1rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button"><p>Search</p><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="Search for something" placeholder="Search for something"/><div class="search-layout" data-preview="true"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="Dark mode"><title>Dark mode</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="Light mode"><title>Light mode</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="Reader mode"><title>Reader mode</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a,b)=>!a.isFolder&amp;&amp;!b.isFolder||a.isFolder&amp;&amp;b.isFolder?a.displayName.localeCompare(b.displayName,void 0,{numeric:!0,sensitivity:\&quot;base\&quot;}):!a.isFolder&amp;&amp;b.isFolder?1:-1&quot;,&quot;filterFn&quot;:&quot;node=>node.slugSegment!==\&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;node=>node&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-content"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>Explorer</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div class="explorer-content" aria-expanded="false"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#"></a></li></template><template id="template-folder"><li><div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="../../">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../扩展/">扩展</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../扩展/概念解析/">概念解析</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>EXT   数据库分片和分区</a></div></nav><h1 class="article-title">EXT - 数据库分片和分区<span class="article-subtitle"> </span><span class="article-synonyms"> </span></h1><p show-comma="true" class="content-meta"><span>32 min read</span></p></div></div><article class="popover-hint"><h1 id="数据库分片">数据库分片<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#数据库分片" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p>数据库分片（Sharding）是一种数据库水平扩展的技术，其中数据被分散到多个数据库实例或分片中，以提高性能并减少大量数据对单个数据库的影响。</p>
+<p>分片是一种数据库架构模式，我们将大型数据集分成较小的块（逻辑分片），并将这些块存储/分发到不同的机器/数据库节点（物理分片）中。</p>
+<ul>
+<li>每个块/分区称为“分片”，每个分片具有与原始数据库相同的数据库模式。</li>
+<li>我们以这样的方式分布数据，即每一行都恰好出现在一个分片中。</li>
+<li>这是提高应用程序 可扩展性的良好机制。</li>
+</ul>
+<p><img src="https://ying-quartz-resourse.oss-cn-shanghai.aliyuncs.com/20250807130526294.png" alt="数据库分片"/></p>
+<h2 id="分片的方法">分片的方法<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#分片的方法" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="基于密钥的分片">基于密钥的分片<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#基于密钥的分片" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>基于密钥的分片技术也称为基于哈希的分片技术。在这里，我们获取实体的值，例如客户 ID、客户电子邮件、客户端 IP 地址、邮政编码等，并将该值用作哈希函数的输入。此过程生成一个哈希值，用于确定需要使用哪个分片来存储数据。</p>
+<p>我们需要记住，输入哈希函数的值都应该来自同一列（分片键），以确保数据以正确的顺序和一致的方式放置。
+基本上，分片键就像主键或各个行的唯一标识符。</p>
+<p><strong>基于密钥的分片优缺点</strong></p>
+<ul>
+<li>
+<p>优点：</p>
+<ul>
+<li>可预测的数据分布：
+<ul>
+<li>基于密钥的分片提供了一种在分片之间分发数据的可预测方法。</li>
+<li>每个不同的键值都与特定的分片相关联，从而保证数据分布的均匀性和一致性。</li>
+</ul>
+</li>
+<li>优化范围查询：
+<ul>
+<li>如果查询涉及键值范围，则可以优化基于键的分片以有效地处理这些范围查询。</li>
+<li>当处理跨越一系列连续键值的操作时，这尤其有用。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>缺点：</p>
+<ul>
+<li>数据分布不均匀：如果分片键分布不均匀，可能会导致分片间数据分布不均匀。</li>
+<li>特定键的可扩展性有限：如果某些键的流量很大，或者数据集严重偏向特定键范围，则基于键的分片的可扩展性可能会受到限制。</li>
+<li>复杂的键选择：选择合适的分片键对于有效的基于键的分片至关重要。</li>
+</ul>
+</li>
+</ul>
+<h3 id="水平或基于范围的分片">水平或基于范围的分片<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#水平或基于范围的分片" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>在水平分片或基于范围的分片中，我们根据每条记录中特定值的范围将数据分成不同的部分。假设有一个包含在线客户姓名和电子邮件信息的数据库。可以将这些信息拆分成两个分片。</p>
+<p>示例：</p>
+<ul>
+<li>在一个分片中，您可以保存名字以A至P开头的客户的信息</li>
+<li>在另一个分片中，保存其余客户的信息。</li>
+</ul>
+<p><img src="https://ying-quartz-resourse.oss-cn-shanghai.aliyuncs.com/20250808154242592.png" alt="数据库水平分片"/></p>
+<p><strong>基于范围的分片的优缺点</strong></p>
+<ul>
+<li>
+<p>优点：</p>
+<ul>
+<li>可扩展性：水平或基于范围的分片通过将数据分布在多个分片上，实现无缝可扩展性，适应不断增长的数据集。</li>
+<li>提高性能：分片之间的数据分布通过并行化提高了查询性能，确保每个分片处理的数据子集更小，操作更快。</li>
+</ul>
+</li>
+<li>
+<p>缺点：</p>
+<ul>
+<li>跨分片的复杂查询：协调涉及多个分片的查询可能具有挑战性。</li>
+<li>数据分布不均匀：数据分布管理不善可能会导致分片之间的工作负载不均匀。</li>
+</ul>
+</li>
+</ul>
+<h3 id="垂直分片">垂直分片<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#垂直分片" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>在垂直分片中，我们将表中的整列拆分出来，并将这些列放入不同的新表中。数据完全独立于各个分区。此外，每个分区都包含不同的行和列。我们可以将一个实体的不同特征拆分到不同机器上的不同分片中。</p>
+<p><img src="https://ying-quartz-resourse.oss-cn-shanghai.aliyuncs.com/20250808154534274.png" alt/></p>
+<p><strong>垂直分片的优缺点</strong></p>
+<ul>
+<li>
+<p>优点：</p>
+<ul>
+<li>查询性能：垂直分片允许每个分片专注于特定的列子集，从而提升查询性能。这种专业化可以提高仅涉及可用列子集的查询效率。</li>
+<li>简化查询：需要一组特定列的查询可以简化，因为它们只需要与包含相关列的分片交互。</li>
+</ul>
+</li>
+<li>
+<p>缺点：</p>
+<ul>
+<li>热点的可能性：如果某些分片包含访问量很大的列，则它们可能会成为热点，从而导致工作负载分布不均匀。</li>
+<li>模式变更的挑战：在垂直分片系统中，更改模式（例如添加或删除列）可能更具挑战性。更改可能会影响多个分片，需要谨慎协调。</li>
+</ul>
+</li>
+</ul>
+<h3 id="基于目录的分片">基于目录的分片<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#基于目录的分片" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>在基于目录的分片中，我们为原始数据库创建并维护一个查找服务或查找表。基本上，我们使用查找表的分片键，并对数据库中存在的每个实体进行映射。这样，我们就可以跟踪哪些数据库分片保存了哪些数据。</p>
+<p><img src="https://ying-quartz-resourse.oss-cn-shanghai.aliyuncs.com/20250808154846114.jpg" alt="基于目录的分片"/></p>
+<p>查找表保存了一组关于特定数据在何处可以找到的静态信息。在上图中，您可以看到我们使用了配送区域作为分片键：</p>
+<ul>
+<li>首先，客户端应用程序查询查找服务以找出放置数据的分片（数据库分区）。</li>
+<li>当查找服务返回分片时，它会查询/更新该分片。</li>
+</ul>
+<p><strong>基于目录的分片的优缺点</strong></p>
+<ul>
+<li>
+<p>优点：</p>
+<ul>
+<li>灵活的数据分布：基于目录的分片允许灵活的数据分布，其中中央目录可以动态管理和更新数据到分片位置的映射。</li>
+<li>高效的查询路由：使用目录中存储的信息，可以将查询高效地路由到合适的分片，从而提高查询性能。</li>
+<li>动态可扩展性：系统可以通过添加或删除分片进行动态扩展，而无需更改应用程序逻辑。</li>
+</ul>
+</li>
+<li>
+<p>缺点：</p>
+<ul>
+<li>集中式故障点：中央目录代表单点故障。如果目录不可用或出现问题，则可能会中断整个系统，影响数据访问和查询路由。</li>
+<li>增加延迟：通过中央目录的查询路由引入了额外的层，与其他分片策略相比，可能会导致延迟增加。</li>
+</ul>
+</li>
+</ul>
+<h2 id="分片优化">分片优化<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#分片优化" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>以下是优化数据库分片以实现均匀数据分布的一些简单方法：</p>
+<ul>
+<li>使用一致性哈希：这有助于通过使用哈希函数（根据记录的键值将记录分配给不同的分片）在所有分片上更均匀地分布数据。</li>
+<li>选择一个合适的分片键：选择一个均衡的分片键至关重要。一个不会产生热点的分片键可以确保数据在所有服务器上均匀分布。</li>
+<li>谨慎使用基于范围的分片：如果使用基于范围的分片，请确保正确定义范围，以便一个分片不会比其他分片承载更多的数据。</li>
+<li>定期监控和重新平衡：密切关注数据分布，并在必要时重新平衡分片，以避免数据增长时负载不均匀。</li>
+<li>自动化分片逻辑：实施自动化工具或内置数据库功能，自动分配数据并处理分片以维持分片之间的平衡。</li>
+</ul>
+<h1 id="数据分区">数据分区<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#数据分区" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p>数据分区（Partitioning）技术，可以将庞大的数据集划分为更小、更易于管理的部分。这些技术应用于分布式系统、并行计算和数据库管理等众多领域。</p>
+<h2 id="分区的方法">分区的方法<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#分区的方法" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="水平分区">水平分区<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#水平分区" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>数据集根据行或记录进行划分。每个分区包含行的子集，并且这些分区通常分布在多个服务器或存储设备上。水平分区通常用于分布式数据库或系统，以提高并行性并实现负载平衡。</p>
+<p><img src="https://ying-quartz-resourse.oss-cn-shanghai.aliyuncs.com/20250808161657421.webp" alt="数据水平分区"/></p>
+<p><strong>水平分区的优缺点</strong></p>
+<ul>
+<li>
+<p>优点：</p>
+<ul>
+<li>更高的可扩展性：通过水平分区（将数据划分到多台计算机或存储设备之间），可以并行处理大型数据集。</li>
+<li>负载平衡：数据分区允许在多个节点之间公平分配工作负载，从而防止瓶颈并提高系统性能。</li>
+<li>数据隔离：由于每个分区可以单独控制，因此数据隔离和容错能力得到增强。即使一个分区发生故障，其他分区也能继续运行。</li>
+</ul>
+</li>
+<li>
+<p>缺点：</p>
+<ul>
+<li>连接操作：水平分区会使跨多个分区的连接操作更加复杂且可能更慢，因为需要从不同的节点获取数据。</li>
+<li>数据倾斜：如果数据分布不均匀，或者某些分区比其他分区收到更多的查询或更新，则会导致数据倾斜，从而影响性能和负载平衡。</li>
+</ul>
+</li>
+</ul>
+<h3 id="垂直分区">垂直分区<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#垂直分区" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>与水平分区不同，垂直分区根据列或属性对数据集进行划分。此方法中的每个分区都为每一行分配一个列子集。当某些列的访问频率高于其他列，或者不同列具有不同的访问模式时，垂直分区可能会有所帮助。</p>
+<p><img src="https://ying-quartz-resourse.oss-cn-shanghai.aliyuncs.com/20250808162309833.webp" alt="数据处置分区"/></p>
+<p><strong>垂直分区的优缺点</strong></p>
+<ul>
+<li>
+<p>优点：</p>
+<ul>
+<li>提高查询性能：通过将经常访问的列放在单独的分区中，垂直分区可以减少从存储中读取的数据量，从而提高查询性能。</li>
+<li>高效的数据检索：当查询仅需要列的子集时，垂直分区允许仅检索必要的数据，从而节省存储和 I/O 资源。</li>
+<li>简化的模式管理：通过垂直分区，添加或删除列变得更容易，因为更改只会影响相应的分区。</li>
+</ul>
+</li>
+<li>
+<p>缺点：</p>
+<ul>
+<li>复杂性增加：垂直分区可能导致更复杂的查询执行计划，因为查询可能需要访问多个分区来收集所有所需的数据。</li>
+<li>跨分区连接：连接来自不同分区的数据可能更复杂且速度可能更慢，因为它涉及从不同分区检索数据并将它们组合起来。</li>
+<li>可扩展性有限：对于列数不断增长的数据集，垂直分区可能不那么有效，因为添加新列可能需要重新构建分区。</li>
+</ul>
+</li>
+</ul>
+<h3 id="基于键的分区">基于键的分区<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#基于键的分区" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>这种方法根据特定的属性值或键对数据进行划分。数据集的每个分区包含与特定键值相关的所有信息。在分布式数据库或系统中，基于键的分区通常用于均匀分布数据，并实现基于键查找的有效数据检索。</p>
+<p><img src="https://ying-quartz-resourse.oss-cn-shanghai.aliyuncs.com/20250808162536406.webp" alt="基于键的分区"/></p>
+<p><strong>基于键的分区的优缺点</strong></p>
+<ul>
+<li>
+<p>优点：</p>
+<ul>
+<li>数据分布均匀：基于键的分区确保具有相同键值的数据存储在同一个分区中，从而实现通过键查找进行高效的数据检索。</li>
+<li>可扩展性：基于键的分区可以将数据均匀地分布在各个分区之间，从而实现更好的并行性和更高的可扩展性。</li>
+<li>负载平衡：通过根据键值分配数据，使工作负载在多个分区之间实现平衡，防止热点并优化性能。</li>
+</ul>
+</li>
+<li>
+<p>缺点：</p>
+<ul>
+<li>倾斜和热点：如果键分布不均匀，或者某些键值比其他键值被访问得更频繁，则会导致数据倾斜或热点，从而影响性能和负载平衡。</li>
+<li>查询灵活性有限：基于键的分区对于主要涉及键查找的查询最有效。跨多个键或需要范围查询的查询可能会增加复杂性，并可能降低性能。</li>
+<li>分区管理：根据键值管理分区需要仔细的规划和维护，尤其是在数据集增长或键分布发生变化时。</li>
+</ul>
+</li>
+</ul>
+<h3 id="范围分区">范围分区<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#范围分区" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>使用范围分区，根据预设的值范围对数据集进行划分。例如，如果您的数据集包含时间戳，您可以根据特定的时间范围对其进行划分。当您的数据具有自然顺序，并且希望根据值范围均匀分布时，范围分区可能很有用。</p>
+<p><img src="https://ying-quartz-resourse.oss-cn-shanghai.aliyuncs.com/20250808162733091.webp" alt="数据范围分区"/></p>
+<p><strong>范围分区的优缺点</strong></p>
+<ul>
+<li>
+<p>优点：</p>
+<ul>
+<li>自然排序：范围分区适用于基于特定属性具有自然排序的数据集。它允许基于值的范围进行高效的数据检索。</li>
+<li>均匀的数据分布：通过根据范围划分数据集，范围分区可以将数据均匀地分布在各个分区之间，确保负载平衡和最佳性能。</li>
+<li>简化查询计划：当查询主要涉及基于范围的条件时，范围分区可以简化查询计划，因为系统根据指定的范围知道要访问哪个分区。</li>
+</ul>
+</li>
+<li>
+<p>缺点：</p>
+<ul>
+<li>数据分布不均匀：如果数据分布在各个范围内不均匀，则会导致数据倾斜并影响负载平衡和查询性能。</li>
+<li>数据增长挑战：随着数据集的增长，可能需要调整范围或添加新的分区，这需要仔细管理并可能影响现有的查询和数据分布。</li>
+<li>连接和范围查询：当跨分区执行连接或查询涉及多个不连续范围时，范围分区可能会带来复杂性，从而可能导致性能挑战。</li>
+</ul>
+</li>
+</ul>
+<h3 id="基于哈希的分区">基于哈希的分区<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#基于哈希的分区" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>使用哈希函数分析数据并确定其所属分区的技术称为哈希分区。输入数据后，哈希函数会生成一个哈希值，用于将数据归类到特定的分区中。基于哈希的分区可以通过随机地将数据划分到各个分区中，从而实现负载平衡并加快数据检索速度。</p>
+<p><img src="https://ying-quartz-resourse.oss-cn-shanghai.aliyuncs.com/20250808162902524.webp" alt="基于哈希的分区"/></p>
+<p><strong>基于哈希的分区的优缺点</strong></p>
+<ul>
+<li>
+<p>优点：</p>
+<ul>
+<li>均匀的数据分布：基于哈希的分区提供了跨分区的随机数据分布，确保了均匀的数据分布和负载平衡。</li>
+<li>可扩展性：基于哈希的分区通过在多个节点上均匀分布数据实现了可扩展的并行处理。</li>
+<li>简单性：基于哈希的分区不依赖于任何特定的数据属性或顺序，并且相对容易实现。</li>
+</ul>
+</li>
+<li>
+<p>缺点：</p>
+<ul>
+<li>基于键的查询：基于哈希的分区不适合高效的基于键的查找，因为数据随机分布在各个分区中。基于键的查询可能需要跨多个分区进行搜索。</li>
+<li>负载平衡挑战：在某些情况下，数据分布可能不是完全平衡的，从而导致负载不平衡和潜在的性能问题。</li>
+<li>分区管理：随着数据集的增长或系统要求的变化，基于哈希的分区可能需要调整分区或哈希函数的数量，从而需要仔细的管理和潜在的数据重新分配。</li>
+</ul>
+</li>
+</ul>
+<h3 id="循环分区">循环分区<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#循环分区" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>在循环分区中，数据在各个分区之间循环且均匀地分布。无论数据的属性如何，每个分片都会按顺序分配下一个可访问的数据项。循环分区的实现很简单，并且可以提供最低程度的负载均衡。</p>
+<p><img src="https://ying-quartz-resourse.oss-cn-shanghai.aliyuncs.com/20250808163024535.webp" alt="循环分区"/></p>
+<p><strong>循环分区的优缺点</strong></p>
+<ul>
+<li>
+<p>优点：</p>
+<ul>
+<li>实现简单：循环分区实现起来很简单，因为它以循环的方式将数据项分配到分区，而不依赖于任何特定的数据特性。</li>
+<li>基本负载平衡：循环分区可以提供基本级别的负载平衡，确保数据均匀分布在各个分区之间。</li>
+<li>可扩展性：通过循环分区实现，将数据分成几个部分并允许并行处理。</li>
+</ul>
+</li>
+<li>
+<p>缺点：</p>
+<ul>
+<li>数据分布不均匀或分区数量不是数据项总数的倍数可能会导致循环分区产生不一致的分区大小。</li>
+<li>数据检索效率低下：循环分区不考虑任何数据特征或访问模式，这可能会导致某些查询的数据检索效率低下。</li>
+<li>有限的查询优化：循环分区不会针对特定的查询模式或访问模式进行优化，可能会导致查询性能不佳。</li>
+</ul>
+</li>
+</ul>
+<h2 id="方法总结">方法总结<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#方法总结" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>分区技术</th><th>描述</th><th>适用数据</th><th>查询性能</th><th>数据分布</th><th>复杂</th></tr></thead><tbody><tr><td>水平分区</td><td>根据行/记录划分数据集</td><td>大型数据集</td><td>复杂连接</td><td>分布不均</td><td>分布式事务管理</td></tr><tr><td>垂直分区</td><td>根据列/属性划分数据集</td><td>宽桌</td><td>改进的检索</td><td>高效存储</td><td>增加了查询复杂性</td></tr><tr><td>基于键的分区</td><td>根据特定键划分数据集</td><td>键值数据集</td><td>高效的键查找</td><td>按按键均匀分布</td><td>查询灵活性有限</td></tr><tr><td>范围分区</td><td>根据特定范围划分数据集</td><td>有序数据集</td><td>高效范围查询</td><td>按范围均匀分布</td><td>连接和范围查询</td></tr><tr><td>基于哈希的分区</td><td>根据哈希函数划分数据集</td><td>无序数据集</td><td>均匀分布</td><td>随机分布</td><td>基于键的查询效率低下</td></tr><tr><td>循环分区</td><td>以循环方式划分数据集</td><td>大小相等的数据集</td><td>基本负载均衡</td><td>均匀分布</td><td>有限的查询优化</td></tr></tbody></table></div>
+<h1 id="数据库分片和分区之间的区别">数据库分片和分区之间的区别<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#数据库分片和分区之间的区别" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>方面</th><th>分片</th><th>分区</th></tr></thead><tbody><tr><td>数据分布</td><td>跨多个数据库实例（分片）。</td><td>在单个数据库实例（分区）内。</td></tr><tr><td>可扩展性</td><td>出色的水平可扩展性。</td><td>受单个数据库容量的限制。</td></tr><tr><td>查询性能</td><td>由于并行处理而具有高性能。</td><td>提高了焦点查询的性能。</td></tr><tr><td>维护</td><td>分布式系统的复杂管理。</td><td>单个数据库内的高效数据管理。</td></tr><tr><td>连接操作</td><td>跨不同分片可能会很复杂且缓慢。</td><td>通常对于分区内的连接来说更简单。</td></tr><tr><td>数据一致性</td><td>保持一致性的挑战。</td><td>一致性管理更加直接。</td></tr><tr><td>用例</td><td>高流量、海量数据集。</td><td>单个数据库内的性能优化。</td></tr></tbody></table></div>
+<h2 id="分片的关键方面">分片的关键方面<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#分片的关键方面" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><strong>数据分布</strong></p>
+<p>数据分布是分片技术的一个重要环节。分片技术将大型数据集水平划分，创建更小、更独立的子集（称为分片）。这些独立的分片随后托管在不同的服务器或节点上。分布机制则将分片分布在多个数据库实例或服务器上。每个分片负责管理特定的数据子集。</p>
+<blockquote>
+<p>示例：在一个多元化的电商平台中，用户数据按地理区域分布。每个分片存储来自特定地区的用户，例如，北美用户存储在一个分片中，欧洲用户存储在另一个分片中。</p>
+</blockquote>
+<p><strong>可扩展性</strong></p>
+<p>分片技术实现了卓越的水平可扩展性，让扩展变得轻而易举。这种方法允许将新的分片无缝添加到基础架构中，从而有效地分配数据负载，并高效地容纳大型数据集和高流量。</p>
+<blockquote>
+<p>示例：一个用户量快速增长的社交媒体平台可能会采用一种名为“分片”的技术。该技术将新注册用户的数据分布到多个分片中，以防止单个分片数据过载。</p>
+</blockquote>
+<p><strong>查询性能</strong></p>
+<p>分片的并行处理功能极大地提升了查询性能，尤其适用于优先处理读取操作的工作负载。通过在各个分片上同时执行查询，系统显著缩短了响应时间。</p>
+<blockquote>
+<p>示例：在一个旨在高效处理在线产品销售的数据库中，查询特定时间范围内最热门产品的过程得到了高度优化。这种优化是通过跨多个分片的并行处理实现的。</p>
+</blockquote>
+<p><strong>维护</strong></p>
+<p>分片通过分发数据、路由查询和维护不同分片之间的一致性使过程变得复杂。维护任务：备份、索引和其他维护任务可能很复杂，可能需要跨分片进行协调。</p>
+<blockquote>
+<p>示例：在管理使用分片数据库的在线游戏平台时，在多人游戏会话期间维护数据一致性可能是一项挑战。确保跨不同分片的玩家数据一致至关重要。</p>
+</blockquote>
+<p><strong>加入操作</strong></p>
+<p>合并来自多个分片的数据可能会在复杂性和速度方面带来挑战，可能会削弱分片针对特定查询模式的优势。</p>
+<blockquote>
+<p>示例：假设有一个分片数据库，它将用户个人资料及其对应的订单分别存储在不同的分片中。需要注意的是，将来自不同分片的用户数据与其订单历史记录合并可能会带来性能挑战。</p>
+</blockquote>
+<p><strong>数据一致性</strong></p>
+<p>数据一致性至关重要，尤其是在处理分布式事务和跨分片数据同步时。这可能带来挑战，需要复杂的同步机制来确保结果的可靠性。</p>
+<blockquote>
+<p>示例：在分布式电商平台中，处理客户订单时跨分片管理库存水平可能会变得非常复杂。这种复杂性通常需要采用防止超卖的机制。</p>
+</blockquote>
+<h2 id="分区的关键方面">分区的关键方面<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#分区的关键方面" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><strong>数据分布</strong></p>
+<p>在组织数据方面，分区是一种实用的技术。它涉及将单个数据库表分解成更小的逻辑段（称为分区）。每个分区包含表数据的特定子集，该子集由指定的标准确定。这种分布机制由通常存在于单个数据库实例中的分区组成。这些分区根据预定的标准（例如值范围或类别）进行组织。</p>
+<blockquote>
+<p>示例：银行系统中记录客户交易的表可以根据交易日期进行划分。每个分区可以存储特定月份的交易，并将其与其他月份的交易区分开。</p>
+</blockquote>
+<p><strong>可扩展性</strong></p>
+<p>通过分片技术，可扩展性变得轻而易举，从而实现了卓越的水平可扩展性。系统可以轻松地将新的分片纳入其基础架构，从而有效地分配数据负载，并适应庞大的数据集和高流量。</p>
+<blockquote>
+<p>示例：一个用户快速增长的社交媒体平台可能会采用一种称为分片的技术。这涉及将新用户的数据分布到多个分片中，以防止任何一个分片的数据过载。</p>
+</blockquote>
+<p><strong>查询性能</strong></p>
+<p>查询性能分区通过最小化需要扫描的数据量，极大地提高了速度。由于数据量的减少，这使得针对特定分区的查询执行速度更快。</p>
+<blockquote>
+<p>示例：医疗保健数据库通常按患者年龄组织，以便在搜索特定年龄范围内的患者时更快地获得结果。通过对数据库进行分区并仅扫描相关部分，可以提高检索患者记录的效率。</p>
+</blockquote>
+<p><strong>维护</strong></p>
+<p>维护任务通常可以通过分区来简化。这种方法允许操作专门针对分区，从而提高备份、索引和其他维护任务的效率。</p>
+<p>变化的复杂性：然而，改变分区方案或在分区之间迁移数据的过程仍然会呈现出相当大的复杂性。</p>
+<blockquote>
+<p>示例：某电商平台可以按产品类别整理其产品库存数据。当更新特定类别的价格时，只需修改相应的分区，从而最大限度地减少对整个数据集的影响。</p>
+</blockquote>
+<p><strong>加入操作</strong></p>
+<p>连接开销：跨分区连接表可能会带来开销，尤其是当连接条件涉及来自不同分区的列时。</p>
+<blockquote>
+<p>示例：在供应链系统的分区数据库中，跨分区将供应商信息与产品库存数据连接起来可能需要额外的优化以保持查询性能。</p>
+</blockquote>
+<p><strong>数据一致性</strong></p>
+<p>单个分区内的数据一致性通常更容易管理，但在需要时确保分区之间的一致性非常重要。</p>
+<blockquote>
+<p>示例：在分区银行系统中，处理不同分区内的交易时，需要仔细协调以确保账户余额保持一致。</p>
+</blockquote>
+<h2 id="适用场景">适用场景<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#适用场景" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>使用分片或分区的决定取决于几个因素，包括应用程序的规模、预期增长、查询模式和数据分布要求：</p>
+<p><strong>在以下情况下使用分片</strong></p>
+<ul>
+<li>处理单个服务器无法有效管理的极大数据集。</li>
+<li>需要将数据分布在多个地理位置以减少延迟。</li>
+<li>针对高流量应用程序扩展读写操作。</li>
+<li>接受管理分布式系统的复杂性。</li>
+</ul>
+<p><strong>在以下情况下使用分区</strong></p>
+<ul>
+<li>在单个数据库实例的限制内运行，但仍需要性能优化。</li>
+<li>组织数据以便于管理和高效维护。</li>
+<li>处理可以根据某些属性进行逻辑分类的数据。</li>
+<li>通过限制数据扫描范围来优化特定的查询模式。</li>
+</ul></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>Graph View</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc desktop-only"><button type="button" class="toc-header" aria-controls="toc-content" aria-expanded="true"><h3>Table of Contents</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul class="toc-content overflow" id="list-1"><li class="depth-0"><a href="#数据库分片" data-for="数据库分片">数据库分片</a></li><li class="depth-1"><a href="#分片的方法" data-for="分片的方法">分片的方法</a></li><li class="depth-2"><a href="#基于密钥的分片" data-for="基于密钥的分片">基于密钥的分片</a></li><li class="depth-2"><a href="#水平或基于范围的分片" data-for="水平或基于范围的分片">水平或基于范围的分片</a></li><li class="depth-2"><a href="#垂直分片" data-for="垂直分片">垂直分片</a></li><li class="depth-2"><a href="#基于目录的分片" data-for="基于目录的分片">基于目录的分片</a></li><li class="depth-1"><a href="#分片优化" data-for="分片优化">分片优化</a></li><li class="depth-0"><a href="#数据分区" data-for="数据分区">数据分区</a></li><li class="depth-1"><a href="#分区的方法" data-for="分区的方法">分区的方法</a></li><li class="depth-2"><a href="#水平分区" data-for="水平分区">水平分区</a></li><li class="depth-2"><a href="#垂直分区" data-for="垂直分区">垂直分区</a></li><li class="depth-2"><a href="#基于键的分区" data-for="基于键的分区">基于键的分区</a></li><li class="depth-2"><a href="#范围分区" data-for="范围分区">范围分区</a></li><li class="depth-2"><a href="#基于哈希的分区" data-for="基于哈希的分区">基于哈希的分区</a></li><li class="depth-2"><a href="#循环分区" data-for="循环分区">循环分区</a></li><li class="depth-1"><a href="#方法总结" data-for="方法总结">方法总结</a></li><li class="depth-0"><a href="#数据库分片和分区之间的区别" data-for="数据库分片和分区之间的区别">数据库分片和分区之间的区别</a></li><li class="depth-1"><a href="#分片的关键方面" data-for="分片的关键方面">分片的关键方面</a></li><li class="depth-1"><a href="#分区的关键方面" data-for="分区的关键方面">分区的关键方面</a></li><li class="depth-1"><a href="#适用场景" data-for="适用场景">适用场景</a></li><li class="overflow-end"></li></ul></div><div class="backlinks"><h3>Backlinks</h3><ul id="list-2" class="overflow"><li><a href="../../扩展/概念解析/EXT---数据库读写分离" class="internal">EXT - 数据库读写分离</a></li><li><a href="../../扩展知识目录" class="internal">扩展知识目录</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v4.5.1</a> © 2025</p><ul><li><a href="https://github.com/hero851815/quartz-page">GitHub</a></li></ul></footer></div></div></body><script type="application/javascript">function n(){let t=this.parentElement;t.classList.toggle("is-collapsed");let e=t.getElementsByClassName("callout-content")[0];if(!e)return;let l=t.classList.contains("is-collapsed");e.style.gridTemplateRows=l?"0fr":"1fr"}function c(){let t=document.getElementsByClassName("callout is-collapsible");for(let e of t){let l=e.getElementsByClassName("callout-title")[0],s=e.getElementsByClassName("callout-content")[0];if(!l||!s)continue;l.addEventListener("click",n),window.addCleanup(()=>l.removeEventListener("click",n));let o=e.classList.contains("is-collapsed");s.style.gridTemplateRows=o?"0fr":"1fr"}}document.addEventListener("nav",c);
+</script><script type="module">function f(i,e){if(!i)return;function r(o){o.target===this&&(o.preventDefault(),o.stopPropagation(),e())}function t(o){o.key.startsWith("Esc")&&(o.preventDefault(),e())}i?.addEventListener("click",r),window.addCleanup(()=>i?.removeEventListener("click",r)),document.addEventListener("keydown",t),window.addCleanup(()=>document.removeEventListener("keydown",t))}function y(i){for(;i.firstChild;)i.removeChild(i.firstChild)}var h=class{constructor(e,r){this.container=e;this.content=r;this.setupEventListeners(),this.setupNavigationControls(),this.resetTransform()}isDragging=!1;startPan={x:0,y:0};currentPan={x:0,y:0};scale=1;MIN_SCALE=.5;MAX_SCALE=3;cleanups=[];setupEventListeners(){let e=this.onMouseDown.bind(this),r=this.onMouseMove.bind(this),t=this.onMouseUp.bind(this),o=this.resetTransform.bind(this);this.container.addEventListener("mousedown",e),document.addEventListener("mousemove",r),document.addEventListener("mouseup",t),window.addEventListener("resize",o),this.cleanups.push(()=>this.container.removeEventListener("mousedown",e),()=>document.removeEventListener("mousemove",r),()=>document.removeEventListener("mouseup",t),()=>window.removeEventListener("resize",o))}cleanup(){for(let e of this.cleanups)e()}setupNavigationControls(){let e=document.createElement("div");e.className="mermaid-controls";let r=this.createButton("+",()=>this.zoom(.1)),t=this.createButton("-",()=>this.zoom(-.1)),o=this.createButton("Reset",()=>this.resetTransform());e.appendChild(t),e.appendChild(o),e.appendChild(r),this.container.appendChild(e)}createButton(e,r){let t=document.createElement("button");return t.textContent=e,t.className="mermaid-control-button",t.addEventListener("click",r),window.addCleanup(()=>t.removeEventListener("click",r)),t}onMouseDown(e){e.button===0&&(this.isDragging=!0,this.startPan={x:e.clientX-this.currentPan.x,y:e.clientY-this.currentPan.y},this.container.style.cursor="grabbing")}onMouseMove(e){this.isDragging&&(e.preventDefault(),this.currentPan={x:e.clientX-this.startPan.x,y:e.clientY-this.startPan.y},this.updateTransform())}onMouseUp(){this.isDragging=!1,this.container.style.cursor="grab"}zoom(e){let r=Math.min(Math.max(this.scale+e,this.MIN_SCALE),this.MAX_SCALE),t=this.content.getBoundingClientRect(),o=t.width/2,n=t.height/2,c=r-this.scale;this.currentPan.x-=o*c,this.currentPan.y-=n*c,this.scale=r,this.updateTransform()}updateTransform(){this.content.style.transform=`translate(${this.currentPan.x}px, ${this.currentPan.y}px) scale(${this.scale})`}resetTransform(){this.scale=1;let e=this.content.querySelector("svg");this.currentPan={x:e.getBoundingClientRect().width/2,y:e.getBoundingClientRect().height/2},this.updateTransform()}},C=["--secondary","--tertiary","--gray","--light","--lightgray","--highlight","--dark","--darkgray","--codeFont"],E;document.addEventListener("nav",async()=>{let e=document.querySelector(".center").querySelectorAll("code.mermaid");if(e.length===0)return;E||=await import("https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.4.0/mermaid.esm.min.mjs");let r=E.default,t=new WeakMap;for(let n of e)t.set(n,n.innerText);async function o(){for(let s of e){s.removeAttribute("data-processed");let a=t.get(s);a&&(s.innerHTML=a)}let n=C.reduce((s,a)=>(s[a]=window.getComputedStyle(document.documentElement).getPropertyValue(a),s),{}),c=document.documentElement.getAttribute("saved-theme")==="dark";r.initialize({startOnLoad:!1,securityLevel:"loose",theme:c?"dark":"base",themeVariables:{fontFamily:n["--codeFont"],primaryColor:n["--light"],primaryTextColor:n["--darkgray"],primaryBorderColor:n["--tertiary"],lineColor:n["--darkgray"],secondaryColor:n["--secondary"],tertiaryColor:n["--tertiary"],clusterBkg:n["--light"],edgeLabelBackground:n["--highlight"]}}),await r.run({nodes:e})}await o(),document.addEventListener("themechange",o),window.addCleanup(()=>document.removeEventListener("themechange",o));for(let n=0;n<e.length;n++){let v=function(){let g=l.querySelector("#mermaid-space"),m=l.querySelector(".mermaid-content");if(!m)return;y(m);let w=c.querySelector("svg").cloneNode(!0);m.appendChild(w),l.classList.add("active"),g.style.cursor="grab",u=new h(g,m)},M=function(){l.classList.remove("active"),u?.cleanup(),u=null},c=e[n],s=c.parentElement,a=s.querySelector(".clipboard-button"),d=s.querySelector(".expand-button"),p=window.getComputedStyle(a),L=a.offsetWidth+parseFloat(p.marginLeft||"0")+parseFloat(p.marginRight||"0");d.style.right=`calc(${L}px + 0.3rem)`,s.prepend(d);let l=s.querySelector("#mermaid-container");if(!l)return;let u=null;d.addEventListener("click",v),f(l,M),window.addCleanup(()=>{u?.cleanup(),d.removeEventListener("click",v)})}});
+</script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript"></script><script src="../../postscript.js" type="module"></script></html>
