@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en"><head><title>数据溯源和数据沿袭 - 专业术语词典与技术指南</title><meta charset="utf-8"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted Grotesk:wght@400;700&amp;family=Source Sans Pro:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="og:site_name" content="数据安全知识库"/><meta property="og:title" content="数据溯源和数据沿袭 - 专业术语词典与技术指南"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="数据溯源和数据沿袭 - 专业术语词典与技术指南"/><meta name="twitter:description" content="数据溯源 数据溯源的定义 数据溯源（Data Provenance）是指对数据历史的全面追踪，包括其起源、转换以及在其整个生命周期中所做的任何修改。通过记录数据的来源、收集方式以及访问或修改人员，数据溯源可确保数据的真实性、完整性和可靠性。此过程利用元数据（描述其他数据的数据）来帮助组织追踪其数据的整个旅程。 数据溯源的关键方面 数据来源包括几个关键方面： 数据来源 来源是指数据的来源，用于标识数据的创建者、生成时间和生成系统。例如，在医疗保健领域，数据溯源可以追踪哪家医院、哪台设备或哪位临床医生采集了患者的病历。追溯来源有助于验证数据的真实性，并确保下游信息的可信度。 数据处理历史 数据来源..."/><meta property="og:description" content="数据溯源 数据溯源的定义 数据溯源（Data Provenance）是指对数据历史的全面追踪，包括其起源、转换以及在其整个生命周期中所做的任何修改。通过记录数据的来源、收集方式以及访问或修改人员，数据溯源可确保数据的真实性、完整性和可靠性。此过程利用元数据（描述其他数据的数据）来帮助组织追踪其数据的整个旅程。 数据溯源的关键方面 数据来源包括几个关键方面： 数据来源 来源是指数据的来源，用于标识数据的创建者、生成时间和生成系统。例如，在医疗保健领域，数据溯源可以追踪哪家医院、哪台设备或哪位临床医生采集了患者的病历。追溯来源有助于验证数据的真实性，并确保下游信息的可信度。 数据处理历史 数据来源..."/><meta property="og:image:alt" content="数据溯源 数据溯源的定义 数据溯源（Data Provenance）是指对数据历史的全面追踪，包括其起源、转换以及在其整个生命周期中所做的任何修改。通过记录数据的来源、收集方式以及访问或修改人员，数据溯源可确保数据的真实性、完整性和可靠性。此过程利用元数据（描述其他数据的数据）来帮助组织追踪其数据的整个旅程。 数据溯源的关键方面 数据来源包括几个关键方面： 数据来源 来源是指数据的来源，用于标识数据的创建者、生成时间和生成系统。例如，在医疗保健领域，数据溯源可以追踪哪家医院、哪台设备或哪位临床医生采集了患者的病历。追溯来源有助于验证数据的真实性，并确保下游信息的可信度。 数据处理历史 数据来源..."/><meta property="twitter:domain" content="hero851815.cc"/><meta property="og:url" content="https://hero851815.cc/扩展/概念解析/EXT---数据溯源和数据沿袭"/><meta property="twitter:url" content="https://hero851815.cc/扩展/概念解析/EXT---数据溯源和数据沿袭"/><link rel="icon" href="../../static/icon.png"/><meta name="description" content="数据溯源 数据溯源的定义 数据溯源（Data Provenance）是指对数据历史的全面追踪，包括其起源、转换以及在其整个生命周期中所做的任何修改。通过记录数据的来源、收集方式以及访问或修改人员，数据溯源可确保数据的真实性、完整性和可靠性。此过程利用元数据（描述其他数据的数据）来帮助组织追踪其数据的整个旅程。 数据溯源的关键方面 数据来源包括几个关键方面： 数据来源 来源是指数据的来源，用于标识数据的创建者、生成时间和生成系统。例如，在医疗保健领域，数据溯源可以追踪哪家医院、哪台设备或哪位临床医生采集了患者的病历。追溯来源有助于验证数据的真实性，并确保下游信息的可信度。 数据处理历史 数据来源..."/><meta name="generator" content="Quartz"/><link href="../../index.css" rel="stylesheet" type="text/css" spa-preserve/><style>.expand-button {
+  position: absolute;
+  display: flex;
+  float: right;
+  padding: 0.4rem;
+  margin: 0.3rem;
+  right: 0;
+  color: var(--gray);
+  border-color: var(--dark);
+  background-color: var(--light);
+  border: 1px solid;
+  border-radius: 5px;
+  opacity: 0;
+  transition: 0.2s;
+}
+.expand-button > svg {
+  fill: var(--light);
+  filter: contrast(0.3);
+}
+.expand-button:hover {
+  cursor: pointer;
+  border-color: var(--secondary);
+}
+.expand-button:focus {
+  outline: 0;
+}
+
+pre:hover > .expand-button {
+  opacity: 1;
+  transition: 0.2s;
+}
+
+#mermaid-container {
+  position: fixed;
+  contain: layout;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: none;
+  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.5);
+}
+#mermaid-container.active {
+  display: inline-block;
+}
+#mermaid-container > #mermaid-space {
+  border: 1px solid var(--lightgray);
+  background-color: var(--light);
+  border-radius: 5px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80vh;
+  width: 80vw;
+  overflow: hidden;
+}
+#mermaid-container > #mermaid-space > .mermaid-content {
+  padding: 2rem;
+  position: relative;
+  transform-origin: 0 0;
+  transition: transform 0.1s ease;
+  overflow: visible;
+  min-height: 200px;
+  min-width: 200px;
+}
+#mermaid-container > #mermaid-space > .mermaid-content pre {
+  margin: 0;
+  border: none;
+}
+#mermaid-container > #mermaid-space > .mermaid-content svg {
+  max-width: none;
+  height: auto;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  background: var(--light);
+  border: 1px solid var(--lightgray);
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid var(--lightgray);
+  background: var(--light);
+  color: var(--dark);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: var(--bodyFont);
+  transition: all 0.2s ease;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:hover {
+  background: var(--lightgray);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:active {
+  transform: translateY(1px);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:nth-child(2) {
+  width: auto;
+  padding: 0 12px;
+  font-size: 14px;
+}
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiL2hvbWUvcnVubmVyL3dvcmsvcXVhcnR6LXJlcG8vcXVhcnR6LXJlcG8vcXVhcnR6L3F1YXJ0ei9jb21wb25lbnRzL3N0eWxlcyIsInNvdXJjZXMiOlsibWVybWFpZC5pbmxpbmUuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBR0Y7RUFDRTs7O0FBS0Y7RUFDRTtFQUNBOzs7QUFJSjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTs7QUFHRjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTtFQUNBOztBQUdGO0VBQ0U7RUFDQTs7QUFJSjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7O0FBR0Y7RUFDRTs7QUFJRjtFQUNFO0VBQ0E7RUFDQSIsInNvdXJjZXNDb250ZW50IjpbIi5leHBhbmQtYnV0dG9uIHtcbiAgcG9zaXRpb246IGFic29sdXRlO1xuICBkaXNwbGF5OiBmbGV4O1xuICBmbG9hdDogcmlnaHQ7XG4gIHBhZGRpbmc6IDAuNHJlbTtcbiAgbWFyZ2luOiAwLjNyZW07XG4gIHJpZ2h0OiAwOyAvLyBOT1RFOiByaWdodCB3aWxsIGJlIHNldCBpbiBtZXJtYWlkLmlubGluZS50c1xuICBjb2xvcjogdmFyKC0tZ3JheSk7XG4gIGJvcmRlci1jb2xvcjogdmFyKC0tZGFyayk7XG4gIGJhY2tncm91bmQtY29sb3I6IHZhcigtLWxpZ2h0KTtcbiAgYm9yZGVyOiAxcHggc29saWQ7XG4gIGJvcmRlci1yYWRpdXM6IDVweDtcbiAgb3BhY2l0eTogMDtcbiAgdHJhbnNpdGlvbjogMC4ycztcblxuICAmID4gc3ZnIHtcbiAgICBmaWxsOiB2YXIoLS1saWdodCk7XG4gICAgZmlsdGVyOiBjb250cmFzdCgwLjMpO1xuICB9XG5cbiAgJjpob3ZlciB7XG4gICAgY3Vyc29yOiBwb2ludGVyO1xuICAgIGJvcmRlci1jb2xvcjogdmFyKC0tc2Vjb25kYXJ5KTtcbiAgfVxuXG4gICY6Zm9jdXMge1xuICAgIG91dGxpbmU6IDA7XG4gIH1cbn1cblxucHJlIHtcbiAgJjpob3ZlciA+IC5leHBhbmQtYnV0dG9uIHtcbiAgICBvcGFjaXR5OiAxO1xuICAgIHRyYW5zaXRpb246IDAuMnM7XG4gIH1cbn1cblxuI21lcm1haWQtY29udGFpbmVyIHtcbiAgcG9zaXRpb246IGZpeGVkO1xuICBjb250YWluOiBsYXlvdXQ7XG4gIHotaW5kZXg6IDk5OTtcbiAgbGVmdDogMDtcbiAgdG9wOiAwO1xuICB3aWR0aDogMTAwdnc7XG4gIGhlaWdodDogMTAwdmg7XG4gIG92ZXJmbG93OiBoaWRkZW47XG4gIGRpc3BsYXk6IG5vbmU7XG4gIGJhY2tkcm9wLWZpbHRlcjogYmx1cig0cHgpO1xuICBiYWNrZ3JvdW5kOiByZ2JhKDAsIDAsIDAsIDAuNSk7XG5cbiAgJi5hY3RpdmUge1xuICAgIGRpc3BsYXk6IGlubGluZS1ibG9jaztcbiAgfVxuXG4gICYgPiAjbWVybWFpZC1zcGFjZSB7XG4gICAgYm9yZGVyOiAxcHggc29saWQgdmFyKC0tbGlnaHRncmF5KTtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1saWdodCk7XG4gICAgYm9yZGVyLXJhZGl1czogNXB4O1xuICAgIHBvc2l0aW9uOiBmaXhlZDtcbiAgICB0b3A6IDUwJTtcbiAgICBsZWZ0OiA1MCU7XG4gICAgdHJhbnNmb3JtOiB0cmFuc2xhdGUoLTUwJSwgLTUwJSk7XG4gICAgaGVpZ2h0OiA4MHZoO1xuICAgIHdpZHRoOiA4MHZ3O1xuICAgIG92ZXJmbG93OiBoaWRkZW47XG5cbiAgICAmID4gLm1lcm1haWQtY29udGVudCB7XG4gICAgICBwYWRkaW5nOiAycmVtO1xuICAgICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgICAgdHJhbnNmb3JtLW9yaWdpbjogMCAwO1xuICAgICAgdHJhbnNpdGlvbjogdHJhbnNmb3JtIDAuMXMgZWFzZTtcbiAgICAgIG92ZXJmbG93OiB2aXNpYmxlO1xuICAgICAgbWluLWhlaWdodDogMjAwcHg7XG4gICAgICBtaW4td2lkdGg6IDIwMHB4O1xuXG4gICAgICBwcmUge1xuICAgICAgICBtYXJnaW46IDA7XG4gICAgICAgIGJvcmRlcjogbm9uZTtcbiAgICAgIH1cblxuICAgICAgc3ZnIHtcbiAgICAgICAgbWF4LXdpZHRoOiBub25lO1xuICAgICAgICBoZWlnaHQ6IGF1dG87XG4gICAgICB9XG4gICAgfVxuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRyb2xzIHtcbiAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICAgIGJvdHRvbTogMjBweDtcbiAgICAgIHJpZ2h0OiAyMHB4O1xuICAgICAgZGlzcGxheTogZmxleDtcbiAgICAgIGdhcDogOHB4O1xuICAgICAgcGFkZGluZzogOHB4O1xuICAgICAgYmFja2dyb3VuZDogdmFyKC0tbGlnaHQpO1xuICAgICAgYm9yZGVyOiAxcHggc29saWQgdmFyKC0tbGlnaHRncmF5KTtcbiAgICAgIGJvcmRlci1yYWRpdXM6IDZweDtcbiAgICAgIGJveC1zaGFkb3c6IDAgMnB4IDRweCByZ2JhKDAsIDAsIDAsIDAuMSk7XG4gICAgICB6LWluZGV4OiAyO1xuXG4gICAgICAubWVybWFpZC1jb250cm9sLWJ1dHRvbiB7XG4gICAgICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICAgICAgICB3aWR0aDogMzJweDtcbiAgICAgICAgaGVpZ2h0OiAzMnB4O1xuICAgICAgICBwYWRkaW5nOiAwO1xuICAgICAgICBib3JkZXI6IDFweCBzb2xpZCB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodCk7XG4gICAgICAgIGNvbG9yOiB2YXIoLS1kYXJrKTtcbiAgICAgICAgYm9yZGVyLXJhZGl1czogNHB4O1xuICAgICAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgICAgIGZvbnQtc2l6ZTogMTZweDtcbiAgICAgICAgZm9udC1mYW1pbHk6IHZhcigtLWJvZHlGb250KTtcbiAgICAgICAgdHJhbnNpdGlvbjogYWxsIDAuMnMgZWFzZTtcblxuICAgICAgICAmOmhvdmVyIHtcbiAgICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICB9XG5cbiAgICAgICAgJjphY3RpdmUge1xuICAgICAgICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWSgxcHgpO1xuICAgICAgICB9XG5cbiAgICAgICAgLy8gU3R5bGUgdGhlIHJlc2V0IGJ1dHRvbiBkaWZmZXJlbnRseVxuICAgICAgICAmOm50aC1jaGlsZCgyKSB7XG4gICAgICAgICAgd2lkdGg6IGF1dG87XG4gICAgICAgICAgcGFkZGluZzogMCAxMnB4O1xuICAgICAgICAgIGZvbnQtc2l6ZTogMTRweDtcbiAgICAgICAgfVxuICAgICAgfVxuICAgIH1cbiAgfVxufVxuIl19 */</style><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" spa-preserve/><script src="../../prescript.js" type="application/javascript" spa-preserve></script><script type="application/javascript" spa-preserve>const fetchData = fetch("../../static/contentIndex.json").then(data => data.json())</script><link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://hero851815.cc/index.xml"/><meta property="og:image:width" content="1200"/><meta property="og:image:height" content="630"/><meta property="og:image" content="https://hero851815.cc/扩展/概念解析/EXT---数据溯源和数据沿袭-og-image.webp"/><meta property="og:image:url" content="https://hero851815.cc/扩展/概念解析/EXT---数据溯源和数据沿袭-og-image.webp"/><meta name="twitter:image" content="https://hero851815.cc/扩展/概念解析/EXT---数据溯源和数据沿袭-og-image.webp"/><meta property="og:image:type" content="image/.webp"/></head><body data-slug="扩展/概念解析/EXT---数据溯源和数据沿袭"><div id="quartz-root" class="page"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href="../..">数据安全知识库</a></h2><div class="spacer mobile-only"></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 1rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button"><p>Search</p><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="Search for something" placeholder="Search for something"/><div class="search-layout" data-preview="true"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="Dark mode"><title>Dark mode</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="Light mode"><title>Light mode</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="Reader mode"><title>Reader mode</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a,b)=>!a.isFolder&amp;&amp;!b.isFolder||a.isFolder&amp;&amp;b.isFolder?a.displayName.localeCompare(b.displayName,void 0,{numeric:!0,sensitivity:\&quot;base\&quot;}):!a.isFolder&amp;&amp;b.isFolder?1:-1&quot;,&quot;filterFn&quot;:&quot;node=>node.slugSegment!==\&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;node=>node&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-content"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>Explorer</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div class="explorer-content" aria-expanded="false"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#"></a></li></template><template id="template-folder"><li><div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="../../">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../扩展/">扩展</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../扩展/概念解析/">概念解析</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>数据溯源和数据沿袭</a></div></nav><h1 class="article-title">数据溯源和数据沿袭<span class="article-subtitle"> </span><span class="article-synonyms"> </span></h1><p show-comma="true" class="content-meta"><span>20 min read</span></p></div></div><article class="popover-hint"><h1 id="数据溯源">数据溯源<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#数据溯源" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h2 id="数据溯源的定义">数据溯源的定义<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#数据溯源的定义" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>数据溯源（Data Provenance）是指对数据历史的全面追踪，包括其起源、转换以及在其整个生命周期中所做的任何修改。通过记录数据的来源、收集方式以及访问或修改人员，数据溯源可确保数据的真实性、完整性和可靠性。此过程利用元数据（描述其他数据的数据）来帮助组织追踪其数据的整个旅程。</p>
+<h2 id="数据溯源的关键方面">数据溯源的关键方面<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#数据溯源的关键方面" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>数据来源包括几个关键方面：</p>
+<ol>
+<li><strong>数据来源</strong></li>
+</ol>
+<p>来源是指数据的来源，用于标识数据的创建者、生成时间和生成系统。例如，在医疗保健领域，数据溯源可以追踪哪家医院、哪台设备或哪位临床医生采集了患者的病历。追溯来源有助于验证数据的真实性，并确保下游信息的可信度。</p>
+<ol start="2">
+<li><strong>数据处理历史</strong></li>
+</ol>
+<p>数据来源记录了数据经历的每一次转换，包括捕获能够解答关键问题的元数据：应用了哪些流程？谁执行了这些流程？这些流程何时发生？这种可追溯性确保了数据随时间推移的完整性。</p>
+<ol start="3">
+<li><strong>数据所有权和保管</strong></li>
+</ol>
+<p>此部分跟踪在数据生命周期的不同阶段由谁控制数据。通过记录谁、哪些系统或组织负责数据，它确保了问责制并支持遵守数据治理政策。例如，在金融交易中，出处跟踪从收银员录入到最终登录会计系统的详细信息。</p>
+<ol start="4">
+<li><strong>数据质量和验证</strong></li>
+</ol>
+<p>虽然数据溯源并非直接属于其运营职责，但它记录了为验证数据准确性和可靠性而采取的步骤。溯源通常包括完整性检查或验证步骤（例如同行评审）的记录，以确保所使用和共享的数据具有高质量。</p>
+<h2 id="数据溯源的主要优势">数据溯源的主要优势<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#数据溯源的主要优势" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>数据溯源在确定数据来源和历史、确保数据可信度和可靠性方面发挥着至关重要的作用。它还能帮助组织遵守治理标准和法规，支持稳健的数据管理实践。以下是数据溯源的主要优势：</p>
+<ol>
+<li><strong>提高数据完整性</strong></li>
+</ol>
+<p>数据溯源确保数据在其整个生命周期内的准确性、一致性和可信度。据Gartner 称，数据不准确每年平均给美国企业造成 1290 万美元的损失。除了财务损失外，数据完整性差还会损害决策、战略规划和运营效率，并可能危及企业的长期生存能力。例如，追踪交易日志的来源可确保它们在审计期间不被篡改，从而防止人为处理错误和恶意操作。</p>
+<ol start="2">
+<li><strong>错误和异常检测</strong></li>
+</ol>
+<p>在网络安全领域，数据溯源系统可以标记可疑的修改，预示潜在的数据泄露。数据泄露通常会被长时间忽视。IBM的《数据泄露成本报告》（2024 年）指出，识别和控制数据泄露的平均时间为 258 天，较 2023 年的 277 天略有改善。溯源系统可以通过提供对数据修改的即时洞察，从而缩短检测时间，从而加快识别和响应速度。</p>
+<ol start="3">
+<li><strong>加强问责</strong></li>
+</ol>
+<p>数据溯源记录“谁对数据做了什么”，确保用户和系统对数据变更负责。据Syteca 称，74% 的组织在数据泄露期间容易受到内部威胁。溯源系统通过监控和追踪数据访问和变更来降低此类风险。在云平台等协作环境中，溯源系统会跟踪共享文件的修改，从而精准定位对删除或更改负责的用户。</p>
+<ol start="4">
+<li><strong>透明度</strong></li>
+</ol>
+<p>溯源系统 (Provenance) 提供数据整个生命周期的可视性，从源头到当前状态。在供应链中，溯源系统揭示了货物的来源和流动情况。基于区块链的溯源系统可以验证符合道德规范的产品（例如钻石或食品）的来源。这种透明度可以打击欺诈和虚假信息，有助于确保产品声明的完整性。</p>
+<ol start="5">
+<li><strong>监管合规性</strong></li>
+</ol>
+<p>数据溯源通过维护数据处理和存储的准确记录，确保遵守法律和标准。在医疗保健领域，溯源通过记录患者数据访问权限来支持遵守《健康保险流通与责任法案》(HIPAA)。不遵守此类标准可能导致高额罚款。例如，根据责任程度，违反 HIPAA 规定的罚款可能超过 200 万美元。溯源系统通过创建详细的审计线索，展现数据管理的问责制和透明度，从而帮助避免处罚。</p>
+<ol start="6">
+<li><strong>信任数据驱动系统</strong></li>
+</ol>
+<p>人工智能模型依赖于干净、无偏见的数据来获得准确的结果。溯源系统确保训练数据集来自可靠来源，从而降低结果偏差的风险。研究表明，85% 的人工智能模型因数据质量问题而失败，这凸显了数据溯源在不断发展的人工智能生态系统中至关重要的作用。</p>
+<h2 id="数据溯源技术">数据溯源技术<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#数据溯源技术" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>数据来源技术大致可分为三种主要方法：手动文档、自动来源收集以及结合两者元素的混合方法。</p>
+<ol>
+<li><strong>手册文档</strong></li>
+</ol>
+<p>手动记录是指个人或团队使用电子表格、书面日志或结构化文档记录数据的来源和生命周期。例如，研究人员可能会手动记录数据集来源、实验条件和结果，以确保可重复性和透明度。资源有限的小型企业通常依靠手动维护的元数据表来跟踪其数据管道。</p>
+<ol start="2">
+<li><strong>自动出处收集</strong></li>
+</ol>
+<p>自动化溯源收集利用软件和技术，以最少的人工干预捕获、记录和分析元数据。这些工具与现有工作流程无缝集成，提供持续跟踪。Azure Purview 和 Google Cloud Data Catalog 等云平台会自动跟踪其环境中的数据沿袭。区块链技术是另一个例子，它通过记录产品生命周期数据，在供应链中提供不可变的可追溯性。在电子商务领域，Google BigQuery 等工具会记录客户购买数据，跟踪信息如何从前端网站传输到后端分析系统。</p>
+<ol start="3">
+<li><strong>数据溯源中的混合技术</strong></li>
+</ol>
+<p>这种混合技术兼具手动和自动化方法的优势。它使用自动化系统处理常规的大规模流程，同时在需要人工判断、精准度或定制化的场景中引入人工监督。这种方法在技术效率与人类洞察力之间取得平衡，确保了可扩展性和情境准确性。</p>
+<p>在实践中，混合方法通常涉及通过系统日志和工作流管理系统进行自动记录，并辅以手动注释和文档。这可能包括定义元数据标准、创建和维护数据字典，以及手动记录迁移、更新和删除等重要数据事件。通过整合这两种技术，组织可以制定全面而细致的数据来源策略，以应对现代数据管理的挑战。</p>
+<h1 id="数据沿袭">数据沿袭<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#数据沿袭" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h2 id="数据沿袭的定义">数据沿袭的定义<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#数据沿袭的定义" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>数据沿袭（Data Lineage）是指维护数据从诞生到使用的整个过程的来源、移动和处理历史记录。它提供了完整的审计跟踪，追踪数据在系统间转换、组合和传播的全过程。</p>
+<p><strong>数据沿袭捕获以下基本元数据</strong>：</p>
+<ul>
+<li>数据来源</li>
+<li>它在数据库、流程和分析之间如何流动</li>
+<li>谁或什么算法访问/修改了它</li>
+<li>对数据执行的操作序列</li>
+<li>可以将数据沿袭视为一条面包屑路径，记录数据在创建、使用、丰富、存档或删除时的整个生命周期历程。</li>
+</ul>
+<h2 id="数据沿袭如何运作">数据沿袭如何运作<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#数据沿袭如何运作" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>数据沿袭追踪特定数据的旅程，提供其来源、转换和最终目的地的详细路线图。以下是其中涉及的典型步骤的细分：</p>
+<p><img src="https://ying-quartz-resourse.oss-cn-shanghai.aliyuncs.com/20250812150559588.webp" alt="数据沿袭工作原理"/></p>
+<ol>
+<li>
+<p><strong>数据采集与来源识别</strong>：该流程始于识别数据来源的起点或资源。这可以是客户在网页上的注册表单、生产设施中的传感器，或任何其他以此方式运行的组件。</p>
+</li>
+<li>
+<p><strong>数据移动和转换跟踪</strong>：这些数据沿袭工具通过流程和系统覆盖数据，从而实现数据的移动。这种处理过程涉及各种转换，可能包括清理、过滤和丰富（将其与其他数据合并）。</p>
+</li>
+<li>
+<p><strong>元数据收集</strong>：元数据，我们可以将其定义为“关于数据的数据”，在数据谱系过程中发挥着非常重要的作用。数据会留下元数据，这些元数据会提供有关其特征的信息，例如其格式、创建日期以及执行的转换。</p>
+</li>
+<li>
+<p><strong>数据存储和沿袭信息创建</strong>：智能电表作为存储库的中心，捕获这些数据并通过智能电网发送，从而向下传递计算结果。通过数据沿袭工具，这些数据将自动创建沿袭图，以显示和跟踪数据系统之间的数据路径。</p>
+</li>
+<li>
+<p><strong>数据目录集成</strong>：在大多数情况下，数据沿袭与数据目录一起存在于数据目录中。数据沿袭的中央库可供用户访问，这意味着他们可以找到任何有关用于传达特定信息的原始数据的信息。</p>
+</li>
+<li>
+<p><strong>数据利用和持续监控</strong>：业务分析师、数据科学家和其他利益相关者可以使用数据目录调查数据来源，这些信息有助于他们了解数据的用途。这种透明度意味着他们可以使用最准确、高质量的数据进行深入、均衡的分析和决策。</p>
+</li>
+</ol>
+<h2 id="数据沿袭的最佳实践">数据沿袭的最佳实践<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#数据沿袭的最佳实践" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>以下是在组织中实施数据沿袭的一些最佳实践：</p>
+<ul>
+<li>
+<p><strong>标准化命名约定</strong>： 在整个系统中强制执行数据元素的一致命名约定。这可以简化跟踪数据流并减少混淆，尤其是在复杂的环境中。</p>
+</li>
+<li>
+<p><strong>自动化沿袭收集</strong>：利用自动化数据沿袭工具实时捕获数据转换和沿袭。自动化可最大限度地减少人为错误，并确保数据沿袭记录的准确性。</p>
+</li>
+<li>
+<p><strong>精心记录数据源</strong>： 维护组织内所有数据源的详细文档。这包括有关数据格式、更新频率和任何相关访问控制的信息。</p>
+</li>
+<li>
+<p><strong>明确所有权和管理职责</strong>：明确数据资产的所有权和管理职责。这可以确保数据质量的问责，并促进数据沿袭方面的沟通。</p>
+</li>
+<li>
+<p><strong>利用可视化工具</strong>： 使用数据沿袭可视化工具创建易于理解的图表，以展示数据流。这些图表应根据受众进行定制，为数据架构师提供技术细节，为业务用户提供高层次概述。</p>
+</li>
+<li>
+<p><strong>持续审计和更新</strong>：定期审查和更新数据沿袭信息，确保其准确性，并随着数据格局的变化而变化。安排定期审计，以识别并解决任何差距或不一致之处。</p>
+</li>
+<li>
+<p><strong>注重完整性</strong>：在追求全面性的同时，避免陷入过多细节。努力捕捉与您的需求相关的基本数据转换和流动。</p>
+</li>
+</ul>
+<h2 id="数据沿袭工具">数据沿袭工具<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#数据沿袭工具" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>数据沿袭工具的类型如下：</p>
+<ul>
+<li><strong>数据目录</strong>（Collibra、Alation）：构建一个中介系统来维护数据定义和简单的沿袭信息。</li>
+<li><strong>工作流管理器</strong>（Apache Atlas、Azure Purview）：凭借其负责的数据管道收集遗传谱系。</li>
+<li><strong>ETL工具</strong>（Informatica、Talend）：提供沿袭功能来处理在执行流程的环境中完成该任务的转换。</li>
+<li><strong>沿袭平台</strong>（DataEdna、Monte Carlo）：专注于通过不同的服务部署实现从源到终端设备的自动化数据沿袭追踪。</li>
+<li><strong>图形数据库</strong>（Neo4j、Spark）：利用图形作为数据结构，不仅可以存储数据关系，还可以可视化数据关系，甚至包含谱系的数据关系。</li>
+<li><strong>沿袭可视化工具</strong>（Linkurious）：提供交互式界面，以详细了解和理解地图上显示的路线。</li>
+</ul>
+<h2 id="数据沿袭示例">数据沿袭示例<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#数据沿袭示例" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><img src="https://ying-quartz-resourse.oss-cn-shanghai.aliyuncs.com/20250812150559589.webp" alt="数据沿袭示例"/></p>
+<p>示例：一位客户在公司网站上注册，并在注册表单上填写信息。这些数据，即客户记录的来源，随后被传输到客户数据平台 (CDP)，并在那里进行转换。在这里，重复数据会被删除，并且数据可能会从其他来源（例如购买历史记录）中补充更多详细信息。之后，经过补充的客户记录会到达 CRM 系统。在整个流程中，元数据会跟踪数据的旅程，包括其来源、任何转换以及时间戳。然后，这些元数据将用于创建存储在数据目录中的数据沿袭信息。通过利用数据目录，业务分析师可以了解客户数据的完整历史，从最初的捕获到其在报告和仪表板中的使用。这种透明度确保他们能够使用高质量、可靠的数据来获得准确的洞察。</p>
+<h1 id="数据沿袭数据溯源和数据治理">数据沿袭、数据溯源和数据治理<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#数据沿袭数据溯源和数据治理" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>方面</th><th>数据沿袭</th><th>数据来源</th><th>数据治理</th></tr></thead><tbody><tr><td>重点</td><td>跟踪数据在其生命周期内的流动。</td><td>强调数据的起源、创建和历史。</td><td>涵盖数据的总体管理和控制。</td></tr><tr><td>目的</td><td>了解数据从源到目的地的路径。</td><td>突出显示数据创建和更改的沿袭。</td><td>管理并确保数据的质量、完整性和合规性。</td></tr><tr><td>跟踪的组件</td><td>数据的来源、转换和目的地。</td><td>数据的起源、变化和随时间推移的移动。</td><td>政策、标准、流程和整体数据资产。</td></tr><tr><td>主要优点</td><td>提高数据质量、支持合规性并帮助排除故障。</td><td>提高透明度，支持法医分析，并有助于错误检测。</td><td>确保数据质量、合规性和整体有效管理。</td></tr><tr><td>用例</td><td>故障排除、合规性、数据质量管理。</td><td>法医分析、错误检测和历史背景。</td><td>合规保证、风险管理和整体数据控制。</td></tr><tr><td>自动化</td><td>可以自动捕获和更新数据沿袭。</td><td>自动化可以帮助跟踪数据随时间的变化。</td><td>执行数据政策和标准的自动化。</td></tr><tr><td>可视化</td><td>数据流和转换的图形表示。</td><td>数据历史演变的可视化表示。</td><td>政策和标准通常以文档形式呈现并可视化。</td></tr><tr><td>示例</td><td>展示客户数据如何从 CRM 转移到分析。</td><td>跟踪数周或数月内数据集的变化。</td><td>实施数据访问、使用和保留的政策。</td></tr></tbody></table></div>
+<ul>
+<li>数据沿袭跟踪数据或数据集在不同系统、流程和应用程序中的移动和转换，重点关注数据如何流动和变化。</li>
+<li>数据溯源是数据源的元数据记录，提供历史背景和真实性。</li>
+<li>数据沿袭有助于优化数据管道并对其进行故障排除，而数据溯源有助于验证和审计数据。</li>
+</ul></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>Graph View</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc desktop-only"><button type="button" class="toc-header" aria-controls="toc-content" aria-expanded="true"><h3>Table of Contents</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul class="toc-content overflow" id="list-1"><li class="depth-0"><a href="#数据溯源" data-for="数据溯源">数据溯源</a></li><li class="depth-1"><a href="#数据溯源的定义" data-for="数据溯源的定义">数据溯源的定义</a></li><li class="depth-1"><a href="#数据溯源的关键方面" data-for="数据溯源的关键方面">数据溯源的关键方面</a></li><li class="depth-1"><a href="#数据溯源的主要优势" data-for="数据溯源的主要优势">数据溯源的主要优势</a></li><li class="depth-1"><a href="#数据溯源技术" data-for="数据溯源技术">数据溯源技术</a></li><li class="depth-0"><a href="#数据沿袭" data-for="数据沿袭">数据沿袭</a></li><li class="depth-1"><a href="#数据沿袭的定义" data-for="数据沿袭的定义">数据沿袭的定义</a></li><li class="depth-1"><a href="#数据沿袭如何运作" data-for="数据沿袭如何运作">数据沿袭如何运作</a></li><li class="depth-1"><a href="#数据沿袭的最佳实践" data-for="数据沿袭的最佳实践">数据沿袭的最佳实践</a></li><li class="depth-1"><a href="#数据沿袭工具" data-for="数据沿袭工具">数据沿袭工具</a></li><li class="depth-1"><a href="#数据沿袭示例" data-for="数据沿袭示例">数据沿袭示例</a></li><li class="depth-0"><a href="#数据沿袭数据溯源和数据治理" data-for="数据沿袭数据溯源和数据治理">数据沿袭、数据溯源和数据治理</a></li><li class="overflow-end"></li></ul></div><div class="backlinks"><h3>Backlinks</h3><ul id="list-2" class="overflow"><li><a href="../../扩展知识目录" class="internal">扩展知识目录</a></li><li><a href="../../词典/S/数据溯源" class="internal">数据溯源</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v4.5.1</a> © 2025</p><ul><li><a href="https://github.com/hero851815/quartz-page">GitHub</a></li></ul></footer></div></div></body><script type="application/javascript">function n(){let t=this.parentElement;t.classList.toggle("is-collapsed");let e=t.getElementsByClassName("callout-content")[0];if(!e)return;let l=t.classList.contains("is-collapsed");e.style.gridTemplateRows=l?"0fr":"1fr"}function c(){let t=document.getElementsByClassName("callout is-collapsible");for(let e of t){let l=e.getElementsByClassName("callout-title")[0],s=e.getElementsByClassName("callout-content")[0];if(!l||!s)continue;l.addEventListener("click",n),window.addCleanup(()=>l.removeEventListener("click",n));let o=e.classList.contains("is-collapsed");s.style.gridTemplateRows=o?"0fr":"1fr"}}document.addEventListener("nav",c);
+</script><script type="module">function f(i,e){if(!i)return;function r(o){o.target===this&&(o.preventDefault(),o.stopPropagation(),e())}function t(o){o.key.startsWith("Esc")&&(o.preventDefault(),e())}i?.addEventListener("click",r),window.addCleanup(()=>i?.removeEventListener("click",r)),document.addEventListener("keydown",t),window.addCleanup(()=>document.removeEventListener("keydown",t))}function y(i){for(;i.firstChild;)i.removeChild(i.firstChild)}var h=class{constructor(e,r){this.container=e;this.content=r;this.setupEventListeners(),this.setupNavigationControls(),this.resetTransform()}isDragging=!1;startPan={x:0,y:0};currentPan={x:0,y:0};scale=1;MIN_SCALE=.5;MAX_SCALE=3;cleanups=[];setupEventListeners(){let e=this.onMouseDown.bind(this),r=this.onMouseMove.bind(this),t=this.onMouseUp.bind(this),o=this.resetTransform.bind(this);this.container.addEventListener("mousedown",e),document.addEventListener("mousemove",r),document.addEventListener("mouseup",t),window.addEventListener("resize",o),this.cleanups.push(()=>this.container.removeEventListener("mousedown",e),()=>document.removeEventListener("mousemove",r),()=>document.removeEventListener("mouseup",t),()=>window.removeEventListener("resize",o))}cleanup(){for(let e of this.cleanups)e()}setupNavigationControls(){let e=document.createElement("div");e.className="mermaid-controls";let r=this.createButton("+",()=>this.zoom(.1)),t=this.createButton("-",()=>this.zoom(-.1)),o=this.createButton("Reset",()=>this.resetTransform());e.appendChild(t),e.appendChild(o),e.appendChild(r),this.container.appendChild(e)}createButton(e,r){let t=document.createElement("button");return t.textContent=e,t.className="mermaid-control-button",t.addEventListener("click",r),window.addCleanup(()=>t.removeEventListener("click",r)),t}onMouseDown(e){e.button===0&&(this.isDragging=!0,this.startPan={x:e.clientX-this.currentPan.x,y:e.clientY-this.currentPan.y},this.container.style.cursor="grabbing")}onMouseMove(e){this.isDragging&&(e.preventDefault(),this.currentPan={x:e.clientX-this.startPan.x,y:e.clientY-this.startPan.y},this.updateTransform())}onMouseUp(){this.isDragging=!1,this.container.style.cursor="grab"}zoom(e){let r=Math.min(Math.max(this.scale+e,this.MIN_SCALE),this.MAX_SCALE),t=this.content.getBoundingClientRect(),o=t.width/2,n=t.height/2,c=r-this.scale;this.currentPan.x-=o*c,this.currentPan.y-=n*c,this.scale=r,this.updateTransform()}updateTransform(){this.content.style.transform=`translate(${this.currentPan.x}px, ${this.currentPan.y}px) scale(${this.scale})`}resetTransform(){this.scale=1;let e=this.content.querySelector("svg");this.currentPan={x:e.getBoundingClientRect().width/2,y:e.getBoundingClientRect().height/2},this.updateTransform()}},C=["--secondary","--tertiary","--gray","--light","--lightgray","--highlight","--dark","--darkgray","--codeFont"],E;document.addEventListener("nav",async()=>{let e=document.querySelector(".center").querySelectorAll("code.mermaid");if(e.length===0)return;E||=await import("https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.4.0/mermaid.esm.min.mjs");let r=E.default,t=new WeakMap;for(let n of e)t.set(n,n.innerText);async function o(){for(let s of e){s.removeAttribute("data-processed");let a=t.get(s);a&&(s.innerHTML=a)}let n=C.reduce((s,a)=>(s[a]=window.getComputedStyle(document.documentElement).getPropertyValue(a),s),{}),c=document.documentElement.getAttribute("saved-theme")==="dark";r.initialize({startOnLoad:!1,securityLevel:"loose",theme:c?"dark":"base",themeVariables:{fontFamily:n["--codeFont"],primaryColor:n["--light"],primaryTextColor:n["--darkgray"],primaryBorderColor:n["--tertiary"],lineColor:n["--darkgray"],secondaryColor:n["--secondary"],tertiaryColor:n["--tertiary"],clusterBkg:n["--light"],edgeLabelBackground:n["--highlight"]}}),await r.run({nodes:e})}await o(),document.addEventListener("themechange",o),window.addCleanup(()=>document.removeEventListener("themechange",o));for(let n=0;n<e.length;n++){let v=function(){let g=l.querySelector("#mermaid-space"),m=l.querySelector(".mermaid-content");if(!m)return;y(m);let w=c.querySelector("svg").cloneNode(!0);m.appendChild(w),l.classList.add("active"),g.style.cursor="grab",u=new h(g,m)},M=function(){l.classList.remove("active"),u?.cleanup(),u=null},c=e[n],s=c.parentElement,a=s.querySelector(".clipboard-button"),d=s.querySelector(".expand-button"),p=window.getComputedStyle(a),L=a.offsetWidth+parseFloat(p.marginLeft||"0")+parseFloat(p.marginRight||"0");d.style.right=`calc(${L}px + 0.3rem)`,s.prepend(d);let l=s.querySelector("#mermaid-container");if(!l)return;let u=null;d.addEventListener("click",v),f(l,M),window.addCleanup(()=>{u?.cleanup(),d.removeEventListener("click",v)})}});
+</script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript"></script><script src="../../postscript.js" type="module"></script></html>
