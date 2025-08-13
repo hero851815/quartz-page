@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en"><head><title>独立磁盘冗余阵列 - 专业术语词典与技术指南</title><meta charset="utf-8"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted Grotesk:wght@400;700&amp;family=Source Sans Pro:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="og:site_name" content="数据安全知识库"/><meta property="og:title" content="独立磁盘冗余阵列 - 专业术语词典与技术指南"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="独立磁盘冗余阵列 - 专业术语词典与技术指南"/><meta name="twitter:description" content="RAID 的概念 独立磁盘冗余阵列（Redundant Arrays of Independent Disks）是一种将多个硬盘或 SSD 组合成单个系统的技术，旨在提高性能和/或数据安全性。即使一个硬盘发生故障，数据仍然可以从其他硬盘恢复。 RAID 通过在驱动器之间分散或复制数据，帮助更可靠、更高效地存储数据。不同的 RAID 级别提供不同的速度、存储容量和容错能力组合。 RAID 控制器 RAID 控制器管理多个硬盘，使它们作为一个系统协同工作。它有助于提高速度，并通过处理硬盘故障来增强数据保护。您可以将其视为一个智能管理器，既能提升性能，又能保障数据安全。 RAID控制器有三种类型： ..."/><meta property="og:description" content="RAID 的概念 独立磁盘冗余阵列（Redundant Arrays of Independent Disks）是一种将多个硬盘或 SSD 组合成单个系统的技术，旨在提高性能和/或数据安全性。即使一个硬盘发生故障，数据仍然可以从其他硬盘恢复。 RAID 通过在驱动器之间分散或复制数据，帮助更可靠、更高效地存储数据。不同的 RAID 级别提供不同的速度、存储容量和容错能力组合。 RAID 控制器 RAID 控制器管理多个硬盘，使它们作为一个系统协同工作。它有助于提高速度，并通过处理硬盘故障来增强数据保护。您可以将其视为一个智能管理器，既能提升性能，又能保障数据安全。 RAID控制器有三种类型： ..."/><meta property="og:image:alt" content="RAID 的概念 独立磁盘冗余阵列（Redundant Arrays of Independent Disks）是一种将多个硬盘或 SSD 组合成单个系统的技术，旨在提高性能和/或数据安全性。即使一个硬盘发生故障，数据仍然可以从其他硬盘恢复。 RAID 通过在驱动器之间分散或复制数据，帮助更可靠、更高效地存储数据。不同的 RAID 级别提供不同的速度、存储容量和容错能力组合。 RAID 控制器 RAID 控制器管理多个硬盘，使它们作为一个系统协同工作。它有助于提高速度，并通过处理硬盘故障来增强数据保护。您可以将其视为一个智能管理器，既能提升性能，又能保障数据安全。 RAID控制器有三种类型： ..."/><meta property="twitter:domain" content="hero851815.cc"/><meta property="og:url" content="https://hero851815.cc/扩展/系统架构/EXT---独立磁盘冗余阵列"/><meta property="twitter:url" content="https://hero851815.cc/扩展/系统架构/EXT---独立磁盘冗余阵列"/><link rel="icon" href="../../static/icon.png"/><meta name="description" content="RAID 的概念 独立磁盘冗余阵列（Redundant Arrays of Independent Disks）是一种将多个硬盘或 SSD 组合成单个系统的技术，旨在提高性能和/或数据安全性。即使一个硬盘发生故障，数据仍然可以从其他硬盘恢复。 RAID 通过在驱动器之间分散或复制数据，帮助更可靠、更高效地存储数据。不同的 RAID 级别提供不同的速度、存储容量和容错能力组合。 RAID 控制器 RAID 控制器管理多个硬盘，使它们作为一个系统协同工作。它有助于提高速度，并通过处理硬盘故障来增强数据保护。您可以将其视为一个智能管理器，既能提升性能，又能保障数据安全。 RAID控制器有三种类型： ..."/><meta name="generator" content="Quartz"/><link href="../../index.css" rel="stylesheet" type="text/css" spa-preserve/><style>.expand-button {
+  position: absolute;
+  display: flex;
+  float: right;
+  padding: 0.4rem;
+  margin: 0.3rem;
+  right: 0;
+  color: var(--gray);
+  border-color: var(--dark);
+  background-color: var(--light);
+  border: 1px solid;
+  border-radius: 5px;
+  opacity: 0;
+  transition: 0.2s;
+}
+.expand-button > svg {
+  fill: var(--light);
+  filter: contrast(0.3);
+}
+.expand-button:hover {
+  cursor: pointer;
+  border-color: var(--secondary);
+}
+.expand-button:focus {
+  outline: 0;
+}
+
+pre:hover > .expand-button {
+  opacity: 1;
+  transition: 0.2s;
+}
+
+#mermaid-container {
+  position: fixed;
+  contain: layout;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: none;
+  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.5);
+}
+#mermaid-container.active {
+  display: inline-block;
+}
+#mermaid-container > #mermaid-space {
+  border: 1px solid var(--lightgray);
+  background-color: var(--light);
+  border-radius: 5px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80vh;
+  width: 80vw;
+  overflow: hidden;
+}
+#mermaid-container > #mermaid-space > .mermaid-content {
+  padding: 2rem;
+  position: relative;
+  transform-origin: 0 0;
+  transition: transform 0.1s ease;
+  overflow: visible;
+  min-height: 200px;
+  min-width: 200px;
+}
+#mermaid-container > #mermaid-space > .mermaid-content pre {
+  margin: 0;
+  border: none;
+}
+#mermaid-container > #mermaid-space > .mermaid-content svg {
+  max-width: none;
+  height: auto;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  background: var(--light);
+  border: 1px solid var(--lightgray);
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid var(--lightgray);
+  background: var(--light);
+  color: var(--dark);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: var(--bodyFont);
+  transition: all 0.2s ease;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:hover {
+  background: var(--lightgray);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:active {
+  transform: translateY(1px);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:nth-child(2) {
+  width: auto;
+  padding: 0 12px;
+  font-size: 14px;
+}
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiL2hvbWUvcnVubmVyL3dvcmsvcXVhcnR6LXJlcG8vcXVhcnR6LXJlcG8vcXVhcnR6L3F1YXJ0ei9jb21wb25lbnRzL3N0eWxlcyIsInNvdXJjZXMiOlsibWVybWFpZC5pbmxpbmUuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBR0Y7RUFDRTs7O0FBS0Y7RUFDRTtFQUNBOzs7QUFJSjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTs7QUFHRjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTtFQUNBOztBQUdGO0VBQ0U7RUFDQTs7QUFJSjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7O0FBR0Y7RUFDRTs7QUFJRjtFQUNFO0VBQ0E7RUFDQSIsInNvdXJjZXNDb250ZW50IjpbIi5leHBhbmQtYnV0dG9uIHtcbiAgcG9zaXRpb246IGFic29sdXRlO1xuICBkaXNwbGF5OiBmbGV4O1xuICBmbG9hdDogcmlnaHQ7XG4gIHBhZGRpbmc6IDAuNHJlbTtcbiAgbWFyZ2luOiAwLjNyZW07XG4gIHJpZ2h0OiAwOyAvLyBOT1RFOiByaWdodCB3aWxsIGJlIHNldCBpbiBtZXJtYWlkLmlubGluZS50c1xuICBjb2xvcjogdmFyKC0tZ3JheSk7XG4gIGJvcmRlci1jb2xvcjogdmFyKC0tZGFyayk7XG4gIGJhY2tncm91bmQtY29sb3I6IHZhcigtLWxpZ2h0KTtcbiAgYm9yZGVyOiAxcHggc29saWQ7XG4gIGJvcmRlci1yYWRpdXM6IDVweDtcbiAgb3BhY2l0eTogMDtcbiAgdHJhbnNpdGlvbjogMC4ycztcblxuICAmID4gc3ZnIHtcbiAgICBmaWxsOiB2YXIoLS1saWdodCk7XG4gICAgZmlsdGVyOiBjb250cmFzdCgwLjMpO1xuICB9XG5cbiAgJjpob3ZlciB7XG4gICAgY3Vyc29yOiBwb2ludGVyO1xuICAgIGJvcmRlci1jb2xvcjogdmFyKC0tc2Vjb25kYXJ5KTtcbiAgfVxuXG4gICY6Zm9jdXMge1xuICAgIG91dGxpbmU6IDA7XG4gIH1cbn1cblxucHJlIHtcbiAgJjpob3ZlciA+IC5leHBhbmQtYnV0dG9uIHtcbiAgICBvcGFjaXR5OiAxO1xuICAgIHRyYW5zaXRpb246IDAuMnM7XG4gIH1cbn1cblxuI21lcm1haWQtY29udGFpbmVyIHtcbiAgcG9zaXRpb246IGZpeGVkO1xuICBjb250YWluOiBsYXlvdXQ7XG4gIHotaW5kZXg6IDk5OTtcbiAgbGVmdDogMDtcbiAgdG9wOiAwO1xuICB3aWR0aDogMTAwdnc7XG4gIGhlaWdodDogMTAwdmg7XG4gIG92ZXJmbG93OiBoaWRkZW47XG4gIGRpc3BsYXk6IG5vbmU7XG4gIGJhY2tkcm9wLWZpbHRlcjogYmx1cig0cHgpO1xuICBiYWNrZ3JvdW5kOiByZ2JhKDAsIDAsIDAsIDAuNSk7XG5cbiAgJi5hY3RpdmUge1xuICAgIGRpc3BsYXk6IGlubGluZS1ibG9jaztcbiAgfVxuXG4gICYgPiAjbWVybWFpZC1zcGFjZSB7XG4gICAgYm9yZGVyOiAxcHggc29saWQgdmFyKC0tbGlnaHRncmF5KTtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1saWdodCk7XG4gICAgYm9yZGVyLXJhZGl1czogNXB4O1xuICAgIHBvc2l0aW9uOiBmaXhlZDtcbiAgICB0b3A6IDUwJTtcbiAgICBsZWZ0OiA1MCU7XG4gICAgdHJhbnNmb3JtOiB0cmFuc2xhdGUoLTUwJSwgLTUwJSk7XG4gICAgaGVpZ2h0OiA4MHZoO1xuICAgIHdpZHRoOiA4MHZ3O1xuICAgIG92ZXJmbG93OiBoaWRkZW47XG5cbiAgICAmID4gLm1lcm1haWQtY29udGVudCB7XG4gICAgICBwYWRkaW5nOiAycmVtO1xuICAgICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgICAgdHJhbnNmb3JtLW9yaWdpbjogMCAwO1xuICAgICAgdHJhbnNpdGlvbjogdHJhbnNmb3JtIDAuMXMgZWFzZTtcbiAgICAgIG92ZXJmbG93OiB2aXNpYmxlO1xuICAgICAgbWluLWhlaWdodDogMjAwcHg7XG4gICAgICBtaW4td2lkdGg6IDIwMHB4O1xuXG4gICAgICBwcmUge1xuICAgICAgICBtYXJnaW46IDA7XG4gICAgICAgIGJvcmRlcjogbm9uZTtcbiAgICAgIH1cblxuICAgICAgc3ZnIHtcbiAgICAgICAgbWF4LXdpZHRoOiBub25lO1xuICAgICAgICBoZWlnaHQ6IGF1dG87XG4gICAgICB9XG4gICAgfVxuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRyb2xzIHtcbiAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICAgIGJvdHRvbTogMjBweDtcbiAgICAgIHJpZ2h0OiAyMHB4O1xuICAgICAgZGlzcGxheTogZmxleDtcbiAgICAgIGdhcDogOHB4O1xuICAgICAgcGFkZGluZzogOHB4O1xuICAgICAgYmFja2dyb3VuZDogdmFyKC0tbGlnaHQpO1xuICAgICAgYm9yZGVyOiAxcHggc29saWQgdmFyKC0tbGlnaHRncmF5KTtcbiAgICAgIGJvcmRlci1yYWRpdXM6IDZweDtcbiAgICAgIGJveC1zaGFkb3c6IDAgMnB4IDRweCByZ2JhKDAsIDAsIDAsIDAuMSk7XG4gICAgICB6LWluZGV4OiAyO1xuXG4gICAgICAubWVybWFpZC1jb250cm9sLWJ1dHRvbiB7XG4gICAgICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICAgICAgICB3aWR0aDogMzJweDtcbiAgICAgICAgaGVpZ2h0OiAzMnB4O1xuICAgICAgICBwYWRkaW5nOiAwO1xuICAgICAgICBib3JkZXI6IDFweCBzb2xpZCB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodCk7XG4gICAgICAgIGNvbG9yOiB2YXIoLS1kYXJrKTtcbiAgICAgICAgYm9yZGVyLXJhZGl1czogNHB4O1xuICAgICAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgICAgIGZvbnQtc2l6ZTogMTZweDtcbiAgICAgICAgZm9udC1mYW1pbHk6IHZhcigtLWJvZHlGb250KTtcbiAgICAgICAgdHJhbnNpdGlvbjogYWxsIDAuMnMgZWFzZTtcblxuICAgICAgICAmOmhvdmVyIHtcbiAgICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICB9XG5cbiAgICAgICAgJjphY3RpdmUge1xuICAgICAgICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWSgxcHgpO1xuICAgICAgICB9XG5cbiAgICAgICAgLy8gU3R5bGUgdGhlIHJlc2V0IGJ1dHRvbiBkaWZmZXJlbnRseVxuICAgICAgICAmOm50aC1jaGlsZCgyKSB7XG4gICAgICAgICAgd2lkdGg6IGF1dG87XG4gICAgICAgICAgcGFkZGluZzogMCAxMnB4O1xuICAgICAgICAgIGZvbnQtc2l6ZTogMTRweDtcbiAgICAgICAgfVxuICAgICAgfVxuICAgIH1cbiAgfVxufVxuIl19 */</style><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" spa-preserve/><script src="../../prescript.js" type="application/javascript" spa-preserve></script><script type="application/javascript" spa-preserve>const fetchData = fetch("../../static/contentIndex.json").then(data => data.json())</script><link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://hero851815.cc/index.xml"/><meta property="og:image:width" content="1200"/><meta property="og:image:height" content="630"/><meta property="og:image" content="https://hero851815.cc/扩展/系统架构/EXT---独立磁盘冗余阵列-og-image.webp"/><meta property="og:image:url" content="https://hero851815.cc/扩展/系统架构/EXT---独立磁盘冗余阵列-og-image.webp"/><meta name="twitter:image" content="https://hero851815.cc/扩展/系统架构/EXT---独立磁盘冗余阵列-og-image.webp"/><meta property="og:image:type" content="image/.webp"/></head><body data-slug="扩展/系统架构/EXT---独立磁盘冗余阵列"><div id="quartz-root" class="page"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href="../..">数据安全知识库</a></h2><div class="spacer mobile-only"></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 1rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button"><p>Search</p><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="Search for something" placeholder="Search for something"/><div class="search-layout" data-preview="true"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="Dark mode"><title>Dark mode</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="Light mode"><title>Light mode</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="Reader mode"><title>Reader mode</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a,b)=>!a.isFolder&amp;&amp;!b.isFolder||a.isFolder&amp;&amp;b.isFolder?a.displayName.localeCompare(b.displayName,void 0,{numeric:!0,sensitivity:\&quot;base\&quot;}):!a.isFolder&amp;&amp;b.isFolder?1:-1&quot;,&quot;filterFn&quot;:&quot;node=>node.slugSegment!==\&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;node=>node&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-content"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>Explorer</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div class="explorer-content" aria-expanded="false"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#"></a></li></template><template id="template-folder"><li><div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="../../">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../扩展/">扩展</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../扩展/系统架构/">系统架构</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>独立磁盘冗余阵列</a></div></nav><h1 class="article-title">独立磁盘冗余阵列<span class="article-subtitle"> </span><span class="article-synonyms"> </span></h1><p show-comma="true" class="content-meta"><span>18 min read</span></p></div></div><article class="popover-hint"><h1 id="raid-的概念">RAID 的概念<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#raid-的概念" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p>独立磁盘冗余阵列（Redundant Arrays of Independent Disks）是一种将多个硬盘或 SSD 组合成单个系统的技术，旨在提高性能和/或数据安全性。即使一个硬盘发生故障，数据仍然可以从其他硬盘恢复。</p>
+<p>RAID 通过在驱动器之间分散或复制数据，帮助更可靠、更高效地存储数据。不同的 RAID 级别提供不同的速度、存储容量和容错能力组合。</p>
+<h1 id="raid-控制器">RAID 控制器<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#raid-控制器" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p>RAID 控制器管理多个硬盘，使它们作为一个系统协同工作。它有助于提高速度，并通过处理硬盘故障来增强数据保护。您可以将其视为一个智能管理器，既能提升性能，又能保障数据安全。</p>
+<p>RAID控制器有三种类型：</p>
+<h2 id="1-基于硬件的raid">1. 基于硬件的RAID<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#1-基于硬件的raid" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>使用专用物理控制器来管理硬盘。</p>
+<ul>
+<li>提供高速和可靠性</li>
+<li>可以独立于计算机处理器工作</li>
+<li>通常内置于主板或作为单独的卡</li>
+</ul>
+<p>可以将其想象为一位船长顺利地管理驾驶。</p>
+<h2 id="2-基于软件的raid">2. 基于软件的RAID<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#2-基于软件的raid" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>使用计算机的处理器和内存来管理 RAID。</p>
+<ul>
+<li>无需特殊硬件</li>
+<li>成本效益高，但可能会降低整体系统性能</li>
+<li>比硬件 RAID 慢</li>
+</ul>
+<p>充当得像一个得力助手，但要与其他任务分担负担。</p>
+<h2 id="3-基于固件的-raid伪-raid">3. 基于固件的 RAID（伪 RAID）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#3-基于固件的-raid伪-raid" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>内置于计算机的 BIOS/固件，并在启动期间工作。</p>
+<ul>
+<li>操作系统加载后需要驱动程序</li>
+<li>比硬件 RAID 便宜，但仍然占用 CPU 资源</li>
+<li>也称为混合 RAID 或假 RAID</li>
+</ul>
+<p>启动助手，系统运行后将工作移交给软件。</p>
+<h1 id="为什么要进行数据冗余">为什么要进行数据冗余<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#为什么要进行数据冗余" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p><a href="../../扩展/数据管理/EXT---数据冗余和数据不一致" class="internal alias" data-slug="扩展/数据管理/EXT---数据冗余和数据不一致">数据冗余</a>虽然占用了额外的空间，但却增强了磁盘的可靠性。这意味着，如果磁盘发生故障，如果相同的数据也备份到另一个磁盘上，我们就可以检索数据并继续操作。另一方面，如果数据分散在多个磁盘上，且没有采用 RAID 技术，那么单个磁盘的损坏就可能影响整个数据。</p>
+<h1 id="raid系统的关键评估点">RAID系统的关键评估点<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#raid系统的关键评估点" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p>评估 RAID 系统时，应考虑以下关键方面：</p>
+<h2 id="1-可靠性">1. 可靠性<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#1-可靠性" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>可靠性指系统容忍磁盘故障，防止数据丢失的能力。</p>
+<p><em>例子：</em></p>
+<ul>
+<li>RAID 0 不提供容错功能；如果一个磁盘发生故障，所有数据都会丢失。</li>
+<li>RAID 5 可以容忍一个磁盘因奇偶校验数据而发生故障。</li>
+<li>RAID 6 可以处理两个同时发生的磁盘故障。</li>
+</ul>
+<h2 id="2-可用性">2. 可用性<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#2-可用性" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>可用性指 RAID 系统可运行且可供使用的时间比例。</p>
+<p><em>例子：</em></p>
+<ul>
+<li>RAID 1（镜像）即使在单个磁盘发生故障时也允许立即访问数据。</li>
+<li>RAID 5 和 6 可能会在重建期间降低性能，但数据仍然可用。</li>
+</ul>
+<h2 id="3-性能">3. 性能<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#3-性能" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>性能是衡量 RAID 系统处理数据任务的效率。包括：</p>
+<ul>
+<li>响应时间：系统响应数据请求的速度。</li>
+<li>吞吐量：系统处理数据的速率（例如，MB/s 或 IOPS）。</li>
+</ul>
+<p><strong>关键因素：</strong></p>
+<ul>
+<li>RAID 级别对性能的影响不同：</li>
+<li>RAID 0 提供高吞吐量，但没有冗余。</li>
+<li>RAID 1 通过从镜像磁盘提供数据来提高读取性能，但可能不会显著提高写入性能。</li>
+<li>RAID 5/6 会引入奇偶校验计算的开销，从而影响写入速度。</li>
+<li>工作负载类型（例如顺序读/写操作与随机读/写操作）。</li>
+</ul>
+<p><strong>性能权衡：</strong></p>
+<p>更高的冗余度通常以较慢的写入速度为代价（由于奇偶校验计算）。</p>
+<h2 id="4-容量">4. 容量<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#4-容量" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>容量是考虑冗余机制后可供用户使用的存储量。</p>
+<p><strong>关键计算：对于一组 N 个磁盘，每个磁盘有 B 个块，可用容量取决于 RAID 级别：</strong></p>
+<ul>
+<li>RAID 0：所有 N×B 块均可使用（无冗余）。</li>
+<li>RAID 1：可用容量为 B（由于镜像，因此只有一个磁盘的容量）。</li>
+<li>RAID 5：可用容量为（N-1）×B（用于奇偶校验的一个磁盘的容量）。</li>
+<li>RAID 6：可用容量为（N-2）×B（两个磁盘的容量用于奇偶校验）。</li>
+</ul>
+<p><strong>权衡：</strong></p>
+<p>与非冗余设置（RAID 0）相比，更高的冗余度（RAID 5/6）会减少可用容量。</p>
+<p>RAID 对底层系统非常透明。这意味着，对于主机系统来说，它就像一个以块的线性阵列形式呈现的单个大磁盘。这使得 RAID 可以取代旧技术，而无需对现有代码进行太多更改。</p>
+<h1 id="不同的-raid-级别">不同的 RAID 级别<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#不同的-raid-级别" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h2 id="raid-0剥离">RAID-0（剥离）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#raid-0剥离" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>RAID-0 通过将数据分割成更小的“块”并分布到多个磁盘上来提高系统性能。此过程称为“条带化”。它通过启用并行读/写操作来提高数据访问速度，但不提供冗余或容错功能。</p>
+<p><img src="https://ying-quartz-resourse.oss-cn-shanghai.aliyuncs.com/20250813133939535.png" alt="RAID-0"/></p>
+<ul>
+<li>分布在磁盘上的一组块形成一个“条带”。例如，“0、1、2、3”就是一个条带。</li>
+<li>我们不是一次只将一个块放入磁盘，而是可以先处理两个（或更多）块，然后再移动到下一个块。</li>
+</ul>
+<p><strong>评估</strong></p>
+<ul>
+<li>
+<p>可靠性： 0</p>
+<ul>
+<li>数据没有重复。因此，一旦丢失，区块将无法恢复。</li>
+</ul>
+</li>
+<li>
+<p>容量： <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">∗</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span></span></span></span></p>
+<ul>
+<li>整个空间用于存储数据。由于没有重复，因此 N 个磁盘（每个磁盘包含 B 个块）被充分利用。</li>
+</ul>
+</li>
+</ul>
+<p><strong>优点</strong></p>
+<ul>
+<li>它很容易实现。</li>
+<li>它以更好的方式利用存储容量。</li>
+</ul>
+<p><strong>缺点</strong></p>
+<ul>
+<li>单个驱动器的丢失可能会导致系统彻底崩溃。</li>
+<li>对于关键系统来说，这不是一个好的选择。</li>
+</ul>
+<h2 id="raid-1镜像">RAID-1（镜像）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#raid-1镜像" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>RAID-1 通过在单独的磁盘上为每个数据块创建相同的副本（镜像）来增强可靠性。这确保即使一个磁盘发生故障，数据仍然可以从其副本访问。虽然这种配置高度可靠，但需要大量的存储开销。</p>
+<p><img src="https://ying-quartz-resourse.oss-cn-shanghai.aliyuncs.com/20250813134248927.png" alt="RAID-1"/></p>
+<p><strong>镜像：</strong></p>
+<ul>
+<li>每个数据块写入两个（或更多）磁盘。</li>
+</ul>
+<p><em>例如：</em></p>
+<ul>
+<li>块 0 存储在磁盘 0 上，其副本存储在磁盘 1 上。</li>
+<li>块 1 存储在磁盘 2 上，其副本存储在磁盘 3 上。</li>
+</ul>
+<p><strong>评估</strong>（假设 RAID 系统是如图的镜像级别为 2 ）</p>
+<ul>
+<li>
+<p>可靠性： 1 到 N/2</p>
+<ul>
+<li>1个磁盘故障肯定可以处理，因为该磁盘的块在其他磁盘上会有重复。如果我们足够幸运，磁盘 0 和 2 发生故障，那么由于这些磁盘的块在磁盘 1 和 3 上都有重复，因此同样可以处理。因此，在最佳情况下，N/2 个磁盘故障是可以处理的。</li>
+</ul>
+</li>
+<li>
+<p>容量： <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">∗</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span><span class="mord">/2</span></span></span></span></p>
+<ul>
+<li>只有一半的空间用于存储数据。另一半只是已存储数据的镜像。</li>
+</ul>
+</li>
+</ul>
+<p><strong>优点</strong></p>
+<ul>
+<li>它涵盖完全冗余。</li>
+<li>它可以提高数据的安全性和速度。</li>
+</ul>
+<p><strong>缺点</strong></p>
+<ul>
+<li>它非常昂贵。</li>
+<li>存储容量较小。</li>
+</ul>
+<h2 id="raid-2带专用奇偶校验的位级剥离">RAID-2（带专用奇偶校验的位级剥离）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#raid-2带专用奇偶校验的位级剥离" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>RAID-2 是一种特殊的 RAID 级别，它采用位级条带化技术，并结合使用汉明码进行纠错。在这种配置中，数据以位级分布在多个驱动器上，并使用专用的奇偶校验驱动器进行错误检测和纠正。虽然它具有强大的容错能力，但由于其复杂性和成本，在实际应用中很少使用。</p>
+<p><strong>优点</strong></p>
+<ul>
+<li>在纠错的情况下，它使用汉明码。</li>
+<li>它使用一个指定的驱动器来存储奇偶校验。</li>
+</ul>
+<p><strong>缺点</strong></p>
+<ul>
+<li>由于需要额外的驱动，结构复杂，成本较高。</li>
+<li>它需要额外的驱动器来检测错误。</li>
+</ul>
+<h2 id="raid-3带专用奇偶校验的字节级剥离">RAID-3（带专用奇偶校验的字节级剥离）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#raid-3带专用奇偶校验的字节级剥离" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>RAID-3 通过在多个驱动器上采用字节级条带化并将奇偶校验信息存储在专用奇偶校验驱动器上来增强容错能力。专用奇偶校验驱动器允许在单个驱动器发生故障时重建丢失的数据。此配置适用于需要高吞吐量顺序数据处理的工作负载，但对于随机 I/O 操作效率较低。</p>
+<p><img src="https://ying-quartz-resourse.oss-cn-shanghai.aliyuncs.com/20250813135117765.png" alt="RAID-3"/></p>
+<ul>
+<li>这里磁盘 3 包含了磁盘 0、磁盘 1 和磁盘 2 的奇偶校验位。如果发生数据丢失，我们可以用磁盘 3 来构建。</li>
+</ul>
+<p><strong>评估</strong></p>
+<ul>
+<li>可靠性：1
+<ul>
+<li>RAID-3 可以容忍一个磁盘发生故障。丢失的数据可以通过奇偶校验驱动器和剩余的数据驱动器重建。</li>
+</ul>
+</li>
+<li>容量：<span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">1</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span></span></span></span>
+<ul>
+<li>其中 N 为驱动器总数，B 为每个驱动器的块数。其中一个驱动器的容量保留用于存储奇偶校验信息。</li>
+</ul>
+</li>
+</ul>
+<p><strong>优点</strong></p>
+<ul>
+<li>可以批量传输数据。</li>
+<li>可以并行访问数据。</li>
+</ul>
+<p><strong>缺点</strong></p>
+<ul>
+<li>它需要额外的驱动器来实现奇偶校验。</li>
+<li>对于小尺寸文件，其运行速度较慢。</li>
+</ul>
+<h2 id="raid-4具有专用奇偶校验的块级剥离">RAID-4（具有专用奇偶校验的块级剥离）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#raid-4具有专用奇偶校验的块级剥离" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>RAID-4 引入了跨多个磁盘的块级条带化，并结合专用的奇偶校验磁盘来提供容错能力。数据以块为单位写入，并使用 XOR 函数计算出的奇偶校验信息存储在单独的磁盘上。这种设置允许在单个磁盘发生故障时恢复数据，这使得 RAID-4 比 RAID-0 更可靠，但由于依赖专用的奇偶校验磁盘，在写入密集型场景下效率较低。</p>
+<p><img src="https://ying-quartz-resourse.oss-cn-shanghai.aliyuncs.com/20250813135505340.png" alt="RAID-4"/></p>
+<ul>
+<li>在图中，我们可以观察到一列（磁盘）专用于奇偶校验。</li>
+<li>奇偶校验使用简单的异或 (XOR) 函数计算。如果数据位为 0,0,0,1，则奇偶校验位为 XOR(0,0,0,1) = 1。如果数据位为 0,1,1,0，则奇偶校验位为 XOR(0,1,1,0) = 0。一种简单的方法是，如果 1 为偶数，则奇偶校验为 0；如果 1 为奇数，则奇偶校验为 1。</li>
+</ul>
+<p><strong>评估</strong></p>
+<ul>
+<li>
+<p>可靠性：1</p>
+<ul>
+<li>RAID -4 最多允许恢复 1 个磁盘故障（由于奇偶校验的工作方式）。如果多个磁盘发生故障，则无法恢复数据。</li>
+</ul>
+</li>
+<li>
+<p>容量： <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">1</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">∗</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span></span></span></span></p>
+<ul>
+<li>系统中预留一个磁盘用于存储奇偶校验信息。因此，共有 (N-1) 个磁盘可用于存储数据，每个磁盘有 B 个块。</li>
+</ul>
+</li>
+</ul>
+<p><strong>优点</strong></p>
+<ul>
+<li>如果最多丢失一个数据，它有助于重建数据。</li>
+</ul>
+<p><strong>缺点</strong></p>
+<ul>
+<li>当丢失多个数据时，它无法帮助重建数据。</li>
+</ul>
+<h2 id="raid-5带分布式奇偶校验的块级条带化">RAID-5（带分布式奇偶校验的块级条带化）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#raid-5带分布式奇偶校验的块级条带化" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>RAID-5 在 RAID-4 的基础上，将奇偶校验信息分布在所有磁盘上，而不是存储在专用的奇偶校验驱动器上。这种分布式奇偶校验显著提高了写入性能，尤其是对于随机写入操作，同时保持了对单个磁盘故障的容错能力。RAID-5 因其在可靠性、性能和存储效率之间的平衡而成为最常用的 RAID 配置之一。</p>
+<p><img src="https://ying-quartz-resourse.oss-cn-shanghai.aliyuncs.com/20250813135938145.png" alt="RAID-5"/></p>
+<p><strong>RAID-5工作原理</strong></p>
+<ul>
+<li>块级条带化：数据被分成块并以条带形式分布在阵列中的所有驱动器上。</li>
+<li>分布式奇偶校验：使用 XOR 函数计算的奇偶校验位以旋转模式分布在所有驱动器上。</li>
+</ul>
+<p><em>例如：</em></p>
+<ul>
+<li>磁盘 0：数据（D1、D2）、奇偶校验（P1）</li>
+<li>磁盘 1：数据（D3、D4）、奇偶校验（P2）</li>
+<li>磁盘 2：数据（D5、D6）、奇偶校验（P3）</li>
+</ul>
+<p>这种轮换确保没有任何一个磁盘承担所有奇偶校验操作的负担，从而减少了瓶颈。</p>
+<p>数据恢复：如果单个磁盘发生故障，可以通过对剩余数据块和奇偶校验信息进行异或运算来重建丢失的数据。</p>
+<p><strong>评估</strong></p>
+<ul>
+<li>
+<p>可靠性：1</p>
+<ul>
+<li>RAID-5最多允许恢复 1 个磁盘故障（由于奇偶校验的工作方式）。如果多个磁盘发生故障，则无法恢复数据。这与 RAID-4 相同。</li>
+</ul>
+</li>
+<li>
+<p>容量： <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">1</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">∗</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span></span></span></span></p>
+<ul>
+<li>总体而言，存储奇偶校验位所需的空间相当于一块磁盘。因此，共有 (N-1) 块磁盘可用于存储数据，每块磁盘有 B 个块。</li>
+</ul>
+</li>
+</ul>
+<p><strong>优点</strong></p>
+<ul>
+<li>可以使用奇偶校验位重建数据。</li>
+<li>它使性能变得更好。</li>
+</ul>
+<p><strong>缺点</strong></p>
+<ul>
+<li>其技术复杂，并且需要额外的空间。</li>
+<li>如果两张光盘均损坏，数据将永远丢失。</li>
+</ul>
+<h2 id="raid-6具有两个奇偶校验位的块级剥离">RAID-6（具有两个奇偶校验位的块级剥离）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#raid-6具有两个奇偶校验位的块级剥离" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>RAID-6 是 RAID-5 的高级版本，通过引入双分布式奇偶校验来增强容错能力。这使得 RAID-6 能够同时从最多两个磁盘的故障中恢复，从而对于具有较大阵列的关键系统而言更加可靠。但是，增加的奇偶校验计算可能会影响写入性能。</p>
+<p><img src="https://ying-quartz-resourse.oss-cn-shanghai.aliyuncs.com/20250813140300036.png" alt="RAID-6"/></p>
+<p><strong>RAID-6工作原理</strong></p>
+<ul>
+<li>块级条带化：数据被分成块并以条带形式分布在阵列中的所有磁盘上。</li>
+<li>双重分布式奇偶校验：为每个块计算两组奇偶校验信息，并以旋转模式分布在阵列中的所有磁盘上。</li>
+</ul>
+<p><em>例子：</em></p>
+<ul>
+<li>磁盘 0：数据（D1、D2）、奇偶校验（P1）</li>
+<li>磁盘 1：数据（D3、D4）、奇偶校验（P2）</li>
+<li>磁盘 2：数据（D5、P1）、奇偶校验（P3）</li>
+<li>磁盘 3：奇偶校验 (P2, P3)、数据 (D6)</li>
+</ul>
+<p>数据恢复：如果一个或两个磁盘发生故障，则可以使用剩余数据和奇偶校验信息重建丢失的数据。</p>
+<p><strong>评估</strong></p>
+<ul>
+<li>
+<p>可靠性：2</p>
+<ul>
+<li>RAID-6可以容忍两个磁盘同时发生故障，提供比RAID-5更高的容错能力。</li>
+</ul>
+</li>
+<li>
+<p>容量：<span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">2</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span></span></span></span></p>
+<ul>
+<li>其中N是磁盘总数，B是每个磁盘的块数。</li>
+</ul>
+</li>
+</ul>
+<p><strong>优点</strong></p>
+<ul>
+<li>非常高的数据可访问性。</li>
+<li>快速读取数据交易。</li>
+</ul>
+<p><strong>缺点</strong></p>
+<ul>
+<li>由于双重奇偶校验，其写入数据事务速度较慢。</li>
+<li>需要额外的空间。</li>
+</ul></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>Graph View</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc desktop-only"><button type="button" class="toc-header" aria-controls="toc-content" aria-expanded="true"><h3>Table of Contents</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul class="toc-content overflow" id="list-1"><li class="depth-0"><a href="#raid-的概念" data-for="raid-的概念">RAID 的概念</a></li><li class="depth-0"><a href="#raid-控制器" data-for="raid-控制器">RAID 控制器</a></li><li class="depth-1"><a href="#1-基于硬件的raid" data-for="1-基于硬件的raid">1. 基于硬件的RAID</a></li><li class="depth-1"><a href="#2-基于软件的raid" data-for="2-基于软件的raid">2. 基于软件的RAID</a></li><li class="depth-1"><a href="#3-基于固件的-raid伪-raid" data-for="3-基于固件的-raid伪-raid">3. 基于固件的 RAID（伪 RAID）</a></li><li class="depth-0"><a href="#为什么要进行数据冗余" data-for="为什么要进行数据冗余">为什么要进行数据冗余</a></li><li class="depth-0"><a href="#raid系统的关键评估点" data-for="raid系统的关键评估点">RAID系统的关键评估点</a></li><li class="depth-1"><a href="#1-可靠性" data-for="1-可靠性">1. 可靠性</a></li><li class="depth-1"><a href="#2-可用性" data-for="2-可用性">2. 可用性</a></li><li class="depth-1"><a href="#3-性能" data-for="3-性能">3. 性能</a></li><li class="depth-1"><a href="#4-容量" data-for="4-容量">4. 容量</a></li><li class="depth-0"><a href="#不同的-raid-级别" data-for="不同的-raid-级别">不同的 RAID 级别</a></li><li class="depth-1"><a href="#raid-0剥离" data-for="raid-0剥离">RAID-0（剥离）</a></li><li class="depth-1"><a href="#raid-1镜像" data-for="raid-1镜像">RAID-1（镜像）</a></li><li class="depth-1"><a href="#raid-2带专用奇偶校验的位级剥离" data-for="raid-2带专用奇偶校验的位级剥离">RAID-2（带专用奇偶校验的位级剥离）</a></li><li class="depth-1"><a href="#raid-3带专用奇偶校验的字节级剥离" data-for="raid-3带专用奇偶校验的字节级剥离">RAID-3（带专用奇偶校验的字节级剥离）</a></li><li class="depth-1"><a href="#raid-4具有专用奇偶校验的块级剥离" data-for="raid-4具有专用奇偶校验的块级剥离">RAID-4（具有专用奇偶校验的块级剥离）</a></li><li class="depth-1"><a href="#raid-5带分布式奇偶校验的块级条带化" data-for="raid-5带分布式奇偶校验的块级条带化">RAID-5（带分布式奇偶校验的块级条带化）</a></li><li class="depth-1"><a href="#raid-6具有两个奇偶校验位的块级剥离" data-for="raid-6具有两个奇偶校验位的块级剥离">RAID-6（具有两个奇偶校验位的块级剥离）</a></li><li class="overflow-end"></li></ul></div><div class="backlinks"><h3>Backlinks</h3><ul id="list-2" class="overflow"><li><a href="../../扩展知识目录" class="internal">扩展知识目录</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v4.5.1</a> © 2025</p><ul><li><a href="https://github.com/hero851815/quartz-page">GitHub</a></li></ul></footer></div></div></body><script type="application/javascript">function n(){let t=this.parentElement;t.classList.toggle("is-collapsed");let e=t.getElementsByClassName("callout-content")[0];if(!e)return;let l=t.classList.contains("is-collapsed");e.style.gridTemplateRows=l?"0fr":"1fr"}function c(){let t=document.getElementsByClassName("callout is-collapsible");for(let e of t){let l=e.getElementsByClassName("callout-title")[0],s=e.getElementsByClassName("callout-content")[0];if(!l||!s)continue;l.addEventListener("click",n),window.addCleanup(()=>l.removeEventListener("click",n));let o=e.classList.contains("is-collapsed");s.style.gridTemplateRows=o?"0fr":"1fr"}}document.addEventListener("nav",c);
+</script><script type="module">function f(i,e){if(!i)return;function r(o){o.target===this&&(o.preventDefault(),o.stopPropagation(),e())}function t(o){o.key.startsWith("Esc")&&(o.preventDefault(),e())}i?.addEventListener("click",r),window.addCleanup(()=>i?.removeEventListener("click",r)),document.addEventListener("keydown",t),window.addCleanup(()=>document.removeEventListener("keydown",t))}function y(i){for(;i.firstChild;)i.removeChild(i.firstChild)}var h=class{constructor(e,r){this.container=e;this.content=r;this.setupEventListeners(),this.setupNavigationControls(),this.resetTransform()}isDragging=!1;startPan={x:0,y:0};currentPan={x:0,y:0};scale=1;MIN_SCALE=.5;MAX_SCALE=3;cleanups=[];setupEventListeners(){let e=this.onMouseDown.bind(this),r=this.onMouseMove.bind(this),t=this.onMouseUp.bind(this),o=this.resetTransform.bind(this);this.container.addEventListener("mousedown",e),document.addEventListener("mousemove",r),document.addEventListener("mouseup",t),window.addEventListener("resize",o),this.cleanups.push(()=>this.container.removeEventListener("mousedown",e),()=>document.removeEventListener("mousemove",r),()=>document.removeEventListener("mouseup",t),()=>window.removeEventListener("resize",o))}cleanup(){for(let e of this.cleanups)e()}setupNavigationControls(){let e=document.createElement("div");e.className="mermaid-controls";let r=this.createButton("+",()=>this.zoom(.1)),t=this.createButton("-",()=>this.zoom(-.1)),o=this.createButton("Reset",()=>this.resetTransform());e.appendChild(t),e.appendChild(o),e.appendChild(r),this.container.appendChild(e)}createButton(e,r){let t=document.createElement("button");return t.textContent=e,t.className="mermaid-control-button",t.addEventListener("click",r),window.addCleanup(()=>t.removeEventListener("click",r)),t}onMouseDown(e){e.button===0&&(this.isDragging=!0,this.startPan={x:e.clientX-this.currentPan.x,y:e.clientY-this.currentPan.y},this.container.style.cursor="grabbing")}onMouseMove(e){this.isDragging&&(e.preventDefault(),this.currentPan={x:e.clientX-this.startPan.x,y:e.clientY-this.startPan.y},this.updateTransform())}onMouseUp(){this.isDragging=!1,this.container.style.cursor="grab"}zoom(e){let r=Math.min(Math.max(this.scale+e,this.MIN_SCALE),this.MAX_SCALE),t=this.content.getBoundingClientRect(),o=t.width/2,n=t.height/2,c=r-this.scale;this.currentPan.x-=o*c,this.currentPan.y-=n*c,this.scale=r,this.updateTransform()}updateTransform(){this.content.style.transform=`translate(${this.currentPan.x}px, ${this.currentPan.y}px) scale(${this.scale})`}resetTransform(){this.scale=1;let e=this.content.querySelector("svg");this.currentPan={x:e.getBoundingClientRect().width/2,y:e.getBoundingClientRect().height/2},this.updateTransform()}},C=["--secondary","--tertiary","--gray","--light","--lightgray","--highlight","--dark","--darkgray","--codeFont"],E;document.addEventListener("nav",async()=>{let e=document.querySelector(".center").querySelectorAll("code.mermaid");if(e.length===0)return;E||=await import("https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.4.0/mermaid.esm.min.mjs");let r=E.default,t=new WeakMap;for(let n of e)t.set(n,n.innerText);async function o(){for(let s of e){s.removeAttribute("data-processed");let a=t.get(s);a&&(s.innerHTML=a)}let n=C.reduce((s,a)=>(s[a]=window.getComputedStyle(document.documentElement).getPropertyValue(a),s),{}),c=document.documentElement.getAttribute("saved-theme")==="dark";r.initialize({startOnLoad:!1,securityLevel:"loose",theme:c?"dark":"base",themeVariables:{fontFamily:n["--codeFont"],primaryColor:n["--light"],primaryTextColor:n["--darkgray"],primaryBorderColor:n["--tertiary"],lineColor:n["--darkgray"],secondaryColor:n["--secondary"],tertiaryColor:n["--tertiary"],clusterBkg:n["--light"],edgeLabelBackground:n["--highlight"]}}),await r.run({nodes:e})}await o(),document.addEventListener("themechange",o),window.addCleanup(()=>document.removeEventListener("themechange",o));for(let n=0;n<e.length;n++){let v=function(){let g=l.querySelector("#mermaid-space"),m=l.querySelector(".mermaid-content");if(!m)return;y(m);let w=c.querySelector("svg").cloneNode(!0);m.appendChild(w),l.classList.add("active"),g.style.cursor="grab",u=new h(g,m)},M=function(){l.classList.remove("active"),u?.cleanup(),u=null},c=e[n],s=c.parentElement,a=s.querySelector(".clipboard-button"),d=s.querySelector(".expand-button"),p=window.getComputedStyle(a),L=a.offsetWidth+parseFloat(p.marginLeft||"0")+parseFloat(p.marginRight||"0");d.style.right=`calc(${L}px + 0.3rem)`,s.prepend(d);let l=s.querySelector("#mermaid-container");if(!l)return;let u=null;d.addEventListener("click",v),f(l,M),window.addCleanup(()=>{u?.cleanup(),d.removeEventListener("click",v)})}});
+</script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript"></script><script src="../../postscript.js" type="module"></script></html>
