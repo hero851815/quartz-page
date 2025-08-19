@@ -1,70 +1,70 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <rss version="2.0">
     <channel>
-      <title>数据安全知识库</title>
+      <title>DS-Knowledge</title>
       <link>https://hero851815.cc</link>
-      <description>Last 10 notes on 数据安全知识库</description>
+      <description>Last 10 notes on DS-Knowledge</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
-    <title>数据安全知识库</title>
-    <link>https://hero851815.cc/</link>
-    <guid>https://hero851815.cc/</guid>
-    <description>全面的数据安全术语词典、技术指南和标准规范</description>
-    <pubDate>Thu, 14 Aug 2025 08:57:11 GMT</pubDate>
+    <title>数据湖</title>
+    <link>https://hero851815.cc/%E8%AF%8D%E5%85%B8/S/%E6%95%B0%E6%8D%AE%E6%B9%96</link>
+    <guid>https://hero851815.cc/%E8%AF%8D%E5%85%B8/S/%E6%95%B0%E6%8D%AE%E6%B9%96</guid>
+    <description>定义 是指一种高度可扩展的数据存储架构，它专门用于存储大量原始数据，这些数据可以来自各种来源并以不同的格式存在，包括结构化、半结构化和非结构化数据。【来源：《数据领域常用名词解释（第一批）》，2024】 补充评论 扩展资料 关联词 数据仓库 湖仓一体 .</description>
+    <pubDate>Tue, 19 Aug 2025 06:22:20 GMT</pubDate>
   </item><item>
-    <title>DDoS</title>
-    <link>https://hero851815.cc/%E6%89%A9%E5%B1%95/%E5%AE%89%E5%85%A8%E9%98%B2%E6%8A%A4/EXT---DDoS</link>
-    <guid>https://hero851815.cc/%E6%89%A9%E5%B1%95/%E5%AE%89%E5%85%A8%E9%98%B2%E6%8A%A4/EXT---DDoS</guid>
-    <description>什么是DDoS 分布式拒绝服务 (Distributed DoS) 是一种 DOS 攻击，其中多个受木马感染的系统针对特定系统，从而引发 DoS 攻击。 DDoS 攻击利用多台服务器和互联网连接来淹没目标资源。DDoS 攻击是网络平台上最强大的武器之一。当您得知某个网站瘫痪时，通常意味着该网站已成为DDoS 攻击的受害者。这意味着黑客通过施加大量流量攻击了您的网站或电脑。因此，网站或电脑因过载而崩溃。 拒绝服务 DoS 代表拒绝服务 (Denial of Service)。它是一种针对服务的攻击，会破坏服务的正常功能并阻止其他用户访问。DoS 攻击最常见的目标是网站等在线服务，但攻击也可能针对...</description>
-    <pubDate>Thu, 14 Aug 2025 08:57:11 GMT</pubDate>
+    <title>数据溯源</title>
+    <link>https://hero851815.cc/%E8%AF%8D%E5%85%B8/S/%E6%95%B0%E6%8D%AE%E6%BA%AF%E6%BA%90</link>
+    <guid>https://hero851815.cc/%E8%AF%8D%E5%85%B8/S/%E6%95%B0%E6%8D%AE%E6%BA%AF%E6%BA%90</guid>
+    <description>定义 根据数据在整个生存周期内（从产生、传播到消亡）的演变信息和演变处理内容的记录，推演数据演变情况的过程。【来源：YD/T 4945-2024《电信网和互联网数据溯源技术规范》，GB/T 34945—2017，定义2.1，有修改】 补充评论 扩展资料 EXT - 数据溯源和数据沿袭 关联词 .</description>
+    <pubDate>Tue, 19 Aug 2025 06:22:20 GMT</pubDate>
   </item><item>
-    <title>EXT - SQL注入</title>
-    <link>https://hero851815.cc/%E6%89%A9%E5%B1%95/%E5%AE%89%E5%85%A8%E9%98%B2%E6%8A%A4/EXT---SQL%E6%B3%A8%E5%85%A5</link>
-    <guid>https://hero851815.cc/%E6%89%A9%E5%B1%95/%E5%AE%89%E5%85%A8%E9%98%B2%E6%8A%A4/EXT---SQL%E6%B3%A8%E5%85%A5</guid>
-    <description>什么是SQL注入 SQL 注入(SQL Injection) 是一种安全漏洞，攻击者可以通过在用户输入字段中插入恶意 SQL 代码来操纵Web 应用程序的数据库查询。这些注入的查询可以操纵底层数据库，从而检索、修改或删除敏感数据。在某些情况下，攻击者甚至可以提升权限，完全控制数据库或服务器。 SQL注入如何工作 SQL 注入通常发生在 Web 应用程序未正确验证用户输入时，这会导致攻击者注入恶意SQL 代码。例如，如果 Web 应用程序获取用户输入（例如用户名或密码），并在未经适当过滤的情况下将其直接插入到 SQL 查询中，攻击者便可以操纵该查询执行非预期的操作。 例子 假设我们有一个基于学生...</description>
-    <pubDate>Thu, 14 Aug 2025 08:57:11 GMT</pubDate>
+    <title>数据脱敏</title>
+    <link>https://hero851815.cc/%E8%AF%8D%E5%85%B8/S/%E6%95%B0%E6%8D%AE%E8%84%B1%E6%95%8F</link>
+    <guid>https://hero851815.cc/%E8%AF%8D%E5%85%B8/S/%E6%95%B0%E6%8D%AE%E8%84%B1%E6%95%8F</guid>
+    <description>定义 通过一系列数据处理方法对原始数据进行处理以屏蔽敏感数据的一种数据保护方法。【来源：GB/T 37988-2019《数据安全能力成熟度模型》】 对某些敏感信息通过一定规则进行数据的变形，实现敏感隐私数据的可靠保护。【来源：YD/T 3802-2020 《电信网和互联网数据安全通用要求》】 补充评论 扩展资料 关联词 匿名化 去标识化 .</description>
+    <pubDate>Tue, 19 Aug 2025 06:22:20 GMT</pubDate>
   </item><item>
-    <title>中间人攻击</title>
-    <link>https://hero851815.cc/%E6%89%A9%E5%B1%95/%E5%AE%89%E5%85%A8%E9%98%B2%E6%8A%A4/EXT---%E4%B8%AD%E9%97%B4%E4%BA%BA%E6%94%BB%E5%87%BB</link>
-    <guid>https://hero851815.cc/%E6%89%A9%E5%B1%95/%E5%AE%89%E5%85%A8%E9%98%B2%E6%8A%A4/EXT---%E4%B8%AD%E9%97%B4%E4%BA%BA%E6%94%BB%E5%87%BB</guid>
-    <description>内容摘自Geeksforgeeks</description>
-    <pubDate>Thu, 14 Aug 2025 08:57:11 GMT</pubDate>
+    <title>数据质量</title>
+    <link>https://hero851815.cc/%E8%AF%8D%E5%85%B8/S/%E6%95%B0%E6%8D%AE%E8%B4%A8%E9%87%8F</link>
+    <guid>https://hero851815.cc/%E8%AF%8D%E5%85%B8/S/%E6%95%B0%E6%8D%AE%E8%B4%A8%E9%87%8F</guid>
+    <description>定义 在指定条件下使用时，数据的特性满足明确的和隐含的要求的程度。【来源：GB/T36073-2018《数据管理能力成熟度评估模型》】 补充评论 扩展资料 关联词 .</description>
+    <pubDate>Tue, 19 Aug 2025 06:22:20 GMT</pubDate>
   </item><item>
-    <title>威胁建模</title>
-    <link>https://hero851815.cc/%E6%89%A9%E5%B1%95/%E5%AE%89%E5%85%A8%E9%98%B2%E6%8A%A4/EXT---%E5%A8%81%E8%83%81%E5%BB%BA%E6%A8%A1</link>
-    <guid>https://hero851815.cc/%E6%89%A9%E5%B1%95/%E5%AE%89%E5%85%A8%E9%98%B2%E6%8A%A4/EXT---%E5%A8%81%E8%83%81%E5%BB%BA%E6%A8%A1</guid>
-    <description>引言 威胁建模是一个结构化的过程，用于识别、分析和应对系统、应用程序或组织面临的潜在威胁。它有助于在漏洞被利用之前主动发现它们，从而降低风险并提高安全性。它致力于在保护宝贵资产的背景下识别、传达和理解威胁及其缓解措施。威胁建模使用假设场景、系统图和测试来保护系统和数据的安全。 它可以应用于多种目标，例如： 软件和应用程序 系统和网络 分布式系统和物联网设备 业务流程 威胁建模的目的 威胁建模的目的是尽早识别、传达并了解威胁及缓解措施，并将其告知组织的利益相关者。此过程的文档为系统分析人员和防御人员提供了对潜在攻击者概况、最可能的攻击媒介以及攻击者最想获得的资产的完整分析 。 威胁模型的关键组成...</description>
-    <pubDate>Thu, 14 Aug 2025 08:57:11 GMT</pubDate>
+    <title>数据资产</title>
+    <link>https://hero851815.cc/%E8%AF%8D%E5%85%B8/S/%E6%95%B0%E6%8D%AE%E8%B5%84%E4%BA%A7</link>
+    <guid>https://hero851815.cc/%E8%AF%8D%E5%85%B8/S/%E6%95%B0%E6%8D%AE%E8%B5%84%E4%BA%A7</guid>
+    <description>定义 以数据为载体和表现形式，能够持续发挥作用并且带来经济效益的数字化资源。 注：数据资产包含结构化数据、非结构化数据和半结构化数据。 【来源：GB/T 37550-2019《电子商务数据资产评价指标体系》】 合法拥有或者控制的，能进行计量的，为组织带来经济和社会价值的数据资源。【来源：GB/T 40685-2021《信息技术服务 数据资产 管理要求》】 补充评论 数据资产包含以物理或电子形式记录的数据表、数据项、数据文件等；【来源：JR/T 0158-2018《证券期货业数据分类分级指引》】 扩展资料 关联词 .</description>
+    <pubDate>Tue, 19 Aug 2025 06:22:20 GMT</pubDate>
   </item><item>
-    <title>恶意软件</title>
-    <link>https://hero851815.cc/%E6%89%A9%E5%B1%95/%E5%AE%89%E5%85%A8%E9%98%B2%E6%8A%A4/EXT---%E6%81%B6%E6%84%8F%E8%BD%AF%E4%BB%B6</link>
-    <guid>https://hero851815.cc/%E6%89%A9%E5%B1%95/%E5%AE%89%E5%85%A8%E9%98%B2%E6%8A%A4/EXT---%E6%81%B6%E6%84%8F%E8%BD%AF%E4%BB%B6</guid>
-    <description>恶意软件的定义 恶意软件（Malware）是一种未经用户同意就进入系统，窃取用户私人和机密数据（包括银行信息和密码）的软件。它们还会生成烦人的弹出广告，并更改系统设置。它们通过各种方式进入系统： 伴随免费下载。 点击可疑链接。 打开来自恶意来源的电子邮件。 访问恶意网站。 未在系统中安装更新版本的防病毒软件。 恶意软件的类型 病毒 计算机病毒（Virus）是指破坏计算机系统和/或销毁或删除数据文件的程序。计算机病毒是一种恶意程序，它通过复制到另一个程序中进行自我复制。换句话说，计算机病毒会自行传播到其他可执行代码或文档中。创建计算机病毒的目的是感染易受攻击的系统，获取管理员控制权并窃取用户敏感...</description>
-    <pubDate>Thu, 14 Aug 2025 08:57:11 GMT</pubDate>
+    <title>水印信息</title>
+    <link>https://hero851815.cc/%E8%AF%8D%E5%85%B8/S/%E6%B0%B4%E5%8D%B0%E4%BF%A1%E6%81%AF</link>
+    <guid>https://hero851815.cc/%E8%AF%8D%E5%85%B8/S/%E6%B0%B4%E5%8D%B0%E4%BF%A1%E6%81%AF</guid>
+    <description>定义 通过数字水印技术在数字媒体中嵌入的特定信息。 注：常见水印信息包括但不限于版权信息、溯源信息、链路信息、机构/员工标识符（ID）、时间信息等。 【来源：GB/T 45909-2025《网络安全技术 数字水印技术实现指南》】 补充评论 扩展资料 关联词 水印载体 .</description>
+    <pubDate>Tue, 19 Aug 2025 06:22:20 GMT</pubDate>
   </item><item>
-    <title>数据丢失防护</title>
-    <link>https://hero851815.cc/%E6%89%A9%E5%B1%95/%E5%AE%89%E5%85%A8%E9%98%B2%E6%8A%A4/EXT---%E6%95%B0%E6%8D%AE%E4%B8%A2%E5%A4%B1%E9%98%B2%E6%8A%A4</link>
-    <guid>https://hero851815.cc/%E6%89%A9%E5%B1%95/%E5%AE%89%E5%85%A8%E9%98%B2%E6%8A%A4/EXT---%E6%95%B0%E6%8D%AE%E4%B8%A2%E5%A4%B1%E9%98%B2%E6%8A%A4</guid>
-    <description>内容摘自Cloudflare的Access词汇</description>
-    <pubDate>Thu, 14 Aug 2025 08:57:11 GMT</pubDate>
+    <title>水印载体</title>
+    <link>https://hero851815.cc/%E8%AF%8D%E5%85%B8/S/%E6%B0%B4%E5%8D%B0%E8%BD%BD%E4%BD%93</link>
+    <guid>https://hero851815.cc/%E8%AF%8D%E5%85%B8/S/%E6%B0%B4%E5%8D%B0%E8%BD%BD%E4%BD%93</guid>
+    <description>定义 用于嵌入或携带水印信息的文档、图像、音频、视频、网页、数据库等数字内容。 注：本文件中简称载体。 【来源：GB/T 45909-2025《网络安全技术 数字水印技术实现指南》】 补充评论 扩展资料 关联词 水印信息 .</description>
+    <pubDate>Tue, 19 Aug 2025 06:22:20 GMT</pubDate>
   </item><item>
-    <title>数据匿名化技术</title>
-    <link>https://hero851815.cc/%E6%89%A9%E5%B1%95/%E5%AE%89%E5%85%A8%E9%98%B2%E6%8A%A4/EXT---%E6%95%B0%E6%8D%AE%E5%8C%BF%E5%90%8D%E5%8C%96%E6%8A%80%E6%9C%AF</link>
-    <guid>https://hero851815.cc/%E6%89%A9%E5%B1%95/%E5%AE%89%E5%85%A8%E9%98%B2%E6%8A%A4/EXT---%E6%95%B0%E6%8D%AE%E5%8C%BF%E5%90%8D%E5%8C%96%E6%8A%80%E6%9C%AF</guid>
-    <description>为什么数据匿名化很重要 增强数据安全性：数据隐私的第三级是匿名化或数据屏蔽，通过屏蔽或消除姓名、地址、社保号码等个人数据，从而提高数据的隐私性。匿名数据难以识别，除非正确识别，否则没有人能够通过该数据追踪到特定个人。 法规合规性：全球各地有许多不同的法规要求组织在处理个人信息时遵守特定标准。去识别化技术可以消除数据处理过程中隐私泄露的风险，从而提高合规性。 促进数据共享：未选定的数据也可以公开给第三方研究人员、分析师甚至其他公司，以供进一步研究。这可以减少隐私侵犯，同时提供宝贵的见解和创造空间。 降低成本：匿名数据的存储和管理成本也比原始数据相对低。这是因为匿名数据风险较低，使用时可能不需要高...</description>
-    <pubDate>Thu, 14 Aug 2025 08:57:11 GMT</pubDate>
+    <title>溯源信息</title>
+    <link>https://hero851815.cc/%E8%AF%8D%E5%85%B8/S/%E6%BA%AF%E6%BA%90%E4%BF%A1%E6%81%AF</link>
+    <guid>https://hero851815.cc/%E8%AF%8D%E5%85%B8/S/%E6%BA%AF%E6%BA%90%E4%BF%A1%E6%81%AF</guid>
+    <description>定义 推演数据演变情况所依据的演变信息和演变处理内容的记录。【来源：YD/T 4945-2024《电信网和互联网数据溯源技术规范》】 补充评论 扩展资料 关联词 .</description>
+    <pubDate>Tue, 19 Aug 2025 06:22:20 GMT</pubDate>
   </item><item>
-    <title>机器学习中的隐私保护</title>
-    <link>https://hero851815.cc/%E6%89%A9%E5%B1%95/%E5%AE%89%E5%85%A8%E9%98%B2%E6%8A%A4/EXT---%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E4%B8%AD%E7%9A%84%E9%9A%90%E7%A7%81%E4%BF%9D%E6%8A%A4</link>
-    <guid>https://hero851815.cc/%E6%89%A9%E5%B1%95/%E5%AE%89%E5%85%A8%E9%98%B2%E6%8A%A4/EXT---%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E4%B8%AD%E7%9A%84%E9%9A%90%E7%A7%81%E4%BF%9D%E6%8A%A4</guid>
-    <description>引言 机器学习 (ML) 的进步改变了各行各业，使人们能够从海量数据集中提取洞察。然而，由于 ML 系统严重依赖从个人健康记录到财务详情等各种敏感数据，因此引发了人们对隐私的担忧。在充分利用 ML 优势的同时确保数据机密性是现代人工智能的核心挑战。隐私保护机器学习 (Privacy-preserving machine learning, PPML)解决了这一问题，旨在保护用户数据的同时，实现有效的模型训练和预测。 隐私保护机器学习技术 拆分隐私（DP） 差分隐私（Differential Privacy）是一种技术，它确保无论个人数据是否包含在数据集中，函数的输出都几乎保持不变。它的工作原理...</description>
-    <pubDate>Thu, 14 Aug 2025 08:57:11 GMT</pubDate>
+    <title>算法推荐技术</title>
+    <link>https://hero851815.cc/%E8%AF%8D%E5%85%B8/S/%E7%AE%97%E6%B3%95%E6%8E%A8%E8%8D%90%E6%8A%80%E6%9C%AF</link>
+    <guid>https://hero851815.cc/%E8%AF%8D%E5%85%B8/S/%E7%AE%97%E6%B3%95%E6%8E%A8%E8%8D%90%E6%8A%80%E6%9C%AF</guid>
+    <description>定义 是指利用生成合成类、个性化推送类、排序精选类、检索过滤类、调度决策类等算法技术向用户提供信息。【来源：《互联网信息服务算法推荐管理规定》，2022】 补充评论 此外，团体标准T/TAF 138-2022《App 推荐算法用户权益保护技术要求及测评规范》的附录A列举了常见的推荐算法应用。 扩展资料 关联词 个性化展示 个性化推荐 定向推送 自动化决策 用户画像 .</description>
+    <pubDate>Tue, 19 Aug 2025 06:22:20 GMT</pubDate>
   </item><item>
-    <title>社会工程学</title>
-    <link>https://hero851815.cc/%E6%89%A9%E5%B1%95/%E5%AE%89%E5%85%A8%E9%98%B2%E6%8A%A4/EXT---%E7%A4%BE%E4%BC%9A%E5%B7%A5%E7%A8%8B%E5%AD%A6</link>
-    <guid>https://hero851815.cc/%E6%89%A9%E5%B1%95/%E5%AE%89%E5%85%A8%E9%98%B2%E6%8A%A4/EXT---%E7%A4%BE%E4%BC%9A%E5%B7%A5%E7%A8%8B%E5%AD%A6</guid>
-    <description>什么是社会工程学 社会工程学（Social Engineering）是网络犯罪分子通过互联网上的人际互动进行的多种恶意活动的总称。 它不涉及使用技术黑客技术。攻击者利用心理和操纵手段诱骗用户执行可能危及其安全的操作，包括下载恶意文件、泄露敏感信息、点击恶意链接、与非法来源进行交易等。它包括一系列攻击，例如网络钓鱼、诱饵攻击、尾随攻击、借口攻击、恐吓软件等，因为它们都利用了人们的信任。 社会工程攻击的目的 社会工程学攻击的目的通常是窃取敏感信息，例如登录凭证、信用卡号或个人信息。攻击者可以利用这些信息进行身份盗窃、金融欺诈或其他恶意目的。社会工程学攻击的另一个目的是未经授权访问安全区域或系统。 ...</description>
-    <pubDate>Thu, 14 Aug 2025 08:57:11 GMT</pubDate>
+    <title>身份鉴别</title>
+    <link>https://hero851815.cc/%E8%AF%8D%E5%85%B8/S/%E8%BA%AB%E4%BB%BD%E9%89%B4%E5%88%AB</link>
+    <guid>https://hero851815.cc/%E8%AF%8D%E5%85%B8/S/%E8%BA%AB%E4%BB%BD%E9%89%B4%E5%88%AB</guid>
+    <description>定义 对主客体身份进行确认的过程，也就是对网络用户在进入系统或访问受限系统资源时的身份进行识别和验证的过程。【来源：网络】 补充评论 网络用户身份鉴别：在网络中识别用户身份并辨别其合法性的过程。【来源：GB/T 36633-2018《信息安全技术 网络用户身份鉴别技术指南》】 扩展资料 关联词 .</description>
+    <pubDate>Tue, 19 Aug 2025 06:22:20 GMT</pubDate>
   </item>
     </channel>
   </rss>
