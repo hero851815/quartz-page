@@ -6,65 +6,65 @@
       <description>Last 10 notes on DS-Knowledge</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
-    <title>DDoS</title>
-    <link>https://hero851815.cc/%E6%89%A9%E5%B1%95/%E5%AE%89%E5%85%A8%E9%98%B2%E6%8A%A4/EXT---DDoS</link>
-    <guid>https://hero851815.cc/%E6%89%A9%E5%B1%95/%E5%AE%89%E5%85%A8%E9%98%B2%E6%8A%A4/EXT---DDoS</guid>
-    <description>什么是DDoS 分布式拒绝服务 (Distributed DoS) 是一种 DOS 攻击，其中多个受木马感染的系统针对特定系统，从而引发 DoS 攻击。 DDoS 攻击利用多台服务器和互联网连接来淹没目标资源。DDoS 攻击是网络平台上最强大的武器之一。当您得知某个网站瘫痪时，通常意味着该网站已成为DDoS 攻击的受害者。这意味着黑客通过施加大量流量攻击了您的网站或电脑。因此，网站或电脑因过载而崩溃。 拒绝服务 DoS 代表拒绝服务 (Denial of Service)。它是一种针对服务的攻击，会破坏服务的正常功能并阻止其他用户访问。DoS 攻击最常见的目标是网站等在线服务，但攻击也可能针对...</description>
-    <pubDate>Thu, 04 Sep 2025 01:45:14 GMT</pubDate>
+    <title>互联网平台</title>
+    <link>https://hero851815.cc/%E8%AF%8D%E5%85%B8/H/%E4%BA%92%E8%81%94%E7%BD%91%E5%B9%B3%E5%8F%B0</link>
+    <guid>https://hero851815.cc/%E8%AF%8D%E5%85%B8/H/%E4%BA%92%E8%81%94%E7%BD%91%E5%B9%B3%E5%8F%B0</guid>
+    <description>定义 本指南所称平台为互联网平台，是指通过网络信息技术，使相互依赖的双边或者多边主体在特定载体提供的规则下交互，以此共同创造价值的商业组织形态。【来源：《互联网平台落实主体责任指南（征求意见稿）》，2021】 补充评论 扩展资料 关联词 .</description>
+    <pubDate>Thu, 04 Sep 2025 02:09:31 GMT</pubDate>
   </item><item>
-    <title>SQL注入</title>
-    <link>https://hero851815.cc/%E6%89%A9%E5%B1%95/%E5%AE%89%E5%85%A8%E9%98%B2%E6%8A%A4/EXT---SQL%E6%B3%A8%E5%85%A5</link>
-    <guid>https://hero851815.cc/%E6%89%A9%E5%B1%95/%E5%AE%89%E5%85%A8%E9%98%B2%E6%8A%A4/EXT---SQL%E6%B3%A8%E5%85%A5</guid>
-    <description>什么是SQL注入 SQL 注入(SQL Injection) 是一种安全漏洞，攻击者可以通过在用户输入字段中插入恶意 SQL 代码来操纵Web 应用程序的数据库查询。这些注入的查询可以操纵底层数据库，从而检索、修改或删除敏感数据。在某些情况下，攻击者甚至可以提升权限，完全控制数据库或服务器。 SQL注入如何工作 SQL 注入通常发生在 Web 应用程序未正确验证用户输入时，这会导致攻击者注入恶意SQL 代码。例如，如果 Web 应用程序获取用户输入（例如用户名或密码），并在未经适当过滤的情况下将其直接插入到 SQL 查询中，攻击者便可以操纵该查询执行非预期的操作。 例子 假设我们有一个基于学生...</description>
-    <pubDate>Thu, 04 Sep 2025 01:45:14 GMT</pubDate>
+    <title>合规</title>
+    <link>https://hero851815.cc/%E8%AF%8D%E5%85%B8/H/%E5%90%88%E8%A7%84</link>
+    <guid>https://hero851815.cc/%E8%AF%8D%E5%85%B8/H/%E5%90%88%E8%A7%84</guid>
+    <description>定义 履行组织的全部合规义务。【来源：GB/T 35770-2022《合规管理体系 要求及使用指南》】 补充评论 扩展资料 关联词 .</description>
+    <pubDate>Thu, 04 Sep 2025 02:09:31 GMT</pubDate>
   </item><item>
-    <title>中间人攻击</title>
-    <link>https://hero851815.cc/%E6%89%A9%E5%B1%95/%E5%AE%89%E5%85%A8%E9%98%B2%E6%8A%A4/EXT---%E4%B8%AD%E9%97%B4%E4%BA%BA%E6%94%BB%E5%87%BB</link>
-    <guid>https://hero851815.cc/%E6%89%A9%E5%B1%95/%E5%AE%89%E5%85%A8%E9%98%B2%E6%8A%A4/EXT---%E4%B8%AD%E9%97%B4%E4%BA%BA%E6%94%BB%E5%87%BB</guid>
-    <description>内容摘自Geeksforgeeks</description>
-    <pubDate>Thu, 04 Sep 2025 01:45:14 GMT</pubDate>
+    <title>合规义务</title>
+    <link>https://hero851815.cc/%E8%AF%8D%E5%85%B8/H/%E5%90%88%E8%A7%84%E4%B9%89%E5%8A%A1</link>
+    <guid>https://hero851815.cc/%E8%AF%8D%E5%85%B8/H/%E5%90%88%E8%A7%84%E4%B9%89%E5%8A%A1</guid>
+    <description>定义 组织强制性地必须遵守的要求，以及组织自愿选择遵守的要求。【来源：GB/T 35770-2022《合规管理体系 要求及使用指南》】 补充评论 扩展资料 关联词 .</description>
+    <pubDate>Thu, 04 Sep 2025 02:09:31 GMT</pubDate>
   </item><item>
-    <title>威胁建模</title>
-    <link>https://hero851815.cc/%E6%89%A9%E5%B1%95/%E5%AE%89%E5%85%A8%E9%98%B2%E6%8A%A4/EXT---%E5%A8%81%E8%83%81%E5%BB%BA%E6%A8%A1</link>
-    <guid>https://hero851815.cc/%E6%89%A9%E5%B1%95/%E5%AE%89%E5%85%A8%E9%98%B2%E6%8A%A4/EXT---%E5%A8%81%E8%83%81%E5%BB%BA%E6%A8%A1</guid>
-    <description>引言 威胁建模是一个结构化的过程，用于识别、分析和应对系统、应用程序或组织面临的潜在威胁。它有助于在漏洞被利用之前主动发现它们，从而降低风险并提高安全性。它致力于在保护宝贵资产的背景下识别、传达和理解威胁及其缓解措施。威胁建模使用假设场景、系统图和测试来保护系统和数据的安全。 它可以应用于多种目标，例如： 软件和应用程序 系统和网络 分布式系统和物联网设备 业务流程 威胁建模的目的 威胁建模的目的是尽早识别、传达并了解威胁及缓解措施，并将其告知组织的利益相关者。此过程的文档为系统分析人员和防御人员提供了对潜在攻击者概况、最可能的攻击媒介以及攻击者最想获得的资产的完整分析 。 威胁模型的关键组成...</description>
-    <pubDate>Thu, 04 Sep 2025 01:45:14 GMT</pubDate>
+    <title>合规风险</title>
+    <link>https://hero851815.cc/%E8%AF%8D%E5%85%B8/H/%E5%90%88%E8%A7%84%E9%A3%8E%E9%99%A9</link>
+    <guid>https://hero851815.cc/%E8%AF%8D%E5%85%B8/H/%E5%90%88%E8%A7%84%E9%A3%8E%E9%99%A9</guid>
+    <description>定义 因未遵守组织合规义务而发生不合规的可能性及其后果。【来源：GB/T 35770-2022《合规管理体系 要求及使用指南》】 补充评论 扩展资料 关联词 .</description>
+    <pubDate>Thu, 04 Sep 2025 02:09:31 GMT</pubDate>
   </item><item>
-    <title>恶意软件</title>
-    <link>https://hero851815.cc/%E6%89%A9%E5%B1%95/%E5%AE%89%E5%85%A8%E9%98%B2%E6%8A%A4/EXT---%E6%81%B6%E6%84%8F%E8%BD%AF%E4%BB%B6</link>
-    <guid>https://hero851815.cc/%E6%89%A9%E5%B1%95/%E5%AE%89%E5%85%A8%E9%98%B2%E6%8A%A4/EXT---%E6%81%B6%E6%84%8F%E8%BD%AF%E4%BB%B6</guid>
-    <description>恶意软件的定义 恶意软件（Malware）是一种未经用户同意就进入系统，窃取用户私人和机密数据（包括银行信息和密码）的软件。它们还会生成烦人的弹出广告，并更改系统设置。它们通过各种方式进入系统： 伴随免费下载。 点击可疑链接。 打开来自恶意来源的电子邮件。 访问恶意网站。 未在系统中安装更新版本的防病毒软件。 恶意软件的类型 病毒 计算机病毒（Virus）是指破坏计算机系统和/或销毁或删除数据文件的程序。计算机病毒是一种恶意程序，它通过复制到另一个程序中进行自我复制。换句话说，计算机病毒会自行传播到其他可执行代码或文档中。创建计算机病毒的目的是感染易受攻击的系统，获取管理员控制权并窃取用户敏感...</description>
-    <pubDate>Thu, 04 Sep 2025 01:45:14 GMT</pubDate>
+    <title>恢复时间目标</title>
+    <link>https://hero851815.cc/%E8%AF%8D%E5%85%B8/H/%E6%81%A2%E5%A4%8D%E6%97%B6%E9%97%B4%E7%9B%AE%E6%A0%87</link>
+    <guid>https://hero851815.cc/%E8%AF%8D%E5%85%B8/H/%E6%81%A2%E5%A4%8D%E6%97%B6%E9%97%B4%E7%9B%AE%E6%A0%87</guid>
+    <description>定义 从事件发生到完成恢复产品或服务、活动或者资源之间的时间段。 注：对于产品、服务和活动，恢复时间目标需小于组织无法接受的导致产品／服务停止供应或活动无法执行等负面影响所需的时间。 【来源：GB/T 25069-2022《信息安全技术 术语》】 补充评论 扩展资料 EXT - 系统设计中的恢复时间目标与恢复点目标 关联词 恢复点目标 .</description>
+    <pubDate>Thu, 04 Sep 2025 02:09:31 GMT</pubDate>
   </item><item>
-    <title>数据丢失防护</title>
-    <link>https://hero851815.cc/%E6%89%A9%E5%B1%95/%E5%AE%89%E5%85%A8%E9%98%B2%E6%8A%A4/EXT---%E6%95%B0%E6%8D%AE%E4%B8%A2%E5%A4%B1%E9%98%B2%E6%8A%A4</link>
-    <guid>https://hero851815.cc/%E6%89%A9%E5%B1%95/%E5%AE%89%E5%85%A8%E9%98%B2%E6%8A%A4/EXT---%E6%95%B0%E6%8D%AE%E4%B8%A2%E5%A4%B1%E9%98%B2%E6%8A%A4</guid>
-    <description>内容摘自Cloudflare的Access词汇</description>
-    <pubDate>Thu, 04 Sep 2025 01:45:14 GMT</pubDate>
+    <title>恢复点目标</title>
+    <link>https://hero851815.cc/%E8%AF%8D%E5%85%B8/H/%E6%81%A2%E5%A4%8D%E7%82%B9%E7%9B%AE%E6%A0%87</link>
+    <guid>https://hero851815.cc/%E8%AF%8D%E5%85%B8/H/%E6%81%A2%E5%A4%8D%E7%82%B9%E7%9B%AE%E6%A0%87</guid>
+    <description>定义 为使活动能够恢复操作而需将其所用信息恢复到的时间点。【来源：GB/T 25069-2022《信息安全技术 术语》】 补充评论 扩展资料 EXT - 系统设计中的恢复时间目标与恢复点目标 关联词 恢复时间目标 .</description>
+    <pubDate>Thu, 04 Sep 2025 02:09:31 GMT</pubDate>
   </item><item>
-    <title>数据匿名化技术</title>
-    <link>https://hero851815.cc/%E6%89%A9%E5%B1%95/%E5%AE%89%E5%85%A8%E9%98%B2%E6%8A%A4/EXT---%E6%95%B0%E6%8D%AE%E5%8C%BF%E5%90%8D%E5%8C%96%E6%8A%80%E6%9C%AF</link>
-    <guid>https://hero851815.cc/%E6%89%A9%E5%B1%95/%E5%AE%89%E5%85%A8%E9%98%B2%E6%8A%A4/EXT---%E6%95%B0%E6%8D%AE%E5%8C%BF%E5%90%8D%E5%8C%96%E6%8A%80%E6%9C%AF</guid>
-    <description>为什么数据匿名化很重要 增强数据安全性：数据隐私的第三级是匿名化或数据屏蔽，通过屏蔽或消除姓名、地址、社保号码等个人数据，从而提高数据的隐私性。匿名数据难以识别，除非正确识别，否则没有人能够通过该数据追踪到特定个人。 法规合规性：全球各地有许多不同的法规要求组织在处理个人信息时遵守特定标准。去识别化技术可以消除数据处理过程中隐私泄露的风险，从而提高合规性。 促进数据共享：未选定的数据也可以公开给第三方研究人员、分析师甚至其他公司，以供进一步研究。这可以减少隐私侵犯，同时提供宝贵的见解和创造空间。 降低成本：匿名数据的存储和管理成本也比原始数据相对低。这是因为匿名数据风险较低，使用时可能不需要高...</description>
-    <pubDate>Thu, 04 Sep 2025 01:45:14 GMT</pubDate>
+    <title>核心数据</title>
+    <link>https://hero851815.cc/%E8%AF%8D%E5%85%B8/H/%E6%A0%B8%E5%BF%83%E6%95%B0%E6%8D%AE</link>
+    <guid>https://hero851815.cc/%E8%AF%8D%E5%85%B8/H/%E6%A0%B8%E5%BF%83%E6%95%B0%E6%8D%AE</guid>
+    <description>定义 是指关系国家安全、国民经济命脉、重要民生、重大公共利益等的数据。【来源：《网络安全标准实践指南——网络数据分类分级指引》，2021】 特定领域、特定群体、特定区域或达到一定精度和规模的数据，一旦被泄露或篡改、损毁，可能直接危害国家安全、经济运行、社会稳定、公共健康和安全。【来源：《信息安全技术 网络数据分类分级要求（征求意见稿）》，2022】 对领域、群体、区域具有较高覆盖度或达到较高精度、较大规模、一定深度的，一旦被非法使用或共享，可能直接影响政治安全的重要数据。注：核心数据主要包括关系国家安全重点领域的数据，关系国民经济命脉、重要民生、重大公共利益的数据，经国家有关部门评估确定的其他...</description>
+    <pubDate>Thu, 04 Sep 2025 02:09:31 GMT</pubDate>
   </item><item>
-    <title>机器学习中的隐私保护</title>
-    <link>https://hero851815.cc/%E6%89%A9%E5%B1%95/%E5%AE%89%E5%85%A8%E9%98%B2%E6%8A%A4/EXT---%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E4%B8%AD%E7%9A%84%E9%9A%90%E7%A7%81%E4%BF%9D%E6%8A%A4</link>
-    <guid>https://hero851815.cc/%E6%89%A9%E5%B1%95/%E5%AE%89%E5%85%A8%E9%98%B2%E6%8A%A4/EXT---%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E4%B8%AD%E7%9A%84%E9%9A%90%E7%A7%81%E4%BF%9D%E6%8A%A4</guid>
-    <description>引言 机器学习 (ML) 的进步改变了各行各业，使人们能够从海量数据集中提取洞察。然而，由于 ML 系统严重依赖从个人健康记录到财务详情等各种敏感数据，因此引发了人们对隐私的担忧。在充分利用 ML 优势的同时确保数据机密性是现代人工智能的核心挑战。隐私保护机器学习 (Privacy-preserving machine learning, PPML)解决了这一问题，旨在保护用户数据的同时，实现有效的模型训练和预测。 隐私保护机器学习技术 拆分隐私（DP） 差分隐私（Differential Privacy）是一种技术，它确保无论个人数据是否包含在数据集中，函数的输出都几乎保持不变。它的工作原理...</description>
-    <pubDate>Thu, 04 Sep 2025 01:45:14 GMT</pubDate>
+    <title>湖仓一体</title>
+    <link>https://hero851815.cc/%E8%AF%8D%E5%85%B8/H/%E6%B9%96%E4%BB%93%E4%B8%80%E4%BD%93</link>
+    <guid>https://hero851815.cc/%E8%AF%8D%E5%85%B8/H/%E6%B9%96%E4%BB%93%E4%B8%80%E4%BD%93</guid>
+    <description>定义 是指一种新型的开放式的存储架构，打通了数据仓库和数据湖，将数据仓库的高性能及管理能力与数据湖的灵活性融合起来，底层支持多种数据类型并存，能实现数据间的相互共享，上层可以通过统一封装的接口进行访问，可同时支持实时查询和分析。【来源：《数据领域常用名词解释（第一批）》，2024】 补充评论 扩展资料 关联词 数据仓库 数据湖 .</description>
+    <pubDate>Thu, 04 Sep 2025 02:09:31 GMT</pubDate>
   </item><item>
-    <title>社会工程学</title>
-    <link>https://hero851815.cc/%E6%89%A9%E5%B1%95/%E5%AE%89%E5%85%A8%E9%98%B2%E6%8A%A4/EXT---%E7%A4%BE%E4%BC%9A%E5%B7%A5%E7%A8%8B%E5%AD%A6</link>
-    <guid>https://hero851815.cc/%E6%89%A9%E5%B1%95/%E5%AE%89%E5%85%A8%E9%98%B2%E6%8A%A4/EXT---%E7%A4%BE%E4%BC%9A%E5%B7%A5%E7%A8%8B%E5%AD%A6</guid>
-    <description>什么是社会工程学 社会工程学（Social Engineering）是网络犯罪分子通过互联网上的人际互动进行的多种恶意活动的总称。 它不涉及使用技术黑客技术。攻击者利用心理和操纵手段诱骗用户执行可能危及其安全的操作，包括下载恶意文件、泄露敏感信息、点击恶意链接、与非法来源进行交易等。它包括一系列攻击，例如网络钓鱼、诱饵攻击、尾随攻击、借口攻击、恐吓软件等，因为它们都利用了人们的信任。 社会工程攻击的目的 社会工程学攻击的目的通常是窃取敏感信息，例如登录凭证、信用卡号或个人信息。攻击者可以利用这些信息进行身份盗窃、金融欺诈或其他恶意目的。社会工程学攻击的另一个目的是未经授权访问安全区域或系统。 ...</description>
-    <pubDate>Thu, 04 Sep 2025 01:45:14 GMT</pubDate>
+    <title>交通运输政务数据</title>
+    <link>https://hero851815.cc/%E8%AF%8D%E5%85%B8/J/%E4%BA%A4%E9%80%9A%E8%BF%90%E8%BE%93%E6%94%BF%E5%8A%A1%E6%95%B0%E6%8D%AE</link>
+    <guid>https://hero851815.cc/%E8%AF%8D%E5%85%B8/J/%E4%BA%A4%E9%80%9A%E8%BF%90%E8%BE%93%E6%94%BF%E5%8A%A1%E6%95%B0%E6%8D%AE</guid>
+    <description>定义 是指政务部门在履行职责过程中直接或通过第三方依法采集、产生、获取的，以电子形式记录、保存的各类非涉密数据、文件、资料和图表等。【来源：《交通运输政务数据共享管理办法》，2021】 补充评论 扩展资料 关联词 政务数据 .</description>
+    <pubDate>Thu, 04 Sep 2025 02:09:31 GMT</pubDate>
   </item><item>
-    <title>访问控制</title>
-    <link>https://hero851815.cc/%E6%89%A9%E5%B1%95/%E5%AE%89%E5%85%A8%E9%98%B2%E6%8A%A4/EXT---%E8%AE%BF%E9%97%AE%E6%8E%A7%E5%88%B6</link>
-    <guid>https://hero851815.cc/%E6%89%A9%E5%B1%95/%E5%AE%89%E5%85%A8%E9%98%B2%E6%8A%A4/EXT---%E8%AE%BF%E9%97%AE%E6%8E%A7%E5%88%B6</guid>
-    <description>内容摘自Cloudflare的Access词汇</description>
-    <pubDate>Thu, 04 Sep 2025 01:45:14 GMT</pubDate>
+    <title>加密</title>
+    <link>https://hero851815.cc/%E8%AF%8D%E5%85%B8/J/%E5%8A%A0%E5%AF%86</link>
+    <guid>https://hero851815.cc/%E8%AF%8D%E5%85%B8/J/%E5%8A%A0%E5%AF%86</guid>
+    <description>定义 对数据进行密码变换以产生密文的过程。【来源：GB/T 39786-2021 《信息安全技术 信息系统密码应用基本要求》】】 补充评论 扩展资料 EXT - 国密算法 关联词 .</description>
+    <pubDate>Thu, 04 Sep 2025 02:09:31 GMT</pubDate>
   </item>
     </channel>
   </rss>
