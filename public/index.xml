@@ -6,65 +6,65 @@
       <description>Last 10 notes on DS-Knowledge</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
-    <title>数据安全知识库</title>
-    <link>https://hero851815.cc/</link>
-    <guid>https://hero851815.cc/</guid>
-    <description>全面的数据安全术语词典、技术指南和标准规范</description>
-    <pubDate>Thu, 29 Jan 2026 08:40:23 GMT</pubDate>
+    <title>计算机网络中的基本网络攻击</title>
+    <link>https://hero851815.cc/%E6%89%A9%E5%B1%95/%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80/EXT---%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E4%B8%AD%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%BD%91%E7%BB%9C%E6%94%BB%E5%87%BB</link>
+    <guid>https://hero851815.cc/%E6%89%A9%E5%B1%95/%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80/EXT---%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E4%B8%AD%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%BD%91%E7%BB%9C%E6%94%BB%E5%87%BB</guid>
+    <description>引言 许多人依靠互联网进行许多职业、社交和个人活动。但也有人试图破坏我们联网的计算机，侵犯我们的隐私，并使互联网服务无法运行。 鉴于现有攻击的频率和种类，以及未来新的、更具破坏性的攻击的威胁，网络安全已成为计算机网络领域的核心议题。 基本网络攻击类型 恶意软件（Malware）：专门设计用于破坏、损坏或获取计算机系统的授权访问的恶意软件的简称。如今，许多恶意软件都具有自我复制的能力：一旦感染了一台主机，它就会从该主机通过互联网进入其他主机，并从新感染的主机继续进入更多主机。通过这种方式，自我复制的恶意软件可以呈指数级快速传播。 病毒（Virus）：需要某种形式的用户交互才能感染用户设备的恶意软...</description>
+    <pubDate>Tue, 03 Feb 2026 09:15:31 GMT</pubDate>
   </item><item>
-    <title>DDoS</title>
-    <link>https://hero851815.cc/%E6%89%A9%E5%B1%95/%E5%AE%89%E5%85%A8%E9%98%B2%E6%8A%A4/EXT---DDoS</link>
-    <guid>https://hero851815.cc/%E6%89%A9%E5%B1%95/%E5%AE%89%E5%85%A8%E9%98%B2%E6%8A%A4/EXT---DDoS</guid>
-    <description>什么是DDoS 分布式拒绝服务 (Distributed DoS) 是一种 DOS 攻击，其中多个受木马感染的系统针对特定系统，从而引发 DoS 攻击。 DDoS 攻击利用多台服务器和互联网连接来淹没目标资源。DDoS 攻击是网络平台上最强大的武器之一。当您得知某个网站瘫痪时，通常意味着该网站已成为DDoS 攻击的受害者。这意味着黑客通过施加大量流量攻击了您的网站或电脑。因此，网站或电脑因过载而崩溃。 拒绝服务 DoS 代表拒绝服务 (Denial of Service)。它是一种针对服务的攻击，会破坏服务的正常功能并阻止其他用户访问。DoS 攻击最常见的目标是网站等在线服务，但攻击也可能针对...</description>
-    <pubDate>Thu, 29 Jan 2026 08:40:23 GMT</pubDate>
+    <title>扩展知识目录</title>
+    <link>https://hero851815.cc/%E6%89%A9%E5%B1%95%E7%9F%A5%E8%AF%86%E7%9B%AE%E5%BD%95</link>
+    <guid>https://hero851815.cc/%E6%89%A9%E5%B1%95%E7%9F%A5%E8%AF%86%E7%9B%AE%E5%BD%95</guid>
+    <description>数据安全技术扩展和最佳实践</description>
+    <pubDate>Tue, 03 Feb 2026 09:15:31 GMT</pubDate>
   </item><item>
-    <title>SQL注入</title>
-    <link>https://hero851815.cc/%E6%89%A9%E5%B1%95/%E5%AE%89%E5%85%A8%E9%98%B2%E6%8A%A4/EXT---SQL%E6%B3%A8%E5%85%A5</link>
-    <guid>https://hero851815.cc/%E6%89%A9%E5%B1%95/%E5%AE%89%E5%85%A8%E9%98%B2%E6%8A%A4/EXT---SQL%E6%B3%A8%E5%85%A5</guid>
-    <description>什么是SQL注入 SQL 注入(SQL Injection) 是一种安全漏洞，攻击者可以通过在用户输入字段中插入恶意 SQL 代码来操纵Web 应用程序的数据库查询。这些注入的查询可以操纵底层数据库，从而检索、修改或删除敏感数据。在某些情况下，攻击者甚至可以提升权限，完全控制数据库或服务器。 SQL注入如何工作 SQL 注入通常发生在 Web 应用程序未正确验证用户输入时，这会导致攻击者注入恶意SQL 代码。例如，如果 Web 应用程序获取用户输入（例如用户名或密码），并在未经适当过滤的情况下将其直接插入到 SQL 查询中，攻击者便可以操纵该查询执行非预期的操作。 例子 假设我们有一个基于学生...</description>
-    <pubDate>Thu, 29 Jan 2026 08:40:23 GMT</pubDate>
+    <title>标准之间的关系</title>
+    <link>https://hero851815.cc/%E6%A0%87%E5%87%86/%E6%A0%87%E5%87%86%E4%B9%8B%E9%97%B4%E7%9A%84%E5%85%B3%E7%B3%BB</link>
+    <guid>https://hero851815.cc/%E6%A0%87%E5%87%86/%E6%A0%87%E5%87%86%E4%B9%8B%E9%97%B4%E7%9A%84%E5%85%B3%E7%B3%BB</guid>
+    <description> 关于团体标准、企业标准、行业标准、国家标准之间的关系 定义与性质 国家标准 由国家标准化机构制定并发布 在全国范围内统一实施 分为强制性标准和推荐性标准 行业标准 由国务院行政主管部门制定并发布 在特定行业内实施 分为强制性标准和推荐性标准 企业标准 企业自行制定并在企业内部实施 满足企业特定生产、经营和管理需求 团体标准 社会团体或行业组织制定并发布 促进团体或行业内的技术进步和规范化管理 层级与关系 层级关系 国家标准具有最高法律地位 其次是行业标准、团体标准和企业标准 企业标准应符合国家标准和行业标准，不得与之相抵触 互补与协调 各类标准相互补充、相互协调 国家标准和行业标准提供统一技...</description>
+    <pubDate>Tue, 03 Feb 2026 09:15:31 GMT</pubDate>
   </item><item>
-    <title>中间人攻击</title>
-    <link>https://hero851815.cc/%E6%89%A9%E5%B1%95/%E5%AE%89%E5%85%A8%E9%98%B2%E6%8A%A4/EXT---%E4%B8%AD%E9%97%B4%E4%BA%BA%E6%94%BB%E5%87%BB</link>
-    <guid>https://hero851815.cc/%E6%89%A9%E5%B1%95/%E5%AE%89%E5%85%A8%E9%98%B2%E6%8A%A4/EXT---%E4%B8%AD%E9%97%B4%E4%BA%BA%E6%94%BB%E5%87%BB</guid>
-    <description>内容摘自Geeksforgeeks</description>
-    <pubDate>Thu, 29 Jan 2026 08:40:23 GMT</pubDate>
+    <title>相关标准</title>
+    <link>https://hero851815.cc/%E6%A0%87%E5%87%86/%E7%9B%B8%E5%85%B3%E6%A0%87%E5%87%86</link>
+    <guid>https://hero851815.cc/%E6%A0%87%E5%87%86/%E7%9B%B8%E5%85%B3%E6%A0%87%E5%87%86</guid>
+    <description>1 基础共性标准 1.1 术语定义 JR/T 0236-2021 金融大数据 术语GB/T 25069-2022《信息安全技术 术语》 1.2 数据安全框架 GB/T 42570-2023《信息安全技术 区块链技术安全框架》 2 安全管理标准 2.1 数据安全规范 2.1.1 数据安全通用要求 JT/T 1522-2024《交通运输数据安全分级和保护要求》GBT+43697-2024《数据安全技术 数据分类分级规则》GB/T 45577-2025《数据安全技术 数据安全风险评估方法》 2.1.2 个人信息保护 GB/T 41391-2022《信息安全技术 移动互联网应用程序（App） 收集个人...</description>
+    <pubDate>Tue, 03 Feb 2026 09:15:31 GMT</pubDate>
   </item><item>
-    <title>威胁建模</title>
-    <link>https://hero851815.cc/%E6%89%A9%E5%B1%95/%E5%AE%89%E5%85%A8%E9%98%B2%E6%8A%A4/EXT---%E5%A8%81%E8%83%81%E5%BB%BA%E6%A8%A1</link>
-    <guid>https://hero851815.cc/%E6%89%A9%E5%B1%95/%E5%AE%89%E5%85%A8%E9%98%B2%E6%8A%A4/EXT---%E5%A8%81%E8%83%81%E5%BB%BA%E6%A8%A1</guid>
-    <description>引言 威胁建模是一个结构化的过程，用于识别、分析和应对系统、应用程序或组织面临的潜在威胁。它有助于在漏洞被利用之前主动发现它们，从而降低风险并提高安全性。它致力于在保护宝贵资产的背景下识别、传达和理解威胁及其缓解措施。威胁建模使用假设场景、系统图和测试来保护系统和数据的安全。 它可以应用于多种目标，例如： 软件和应用程序 系统和网络 分布式系统和物联网设备 业务流程 威胁建模的目的 威胁建模的目的是尽早识别、传达并了解威胁及缓解措施，并将其告知组织的利益相关者。此过程的文档为系统分析人员和防御人员提供了对潜在攻击者概况、最可能的攻击媒介以及攻击者最想获得的资产的完整分析 。 威胁模型的关键组成...</description>
-    <pubDate>Thu, 29 Jan 2026 08:40:23 GMT</pubDate>
+    <title>安全</title>
+    <link>https://hero851815.cc/%E8%AF%8D%E5%85%B8/A/%E5%AE%89%E5%85%A8</link>
+    <guid>https://hero851815.cc/%E8%AF%8D%E5%85%B8/A/%E5%AE%89%E5%85%A8</guid>
+    <description>定义 对某一系统，据以获得保密性、完整性、可用性、可核查性、真实性以及可靠性的性质。【来源：ISO/IEC TR 15443-1:2012 《信息技术-安全技术-安全保证框架》】 补充评论 扩展资料 关联词 .</description>
+    <pubDate>Tue, 03 Feb 2026 09:15:31 GMT</pubDate>
   </item><item>
-    <title>恶意软件</title>
-    <link>https://hero851815.cc/%E6%89%A9%E5%B1%95/%E5%AE%89%E5%85%A8%E9%98%B2%E6%8A%A4/EXT---%E6%81%B6%E6%84%8F%E8%BD%AF%E4%BB%B6</link>
-    <guid>https://hero851815.cc/%E6%89%A9%E5%B1%95/%E5%AE%89%E5%85%A8%E9%98%B2%E6%8A%A4/EXT---%E6%81%B6%E6%84%8F%E8%BD%AF%E4%BB%B6</guid>
-    <description>恶意软件的定义 恶意软件（Malware）是一种未经用户同意就进入系统，窃取用户私人和机密数据（包括银行信息和密码）的软件。它们还会生成烦人的弹出广告，并更改系统设置。它们通过各种方式进入系统： 伴随免费下载。 点击可疑链接。 打开来自恶意来源的电子邮件。 访问恶意网站。 未在系统中安装更新版本的防病毒软件。 恶意软件的类型 病毒 计算机病毒（Virus）是指破坏计算机系统和/或销毁或删除数据文件的程序。计算机病毒是一种恶意程序，它通过复制到另一个程序中进行自我复制。换句话说，计算机病毒会自行传播到其他可执行代码或文档中。创建计算机病毒的目的是感染易受攻击的系统，获取管理员控制权并窃取用户敏感...</description>
-    <pubDate>Thu, 29 Jan 2026 08:40:23 GMT</pubDate>
+    <title>安全域</title>
+    <link>https://hero851815.cc/%E8%AF%8D%E5%85%B8/A/%E5%AE%89%E5%85%A8%E5%9F%9F</link>
+    <guid>https://hero851815.cc/%E8%AF%8D%E5%85%B8/A/%E5%AE%89%E5%85%A8%E5%9F%9F</guid>
+    <description>定义 遵从共同安全策略的资产和资源的集合。【来源：GB/T 25069-2022《信息安全技术 术语》】 补充评论 扩展资料 关联词 .</description>
+    <pubDate>Tue, 03 Feb 2026 09:15:31 GMT</pubDate>
   </item><item>
-    <title>数据丢失防护</title>
-    <link>https://hero851815.cc/%E6%89%A9%E5%B1%95/%E5%AE%89%E5%85%A8%E9%98%B2%E6%8A%A4/EXT---%E6%95%B0%E6%8D%AE%E4%B8%A2%E5%A4%B1%E9%98%B2%E6%8A%A4</link>
-    <guid>https://hero851815.cc/%E6%89%A9%E5%B1%95/%E5%AE%89%E5%85%A8%E9%98%B2%E6%8A%A4/EXT---%E6%95%B0%E6%8D%AE%E4%B8%A2%E5%A4%B1%E9%98%B2%E6%8A%A4</guid>
-    <description>内容摘自Cloudflare的Access词汇</description>
-    <pubDate>Thu, 29 Jan 2026 08:40:23 GMT</pubDate>
+    <title>安全多方计算</title>
+    <link>https://hero851815.cc/%E8%AF%8D%E5%85%B8/A/%E5%AE%89%E5%85%A8%E5%A4%9A%E6%96%B9%E8%AE%A1%E7%AE%97</link>
+    <guid>https://hero851815.cc/%E8%AF%8D%E5%85%B8/A/%E5%AE%89%E5%85%A8%E5%A4%9A%E6%96%B9%E8%AE%A1%E7%AE%97</guid>
+    <description>定义 是指在一个分布式网络中，多个参与实体各自持有秘密数据，各方希望以这些数据为输入共同完成对某函数的计算，而要求每个参与实体除计算结果、预期可公开的信息外均不能得到其他参与实体的任何输入信息。主要研究针对无可信第三方情况下，安全地进行多方协同的计算问题。【来源：《数据领域常用名词解释（第一批）》，2024】 补充评论 扩展资料 关联词 隐私计算 .</description>
+    <pubDate>Tue, 03 Feb 2026 09:15:31 GMT</pubDate>
   </item><item>
-    <title>数据匿名化技术</title>
-    <link>https://hero851815.cc/%E6%89%A9%E5%B1%95/%E5%AE%89%E5%85%A8%E9%98%B2%E6%8A%A4/EXT---%E6%95%B0%E6%8D%AE%E5%8C%BF%E5%90%8D%E5%8C%96%E6%8A%80%E6%9C%AF</link>
-    <guid>https://hero851815.cc/%E6%89%A9%E5%B1%95/%E5%AE%89%E5%85%A8%E9%98%B2%E6%8A%A4/EXT---%E6%95%B0%E6%8D%AE%E5%8C%BF%E5%90%8D%E5%8C%96%E6%8A%80%E6%9C%AF</guid>
-    <description>为什么数据匿名化很重要 增强数据安全性：数据隐私的第三级是匿名化或数据屏蔽，通过屏蔽或消除姓名、地址、社保号码等个人数据，从而提高数据的隐私性。匿名数据难以识别，除非正确识别，否则没有人能够通过该数据追踪到特定个人。 法规合规性：全球各地有许多不同的法规要求组织在处理个人信息时遵守特定标准。去识别化技术可以消除数据处理过程中隐私泄露的风险，从而提高合规性。 促进数据共享：未选定的数据也可以公开给第三方研究人员、分析师甚至其他公司，以供进一步研究。这可以减少隐私侵犯，同时提供宝贵的见解和创造空间。 降低成本：匿名数据的存储和管理成本也比原始数据相对低。这是因为匿名数据风险较低，使用时可能不需要高...</description>
-    <pubDate>Thu, 29 Jan 2026 08:40:23 GMT</pubDate>
+    <title>保密性</title>
+    <link>https://hero851815.cc/%E8%AF%8D%E5%85%B8/B/%E4%BF%9D%E5%AF%86%E6%80%A7</link>
+    <guid>https://hero851815.cc/%E8%AF%8D%E5%85%B8/B/%E4%BF%9D%E5%AF%86%E6%80%A7</guid>
+    <description>定义 信息对未经授权的个人、实体或 过程不可用或不泄露的性质。【来源：GB/T 29246-2023《信息安全技术 信息安全管理体系 概述和词汇》】 使信息不泄漏给未授权的个人、 实体、进程，或不被其利用的特性。【来源：GB/T 37988—2019《信息安全技术 数据安全能力成熟度模型》】 保密性是指信息不被未授权实体（含产品、服务、个人、组织）获得或知悉的特性，即医疗器械产品自身和相关数据仅可由授权用户在授权时间以授权方式进行访问和使用。【来源：《医疗器械网络安全注册审查指导原则（2022年修订版）》】 补充评论 扩展资料 关联词 .</description>
+    <pubDate>Tue, 03 Feb 2026 09:15:31 GMT</pubDate>
   </item><item>
-    <title>机器学习中的隐私保护</title>
-    <link>https://hero851815.cc/%E6%89%A9%E5%B1%95/%E5%AE%89%E5%85%A8%E9%98%B2%E6%8A%A4/EXT---%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E4%B8%AD%E7%9A%84%E9%9A%90%E7%A7%81%E4%BF%9D%E6%8A%A4</link>
-    <guid>https://hero851815.cc/%E6%89%A9%E5%B1%95/%E5%AE%89%E5%85%A8%E9%98%B2%E6%8A%A4/EXT---%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E4%B8%AD%E7%9A%84%E9%9A%90%E7%A7%81%E4%BF%9D%E6%8A%A4</guid>
-    <description>引言 机器学习 (ML) 的进步改变了各行各业，使人们能够从海量数据集中提取洞察。然而，由于 ML 系统严重依赖从个人健康记录到财务详情等各种敏感数据，因此引发了人们对隐私的担忧。在充分利用 ML 优势的同时确保数据机密性是现代人工智能的核心挑战。隐私保护机器学习 (Privacy-preserving machine learning, PPML)解决了这一问题，旨在保护用户数据的同时，实现有效的模型训练和预测。 隐私保护机器学习技术 拆分隐私（DP） 差分隐私（Differential Privacy）是一种技术，它确保无论个人数据是否包含在数据集中，函数的输出都几乎保持不变。它的工作原理...</description>
-    <pubDate>Thu, 29 Jan 2026 08:40:23 GMT</pubDate>
+    <title>半结构化数据</title>
+    <link>https://hero851815.cc/%E8%AF%8D%E5%85%B8/B/%E5%8D%8A%E7%BB%93%E6%9E%84%E5%8C%96%E6%95%B0%E6%8D%AE</link>
+    <guid>https://hero851815.cc/%E8%AF%8D%E5%85%B8/B/%E5%8D%8A%E7%BB%93%E6%9E%84%E5%8C%96%E6%95%B0%E6%8D%AE</guid>
+    <description>定义 是指不符合关系型数据库或其他数据表的形式关联起来的数据模型结构，但包含相关标记，用来分隔语义元素以及对记录和字段进行分层的一种数据化结构形式。【来源：《数据领域常用名词解释（第一批）》，2024】 补充评论 扩展资料 关联词 结构化数据 非结构化数据 .</description>
+    <pubDate>Tue, 03 Feb 2026 09:15:31 GMT</pubDate>
   </item><item>
-    <title>社会工程学</title>
-    <link>https://hero851815.cc/%E6%89%A9%E5%B1%95/%E5%AE%89%E5%85%A8%E9%98%B2%E6%8A%A4/EXT---%E7%A4%BE%E4%BC%9A%E5%B7%A5%E7%A8%8B%E5%AD%A6</link>
-    <guid>https://hero851815.cc/%E6%89%A9%E5%B1%95/%E5%AE%89%E5%85%A8%E9%98%B2%E6%8A%A4/EXT---%E7%A4%BE%E4%BC%9A%E5%B7%A5%E7%A8%8B%E5%AD%A6</guid>
-    <description>什么是社会工程学 社会工程学（Social Engineering）是网络犯罪分子通过互联网上的人际互动进行的多种恶意活动的总称。 它不涉及使用技术黑客技术。攻击者利用心理和操纵手段诱骗用户执行可能危及其安全的操作，包括下载恶意文件、泄露敏感信息、点击恶意链接、与非法来源进行交易等。它包括一系列攻击，例如网络钓鱼、诱饵攻击、尾随攻击、借口攻击、恐吓软件等，因为它们都利用了人们的信任。 社会工程攻击的目的 社会工程学攻击的目的通常是窃取敏感信息，例如登录凭证、信用卡号或个人信息。攻击者可以利用这些信息进行身份盗窃、金融欺诈或其他恶意目的。社会工程学攻击的另一个目的是未经授权访问安全区域或系统。 ...</description>
-    <pubDate>Thu, 29 Jan 2026 08:40:23 GMT</pubDate>
+    <title>必要个人信息</title>
+    <link>https://hero851815.cc/%E8%AF%8D%E5%85%B8/B/%E5%BF%85%E8%A6%81%E4%B8%AA%E4%BA%BA%E4%BF%A1%E6%81%AF</link>
+    <guid>https://hero851815.cc/%E8%AF%8D%E5%85%B8/B/%E5%BF%85%E8%A6%81%E4%B8%AA%E4%BA%BA%E4%BF%A1%E6%81%AF</guid>
+    <description>定义 保障移动互联网应用程序基本业务功能正常运行所必需的个人信息，缺少该信息移动互联网应用程序即无法实现基本业务功能。 注1：App、基本业务功能、必要个人信息之间的关系，见附录B中B.1。 注2：App可收集的个人信息范围，分为必要个人信息，非必要但有关联个人信息。非必要但有关联个人信息是指与App所提供服务相关但可选收集的个人信息，见B.2。 【来源：GB/T 41391-2022《信息安全技术 移动互联网应用程序（App）收集个人信息基本要求》】 补充评论 扩展资料 关联词 .</description>
+    <pubDate>Tue, 03 Feb 2026 09:15:31 GMT</pubDate>
   </item>
     </channel>
   </rss>
